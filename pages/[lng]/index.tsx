@@ -122,7 +122,7 @@ const Home: React.FC<any> = ({
   }
 
   const toogleTab = (menus) => setTabActive(menus);
-  
+
   return (
     <Layout
       i18n={i18n}
@@ -227,44 +227,6 @@ const Home: React.FC<any> = ({
       </div>
       <section>
         <div className="container">
-          <div className="row">
-            <div className="col-12 col-md-6">
-              <LazyLoadComponent>
-                <Widget
-                  pos="main-content-1"
-                  widgetClassName="widget-image-home"
-                  thumborSetting={{
-                    width: size.width < 768 ? 512 : 800,
-                    format: "webp",
-                    quality: 85,
-                  }}
-                  loadingComponent={
-                    <Placeholder classes={classesPlaceholderWidget} withImage />
-                  }
-                />
-              </LazyLoadComponent>
-            </div>
-            <div className="col-12 col-md-6">
-              <LazyLoadComponent>
-                <Widget
-                  pos="main-content-2"
-                  widgetClassName="widget-image-home"
-                  thumborSetting={{
-                    width: size.width < 768 ? 512 : 800,
-                    format: "webp",
-                    quality: 85,
-                  }}
-                  loadingComponent={
-                    <Placeholder classes={classesPlaceholderWidget} withImage />
-                  }
-                />
-              </LazyLoadComponent>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="container">
           <LazyLoadComponent>
             <ProductCategory
               itemPerPage={4}
@@ -316,10 +278,9 @@ const Home: React.FC<any> = ({
             <div className="heading__title">
               <h5>{i18n.t("home.ourProducts")}</h5>
             </div>
-            {/* <div className="heading__desc">
+            <div className="heading__desc">
               <p>{i18n.t("home.ourProductsDesc")}</p>
-            </div> */}
-            <hr className="yellow_underline"></hr>
+            </div>
           </div>
           <div className="row best-seller">
             <LazyLoadComponent>
@@ -376,17 +337,53 @@ const Home: React.FC<any> = ({
           </div>
         </div>
       </section>
-      
+      <section>
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-md-6">
+              <LazyLoadComponent>
+                <Widget
+                  pos="main-content-1"
+                  widgetClassName="widget-image-home"
+                  thumborSetting={{
+                    width: size.width < 768 ? 512 : 800,
+                    format: "webp",
+                    quality: 85,
+                  }}
+                  loadingComponent={
+                    <Placeholder classes={classesPlaceholderWidget} withImage />
+                  }
+                />
+              </LazyLoadComponent>
+            </div>
+            <div className="col-12 col-md-6">
+              <LazyLoadComponent>
+                <Widget
+                  pos="main-content-2"
+                  widgetClassName="widget-image-home"
+                  thumborSetting={{
+                    width: size.width < 768 ? 512 : 800,
+                    format: "webp",
+                    quality: 85,
+                  }}
+                  loadingComponent={
+                    <Placeholder classes={classesPlaceholderWidget} withImage />
+                  }
+                />
+              </LazyLoadComponent>
+            </div>
+          </div>
+        </div>
+      </section>
       <section>
         <div className="container">
           <div className="heading">
             <div className="heading__title">
               <h5>{i18n.t("home.featuredProducts")}</h5>
             </div>
-            {/* <div className="heading__desc">
+            <div className="heading__desc">
               <p>{i18n.t("home.featuredDesc")}</p>
-            </div> */}
-            <hr className="yellow_underline"></hr>
+            </div>
           </div>
           <div className="featured-products">
             <div className="featured-products__tabs">

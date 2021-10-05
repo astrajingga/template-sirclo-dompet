@@ -23,9 +23,15 @@ import {
   faWhatsapp,
   faLine
 } from "@fortawesome/free-brands-svg-icons";
+import{
+  AlertCircle 
+} from "react-feather"
 import { toast } from "react-toastify";
 import { useBrand } from "lib/utils/useBrand";
 import { useWhatsAppOTPSetting } from "lib/utils/useSingleSignOn";
+
+import stylesPopupCheckPaymentOrder from "public/scss/components/CheckPaymentOrder.module.scss";
+import styles from "public/scss/pages/Account.module.scss";
 
 const ACTIVE_CURRENCY = "IDR";
 
@@ -177,6 +183,23 @@ const classesAccount = {
   mediaDetailCheckboxContainer: "notification_mediaDetailCheckboxContainer",
   mediaDetailCheckbox: "notification_mediaDetailCheckbox",
   mediaDetailCheckboxLabel: "notification_mediaDetailCheckboxLabel",
+
+  checkPaymentOrderContainerClassName: stylesPopupCheckPaymentOrder.checkOrder_overlay,
+  checkPaymentOrderContainerBodyClassName: stylesPopupCheckPaymentOrder.checkOrder_container,
+  checkPaymentOrderHeaderClassName: stylesPopupCheckPaymentOrder.checkOrder_header,
+  checkPaymentOrderTitleClassName: stylesPopupCheckPaymentOrder.checkOrder_title,
+  checkPaymentOrderDescriptionClassName: stylesPopupCheckPaymentOrder.checkOrder_description,
+  checkPaymentOrderContentClassName: stylesPopupCheckPaymentOrder.checkOrder_content,
+  checkPaymentOrderInputContentClassName: stylesPopupCheckPaymentOrder.checkOrder_inputContent,
+  checkPaymentOrderInputTitleClassName: stylesPopupCheckPaymentOrder.checkOrder_inputTitle,
+  checkPaymentOrderInputClassName: stylesPopupCheckPaymentOrder.checkOrder_input,
+  checkPaymentOrderCloseButtonClassName: stylesPopupCheckPaymentOrder.checkOrder_closeButton,
+  checkPaymentOrderSubmitButtonClassName: stylesPopupCheckPaymentOrder.checkOrder_submitButton,
+
+  orderInfoContainerClassName: styles.membership_info_container,
+  OrderInfoIconClassName: styles.membership_info_icon,
+  orderInfoLabelClassName: styles.membership_info_label,
+  OrderInfoSearchHereClassName: styles.membership_info_button,
 };
 
 const paginationClasses = {
@@ -244,8 +267,8 @@ const Accounts: FC<any> = ({
               onSuccessChPass={onSuccessChPass}
               onFetchCompleted={onFetchCompleted}
               currency={ACTIVE_CURRENCY}
-              orderHistoryType="accordion"
-              paymentHrefPrefix="/payment_notif"
+              orderHistoryType="list"
+              paymentHrefPrefix="payment_notif"
               showSettingNotification={hasOtp}
               orderHistoryIsCallPagination={true}
               orderHistoryItemPerPage={10}
@@ -258,6 +281,7 @@ const Accounts: FC<any> = ({
               mapButtonCloseIcon={<FontAwesomeIcon icon={faTimes} height="1.25em" />}
               mapCenterIcon={<FontAwesomeIcon icon={faDotCircle} size="1x" />}
               icons={{
+                infoIcon : <AlertCircle/>,
                 myAccount: <FontAwesomeIcon icon={faUserAlt} height="1em" />,
                 changePassword: <FontAwesomeIcon icon={faLock} height="1em" />,
                 orderHistory: <FontAwesomeIcon icon={faList} height="1em" />,
