@@ -49,7 +49,9 @@
         "unpaid": "Unpaid",
         "youGot": "You Got",
         "youHave": "You have",
-        "yourAccount": "Your Account"
+        "yourAccount": "Your Account",
+        "cantFindYourOrder": "Can't find your order?",
+        "searchHere": "Search here"
     },
     "article": {
         "categories": "Categories"
@@ -304,13 +306,28 @@
         "doesNotEqual": "Amount transfered is unsuitable",
         "failed": "Payment confirmation failed! Please check your input form.",
         "file": "Receipt file",
-        "title": "Confirm Payment",
+        "heading": "Payment Confirmation",
         "to": "Payment to",
         "totalAmount": "Total amount payable for this order is:",
         "transactionDate": "Transaction Date",
         "unauthorize": "Payment confirmation has failed, please login first and try again",
         "uploadFailed": "File upload failed. Please try again.",
-        "wrongEmail": "Please use the email that you used to create the order"
+        "wrongEmail": "Please use the email that you used to create the order",
+        "orderIdNotFound": "Order ID not found",
+        "emailNotMatch": "Email does not match the order number",
+        "titleCheckYoutOrder": "Check Order ID",
+        "descCheckYoutOrder": "To confirm payment, please enter your email and order ID.",
+        "orderId": "Order ID",
+        "placeholderOrderId":  "Order ID",
+        "email": "Email",
+        "placeholderEmail": "user@gmail.com",
+        "checkOrder": "Check Order",
+        "details": "Details",
+        "optional": "Optional",
+        "invalidFileType": "File Type not supported",
+        "confirmationPaymentSuccess": "Payment confirmation successful",
+        "pleaseLogin": "Your order ID not found. Please login with your account.",
+        "infoUpload": "Proof of payment that has been sent cannot be reupload, please make sure the data you are about to send is correct!"
     },
     "paymentStatus": {
         "continueShopping": "Continue Shopping",
@@ -541,8 +558,13 @@
         "submit": "Submit Review"
     },
     "thankYou": {
-        "message": "Thank you for purchasing in our store",
+        "accountNumber": "Account Number",
+        "bankAccountInformation": "You can make manual transfer payments through several options below",
+        "copy": "Copy",
+        "copyAccountNumberSuccess": "Copy to clipboard",
+        "message": "We send you an email to {EMAIL} your order receipt. If the email isn't in your inbox, try checking the spam folder section.",
         "orderDetail": "Order Detail",
+        "onBehalf": "a/n",
         "paymentMethod": "Payment To",
         "paymentTitle": "Payment",
         "shipping": "Shipping costs",
@@ -552,9 +574,7 @@
         "shippingTitle": "Delivery",
         "summaryTitle": "What are you shopping for?",
         "thanks": "Thank You",
-        "title": "Place Order",
-        "titlePrimary": "Your order has been placed",
-        "total": "Total"
+        "yourOrderID": "Your Order ID"
     },
     "whatsAppOTPInput": {
         "andConjunction": "and",

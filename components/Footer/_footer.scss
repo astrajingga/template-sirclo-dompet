@@ -24,7 +24,7 @@ footer {
   .footer {
     margin-top: 3rem;
     padding: 3rem 0;
-    background-color: #252531;
+    background-color: $color_gray;
 
     @media screen and (max-width: 575px) {
       padding-bottom: 0;
@@ -64,7 +64,7 @@ footer {
 
             a {
               text-decoration: none;
-              color: #ffffff;
+              color: #000000;
             }
           }
         }

@@ -47,7 +47,7 @@
   }
 
   .nav-link-merlin {
-    color: rgb(255, 255, 255) !important;
+    color: rgba(0, 0, 0, 1) !important;
     text-transform: uppercase;
     font-size: small;
   }
@@ -149,7 +149,7 @@
   .nav {
     &-merlin {
       border: none;
-      background-color: #252531;
+      background-color: $color_white;
       justify-content: space-between;
       height: 70px;
       min-height: 0;
@@ -171,7 +171,7 @@
     &--icon,
     &--icon-mobile {
       height: 1.2em;
-      color: $color_white;
+      color: $color_black;
 
       &:hover {
         cursor: pointer;
@@ -231,7 +231,6 @@
       position: relative;
 
       .btn-search {
-        background-color: burlywood;
         position: absolute;
         top: 0;
         right: 0;

@@ -741,13 +741,13 @@ section {
       white-space: nowrap;
       width: 22.5%;
 
-      // &::before,
-      // &::after {
-      //   content: "";
-      //   display: table-cell;
-      //   border-top: 3px solid $color_black;
-      //   width: 50%;
-      // }
+      &::before,
+      &::after {
+        content: "";
+        display: table-cell;
+        border-top: 3px solid $color_black;
+        width: 50%;
+      }
     }
   }
 
