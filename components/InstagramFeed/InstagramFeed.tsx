@@ -52,7 +52,7 @@ const InstagramFeed: FC<{size: TSize}> = ({ size }) => {
 
       <InstaFeed
         Carousel={Carousel}
-        slidesPerPage={size.width < 575 ? 4 : 6}
+        slidesPerPage={size.width < 575 ? 2 : 4}
         slidesPerScroll={1}
         autoPlay={10000}
         infinite

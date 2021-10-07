@@ -225,9 +225,9 @@ const Home: React.FC<any> = ({
           }
         />
       </div>
-      <section>
-        <div className="container">
-          <div className="row">
+      {/* <section> */}
+        {/* <div className="container"> */}
+          {/* <div className="row">
             <div className="col-12 col-md-6">
               <LazyLoadComponent>
                 <Widget
@@ -260,9 +260,9 @@ const Home: React.FC<any> = ({
                 />
               </LazyLoadComponent>
             </div>
-          </div>
-        </div>
-      </section>
+          </div> */}
+        {/* </div> */}
+      {/* </section> */}
       <section>
         <div className="container">
           <LazyLoadComponent>
