@@ -33,7 +33,7 @@ const loginClasses = {
   containerClassName: "login-page-form",
   inputContainerClassName: "sirclo-form-row",
   inputClassName: "form-control sirclo-form-input",
-  buttonClassName: "btn btn-orange btn-long btn-center",
+  buttonClassName: "btn login-page-btnLogin btn-long btn-center col-12 col-md-12",
   footerClassName: "footer",
   forgotPasswordClass: "forgot-password",
   forgotLinkClass: "forgot-link",
@@ -108,7 +108,7 @@ const LoginPage: FC<any> = ({
       lngDict={lngDict}
       brand={brand}
     >
-      <Breadcrumb title={i18n.t("login.title")} links={linksBreadcrumb} lng={lng} />
+      {/* <Breadcrumb title={i18n.t("login.title")} links={linksBreadcrumb} lng={lng} /> */}
       <section>
         <div className="container">
           <div className="login-page-container">
@@ -156,7 +156,7 @@ const LoginPage: FC<any> = ({
                       <span>{i18n.t("testimonials.or")}</span>
                     </label>
                   }
-                  <div className="login-page-withGoogle">
+                  <div className="login-page-withGoogle col-12 col-md-12">
                     {(hasGoogleAuth || hasFacebookAuth) &&
                       <SingleSignOn
                         className="login-page-withGoogleButton"

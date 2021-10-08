@@ -107,10 +107,19 @@ const OrderSummaryBox: FC<any> = ({
 
   const classesOrderSum = () => {
     let classes = classesOrderSummary;
+    
     classes.voucherButtonClassName = `${auth ? "col-12 b-right" : "col-12"
       } order-summary__header--features`;
+    
+    if(page == "cart"){
+      classes.expandedDivClassName = "order-summary_expandedDivCart"
+      classes.voucherButtonClassName =  `${auth ? "col-12 b-right" : "col-12"
+        } order-summary__header--featuresCart`;
+    }
+
     classes.voucherButtonAppliedClassName = `${auth ? "col-6 b-right" : "col-12"
       } order-summary_voucherButtonApplied`;
+      
     return classes;
   };
 

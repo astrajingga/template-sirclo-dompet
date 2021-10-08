@@ -127,7 +127,7 @@ const Cart: FC<any> = ({
       <div className="container">
         <div className="cart margin-step-payment">
           <div className="row">
-            <div className="col-12 col-lg-8">
+            <div className="col-12 col-lg-12">
               {invalidMsg !== "" &&
                 <div className="cart-table__errorCart">
                   {invalidMsg}
@@ -135,8 +135,8 @@ const Cart: FC<any> = ({
               }
               <CartDetails
                 currency="IDR"
-                imageHeaderText={i18n.t("cart.item")}
-                nameHeaderText={i18n.t("cart.product")}
+                // imageHeaderText={i18n.t("cart.item")}
+                // nameHeaderText={i18n.t("cart.product")}
                 classes={classesCartDetails}
                 withSeparatedVariant={true}
                 itemRedirectPathPrefix={`product`}
@@ -165,6 +165,8 @@ const Cart: FC<any> = ({
                   />
                 }
               />
+            </div>
+            <div className="col-12 col-lg-8">
             </div>
             <div className="col-12 col-lg-4 no-padding-mobile-pad">
               <OrderSummaryBox
