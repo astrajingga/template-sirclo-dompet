@@ -108,13 +108,14 @@ const OrderSummaryBox: FC<any> = ({
   const classesOrderSum = () => {
     let classes = classesOrderSummary;
     
-    classes.voucherButtonClassName = `${auth ? "col-12 b-right" : "col-12"
-      } order-summary__header--features`;
-    
     if(page == "cart"){
       classes.expandedDivClassName = "order-summary_expandedDivCart"
       classes.voucherButtonClassName =  `${auth ? "col-12 b-right" : "col-12"
         } order-summary__header--featuresCart`;
+    }else if (page == "place_order"){
+      classes.expandedDivClassName = "order-summary_expandedDiv"
+      classes.voucherButtonClassName = `${auth ? "col-12 b-right" : "col-12"
+        } order-summary__header--features`;
     }
 
     classes.voucherButtonAppliedClassName = `${auth ? "col-6 b-right" : "col-12"
