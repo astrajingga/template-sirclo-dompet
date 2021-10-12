@@ -1,6 +1,7 @@
 import { FC, useState } from 'react'
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import { toast } from 'react-toastify'
+import dynamic from "next/dynamic";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faEye,
@@ -84,6 +85,12 @@ const classesWhatsAppOTP = {
   btnChooseAccountClassName: "btn btn-orange btn-long btn-center"
 }
 
+
+const Widget = dynamic(
+  () => import("@sirclo/nexus").then((mod) => mod.Widget),
+  { ssr: false }
+);
+
 const LoginPage: FC<any> = ({
   lng,
   lngDict,
@@ -100,6 +107,8 @@ const LoginPage: FC<any> = ({
     const lower = brand?.toLowerCase();
     return brand?.charAt(0).toUpperCase() + lower?.slice(1);
   }
+
+  
 
   return (
     <Layout
@@ -192,6 +201,7 @@ const LoginPage: FC<any> = ({
             </div>
           </div>
         </div>
+        <Widget pos="login-image" widgetClassName="widget-login" />
       </section>
     </Layout>
   )

@@ -337,7 +337,7 @@ const Home: React.FC<any> = ({
           </div>
         </div>
       </section>
-      <section>
+      {/* <section>
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-6">
@@ -374,7 +374,7 @@ const Home: React.FC<any> = ({
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section>
         <div className="container">
           <div className="heading">

@@ -18,7 +18,7 @@ const classesSetNewPassword = {
   inputContainerClassName: "sirclo-form-row",
   inputClassName: "form-control sirclo-form-input",
   passwordViewButtonClassName: "sirclo-form-input-btn",
-  buttonClassName: "btn btn-orange btn-long float-right",
+  buttonClassName: "btn login-page-btnLogin btn-long float-right",
   errorClassName: "error",
   passwordStrengthBarContainerClassName:
     "sirclo-form-password-strength-bar-container",
@@ -47,11 +47,11 @@ const ResetPasswordPage: FC<any> = ({
       lngDict={lngDict}
       brand={brand}
     >
-      <Breadcrumb
+      {/* <Breadcrumb
         title={i18n.t("resetPassword.setNewPassword")}
         links={linksBreadcrumb}
         lng={lng}
-      />
+      /> */}
       <div className="container">
         <div className="forgot-password-page-container">
           <div className="forgot-password-page-inner">

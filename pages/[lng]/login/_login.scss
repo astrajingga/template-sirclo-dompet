@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 5rem;
+    z-index: 9;
   }
 
   &-btnLogin
@@ -289,5 +290,18 @@
   {
     font-size: 12px;
     color: $color_gray_text;
+  }
+}
+
+.widget-login {
+  margin: 1rem 0;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: auto;        
+  top: 0;
+
+  img {
+    width: 100% !important;
   }
 }
