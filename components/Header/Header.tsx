@@ -17,7 +17,7 @@ const navClasses = {
   dropdownContainerClassName: "dropdown-container",
   navItemClassName: "nav-item line-merlin",
   navLinkClassName: "nav-link nav-link-merlin",
-  navbarUlClassName: "navbar-nav navbar-merlin",
+  navbarUlClassName: "navbar-nav navbar-merlin flex-grow-1 pl-5",
   subChildClassName: "subchild",
   withChildClassName: "withchild"
 }
@@ -31,7 +31,7 @@ const classesPlaceholderLogo = {
 }
 
 const classesPlaceholderNav = {
-  placeholderList: "placeholder-item placeholder-item__header--nav"
+  placeholderList: "placeholder-item placeholder-item__header--nav flex-grow-1"
 }
 
 const Header = ({ lng }) => {
@@ -48,6 +48,13 @@ const Header = ({ lng }) => {
     }
   };
 
+  const containerClasses = {
+    marginRight: "0",
+    paddingRight: "0",
+    paddingLeft: "200px",
+    justifyContent: "left",
+    backgroundColor: "#2C3E50"
+  };
 
   return (
     <>
@@ -69,8 +76,8 @@ const Header = ({ lng }) => {
         </div>
       }
       <header className="header">
-        <nav className="navbar navbar-expand-lg navbar-light nav-merlin d-none d-lg-flex">
-          <div className="container">
+        <nav className="navbar navbar-expand-lg nav-merlin d-lg-flex">
+          <div className="container-fluid" style={containerClasses}>
             <LazyLoadComponent
               placeholder={
                 <Placeholder classes={classesPlaceholderLogo} withImage={true} />

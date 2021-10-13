@@ -4,7 +4,8 @@ import { useCart, useI18n } from "@sirclo/nexus";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faShoppingCart,
-  faUser,
+  faUserCircle,
+  faHeart,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import dynamic from "next/dynamic";
@@ -80,9 +81,36 @@ const ProfileMenu = ({
   };
 
   return (
-    <div className="navbar-profile-menu">
+    <div className="navbar-nav navbar-merlin">
+      <a
+        className="navbar-profile-menu__heart d-flex align-items-center px-4 line-merlin"
+        onClick={(e) => e.preventDefault()}
+        href="#"
+      >
+        <FontAwesomeIcon
+          className="nav--icon text-white"
+          icon={faHeart}
+        />
+        <span className="badge-cart" onClick={toogleCart}>
+          {data?.totalItem}
+        </span>
+      </a>
+      <a
+        className="navbar-profile-menu__cart d-flex align-items-center px-4 line-merlin"
+        onClick={(e) => e.preventDefault()}
+        href="#"
+      >
+        <FontAwesomeIcon
+          className="nav--icon text-white"
+          icon={faShoppingCart}
+          onClick={toogleCart}
+        />
+        <span className="badge-cart" onClick={toogleCart}>
+          {data?.totalItem}
+        </span>
+      </a>
       <DropdownNav
-        title={<FontAwesomeIcon className="nav--icon" icon={faUser} />}
+        title={<FontAwesomeIcon className="nav--icon text-white" icon={faUserCircle} />}
       >
         <PrivateComponent
           Auth={
@@ -130,25 +158,13 @@ const ProfileMenu = ({
         />
       </DropdownNav>
       <a
-        className="navbar-profile-menu__cart"
         onClick={(e) => e.preventDefault()}
         href="#"
+        className="d-flex align-items-center px-4 navbar-profile-menu__cart"
+        style={{ backgroundColor: "#FBC02D" }}
       >
         <FontAwesomeIcon
-          className="nav--icon ml-4"
-          icon={faShoppingCart}
-          onClick={toogleCart}
-        />
-        <span className="badge-cart" onClick={toogleCart}>
-          {data?.totalItem}
-        </span>
-      </a>
-      <a
-        onClick={(e) => e.preventDefault()}
-        href="#"
-      >
-        <FontAwesomeIcon
-          className="nav--icon ml-4"
+          className="nav--icon text-white"
           icon={faSearch}
           onClick={toogleSearch}
         />

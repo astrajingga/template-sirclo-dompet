@@ -10,6 +10,8 @@
     text-transform: uppercase;
     line-height: 16px;
     text-align: center;
+    background-color: #2296CB;
+    color: white;
 
     &:empty {
       display: none;
@@ -20,6 +22,7 @@
     position: absolute;
     right: 15px;
     top: 3px;
+    color: white;
 
     &:hover {
       cursor: pointer;
@@ -37,9 +40,9 @@
   .line-merlin {
     position: relative;
 
-    &:hover {
-      background-color: #e4e4e4;
-    }
+    // &:hover {
+    //   background-color: #e4e4e4;
+    // }
 
     a {
       line-height: 54px;
@@ -47,7 +50,7 @@
   }
 
   .nav-link-merlin {
-    color: rgba(0, 0, 0, 1) !important;
+    color: white !important;
     text-transform: uppercase;
     font-size: small;
   }
@@ -59,7 +62,7 @@
 
   .dropdown-container {
     position: absolute;
-    background: #e4e4e4;
+    background: #eeeeee;
     visibility: hidden;
     opacity: 0;
     min-width: 125px;
@@ -73,7 +76,7 @@
       visibility: visible;
       opacity: 1;
     }
-    
+
 
     .withchild {
       position: relative;
@@ -199,8 +202,26 @@
         width: max-content;
         padding: 0 5px;
         border-radius: 5px;
-        top: -7px;
-        right: -10px;
+        top: 17px;
+        right: 13px;
+        cursor: pointer;
+      }
+    }
+
+    &__heart {
+      position: relative;
+
+      .badge-cart {
+        position: absolute;
+        font-family: "karla-bold";
+        font-size: 10px;
+        color: $color_white;
+        background: $color_orange;
+        width: max-content;
+        padding: 0 5px;
+        border-radius: 5px;
+        top: 17px;
+        right: 13px;
         cursor: pointer;
       }
     }
@@ -371,6 +392,9 @@
     &active {
       box-shadow: none !important;
       outline: 0px !important;
+    }
+    &:after {
+      display: none;
     }
   }
 

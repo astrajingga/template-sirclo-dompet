@@ -164,20 +164,28 @@
         "shoppingCart": "Keranjang Belanja"
     },
     "home": {
+        "informationProductsSale": "Lebih dari +32.500 produk terjual tahun lalu di seluruh negeri dan di seluruh dunia",
         "bestSeller": "Penjualan Terbaik",
         "bestSellerDesc": "Kami memiliki beberapa rekomendasi produk lain untuk Anda",
         "featured": "Fitur",
-        "featuredDesc": "Kami memiliki beberapa rekomendasi produk lain untuk Anda",
         "featuredProducts": "Produk Unggulan",
         "loading": "Mohon Tunggu",
         "new-arrivals": "Baru",
         "ourProducts": "Produk Kami",
-        "ourProductsDesc": "Kami memiliki beberapa rekomendasi produk untuk Anda",
         "preorder": "Pre Order",
         "sale": "Penjualan",
         "showAll": "Tampilkan Semua",
         "title": "Beranda",
-        "top-rate": "Top Rate"
+        "top-rate": "Top Rate",
+        "aboutUsTitle": "LOREM IPSUM",
+        "aboutUs": "Tentang Kami",
+        "aboutUsDesc": "Sed libero erat, pretium et imperdiet at, accumsan eu magna. Vivamus vitae mollis ligula, et mattis lacus. Etiam pretium scelerisque justo.",
+        "mostPopular": "Produk Terpopuler",
+        "newArrivalProducts": "Produk Terbaru",
+        "preOrderProducts": "Produk Pre Order",
+        "whatDoTheySay": "Apa yang Mereka Bilang Tentang Kami?",
+        "viewAllTestimonial": "Lihat Semua Testimonial",
+        "followInstagram": "Ikuti Kami di Instagram"
     },
     "loader": {
         "loading": "Menunggu"
