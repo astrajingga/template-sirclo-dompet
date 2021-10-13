@@ -55,12 +55,6 @@ const Footer: FC<any> = ({ brand }) => {
         <div className="footer">
           <div className="container">
             <div className="row">
-              <div className="col-12 col-md-3">
-                <Widget pos="footer-4" widgetClassName="footer__widget-info" />
-              </div>
-              <Widget pos="footer-1" widgetClassName="col-md-2 footer__widget footer__widget-links d-none d-lg-block" />
-              <Widget pos="footer-2" widgetClassName="col-md-2 footer__widget footer__widget-links d-none d-lg-block" />
-              <Widget pos="footer-3" widgetClassName="col-md-2 footer__widget footer__widget-links d-none d-lg-block" />
               <div className="col-md-3 footer__widget">
                 <h3>{i18n.t("footer.newsletter")}</h3>
                 <p>{i18n.t("footer.newsletterDesc")}</p>
@@ -77,6 +71,12 @@ const Footer: FC<any> = ({ brand }) => {
                   />
                 </div>
               </div>
+              <div className="col-12 col-md-3">
+                <Widget pos="footer-4" widgetClassName="footer__widget-info" />
+              </div>
+              <Widget pos="footer-1" widgetClassName="col-md-2 footer__widget footer__widget-links d-none d-lg-block" />
+              <Widget pos="footer-2" widgetClassName="col-md-2 footer__widget footer__widget-links d-none d-lg-block" />
+              <Widget pos="footer-3" widgetClassName="col-md-2 footer__widget footer__widget-links d-none d-lg-block" />
               <MobileFooter />
             </div>
           </div>

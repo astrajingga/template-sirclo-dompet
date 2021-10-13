@@ -162,20 +162,28 @@
         "shoppingCart": "Shopping Cart"
     },
     "home": {
+        "informationProductsSale": "More than +32.500 products sold last year across the country and over the globe",
         "bestSeller": "Best Seller",
         "bestSellerDesc": "We have several other product recommendations for you",
         "featured": "Featured",
-        "featuredDesc": "We have several other product recommendations for you",
         "featuredProducts": "Featured Products",
         "loading": "Please Wait",
         "new-arrivals": "New Arrival",
         "ourProducts": "Our Products",
-        "ourProductsDesc": "We have several product recommendations for you",
         "preorder": "Pre Order",
         "sale": "Sale",
         "showAll": "Show All",
         "title": "Home",
-        "top-rate": "Top Rate"
+        "top-rate": "Top Rate",
+        "aboutUsTitle": "LOREM IPSUM",
+        "aboutUs": "About Us",
+        "aboutUsDesc": "Sed libero erat, pretium et imperdiet at, accumsan eu magna. Vivamus vitae mollis ligula, et mattis lacus. Etiam pretium scelerisque justo.",
+        "mostPopular": "Most Popular Product",
+        "newArrivalProducts": "New Arrival Product",
+        "preOrderProducts": "Pre-order Product",
+        "whatDoTheySay": "What Do They Say About Us?",
+        "viewAllTestimonial": "View All Testimonial",
+        "followInstagram": "Follow Us on Instagram"
     },
     "loader": {
         "loading": "Loading"

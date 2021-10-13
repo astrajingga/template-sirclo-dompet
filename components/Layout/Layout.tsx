@@ -76,7 +76,7 @@ const Layout: React.FC<LayoutPropType> = ({
         <link rel="preconnect" href={process.env.IS_PROD == "true" ?
             "http://cdn.sirclo.com" :
             "http://cdn.sirclo.com.dmmy.me"} />
-        
+
         <link
           rel="dns-prefetch"
           href={process.env.IS_PROD == "true" ?
@@ -89,36 +89,36 @@ const Layout: React.FC<LayoutPropType> = ({
         <link rel="dns-prefetch" href="https://graph.instagram.com" />
         <link rel="dns-prefetch" href="http://static.getbutton.io" />
 
-        <link 
-          rel="preload" 
+        <link
+          rel="preload"
           href="/webfonts/Karla-Bold.ttf"
-          as="font" 
+          as="font"
           crossOrigin="anonymous"
-          type="font/ttf" 
+          type="font/ttf"
         />
 
-        <link 
-          rel="preload" 
+        <link
+          rel="preload"
           href="/webfonts/Karla-BoldItalic.ttf"
-          as="font" 
+          as="font"
           crossOrigin="anonymous"
-          type="font/ttf" 
+          type="font/ttf"
         />
 
-        <link 
-          rel="preload" 
+        <link
+          rel="preload"
           href="/webfonts/Karla-Italic.ttf"
-          as="font" 
+          as="font"
           crossOrigin="anonymous"
-          type="font/ttf" 
+          type="font/ttf"
         />
 
-        <link 
-          rel="preload" 
+        <link
+          rel="preload"
           href="/webfonts/Karla-Regular.ttf"
-          as="font" 
+          as="font"
           crossOrigin="anonymous"
-          type="font/ttf" 
+          type="font/ttf"
         />
       </Head>
       <SEO

@@ -44,6 +44,15 @@
           height: 10px;
           background: $color_white;
         }
+
+        &--selected {
+          &:before {
+            background: #fac02c;
+            width: 20px;
+            border-radius: 100px;
+            height: 10px;
+          }
+        }
       }
     }
   }
@@ -310,5 +319,43 @@
 .productContainer {
   .out-of-stock {
     display: none;
+  }
+}
+
+.product-category__items {
+  &--images-name {
+    position: absolute;
+    bottom: 20px;
+    top: unset;
+    border: 0;
+  }
+}
+
+.products__item {
+  &--content-title {
+    font-family: "karla-regular" !important;
+    font-size: 18px;
+  }
+
+  &--content-price {
+    font-weight: bold;
+    font-size: 16px;
+  }
+}
+
+.heading__title {
+  h5 {
+    font-size: 25px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #FAC02C;
+    line-height: 2;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 }
