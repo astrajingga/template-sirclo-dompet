@@ -67,12 +67,22 @@
   }
 }
 
+.card-columns-categories {
+  @media screen and (max-width: 575px) {
+    column-count: 1 !important;
+  }
+
+  @media screen and (min-width: 575px) {
+    column-count: 3 !important;
+  }
+}
+
 .card-columns {
   @media screen and (max-width: 575px) {
     column-count: 1 !important;
   }
 
   @media screen and (min-width: 575px) {
-    column-count: 2 !important;
+    column-count: 4 !important;
   }
 }
