@@ -12,7 +12,7 @@ import { useBrand } from "lib/utils/useBrand";
 
 const classesLookbook = {
   containerClassName: "lookbook",
-  rowClassName: "card-columns",
+  rowClassName: "card-columns-categories",
   lookbookContainerClassName: "card lookbook__items",
   imageClassName: "lookbook__items--images",
   lookbookLabelContainerClassName: "lookbook__items--details",
