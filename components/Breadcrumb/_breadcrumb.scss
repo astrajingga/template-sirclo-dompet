@@ -2,8 +2,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-bottom: 3rem;
-  background-image: linear-gradient($color_orange_light, $color_white);
+  background-color: transparent;
+  // padding: 3rem 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  // background-image: linear-gradient($color_orange_light, $color_white);
+  
+  // background-image: linear-gradient($color_orange_light, $color_white);
 
   @media screen and (max-width: 575px) {
     padding-bottom: 1.5rem;
@@ -23,7 +29,7 @@
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 100% auto;
-    margin-bottom: 30px;
+    // margin-bottom: 50px;
 
     @media screen and (max-width: 575px) {
       margin-bottom: 20px;
@@ -32,8 +38,10 @@
 
   .breadcrumb {
     &-merlin {
-      padding: 0.25rem 3rem;
+      padding-bottom: 0;
       background-color: transparent;
+      padding-top: 0;
+      // padding: 0.25rem 1rem;
 
       &-item {
         a {

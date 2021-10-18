@@ -60,9 +60,9 @@ const classesPlaceholderBlogs = {
 
 const classesBlogRecent = {
   containerClassName: "recent-post",
-  blogRecentClassName: "recent-post__items",
-  imageClassName: "recent-post__items--image",
-  labelContainerClassName: "recent-post__items--label",
+  blogRecentClassName: "recent-post__items row",
+  imageClassName: "recent-post__items--image  col-12 col-md-12",
+  labelContainerClassName: "recent-post__items--label col-12 col-md-12",
   titleClassName: "recent-post__items--label-title",
   dateClassName: "recent-post__items--label-date",
 }
@@ -90,7 +90,7 @@ const Blog: FC<any> = ({
     >
       {allowedBlog &&
         <>
-          <Breadcrumb
+          <Breadcrumb 
             title={i18n.t("blog.title")}
             links={linksBreadcrumb}
             withImage={headerImage}
@@ -98,6 +98,36 @@ const Blog: FC<any> = ({
           />
           <div className="container">
             <div className="row">
+              <div className="col-12 col-lg-3">
+                <div className="row card-recent">
+                  <div className="col-12 col-md-6 col-lg-12">
+                    {(totalCategories > 0 || totalCategories === null) &&
+                      <>
+                        <h2 className="title-side-blogs">
+                          {i18n.t("blog.categories")}
+                        </h2>
+                        <BlogCategories
+                          classes={classesBlogCategories}
+                          getCategoriesCount={(categoriesCount) => setTotalCategories(categoriesCount)}
+                        />
+                      </>
+                    }
+                  </div>
+                  <div className="col-12 col-md-6 col-lg-12">
+                    <h2 className="title-side-blogs">{i18n.t("blog.recentPost")}</h2>
+                    <BlogRecent
+                      classes={classesBlogRecent}
+                      limit={5}
+                      linkPrefix="blog"
+                      thumborSetting={{
+                        width: 100,
+                        format: "webp",
+                        quality: 85
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
               <div className="col-12 col-lg-9">
                 <Blogs
                   classes={classesBlogs}
@@ -132,36 +162,6 @@ const Blog: FC<any> = ({
                     />
                   }
                 />
-              </div>
-              <div className="col-12 col-lg-3">
-                <div className="row">
-                  <div className="col-12 col-md-6 col-lg-12">
-                    {(totalCategories > 0 || totalCategories === null) &&
-                      <>
-                        <h2 className="title-side-blogs">
-                          {i18n.t("blog.categories")}
-                        </h2>
-                        <BlogCategories
-                          classes={classesBlogCategories}
-                          getCategoriesCount={(categoriesCount) => setTotalCategories(categoriesCount)}
-                        />
-                      </>
-                    }
-                  </div>
-                  <div className="col-12 col-md-6 col-lg-12">
-                    <h2 className="title-side-blogs">{i18n.t("blog.recentPost")}</h2>
-                    <BlogRecent
-                      classes={classesBlogRecent}
-                      limit={5}
-                      linkPrefix="blog"
-                      thumborSetting={{
-                        width: 100,
-                        format: "webp",
-                        quality: 85
-                      }}
-                    />
-                  </div>
-                </div>
               </div>
             </div>
           </div>

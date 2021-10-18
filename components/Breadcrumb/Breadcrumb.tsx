@@ -21,14 +21,15 @@ const Breadcrumb: FC<any> = ({
   lng
 }) => {
   return (
+    <div>
     <div
       className={`section-breadcrumb ${withImage ? "section-breadcrumb__image" : ""}`}
       style={{ backgroundImage: `url(${withImage})` }}
     >
-      <div style={breadcrumbTitleClasses}>
-      <h1 className="section-breadcrumb__title">{title}</h1>
-      </div>
-      <nav aria-label="breadcrumb">
+      <h1 className="section-breadcrumb__title">{title}</h1>  
+    </div>
+    <div className="section-breadcrumb" >
+        <nav aria-label="breadcrumb">
         <ol className="breadcrumb breadcrumb-merlin">
           {
             links.map((el, idx) => {
@@ -60,6 +61,7 @@ const Breadcrumb: FC<any> = ({
           }
         </ol>
       </nav>
+      </div>
     </div>
   )
 }

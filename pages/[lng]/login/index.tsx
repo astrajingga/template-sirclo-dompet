@@ -47,7 +47,7 @@ const classesWhatsAppOTP = {
   formWAContainerClassName: "login-page-form",
   inputLabelClassName: "login-page-label",
   inputWANumberClassName: "form-control sirclo-form-input",
-  btnSubmitClassName: "btn btn-orange btn-long btn-center login-page-btn",
+  btnSubmitClassName: "btn login-page-btnLogin btn-long btn-center col-12 col-md-12",
   inputDescriptionClassName: "text-center",
   termsAndConditionClassName: "login-page-pointer",
   privacyPolicyClassName: "login-page-pointer",
@@ -58,7 +58,7 @@ const classesWhatsAppOTP = {
   confirmationBackLabelClassName: "login-page-backTitle ml-2",
   confirmationHeaderTitleClassName: "login-page-title",
   confirmationHeaderSubtitleClassName: "login-page-subtitle",
-  confirmationButtonOTPClassName: "btn btn-orange btn-long btn-center login-page-btn login-page-btnOtp",
+  confirmationButtonOTPClassName: "btn login-page-btnLogin btn-long btn-center col-12 col-md-12",
   anotherLoginMethodClassName: "login-page-pointer",
   //verification
   verificationContainerClassName: "login-page-column",
@@ -69,7 +69,7 @@ const classesWhatsAppOTP = {
   fieldOTPInputContainerClassName: "login-page-inputContainer",
   fieldOTPInputClassName: "form-control sirclo-form-input login-page-inputOtp",
   verificationFooterClassName: "login-page-column",
-  btnResendOTPClassName: "btn btn-orange btn-long btn-center login-page-btn login-page-btnResend",
+  btnResendOTPClassName: "btn login-page-btnLogin btn-long btn-center col-12 col-md-12",
   btnChangeMethodClassName: "login-page-pointer",
   //choose account
   chooseAccountContainerClassName: "login-page-column",
@@ -201,7 +201,7 @@ const LoginPage: FC<any> = ({
             </div>
           </div>
         </div>
-        <Widget pos="login-image" widgetClassName="widget-login" />
+        {/* <Widget pos="login-image" widgetClassName="widget-login" /> */}
       </section>
     </Layout>
   )
