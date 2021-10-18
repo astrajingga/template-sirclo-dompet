@@ -19,7 +19,7 @@ const classesContact = {
   titleClassName: "contact-page-title",
   inputContainerClassName: "sirclo-form-row",
   inputClassName: "form-control sirclo-form-input",
-  buttonClassName: "btn btn-orange btn-long",
+  buttonClassName: "btn login-page-btnLogin btn-long float-right",
 };
 
 const classesPlaceholderContact = {
@@ -50,7 +50,7 @@ const ContactPage: FC<any> = ({
           <Breadcrumb title={i18n.t("contact.title")} links={linksBreadcrumb} lng={lng} />
           <div className="container mb-5">
             <div className="row">
-              <div className="col-12 col-sm-12 col-lg-7">
+              <div className="col-12 col-sm-12 col-lg-12">
                 <Contact
                   classes={classesContact}
                   isAddressDetail={false}
@@ -58,9 +58,10 @@ const ContactPage: FC<any> = ({
                   onError={() => toast.error(i18n.t("contact.submitError"))}
                 />
               </div>
-              <div className="col-12 col-sm-12 col-lg-5">
+              <br></br><br></br>
+              <div className="col-12 col-sm-12 col-lg-12">
                 <Widget
-                  pos="footer-4"
+                  pos="login-image"
                   widgetClassName="contact-info"
                   thumborSetting={{
                     width: size.width < 768 ? 375 : 512,

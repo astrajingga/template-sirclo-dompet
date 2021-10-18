@@ -39,6 +39,10 @@
     border-left: solid 1px $color_orange;
     border-right: solid 1px $color_orange;
 
+    @media screen and (max-width: 767px) {
+      border: none;
+    }
+
     &--features {
       display: flex;
       align-items: center;
@@ -52,6 +56,11 @@
       padding: 0 16px;
       // border-radius: 6px;
       background: $color_white;
+
+      @media screen and (max-width: 767px) {
+        border: 1px solid $color_orange;
+         border-radius: 6px;
+      }
 
       &-icon {
         color: $color_orange;
@@ -584,6 +593,7 @@
   padding-bottom: 0;
   // border-radius: 5px;
   // margin-bottom: 2rem;
+   
 
   &_title {
     font-weight: normal;
@@ -611,6 +621,7 @@
 
   @media screen and (max-width: 767px) {
     margin-top: 29px;
+    border: none;
   }
 }
 

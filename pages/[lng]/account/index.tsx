@@ -60,6 +60,7 @@ const classesAccount = {
   passwordViewButtonClassName: "btn button-view-password",
   buttonClassName: "btn btn-orange-outer btn-long float-right ml-2",
   tableClassName: "table",
+
   orderHistoryContainerClassName: "order-history-container",
   orderItemClassName: "order-history-items",
   orderHeaderClassName: "order-history-items__header",
@@ -68,6 +69,7 @@ const classesAccount = {
   orderDateClassName: "order-history-items__date",
   orderBodyClassName: "order-history-items-body",
   invoiceButtonClassName: "order-history-items-body invoice-button",
+  
   datePickerInputClassName: "date-picker__input",
   datePickerCalendarClassName: "date-picker__calendar",
 
@@ -91,6 +93,7 @@ const classesAccount = {
   orderedItemDetailNeedReviewClassName: "ordered-button ordered-button-needReview btn",
   orderedItemDetailReviewedClassName: "ordered-button ordered-button-reviewed btn",
   buyerNoteLabelClassName: "label",
+  
   shippingContainerClassName: "order-history-shipping-container",
   shippingDetailsClassName: "order-history-shipping-details",
   shippingDetailsLabelClassName: "label",
@@ -100,6 +103,7 @@ const classesAccount = {
   paymentMethodLabelClassName: "label",
   orderFooterClassName: "order-history-footer",
   totalCostClassName: "order-history-footer__total-cost",
+  
   passwordStrengthBarContainerClassName: "sirclo-form-password-strength-bar-container",
   passwordStrengthBarClassName: "sirclo-form-password-strength-bar",
   passwordStrengthLabelClassName: "sirclo-form-password-strength-label",
@@ -112,6 +116,7 @@ const classesAccount = {
   shipmentBodyClassName: "order-history-shipmentTracking__body",
   shipmentFooterClassName: "order-history-shipmentTracking__footer",
   shippingTrackerButton: "order-history-shipmentTracking__toggle",
+  
   shipmentHeaderTextClassName: "track-shipment__headerText",
   shipmentTextClassName: "track-shipment__text",
   shipmentListClassName: "track-shipment__list",
@@ -163,6 +168,7 @@ const classesAccount = {
   popupConfirmationOrderWrapButtonClassName: "orderConfirmPopup__buttons",
   popupConfirmationOrderButtonConfirmClassName: "orderConfirmPopup__button orderConfirmPopup__button--confirm btn btn-orange-outer",
   popupConfirmationOrderButtonNoClassName: "orderConfirmPopup__button orderConfirmPopup__button--cancel btn btn-orange",
+  
   orderControlClassName: "order-history__actions",
   orderedItemDetailDeliveredClassName: "order-history-items-body invoice-button",
 
