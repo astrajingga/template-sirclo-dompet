@@ -24,7 +24,8 @@ footer {
   .footer {
     margin-top: 3rem;
     padding: 3rem 0;
-    background-color: $color_gray;
+    background-color: #242431;
+    color: white;
 
     @media screen and (max-width: 575px) {
       padding-bottom: 0;
@@ -36,6 +37,7 @@ footer {
         font-size: 16px;
         text-transform: none;
         margin-bottom: 23px;
+        color: #FAC02C;
       }
 
       &-info {
@@ -54,6 +56,10 @@ footer {
       &-links {
         padding-left: 3.5rem;
 
+        a {
+          color: white !important;
+        }
+
         ul {
           list-style: none;
           margin: 0;
@@ -64,7 +70,7 @@ footer {
 
             a {
               text-decoration: none;
-              color: #000000;
+              color: white !important;
             }
           }
         }
@@ -72,6 +78,7 @@ footer {
 
       &--socialMedia {
         margin: 1rem 0;
+        color: white;
 
         .circle-icon {
           margin: 0 0.5rem;
@@ -143,7 +150,8 @@ footer {
       &-input {
         border: none;
         padding: 0.5rem;
-        border-radius: 4px;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
 
         &::placeholder {
           color: $color_gray_semi_dark;
@@ -160,6 +168,12 @@ footer {
           margin-bottom: 10px;
         }
       }
+
+      &-btn {
+        border-radius: 0;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
     }
 
     &-bottom {
@@ -167,12 +181,14 @@ footer {
       font-size: 13px;
       text-align: center;
       text-transform: uppercase;
+      background-color: #111011;
+      color: white;
 
       & img, video, iframe
       {
         display: none !important;
       }
-  
+
       div, h1, h2, h3, h4, h5, h6, p
       {
         text-align: center !important;

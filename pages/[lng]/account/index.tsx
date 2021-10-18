@@ -24,7 +24,7 @@ import {
   faLine
 } from "@fortawesome/free-brands-svg-icons";
 import{
-  AlertCircle 
+  AlertCircle
 } from "react-feather"
 import { toast } from "react-toastify";
 import { useBrand } from "lib/utils/useBrand";
@@ -58,7 +58,7 @@ const classesAccount = {
   passwordContainerClassName: "d-flex align-items-center position-relative w-100",
   passwordInputClassName: "form-control sirclo-form-input size-label",
   passwordViewButtonClassName: "btn button-view-password",
-  buttonClassName: "btn btn-orange-outer btn-long float-right ml-2",
+  buttonClassName: "btn btn-dark-blue btn-long float-right ml-2",
   tableClassName: "table",
   orderHistoryContainerClassName: "order-history-container",
   orderItemClassName: "order-history-items",
@@ -257,7 +257,7 @@ const Accounts: FC<any> = ({
               <h2 className="account-page_profile--title">
                 {i18n.t("account.hi")}
                 {", "}
-                <span>{name || "Guys"}</span>
+                <span className="font-weight-bold">{name || "Guys"}</span>
               </h2>
             </div>
             <Account

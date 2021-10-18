@@ -22,7 +22,7 @@ const newsletterClasses = {
   containerClassName: "newsletter",
   labelClassName: "newsletter-label",
   inputClassName: "newsletter-input",
-  buttonClassName: "btn btn-orange",
+  buttonClassName: "btn btn-orange newsletter-input-btn",
 };
 
 const socialMediaIcons = {
@@ -35,7 +35,7 @@ const socialMediaIcons = {
 
 const classesMediaSocial = {
   socialMediaIconContainer: "socialIcons",
-  socialMediaIcon: "circle-icon",
+  socialMediaIcon: "circle-icon text-white",
 };
 
 const Footer: FC<any> = ({ brand }) => {
@@ -72,7 +72,7 @@ const Footer: FC<any> = ({ brand }) => {
                 </div>
               </div>
               <div className="col-12 col-md-3">
-                <Widget pos="footer-4" widgetClassName="footer__widget-info" />
+                <Widget pos="footer-4" widgetClassName="footer__widget" />
               </div>
               <Widget pos="footer-1" widgetClassName="col-md-2 footer__widget footer__widget-links d-none d-lg-block" />
               <Widget pos="footer-2" widgetClassName="col-md-2 footer__widget footer__widget-links d-none d-lg-block" />

@@ -41,7 +41,7 @@ const bannerClasses = {
 
 const classesProductCategory = {
   parentCategoryClassName: "row product-category",
-  categoryItemClassName: "col-3 col-md-3 product-category__items",
+  categoryItemClassName: "col-6 col-md-3 product-category__items",
   categoryValueClassName: "product-category__items--value",
   dropdownIconClassName: "d-none",
   imgContainerClassName: "product-category__items--images",
