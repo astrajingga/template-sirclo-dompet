@@ -347,8 +347,9 @@
   h5 {
     font-size: 25px;
     padding-bottom: 10px;
-    border-bottom: 4px solid #FAC02C;
-    line-height: 2;
+    line-height: 1.5;
+    white-space: normal;
+    width: auto;
 
     &::before {
       display: none;
@@ -357,5 +358,11 @@
     &::after {
       display: none;
     }
+  }
+}
+
+.navbar{
+  @media screen and (max-width: 992px) {
+    display: none;
   }
 }
