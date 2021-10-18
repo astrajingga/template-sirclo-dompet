@@ -24,7 +24,7 @@
     }
 
     &_title
-    { 
+    {
       & > span
       {
         font-size: 14px;
@@ -48,14 +48,14 @@
 .paymentConfirmation
 {
   &_buttonConfirm {
-    @extend 
+    @extend
       .btn,
       .btn_primary;
 
     width: 100%;
     margin-top: 17px;
     height: 40px;
-    
+
     &:disabled{
       background-color: $color_gray_semi_dark !important;
     }
@@ -115,7 +115,7 @@
     span {
       display: flex;
       color: $color_red_error;
-      font-size: 15px;
+      font-size: 20px;
     }
   }
 
