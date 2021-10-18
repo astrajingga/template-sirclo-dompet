@@ -83,19 +83,6 @@ const ProfileMenu = ({
   return (
     <div className="navbar-nav navbar-merlin">
       <a
-        className="navbar-profile-menu__heart d-flex align-items-center px-4 line-merlin"
-        onClick={(e) => e.preventDefault()}
-        href="#"
-      >
-        <FontAwesomeIcon
-          className="nav--icon text-white"
-          icon={faHeart}
-        />
-        <span className="badge-cart" onClick={toogleCart}>
-          {data?.totalItem}
-        </span>
-      </a>
-      <a
         className="navbar-profile-menu__cart d-flex align-items-center px-4 line-merlin"
         onClick={(e) => e.preventDefault()}
         href="#"
