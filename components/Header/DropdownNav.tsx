@@ -13,8 +13,6 @@ const DropdownNav = ({ title, children }) => {
     if (isDropdown) setDropdown(false);
   }
 
-  const userNameDisplay = "Guest";
-
   return (
     <>
       <div className="dropdown inline px-4 d-flex align-items-center line-merlin">
@@ -23,7 +21,7 @@ const DropdownNav = ({ title, children }) => {
           type="button"
           onClick={() => setDropdown(!isDropdown)}
         >
-          {title} {userNameDisplay}
+          {title}
         </button>
         <div className="dropdown-menu dropdown-menu-right dropdown-merlin" style={{ display: isDropdown ? 'block' : 'none' }}>
           {children}

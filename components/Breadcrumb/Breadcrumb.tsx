@@ -8,6 +8,12 @@ export type PageHeadingPropsType = {
   lng: any
 }
 
+const breadcrumbTitleClasses = {
+  padding: "3em 3em",
+  backgroundColor: "#F1F2F7",
+  width: "100%"
+};
+
 const Breadcrumb: FC<any> = ({
   title,
   links,
@@ -36,11 +42,21 @@ const Breadcrumb: FC<any> = ({
                   </li>
                 )
               }
-              return (
-                <li className="breadcrumb-item breadcrumb-merlin-item" key={idx}>
-                  <a className="breadcrumb-merlin-item__link">{el}</a>
-                </li>
-              )
+
+              if (idx === (links.length - 1)) {
+                return (
+                  <li className="breadcrumb-item breadcrumb-merlin-item" key={idx}>
+                    <a className="breadcrumb-merlin-item__link font-weight-bold">{el}</a>
+                  </li>
+                )
+              }
+              else {
+                return (
+                  <li className="breadcrumb-item breadcrumb-merlin-item" key={idx}>
+                    <a className="breadcrumb-merlin-item__link">{el}</a>
+                  </li>
+                )
+              }
             })
           }
         </ol>

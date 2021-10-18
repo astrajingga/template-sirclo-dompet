@@ -8,7 +8,7 @@ const SideMenu = ({ title, openSide, toogleSide, children, positionSide }) => {
         <div className="header-side-menu">
           <h6>{title}</h6>
           <FontAwesomeIcon
-            className="icon"
+            className="icon text-white"
             icon={faTimes}
             onClick={toogleSide}
           />

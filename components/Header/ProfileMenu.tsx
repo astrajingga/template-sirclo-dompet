@@ -110,7 +110,20 @@ const ProfileMenu = ({
         </span>
       </a>
       <DropdownNav
-        title={<FontAwesomeIcon className="nav--icon text-white" icon={faUserCircle} />}
+        title={
+          <PrivateComponent
+            Auth={
+              <>
+                <FontAwesomeIcon className="nav--icon text-white" icon={faUserCircle} />&nbsp;{i18n.t("header.account")}
+              </>
+            }
+            NoAuth={
+              <>
+                <FontAwesomeIcon className="nav--icon text-white" icon={faUserCircle} />&nbsp;{i18n.t("header.login")}
+              </>
+            }
+          />
+        }
       >
         <PrivateComponent
           Auth={

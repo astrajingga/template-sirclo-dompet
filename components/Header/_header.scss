@@ -184,7 +184,6 @@
 
   .navbar-merlin {
     height: 70px;
-    background-color: #2C3E50;
   }
 
   .navbar-profile-menu {
@@ -447,7 +446,7 @@
 
   .navbar-mobile {
     width: 100%;
-    background: $color_white;
+    background: #2C3E50;
     position: sticky;
     z-index: 2;
 
@@ -462,6 +461,7 @@
     .mobile-menu-icon {
       height: 1.5em;
       cursor: pointer;
+      color: white;
     }
 
     &__shortcut {
@@ -552,7 +552,7 @@
 
     a {
       text-decoration: none;
-      color: $color_black;
+      color: white;
     }
 
     &__sub {
