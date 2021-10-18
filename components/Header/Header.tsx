@@ -53,7 +53,7 @@ const Header = ({ lng }) => {
     paddingRight: "0",
     paddingLeft: "200px",
     justifyContent: "left",
-    backgroundColor: "#3C4144"
+    backgroundColor: "#2C3E50"
   };
 
   return (
