@@ -92,13 +92,18 @@ const PaymentConfirmationPage: FC<any> = ({
       lngDict={lngDict}
       brand={brand}
     >
-      <SEO title={i18n.t("paymentConfirm.heading")} />
+        <SEO title={i18n.t("paymentConfirm.heading")} />
       <section>
         <div className="container">
           <div className={styles.paymentNotif_container}>
             <div className={styles.paymentNotif_inner}>
               <div className={styles.paymentNotif_inner_title}>
-                <h3>{i18n.t("paymentConfirm.heading")}</h3>
+                <div style={{ textAlign: "center" }}>
+                  <h3>{i18n.t("paymentConfirm.heading")}</h3>
+                </div>
+                <div>
+                  {i18n.t("")}
+                </div>
               </div>
 
 

@@ -207,24 +207,6 @@
         cursor: pointer;
       }
     }
-
-    &__heart {
-      position: relative;
-
-      .badge-cart {
-        position: absolute;
-        font-family: "karla-bold";
-        font-size: 10px;
-        color: $color_white;
-        background: $color_orange;
-        width: max-content;
-        padding: 0 5px;
-        border-radius: 5px;
-        top: 17px;
-        right: 13px;
-        cursor: pointer;
-      }
-    }
   }
 
   .search {

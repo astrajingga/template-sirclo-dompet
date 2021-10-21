@@ -84,6 +84,8 @@
         "product": "Product Name, Size & Color",
         "quantity": "Quantity",
         "title": "Shopping Cart",
+        "continue" : "Not ready yet?",
+        "Toproduct" : "Continue Shopping",
         "unknownSKU": "Unknown SKU",
         "unpublishedProduct": "Unpublish Product",
         "writeNoteToSeller": "Write Note To Seller"
@@ -162,28 +164,21 @@
         "shoppingCart": "Shopping Cart"
     },
     "home": {
-        "informationProductsSale": "More than +32.500 products sold last year across the country and over the globe",
         "bestSeller": "Best Seller",
         "bestSellerDesc": "We have several other product recommendations for you",
         "featured": "Featured",
+        "featuredDesc": "We have several other product recommendations for you",
         "featuredProducts": "Featured Products",
         "loading": "Please Wait",
         "new-arrivals": "New Arrival",
+        "newProduct": "New Arrival",
         "ourProducts": "Our Products",
+        "ourProductsDesc": "We have several product recommendations for you",
         "preorder": "Pre Order",
         "sale": "Sale",
         "showAll": "Show All",
         "title": "Home",
-        "top-rate": "Top Rate",
-        "aboutUsTitle": "LOREM IPSUM",
-        "aboutUs": "About Us",
-        "aboutUsDesc": "Sed libero erat, pretium et imperdiet at, accumsan eu magna. Vivamus vitae mollis ligula, et mattis lacus. Etiam pretium scelerisque justo.",
-        "mostPopular": "Most Popular Product",
-        "newArrivalProducts": "New Arrival Product",
-        "preOrderProducts": "Pre-order Product",
-        "whatDoTheySay": "What Do They Say About Us?",
-        "viewAllTestimonial": "View All Testimonial",
-        "followInstagram": "Follow Us on Instagram"
+        "top-rate": "Top Rate"
     },
     "loader": {
         "loading": "Loading"
@@ -305,6 +300,7 @@
         "shipping": "Shipping",
         "uniqueCode": "Unique Code",
         "voucher": "Voucher",
+        "title": "Payment",
         "warning": "Unable to proceed transaction amount below 10,000"
     },
     "paymentConfirm": {
@@ -349,19 +345,25 @@
         "unfinishDesc": "Please make a repayment process"
     },
     "placeOrder": {
+        "checkOrder": "Check Orders",
         "fieldNotComplete": "Please complete the field",
-        "haveAnAccount": "Already have an account?",
-        "shipToDiffAddress": "Send to different address?",
-        "signUp": "Sign up an Account",
-        "title": "Place Order"
+        "haveAnAccount": "Do you have an account?",
+        "orderSummary": "Order Summary",
+        "shipToDiffAddress": "Ship to different address?",
+        "signUp": "Also sign me up on Checkout",
+        "userInformation": "Information",
+        "notes": "Notes"
     },
     "product": {
+        "clear" : "Clear All",
         "addToCart": "Add To Cart",
+        "adjust": "Adjust",
         "all": "All",
         "backToHome": "Back to Home",
         "buyNow": "Buy Now",
         "comingSoon": "Coming Soon",
         "day": "Day",
+        "back": "Back",
         "description": "Description",
         "destination": "Destination",
         "detailProduct": "Product Detail",
@@ -612,5 +614,9 @@
         "whatsappNumber": "Whatsapp Number",
         "willSendOTP": "We will send a verification code via WhatsApp number",
         "wrongOTP": "Incorrect OTP code"
+    },
+    "instaFeed": {
+        "title": "@drivenon_club",
+        "titleDesc": "Follow us on Instagram"
     }
 }

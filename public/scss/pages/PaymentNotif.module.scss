@@ -24,7 +24,7 @@
     }
 
     &_title
-    { 
+    {
       & > span
       {
         font-size: 14px;
@@ -48,14 +48,14 @@
 .paymentConfirmation
 {
   &_buttonConfirm {
-    @extend 
+    @extend
       .btn,
       .btn_primary;
 
     width: 100%;
     margin-top: 17px;
     height: 40px;
-    
+
     &:disabled{
       background-color: $color_gray_semi_dark !important;
     }
@@ -75,8 +75,11 @@
   }
   &_detailHeader {
     padding: 16px;
-    background:rgba(251, 192, 45, 0.5);
     display: flex;
+    background:white;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     justify-content: space-between;
   }
   &_detailTitle {
@@ -89,13 +92,19 @@
     margin: auto 0px;
     height: auto;
     color: $color_white;
-    background: $color_orange_dark;
+    background: #EEA738 !important;
     padding: 5px 10px;
     border-radius: 20px;
     font-weight: inherit;
   }
   &_detailContent {
     padding: 16px;
+    background:white;
+    border-left: 1px solid rgba(0, 0, 0, .2);
+    border-right: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 
     section {
       background: $color_white;
@@ -114,8 +123,8 @@
   &_detailTotalAmount {
     span {
       display: flex;
-      color: $color_red_error;
-      font-size: 15px;
+      color: black;
+      font-size: 20px;
     }
   }
 
@@ -141,7 +150,7 @@
   }
 
   &_detailDropdown {
-    color: $color_orange_dark;
+    color: #2296CB;
   }
 
   &_detailPriceBreakdown, &_detailTotalField {
