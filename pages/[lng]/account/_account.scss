@@ -289,7 +289,8 @@
   }
 
   &_membershipStatus {
-    background: $color_orange_light;
+    // background: $color_orange_light;
+    background-color: white;
     border: 1px solid $color_orange_low;
     padding: 1rem;
     border-radius: 2px;

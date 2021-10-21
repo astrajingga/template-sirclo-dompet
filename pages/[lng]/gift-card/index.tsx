@@ -10,7 +10,7 @@ const classesGiftCard = {
   inputContainerClassName: "sirclo-form-row",
   labelClassName: "giftcard-label",
   inputClassName: "form-control sirclo-form-input",
-  buttonClassName: "btn btn-orange btn-long float-right"
+  buttonClassName: "btn login-page-btnLogin btn-long float-right"
 };
 
 const GiftCardPage: FC<any> = ({
@@ -34,12 +34,12 @@ const GiftCardPage: FC<any> = ({
         <div className="container">
           <div className="giftcard-page-container">
             <div className="giftcard-page-inner">
-              <h3 className="giftcard-page-title">
-                {i18n.t("giftCard.welcome")}
-              </h3>
-              <span className="giftcard-page-subtitle">
-                {i18n.t("giftCard.desc")}
-              </span>
+              {/* <h3 className="giftcard-page-title"> */}
+                {/* {i18n.t("giftCard.welcome")} */}
+              {/* </h3> */}
+              {/* <span className="giftcard-page-subtitle"> */}
+                {/* {i18n.t("giftCard.desc")} */}
+              {/* </span> */}
               <GiftCard classes={classesGiftCard} />
             </div>
           </div>

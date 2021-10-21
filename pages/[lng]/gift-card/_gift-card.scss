@@ -11,11 +11,14 @@
   &-inner
   {
     width: 650px;
-    padding: 1.5rem;
+    // padding: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
     align-content: center;
-    border-radius: 5px;
+    // border-radius: 5px;
     background-color: $color_white;
-    box-shadow: 0 0 15px rgba(0,0,0,.15);
+    // box-shadow: 0 0 15px rgba(0,0,0,.15);
 
     .giftcard-note
     {

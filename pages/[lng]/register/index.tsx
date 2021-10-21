@@ -34,7 +34,7 @@ const classesRegister = {
   inputClassName: "form-control sirclo-form-input",
   labelRequiredClassName: "col-12",
   verificationContainerClassName: "col-12 mb-3",
-  buttonClassName: "btn btn-orange btn-long m-3",
+  buttonClassName: "btn login-page-btnLogin m-3 col-12 col-md-6",
   passwordStrengthBarContainerClassName:
     "sirclo-form-password-strength-bar-container",
   passwordStrengthBarClassName: "sirclo-form-password-strength-bar",
@@ -81,7 +81,7 @@ const RegisterPage: FC<any> = ({
       <section>
         {/* <div className="container"> */}
           <div className="row">
-            <div className="col-12 col-sm-12 col-lg-4">
+            <div className=" col-12 col-sm-12 col-lg-4">
               <Widget pos="main-content-2" widgetClassName="widget-login" />
             </div>
             <div className="col-12 col-sm-12 col-lg-8">

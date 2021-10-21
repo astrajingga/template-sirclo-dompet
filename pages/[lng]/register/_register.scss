@@ -3,6 +3,9 @@
     // margin-bottom: 5rem;
     padding-left: 2rem;
     padding-right: 2rem;
+    @media screen and (max-width: 575px) {
+      padding-top: 3rem;
+    }
     // border-radius: 5px;
     // background-color: $color_white;
     // box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
