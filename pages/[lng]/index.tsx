@@ -252,7 +252,7 @@ const Home: React.FC<any> = ({
                 />
               </LazyLoadComponent>
             </div>
-            <div className="col-sm-12 col-md-6 mt-5">
+            <div className="col-sm-12 col-md-6 mt-5 aboutus__title">
               <div style={{ fontSize: "18px" }}>{ i18n.t("home.aboutUs")}</div>
               <div className="font-weight-bold py-2" style={{ fontSize: "30px" }}>{ i18n.t("home.aboutUsTitle")}</div>
               <div style={{ fontSize: "15px" }}>{ i18n.t("home.aboutUsDesc")}</div>
