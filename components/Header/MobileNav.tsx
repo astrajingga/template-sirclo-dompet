@@ -71,9 +71,9 @@ const MobileNavButton = ({ lng, actionLogout, searchProduct }) => {
   return (
     <>
       <div className="navbar-mobile d-lg-none d-md-flex">
-        <div className="container">
+        <div className="container-fluid px-0">
           <div className="d-flex justify-content-between">
-            <div className="navbar-mobile__icon">
+            <div className="navbar-mobile__icon px-4">
               <FontAwesomeIcon
                 className="mobile-menu-icon"
                 icon={faBars}
@@ -96,7 +96,10 @@ const MobileNavButton = ({ lng, actionLogout, searchProduct }) => {
                 />
               </LazyLoadComponent>
             </div>
-            <div className="navbar-mobile__icon">
+            <div
+              className="navbar-mobile__icon px-4"
+              style={{ backgroundColor: "#FBC02D" }}
+            >
               <FontAwesomeIcon
                 className="mobile-menu-icon"
                 icon={faSearch}
