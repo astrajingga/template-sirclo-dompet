@@ -175,7 +175,8 @@
   &_mapArea {
     width: 100%;
     height: 200px;
-    display: grid;
+    // display: grid;
+    position: relative;
   }
 
   &_mapPopup {
