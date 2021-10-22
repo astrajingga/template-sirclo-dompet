@@ -45,7 +45,7 @@ const classesPlaceholderBlogs = {
 
 const classesBlogRecent = {
   containerClassName: "recent-post",
-  blogRecentClassName: "recent-post__items",
+  blogRecentClassName: "recent-post__items row",
   imageClassName: "recent-post__items--image",
   labelContainerClassName: "recent-post__items--label",
   titleClassName: "recent-post__items--label-title",
@@ -80,6 +80,29 @@ const BlogSlug: FC<any> = ({
       <section className="mt-0">
         <div className="container">
           <div className="row">
+            <div className="col-12 col-lg-3 border-blog">
+              <div className="row card-recent">
+                <div className="col-12 col-md-6 col-lg-12">
+                  <h2 className="title-side-blogs">{i18n.t("blog.categories")}</h2>
+                  <BlogCategories
+                    classes={classesBlogCategories}
+                  />
+                </div>
+                <div className="col-12 col-md-6 col-lg-12">
+                  <h2 className="title-side-blogs">{i18n.t("blog.recentPost")}</h2>
+                  <BlogRecent
+                    classes={classesBlogRecent}
+                    limit={5}
+                    linkPrefix="blog"
+                    thumborSetting={{
+                      width: 100,
+                      format: "webp",
+                      quality: 85
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
             <div className="col-12 col-lg-9">
               <BlogSingle
                 classes={classesBlogSingle}
@@ -109,29 +132,6 @@ const BlogSlug: FC<any> = ({
                   </div>
                 }
               />
-            </div>
-            <div className="col-12 col-lg-3">
-              <div className="row">
-                <div className="col-12 col-md-6 col-lg-12">
-                  <h2 className="title-side-blogs">{i18n.t("blog.categories")}</h2>
-                  <BlogCategories
-                    classes={classesBlogCategories}
-                  />
-                </div>
-                <div className="col-12 col-md-6 col-lg-12">
-                  <h2 className="title-side-blogs">{i18n.t("blog.recentPost")}</h2>
-                  <BlogRecent
-                    classes={classesBlogRecent}
-                    limit={5}
-                    linkPrefix="blog"
-                    thumborSetting={{
-                      width: 100,
-                      format: "webp",
-                      quality: 85
-                    }}
-                  />
-                </div>
-              </div>
             </div>
           </div>
         </div>
