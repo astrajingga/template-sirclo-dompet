@@ -157,6 +157,10 @@
   text-align: center;
 }
 
+.border-blog {
+  border-right: 1px solid #E6E6E6;
+}
+
 .recent-post {
   list-style: none;
   padding: 0;
@@ -236,6 +240,8 @@
       font-size: 13px;
       line-height: 20px;
       color: #444;
+      text-align: justify !important;
+      text-justify: inter-word !important;
 
       img
       {
