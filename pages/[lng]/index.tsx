@@ -239,7 +239,7 @@ const Home: React.FC<any> = ({
             <div className="col-sm-12 col-md-6">
               <LazyLoadComponent>
                 <Widget
-                  pos="main-content-2"
+                  pos="main-content-1"
                   widgetClassName="widget-image-home"
                   thumborSetting={{
                     width: size.width < 768 ? 512 : 800,
