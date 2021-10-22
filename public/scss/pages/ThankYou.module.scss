@@ -80,3 +80,14 @@
     }
   }
 }
+
+.btn-dark-blue{
+  background-color: #2D3E51;
+  color: white;
+  transition: .3s;
+
+  &:hover{
+    color: white;
+    background-color: #263444;
+  }
+}

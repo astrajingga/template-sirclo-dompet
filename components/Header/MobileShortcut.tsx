@@ -18,7 +18,7 @@ const MobileShortcut = ({ lng }) => {
   return (
     <div
       className={`
-      navbar-mobile__shortcut d-lg-none 
+      navbar-mobile__shortcut d-lg-none
       ${(router.pathname === "/[lng]/cart" ||
           router.pathname === "/[lng]/place_order" ||
           router.pathname === "/[lng]/shipping_method") &&
@@ -54,25 +54,25 @@ const MobileShortcut = ({ lng }) => {
             </a>
           </Link>
         </div>
-        <div className="navbar-mobile__shortcut--item">
-          <PrivateComponent
-            Auth={
-              <Link href="/[lng]/account" as={`/${lng}/account`}>
-                <a>
-                  <FontAwesomeIcon className="icon-item" icon={faUser} />
-                  <span className="icon-title">{i18n.t("header.account")}</span>
-                </a>
-              </Link>
-            }
-            NoAuth={
-              <Link href="/[lng]/login" as={`/${lng}/login`}>
-                <a>
-                  <FontAwesomeIcon className="icon-item" icon={faUser} />
-                  <span className="icon-title">{i18n.t("header.login")}</span>
-                </a>
-              </Link>
-            }
-          />
+      <div className="navbar-mobile__shortcut--item">
+        <PrivateComponent
+          Auth={
+            <Link href="/[lng]/account" as={`/${lng}/account`}>
+              <a>
+                <FontAwesomeIcon className="icon-item" icon={faUser} />
+                <span className="icon-title">{i18n.t("header.account")}</span>
+              </a>
+            </Link>
+          }
+          NoAuth={
+            <Link href="/[lng]/login" as={`/${lng}/login`}>
+              <a>
+                <FontAwesomeIcon className="icon-item" icon={faUser} />
+                <span className="icon-title">{i18n.t("header.login")}</span>
+              </a>
+            </Link>
+          }
+        />
         </div>
       </div>
     </div>
