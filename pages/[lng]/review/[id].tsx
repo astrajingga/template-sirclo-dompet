@@ -99,6 +99,10 @@ const ReviewPage: FC<any> = ({
       />
       <section>
         <div className="container">
+          <div className="text-center pb-3">
+            <div class="font-weight-bold" style={{ fontSize: "30px" }}>{i18n.t("orderReview.writeAReview")}</div>
+            <div style={{ color: "rgba(0, 0, 0, .6)", fontSize: "15px" }}>{i18n.t("orderReview.howIsQualityProduct")}</div>
+          </div>
           <div className="orderReview">
             <OrderReview
               classes={classesOrderReview}

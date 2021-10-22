@@ -247,6 +247,8 @@
         "lineItemReviewed": "Reviewed"
     },
     "orderReview": {
+        "writeAReview": "Write a Review",
+        "howIsQualityProduct": "How is the quality of this product?",
         "agree": "Agree",
         "confirmationDescriptionTitle": "Your review cannot be changed later",
         "confirmationSubmitTitle": "Do you agree to submit your review",
