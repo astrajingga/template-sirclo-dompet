@@ -882,13 +882,14 @@ section {
 
         &--sale {
           text-decoration: line-through;
-          color: $color_red;
+          color: $color_black;
           padding-right: 10px;
 
           @media screen and (max-width: 767px) {
             display: block;
             padding-right: 0;
           }
+          
         }
       }
     }
