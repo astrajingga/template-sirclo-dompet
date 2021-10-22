@@ -14,8 +14,7 @@
   &-orderInfo {
     display: block;
     max-width: 380px;
-    background: rgba(255, 255, 241, 0.9);
-    border: 1px solid rgba(247, 190, 22, 0.9);
+    background: #F0F2F6;
     padding: 20px;
     margin: 0 auto 20px;
   }
@@ -59,7 +58,7 @@
     {
       margin: 0;
     }
-  }  
+  }
 
   &-reviewTab
   {
@@ -97,7 +96,7 @@
     display: flex;
     padding: 10px 0;
     border-top: 1px solid #E7E7E7;
-    
+
   }
 
   &-productImage
@@ -441,7 +440,7 @@
       font-size: 30px;
     }
   }
-  
+
 
   &-ratingDesc
   {

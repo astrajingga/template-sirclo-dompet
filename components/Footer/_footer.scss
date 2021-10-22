@@ -150,8 +150,7 @@ footer {
       &-input {
         border: none;
         padding: 0.5rem;
-        border-top-left-radius: 3px;
-        border-bottom-left-radius: 3px;
+        border-radius: 3px;
 
         &::placeholder {
           color: $color_gray_semi_dark;
@@ -167,12 +166,18 @@ footer {
           width: 100%;
           margin-bottom: 10px;
         }
-      }
 
-      &-btn {
-        border-radius: 0;
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
+        @media screen and (min-width: 767px) {
+          border-radius: 0;
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+
+          &-btn {
+            border-radius: 0;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+          }
+        }
       }
     }
 

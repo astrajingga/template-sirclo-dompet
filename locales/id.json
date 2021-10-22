@@ -1,5 +1,5 @@
 {
-    "account": {
+  "account": {
       "back": "Kembali ke akun saya",
       "confirmPayment": "Konfirmasi Pembayaran",
       "confirmPaymentSuccess": "Konfirmasi Pembayaran berhasil",
@@ -122,19 +122,19 @@
     },
     "article": {
       "categories": "Kategori"
-    },
-    "banner": {
+  },
+  "banner": {
       "isEmpty": "Tidak ada banner"
-    },
-    "blog": {
+  },
+  "blog": {
       "categories": "Kategori",
       "isEmpty": "Blog tidak ada",
       "leaveReply": "Tinggalkan Balasan",
       "postComment": "Kirimkan Komentar",
       "recentPost": "Postingan Terbaru",
       "title": "Blog"
-    },
-    "cart": {
+  },
+  "cart": {
       "amount": "Jumlah",
       "errorSKUDesc": "Terdapat kendala saat menambahkan barang, silahkan coba kembali",
       "errorSKUDetail": "Terdapat kendala saat menambahkan barang. Silakan hapus seluruh barang pesanan Anda, kemudian lakukan proses pembelian kembali",
@@ -168,8 +168,8 @@
       "submitError": "Gagal mengirim pesan",
       "submitSuccess": "Berhasil mengirim pesan",
       "title": "Kontak Kami"
-    },
-    "coupon": {
+  },
+  "coupon": {
       "apply": "Terapkan",
       "couponPlaceholder": "Masukan kode kupon",
       "discount": "Diskon",
@@ -184,21 +184,21 @@
       "use": "Gunakan",
       "valid": "Dapat digunakan hingga",
       "youHave": "Anda memiliki"
-    },
-    "customerDetail": {
+  },
+  "customerDetail": {
       "change": "Ganti",
       "changePin": "Ganti Pin"
-    },
-    "footer": {
+  },
+  "footer": {
       "newsletter": "Ikuti Kami",
       "newsletterDesc": "Berlangganan berita dan dapatkan penawaran eksklusif setiap minggu",
       "subscribe": "Langganan"
-    },
-    "forgotPassword": {
+  },
+  "forgotPassword": {
       "requestFail": "Pengaturan ulang sandi gagal.",
       "requestSuccessful": "Pengaturan ulang kata sandi berhasil. Silakan periksa email Anda."
-    },
-    "giftCard": {
+  },
+  "giftCard": {
       "desc": "Berikan sesuatu untuk membuat seseorang tersenyum dengan membeli kartu hadiah online kami. Email yang berisi kartu hadiah elektronik akan dikirimkan kepada mereka dan mereka dapat membelanjakannya untuk barang apa pun",
       "message": "Pesan Pribadi",
       "recipient": "Penerima",
@@ -207,14 +207,14 @@
       "title": "Kartu Ucapan",
       "value": "Nilai Kartu Hadiah",
       "welcome": "Tambahkan Kartu Hadiah ke Belanjaan Anda"
-    },
-    "global": {
+  },
+  "global": {
       "continueShopping": "Lanjutkan Berbelanja",
       "error": "Error",
       "loading": "Mohon Tunggu",
       "notImplemented": "Belum tersedia"
-    },
-    "header": {
+  },
+  "header": {
       "account": "Akun",
       "cart": "Keranjang",
       "currency": "Mata Uang",
@@ -229,28 +229,35 @@
       "searchProduct": "Pencarian Produk",
       "shop": "Toko",
       "shoppingCart": "Keranjang Belanja"
-    },
-    "home": {
+  },
+  "home": {
+      "informationProductsSale": "Lebih dari +32.500 produk terjual tahun lalu di seluruh negeri dan di seluruh dunia",
       "bestSeller": "Penjualan Terbaik",
       "bestSellerDesc": "Kami memiliki beberapa rekomendasi produk lain untuk Anda",
       "featured": "Fitur",
-      "featuredDesc": "Kami memiliki beberapa rekomendasi produk lain untuk Anda",
       "featuredProducts": "Produk Unggulan",
       "loading": "Mohon Tunggu",
       "new-arrivals": "Baru",
-      "newProduct": "Produk Terbaru",
       "ourProducts": "Produk Kami",
-      "ourProductsDesc": "Kami memiliki beberapa rekomendasi produk untuk Anda",
       "preorder": "Pre Order",
       "sale": "Penjualan",
       "showAll": "Tampilkan Semua",
       "title": "Beranda",
-      "top-rate": "Top Rate"
-    },
-    "loader": {
+      "top-rate": "Top Rate",
+      "aboutUsTitle": "LOREM IPSUM",
+      "aboutUs": "Tentang Kami",
+      "aboutUsDesc": "Sed libero erat, pretium et imperdiet at, accumsan eu magna. Vivamus vitae mollis ligula, et mattis lacus. Etiam pretium scelerisque justo.",
+      "mostPopular": "Produk Terpopuler",
+      "newArrivalProducts": "Produk Terbaru",
+      "preOrderProducts": "Produk Pre Order",
+      "whatDoTheySay": "Apa yang Mereka Bilang Tentang Kami?",
+      "viewAllTestimonial": "Lihat Semua Testimonial",
+      "followInstagram": "Ikuti Kami di Instagram"
+  },
+  "loader": {
       "loading": "Menunggu"
-    },
-    "login": {
+  },
+  "login": {
       "clickHere": "Klik disini.",
       "credential": "Masukkan kredensial Anda ke untuk masuk",
       "dontHaveAccount": "Belum punya akun?",
@@ -270,14 +277,14 @@
       "welcome": "Selamat Datang Kembali !",
       "whatsapp": "Masuk dengan Whatsapp",
       "withEmail": "Masuk dengan Email"
-    },
-    "lookbook": {
+  },
+  "lookbook": {
       "isEmpty": "Belum ada lookbook",
       "seeCollection": "Lihat Koleksi",
       "seeMore": "Lebih Banyak",
       "title": "Lookbook"
-    },
-    "membership": {
+  },
+  "membership": {
       "exchangePoints": "Tukar Poin Anda",
       "getPointPrompt": "Dapatkan poin di setiap transaksi Anda",
       "insufficientPoints": "Poin tidak mencukupi",
@@ -289,26 +296,28 @@
       "usePoints": "Gunakan Poin Anda",
       "warning": "Anda tidak bisa mendapatkan poin dari transaksi pembelian dengan menggunakan poin",
       "yourPoints": "Poin Anda"
-    },
-    "newsletter": {
+  },
+  "newsletter": {
       "inputEmailPlaceholder": "Masukan email Anda",
       "submitButton": "Berlangganan",
       "submitError": "Berlangganan tidak berhasil disimpan, silakan coba lagi!",
       "submitSuccess": "Berlangganan berhasil disimpan"
-    },
-    "notificationOptIn": {
+  },
+  "notificationOptIn": {
       "checkboxLabel": "Saya ingin menerima status pesanan melalui media sosial",
       "continuePayment": "Lanjutkan ke pembayaran",
       "description": "Anda akan mendapatkan notifikasi pesanan Anda melalui nomor whatsapp di bawah ini",
       "proceedToPayment": "Proses pembayaran",
       "title": "Perbarui melalui Media Sosial "
-    },
-    "orderHistory": {
+  },
+  "orderHistory": {
       "lineItemDelivered": "Selesaikan Pesanan",
       "lineItemNeedReview": "Beri Ulasan",
       "lineItemReviewed": "Sudah di Review"
-    },
-    "orderReview": {
+  },
+  "orderReview": {
+      "writeAReview": "Tulis Ulasan",
+      "howIsQualityProduct": "Bagaimana Kualitas dari Produk Ini?",
       "agree": "Setuju",
       "confirmationDescriptionTitle": "Ulasan Anda tidak dapat diubah nanti",
       "confirmationSubmitTitle": "Apakah Anda setuju untuk mengirimkan ulasan Anda",
@@ -328,8 +337,8 @@
       "transactionDate": "Tanggal transaksi",
       "writeReview": "Tulis Ulasan",
       "yourRating": "Penilaian kamu"
-    },
-    "orderSummary": {
+  },
+  "orderSummary": {
       "allEmpty": "Semua kolom tidak boleh kosong",
       "billingEmpty": "Semua kolom di alamat penagihan tidak boleh kosong",
       "continueShopping": "Lanjutkan Belanja",
@@ -349,13 +358,13 @@
       "viewCart": "Lihat Keranjang",
       "voucher": "Voucher",
       "voucherApplied": "Voucher digunakan"
-    },
-    "pageStepper": {
+  },
+  "pageStepper": {
       "customerInfo": "Informasi Pelanggan",
       "paymentMethod": "Metode Pembayaran",
       "shippingDetails": "Detail Pengiriman"
-    },
-    "payment": {
+  },
+  "payment": {
       "agreement": "Saya setuju dengan syarat dan ketentuan yang berlaku.",
       "availCoupon": "Kupon yang dapat di gunakan",
       "availPoint": "Poin yang dapat di gunakan",
@@ -367,10 +376,9 @@
       "shipping": "Pengiriman",
       "uniqueCode": "Kode Unik",
       "voucher": "Voucher",
-      "title": "Pembayaran",
       "warning": "Transaksi di bawah 10,000 tidak dapat diproses"
-    },
-    "paymentConfirm": {
+  },
+  "paymentConfirm": {
       "amountTransfered": "Jumlah yang di transfer",
       "confirm": "Konfirmasi pembayaran",
       "continue": "Lanjut belanja",
@@ -389,7 +397,7 @@
       "titleCheckYoutOrder": "Periksa Nomor Pesanan",
       "descCheckYoutOrder": "Untuk konfirmasi pembayaran, silahkan masukkan email dan nomor pesanan Anda.",
       "orderId": "Nomor Pesanan",
-      "placeholderOrderId": "Nomor Pesanan",
+      "placeholderOrderId":  "Nomor Pesanan",
       "email": "Email",
       "placeholderEmail": "user@gmail.com",
       "checkOrder": "Periksa Pesanan",
@@ -399,8 +407,8 @@
       "confirmationPaymentSuccess": "Konfirmasi Pembayaran berhasil",
       "pleaseLogin": "Nomor pesanan anda tidak ditemukan. Silahkan login terlebih dahulu",
       "infoUpload": "Bukti pembayaran yang sudah dikirim tidak dapat diperbaiki, pastikan data yang akan Anda kirim sudah benar!"
-    },
-    "paymentStatus": {
+  },
+  "paymentStatus": {
       "continueShopping": "Lanjutkan Berbelanja",
       "failed": "Pembayaran anda gagal diproses",
       "failedDesc": "Silakan lakukan proses pembayaran kembali",
@@ -598,8 +606,8 @@
       "track": "Lacak Pesanan",
       "trackDriver": "Lacak kurir",
       "updatePinpoint": "Ubah Pin Lokasi"
-    },
-    "sort": {
+  },
+  "sort": {
       "aToZAscending": "Nama (A-Z)",
       "aToZDescending": "Nama (Z-A)",
       "by": "Urut berdasarkan",
@@ -608,12 +616,12 @@
       "default": "Tidak berurutan",
       "priceAscending": "Harga (Terendah ke Tertinggi)",
       "priceDescending": "Harga (Tertinggi ke Terendah)"
-    },
-    "stepper": {
+  },
+  "stepper": {
       "stepperNext": "Selanjutnya",
       "stepperOf": "dari"
-    },
-    "testimonial": {
+  },
+  "testimonial": {
       "addTestimonial": "Tambahkan testimonial Anda sendiri",
       "caption": "testimoni dari pelanggan tercinta kami",
       "inputAuthor": "Nama",
@@ -636,8 +644,8 @@
       "title": "Testimonial",
       "weHave": "Kami memiliki",
       "yes": "Ya"
-    },
-    "testimonials": {
+  },
+  "testimonials": {
       "contentLabel": "Tuliskan ulasan",
       "or": "atau",
       "please": "Maaf",
@@ -646,8 +654,8 @@
       "reviewLabel": "Judul",
       "reviewTitlePlaceholder": "Judul",
       "submit": "Kirim Ulasan"
-    },
-    "thankYou": {
+  },
+  "thankYou": {
       "accountNumber": "Nomor Rekening",
       "bankAccountInformation": "Anda dapat melakukan pembayaran manual transfer melalui beberapa opsi dibawah",
       "copy": "Salin",
@@ -665,8 +673,8 @@
       "summaryTitle": "Kamu belanja apa nih?",
       "thanks": "Pesanan telah dibuat",
       "yourOrderID": "Nomor pesanan anda"
-    },
-    "whatsAppOTPInput": {
+  },
+  "whatsAppOTPInput": {
       "andConjunction": "serta",
       "changeNumber": "Ubah nomor",
       "chooseAccount": "Pilih akun",
@@ -700,4 +708,3 @@
       "titleDesc": "Ikuti kami di Instagram"
     }
   }
-  
