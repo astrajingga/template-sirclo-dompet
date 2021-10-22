@@ -316,6 +316,8 @@
       "lineItemReviewed": "Sudah di Review"
   },
   "orderReview": {
+      "writeAReview": "Tulis Ulasan",
+      "howIsQualityProduct": "Bagaimana Kualitas dari Produk Ini?",
       "agree": "Setuju",
       "confirmationDescriptionTitle": "Ulasan Anda tidak dapat diubah nanti",
       "confirmationSubmitTitle": "Apakah Anda setuju untuk mengirimkan ulasan Anda",
@@ -706,4 +708,3 @@
       "titleDesc": "Ikuti kami di Instagram"
     }
   }
-  
