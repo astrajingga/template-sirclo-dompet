@@ -24,7 +24,7 @@
       position: relative;
       bottom: 1rem;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, 40%);
       display: flex;
       justify-content: flex-start;
       list-style: none;
@@ -33,6 +33,10 @@
       max-width: 70%;
       width: max-content;
       overflow-x: auto;
+
+      @media screen and (max-width: 767px) {
+        transform: translate(-50%, 10%);
+      }
 
       @media screen and (max-width: 440px) {
         bottom: 0;
@@ -69,7 +73,7 @@
     justify-content: flex-start;
     flex-wrap: nowrap;
     position: relative;
-    
+
     & > *
     {
       min-width: 100%;
@@ -82,14 +86,14 @@
     &--detailTitle {
       &-title {
         font-family: "karla-bold";
-        font-size: 24px;
+        font-size: 22px;
       }
     }
 
     & > p {
       font-family: "karla-bold";
-      font-size: 25px;
-      color: $color_black;
+      font-size: 22px;
+      color: $color_orange;
       order: 2;
     }
 
@@ -332,7 +336,7 @@
     margin: 0;
 
     &[class*="checked"]
-    { 
+    {
       label::after
       {
         background-color: rgba($color_black, 1);
@@ -358,7 +362,7 @@
     padding: 0;
     opacity: 0;
     cursor: pointer;
-    
+
     &:checked {
       & + label {
         &::after {
@@ -380,7 +384,7 @@
     padding: 0 15px 0 calc(20px + 5px);
     height: 28px;
     flex-grow: 1;
-    
+
     &::before,
     &::after {
       content: "";
@@ -395,11 +399,11 @@
       width: 20px;
       height: 20px;
     }
-    
+
     &::before {
       border: solid 2px $color_black;
     }
-    
+
     &::after {
       background-color: rgba($color_black, 0);
       width: 10px;
@@ -488,7 +492,7 @@
       width: 86px;
       height: 86px;
       min-width: 86px;
-      
+
       img {
         width: 86px;
         height: 86px;
@@ -520,12 +524,12 @@
     &FilterInput {
       appearance: none;
       cursor: pointer;
-            
+
       &:checked + label {
         background-color: #a0aec0;
         background-color: rgba(160, 174, 192, var(--bg-opacity));
         border-width: 0;
-        border-radius: .25rem;        
+        border-radius: .25rem;
       }
     }
 
@@ -579,7 +583,7 @@
       width: 86px;
       height: 86px;
       min-width: 86px;
-      
+
       img, video {
         object-fit: cover;
         cursor: pointer;
@@ -619,7 +623,7 @@
       align-items: center;
       background: #00000047;
     }
-    
+
     &PopupImagePopup {
       position: relative;
 
@@ -657,7 +661,7 @@
       @media screen and (max-width: 767px) {
         padding: 3px 9px;
       }
-      
+
       &:disabled {
         color: #fff;
         background-color: rgba(226, 232, 240, var(--bg-opacity));
@@ -671,20 +675,20 @@
     &PopupRightButton {
       right: 0;
     }
-    
+
     &PopupButtonClose {
-     
+
     margin: 12px;
     color: gray;
     height: 20px;
-    width: 20px; 
+    width: 20px;
     position: absolute;
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 100%;
     cursor: pointer;
-      
+
     top: -10px;
     right: -10px;
     }
@@ -695,7 +699,7 @@
       margin-right: 10px;
       margin-top: 10px;
       min-width: 64px;
-      
+
       img, video {
         height: 64px;
         width: 64px;
@@ -749,10 +753,10 @@
 
     &PopupContent {
       position: relative;
-      background-color: #fff; 
+      background-color: #fff;
       padding: 20px;
       display: flex;
-      flex-direction: column;      
+      flex-direction: column;
       max-width: 66.6666vw;
       border: 0.75rem;
       max-width: 40vw;
@@ -771,7 +775,6 @@
     height: 46px;
     width: 178px;
     margin-right: 12px;
-    background-color: #2C3E50 !important;
 
     @media screen and (max-width: 767px) {
       display: block;
@@ -779,14 +782,6 @@
       width: 100%;
     }
   }
-
-  &_blueOuter
-  {
-    border-color: #2C3E50;
-    color:  #2C3E50;
-    background-color: white !important;
-  }
-  
 }
 
 .reviews {
@@ -1358,7 +1353,7 @@
       position: relative;
       margin: 0 0 16px;
       padding: 16px;
-      
+
       &Item
       {
         display: flex;
@@ -1372,7 +1367,7 @@
         width: 100%;
         min-height: 40px;
       }
-  
+
       &Logo
       {
         display: flex;
@@ -1389,7 +1384,7 @@
         width: 34px;
         height: 24px;
         overflow: hidden;
-  
+
         & > img
         {
           display: block;
@@ -1400,7 +1395,7 @@
           border: none;
         }
       }
-  
+
       &Label,
       &Value
       {
