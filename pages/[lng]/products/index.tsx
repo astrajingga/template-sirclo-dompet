@@ -1,7 +1,13 @@
 import { FC, useState, useEffect } from "react";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import Router, { useRouter } from "next/router";
-import { ProductFilter, ProductSort, Products, useI18n, Pagination } from "@sirclo/nexus";
+import {
+  ProductFilter,
+  ProductSort,
+  Products,
+  useI18n,
+  ProductCategory,
+} from "@sirclo/nexus";
 import Layout from "components/Layout/Layout";
 import Breadcrumb from "components/Breadcrumb/Breadcrumb";
 import SideMenu from "components/SideMenu/SideMenu";
@@ -19,6 +25,7 @@ import useQuery from "lib/utils/useQuery";
 import { useBrand } from "lib/utils/useBrand";
 import useWindowSize from "lib/utils/useWindowSize";
 import useInfiniteScroll from "lib/utils/useInfiniteScroll";
+import convertToTextFromQuery from "lib/utils/convertToTextFromQuery";
 
 const Quickview = dynamic(() => import("components/Quickview/Quickview"));
 
@@ -48,8 +55,14 @@ const classesProductSort = {
   sortOptionButtonClassName: "products-sort__list--items-button",
 };
 
+const classesPagination = {
+  pagingClassName: "col-12 blogs-page__pagination",
+  itemClassName: "blogs-page__paginationItem",
+  activeClassName: "blogs-page__paginationItemActive",
+};
+
 const classesProducts = {
-  productContainerClassName: "col-6 col-md-3 products__item",
+  productContainerClassName: "col-6 col-md-4 products__item",
   productImageClassName: "products__item--image",
   productImageContainerClassName: "image-container",
   productLabelContainerClassName: "products__item--content",
@@ -72,10 +85,23 @@ const classesPlaceholderProduct = {
   placeholderImage: "placeholder-item placeholder-item__product--card",
 };
 
+const classesProductCategory = {
+  parentCategoryClassName: "category_order",
+  categoryItemClassName: "category_list",
+  categoryValueClassName: "category_list_link",
+  categoryNameClassName: "category_list_item",
+  categoryNumberClassName: "ml-1",
+  dropdownIconClassName: "d-none",
+};
+
 const classesEmptyComponent = {
   emptyContainer: "products__empty",
   emptyTitle: "products__empty--title",
   emptyDesc: "products__empty--desc",
+};
+
+const classesPlaceholderCatProduct = {
+  placeholderTitle: "placeholderItem placeholderItem_productCat__title",
 };
 
 const ProductsPage: FC<any> = ({
@@ -221,140 +247,230 @@ const ProductsPage: FC<any> = ({
           </div>
         </Popup>
       )}
-      <Breadcrumb links={linksBreadcrumb} lng={lng} />
-      {/* <section> */}
-      <div className="contain">
-        {/* <div className="categories">
-            <a onClick={toogleFilter} className="categories__item">
-              <span className="categories__item--title">
-                {i18n.t("product.filter")}
-              </span>
-              <FontAwesomeIcon
-                className="categories__item--icon ml-2"
-                icon={faSlidersH}
-              />
-            </a>
-            <a onClick={toogleSort} className="categories__item">
-              <span className="categories__item--title">
-                {i18n.t("product.sort")}
-              </span>
-              <FontAwesomeIcon
-                className="categories__item--icon ml-2"
-                icon={faChevronDown}
-              />
-            </a>
-          </div> */}
-        {/* <div className="container"> */}
-        <div className="row">
-          <div className="col-2 sidebar">
-            <span className="filter">{i18n.t("product.filter")}</span>
-            <ProductFilter
-              classes={classesProductFilter}
-              withPriceInput={true}
-              withPriceValueLabel
-              withTooltip
-              tagType='radio'
-              variantType='radio'
-              colorFilterType='radio'
-              handleFilter={handleFilter}
-              loadingComponent={
-                <Placeholder
-                  classes={classesPlaceholderFilter}
-                  withList={true}
-                  listMany={10}
+      <div className="top-head">
+        <h3 className="text-capitalize">
+          {categories
+            ? convertToTextFromQuery(categories)
+            : i18n.t("product.all")}
+        </h3>
+      </div>
+      <div className="contain-product">
+        <Breadcrumb className="breadcrumb" links={linksBreadcrumb} lng={lng} />
+        <div className="col-12">
+          <ProductCategory
+            classes={classesProductCategory}
+            showCategoryNumber={false}
+            loadingComponent={
+              <div className="container">
+                <div className="row">
+                  <div className="col-6 col-md-3 mb-4">
+                    <Placeholder
+                      classes={classesPlaceholderCatProduct}
+                      withTitle
+                    />
+                  </div>
+                  <div className="col-6 col-md-3 mb-4">
+                    <Placeholder
+                      classes={classesPlaceholderCatProduct}
+                      withTitle
+                    />
+                  </div>
+                  <div className="col-6 col-md-3 mb-4">
+                    <Placeholder
+                      classes={classesPlaceholderCatProduct}
+                      withTitle
+                    />
+                  </div>
+                  <div className="d-none d-md-block col-6 col-md-3 mb-4">
+                    <Placeholder
+                      classes={classesPlaceholderCatProduct}
+                      withTitle
+                    />
+                  </div>
+                  <div className="d-none d-md-block col-6 col-md-3 mb-4">
+                    <Placeholder
+                      classes={classesPlaceholderCatProduct}
+                      withTitle
+                    />
+                  </div>
+                  <div className="d-none d-md-block col-6 col-md-3 mb-4">
+                    <Placeholder
+                      classes={classesPlaceholderCatProduct}
+                      withTitle
+                    />
+                  </div>
+                </div>
+              </div>
+            }
+          />
+        </div>
+        <div className="contain">
+          <div className="row">
+            <div className="col-12 section-sort">
+              <a onClick={toogleFilter} className="categories__item click-sort">
+                <FontAwesomeIcon
+                  className="categories__item--icon ml-2"
+                  icon={faSlidersH}
                 />
-              }
-            />
-          </div>
-          <div className="col-12 col-md-8">
-            <ProductSort
-              classes={classesProductSort}
-              type="dropdown"
-              handleSort={(selectedSort: any) => {
-                setSort(selectedSort);
-                setOpenSort(false);
-              }}
-            />
-            <div className="row products">
-              {Array.from(Array(currPage + 1)).map((_, i) => (
-                <Products
-                  key={i}
-                  tagName={tagname}
-                  pageNumber={i}
-                  itemPerPage={4}
-                  getPageInfo={setPageInfo as any}
-                  collectionSlug={categories}
-                  isQuickView={setIsQuickview}
-                  getQuickViewSlug={setSlug}
-                  quickViewFeature={true}
-                  sort={sort}
-                  filter={filterProduct}
-                  withSeparatedVariant={true}
-                  classes={classesProducts}
-                  fullPath={`product/{id}`}
-                  pathPrefix={`product`}
-                  lazyLoadedImage={false}
-                  thumborSetting={{
-                    width: size.width < 575 ? 350 : 500,
-                    format: "webp",
-                    quality: 85,
-                  }}
-                  emptyStateComponent={
-                    <div className="col-12">
-                      <EmptyComponent
-                        classes={classesEmptyComponent}
-                        logo={
-                          <FontAwesomeIcon
-                            icon={faBoxOpen}
-                            className="products__empty--icon"
-                          />
-                        }
-                        title={i18n.t("product.isEmpty")}
-                        desc={i18n.t("product.isEmptyDesc")}
-                      />
-                    </div>
-                  }
-                  loadingComponent={
-                    <>
-                      <div className="col-6 col-md-3 mb-4">
-                        <Placeholder
-                          classes={classesPlaceholderProduct}
-                          withImage={true}
-                        />
-                      </div>
-                      <div className="col-6 col-md-3 mb-4">
-                        <Placeholder
-                          classes={classesPlaceholderProduct}
-                          withImage={true}
-                        />
-                      </div>
-                      <div className="col-6 col-md-3 mb-4">
-                        <Placeholder
-                          classes={classesPlaceholderProduct}
-                          withImage={true}
-                        />
-                      </div>
-                      <div className="col-6 col-md-3 mb-4">
-                        <Placeholder
-                          classes={classesPlaceholderProduct}
-                          withImage={true}
-                        />
-                      </div>
-                    </>
-                  }
-                />
-              ))}
+                <span className="categories__item--title">
+                  {i18n.t("product.filter")}
+                </span>
+              </a>
+              <div className="nonclick-sort">
+                <div className="sort-items__item">
+                  <FontAwesomeIcon
+                    className="sort-items__item--icon ml-2"
+                    icon={faSlidersH}
+                  />
+                  <span className="sort-items__item--title">
+                    {i18n.t("product.filter")}
+                  </span>
+                </div>
+              </div>
+              <ProductSort
+                classes={classesProductSort}
+                type="dropdown"
+                handleSort={(selectedSort: any) => {
+                  setSort(selectedSort);
+                  setOpenSort(false);
+                }}
+              />
             </div>
           </div>
+          <div className="row">
+            <div className="col-2 sidebar">
+              <ProductFilter
+                classes={classesProductFilter}
+                withPriceInput={true}
+                withPriceValueLabel
+                withTooltip
+                tagType="radio"
+                variantType="radio"
+                colorFilterType="radio"
+                handleFilter={handleFilter}
+                loadingComponent={
+                  <Placeholder
+                    classes={classesPlaceholderFilter}
+                    withList={true}
+                    listMany={10}
+                  />
+                }
+              />
+            </div>
+            <div className="col-12  col-lg-10">
+              <div className="row products">
+                {Array.from(Array(currPage + 1)).map((_, i) => (
+                  <Products
+                    key={i}
+                    tagName={tagname}
+                    pageNumber={i}
+                    itemPerPage={6}
+                    getPageInfo={setPageInfo as any}
+                    collectionSlug={categories}
+                    isQuickView={setIsQuickview}
+                    getQuickViewSlug={setSlug}
+                    quickViewFeature={true}
+                    sort={sort}
+                    filter={filterProduct}
+                    withSeparatedVariant={true}
+                    callPagination={true}
+                    paginationClasses={classesPagination}
+                    classes={classesProducts}
+                    fullPath={`product/{id}`}
+                    pathPrefix={`product`}
+                    lazyLoadedImage={false}
+                    thumborSetting={{
+                      width: size.width < 575 ? 350 : 500,
+                      format: "webp",
+                      quality: 85,
+                    }}
+                    emptyStateComponent={
+                      <div className="col-12">
+                        <EmptyComponent
+                          classes={classesEmptyComponent}
+                          logo={
+                            <FontAwesomeIcon
+                              icon={faBoxOpen}
+                              className="products__empty--icon"
+                            />
+                          }
+                          title={i18n.t("product.isEmpty")}
+                          desc={i18n.t("product.isEmptyDesc")}
+                        />
+                      </div>
+                    }
+                    loadingComponent={
+                      <>
+                        <div
+                          className="col-6 col-md-4"
+                          style={{ marginTop: 10 }}
+                        >
+                          <Placeholder
+                            classes={classesPlaceholderProduct}
+                            withImage={true}
+                          />
+                        </div>
+                        <div
+                          className="col-6 col-md-4"
+                          style={{ marginTop: 10 }}
+                        >
+                          <Placeholder
+                            classes={classesPlaceholderProduct}
+                            withImage={true}
+                          />
+                        </div>
+                        <div
+                          className="col-6 col-md-4"
+                          style={{ marginTop: 10 }}
+                        >
+                          <Placeholder
+                            classes={classesPlaceholderProduct}
+                            withImage={true}
+                          />
+                        </div>
+                        <div
+                          className="col-6 col-md-4"
+                          style={{ marginTop: 10 }}
+                        >
+                          <Placeholder
+                            classes={classesPlaceholderProduct}
+                            withImage={true}
+                          />
+                        </div>
+                        <div
+                          className="col-6 col-md-4"
+                          style={{ marginTop: 10 }}
+                        >
+                          <Placeholder
+                            classes={classesPlaceholderProduct}
+                            withImage={true}
+                          />
+                        </div>
+                        <div
+                          className="col-6 col-md-4"
+                          style={{ marginTop: 10 }}
+                        >
+                          <Placeholder
+                            classes={classesPlaceholderProduct}
+                            withImage={true}
+                          />
+                        </div>
+                      </>
+                    }
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+          {/* </div> */}
         </div>
-        {/* </div> */}
       </div>
       {/* </section> */}
       <SideMenu
         title={i18n.t("product.filter")}
         openSide={openFilter}
         toogleSide={toogleFilter}
-        positionSide="right"
+        positionSide="left"
       >
         <ProductFilter
           classes={classesProductFilter}
@@ -368,21 +484,6 @@ const ProductsPage: FC<any> = ({
               listMany={10}
             />
           }
-        />
-      </SideMenu>
-      <SideMenu
-        title={i18n.t("product.sort")}
-        openSide={openSort}
-        toogleSide={toogleSort}
-        positionSide="right"
-      >
-        <ProductSort
-          classes={classesProductSort}
-          type="dropdown"
-          handleSort={(selectedSort: any) => {
-            setSort(selectedSort);
-            setOpenSort(false);
-          }}
         />
       </SideMenu>
     </Layout>

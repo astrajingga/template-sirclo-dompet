@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 .track-shipment {
   &__list {
     position: relative;
@@ -8,21 +9,20 @@
     position: relative;
     margin: 0;
     padding: 0 16px 16px 32px;
-    
+
     & > p {
-      opacity: .6;
+      opacity: 0.6;
       margin-bottom: 0;
     }
 
     &.latest {
-    
       & > p {
         opacity: 1;
       }
 
       &::before,
       &::after {
-        background-color: $color_orange;
+        background-color: $color_green_track;
       }
     }
 
@@ -42,7 +42,7 @@
       height: 14px;
       border-radius: 100%;
 
-      background-color: $color_orange_low;
+      background-color: $color_green_track_low;
       border: 2px solid $color_white;
 
       top: 4px;
@@ -54,7 +54,8 @@
       width: 2px;
       height: 100%;
 
-      background-color: $color_orange_low;
+      // border-left: 2px dashed $color_green_track_low;
+      background-color: $color_green_track_low;
 
       left: 6px;
       top: 14px;
@@ -112,16 +113,14 @@
     margin-bottom: 0;
   }
 
-
   &__footer {
     padding: 0px 22px 22px 22px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 
     button {
-      @extend 
-        .btn,
-        .btn-orange;
+      @extend .btn;
+      background-color: #f1f2f7;
       display: flex;
       align-items: center;
       position: relative !important;
@@ -132,7 +131,7 @@
       color: $color_black;
       text-transform: uppercase;
 
-      &:hover{
+      &:hover {
         color: $color_black !important;
       }
 
@@ -141,11 +140,14 @@
       }
 
       img {
-        display: inline;  
+        display: inline;
         background-color: $color_yellow;
         padding: 15px 18px;
         margin-right: 10px;
         border-radius: 38px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
       }
 
       &::after {
@@ -184,7 +186,7 @@
 
   &__note {
     background-color: $color_orange_low;
-    padding: .3rem .5rem;
+    padding: 0.3rem 0.5rem;
     border-radius: 4px;
     margin: 5px 0 !important;
   }
