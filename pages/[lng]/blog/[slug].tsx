@@ -70,17 +70,26 @@ const BlogSlug: FC<any> = ({
       lngDict={lngDict}
       brand={brand}
     >
-      <div className="blog-detail__breadcrumb">
+      {/* <div className="blog-detail__breadcrumb">
         <Breadcrumb
           title={title}
           links={linksBreadcrumb}
           lng={lng}
         />
+      </div> */}
+      <div className="top-head">
+        <h3 className="text-capitalize">
+          {title}
+        </h3>
       </div>
+      <Breadcrumb
+          links={linksBreadcrumb}
+          lng={lng}
+        />
       <section className="mt-0">
         <div className="container">
           <div className="row">
-            <div className="col-12 col-lg-3 border-blog">
+            <div className="col-12 col-lg-3 border-blog display-web">
               <div className="row card-recent">
                 <div className="col-12 col-md-6 col-lg-12">
                   <h2 className="title-side-blogs">{i18n.t("blog.categories")}</h2>
@@ -132,6 +141,29 @@ const BlogSlug: FC<any> = ({
                   </div>
                 }
               />
+            </div>
+            <div className="col-12 col-lg-3 border-blog display-app">
+              <div className="row card-recent">
+                <div className="col-12 col-md-6 col-lg-12">
+                  <h2 className="title-side-blogs">{i18n.t("blog.categories")}</h2>
+                  <BlogCategories
+                    classes={classesBlogCategories}
+                  />
+                </div>
+                <div className="col-12 col-md-6 col-lg-12">
+                  <h2 className="title-side-blogs">{i18n.t("blog.recentPost")}</h2>
+                  <BlogRecent
+                    classes={classesBlogRecent}
+                    limit={5}
+                    linkPrefix="blog"
+                    thumborSetting={{
+                      width: 100,
+                      format: "webp",
+                      quality: 85
+                    }}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

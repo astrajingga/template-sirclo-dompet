@@ -29,7 +29,12 @@ const GiftCardPage: FC<any> = ({
       lngDict={lngDict}
       brand={brand}
     >
-      <Breadcrumb title={i18n.t("giftCard.title")} links={linksBreadcrumb} lng={lng} />
+      <div className="top-head">
+        <h3 className="text-capitalize">
+          {i18n.t("giftCard.title")}
+        </h3>
+      </div>
+      <Breadcrumb links={linksBreadcrumb} lng={lng} />
       <section>
         <div className="container">
           <div className="giftcard-page-container">

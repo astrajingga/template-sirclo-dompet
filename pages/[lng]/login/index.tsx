@@ -57,8 +57,8 @@ const classesWhatsAppOTP = {
   confirmationBackContainerClassName: "login-page-back",
   confirmationBackLabelClassName: "login-page-backTitle ml-2",
   confirmationHeaderTitleClassName: "login-page-title",
-  confirmationHeaderSubtitleClassName: "login-page-subtitle",
-  confirmationButtonOTPClassName: "btn login-page-btnLogin btn-long btn-center col-12 col-md-12",
+  confirmationHeaderSubtitleClassName: "loglogin-page-btnLoginin-page-subtitle",
+  confirmationButtonOTPClassName: "btn  btn-long btn-center col-12 col-md-12",
   anotherLoginMethodClassName: "login-page-pointer",
   //verification
   verificationContainerClassName: "login-page-column",

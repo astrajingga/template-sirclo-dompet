@@ -95,11 +95,11 @@ const PlaceOrder: FC<any> = ({
         lngDict={lngDict}
         brand={brand}
       >
-        <Breadcrumb
+        {/* <Breadcrumb
           title={i18n.t("placeOrder.title")}
           links={linksBreadcrumb}
           lng={lng}
-        />
+        /> */}
         <section>
           <div className="container">
             <div className="row">

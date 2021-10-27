@@ -769,8 +769,22 @@
     }
   }
 
-  &_addToCartBtn,
+
   &_buyNowBtn
+  {
+    height: 46px;
+    width: 178px;
+    margin-right: 12px;
+    background-color: #2C3E50 !important;
+
+    @media screen and (max-width: 767px) {
+      display: block;
+      margin: 12px 0 0;
+      width: 100%;
+    }
+  }
+
+  &_addToCartBtn
   {
     height: 46px;
     width: 178px;
@@ -780,9 +794,27 @@
       display: block;
       margin: 12px 0 0;
       width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &_addToCartBtn-product
+  {
+    height: 46px;
+    width: 178px;
+    margin-right: 12px;
+    border: 1px solid #2C3E50 !important;
+
+    @media screen and (max-width: 767px) {
+      display: block;
+      margin: 12px 0 0;
+      width: 100%;
+      margin-bottom: 1rem;
     }
   }
 }
+
+
 
 .reviews {
   display: flex;

@@ -8,7 +8,7 @@ import { useBrand } from "lib/utils/useBrand";
 
 const classesLookbookSingle = {
   containerClassName: "lookbook-detail",
-  rowClassName: "card-columns",
+  rowClassName: "card-columns-categories",
   imageClassName: "card lookbook-detail__items",
 }
 
@@ -39,7 +39,7 @@ const LookbookSinglePage: FC<any> = ({
             slug={slug}
             getTitle={setTitle}
             thumborSetting={{
-              width: size.width < 768 ? 400 : 600,
+              width: size.width < 768 ? 300 : 450,
               format: "webp",
               quality: 85,
             }}

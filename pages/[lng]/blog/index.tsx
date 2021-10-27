@@ -98,7 +98,7 @@ const Blog: FC<any> = ({
           />
           <div className="container">
             <div className="row">
-              <div className="col-12 col-lg-3">
+              <div className="col-12 col-lg-3 display-web">
                 <div className="row card-recent">
                   <div className="col-12 col-md-6 col-lg-12 border-blog">
                     {(totalCategories > 0 || totalCategories === null) &&
@@ -162,6 +162,36 @@ const Blog: FC<any> = ({
                     />
                   }
                 />
+              </div>
+              <div className="col-12 col-lg-3 display-app">
+                <div className="row card-recent">
+                  <div className="col-12 col-md-6 col-lg-12 border-blog">
+                    {(totalCategories > 0 || totalCategories === null) &&
+                      <>
+                        <h2 className="title-side-blogs">
+                          {i18n.t("blog.categories")}
+                        </h2>
+                        <BlogCategories
+                          classes={classesBlogCategories}
+                          getCategoriesCount={(categoriesCount) => setTotalCategories(categoriesCount)}
+                        />
+                      </>
+                    }
+                  </div>
+                  <div className="col-12 col-md-6 col-lg-12">
+                    <h2 className="title-side-blogs">{i18n.t("blog.recentPost")}</h2>
+                    <BlogRecent
+                      classes={classesBlogRecent}
+                      limit={5}
+                      linkPrefix="blog"
+                      thumborSetting={{
+                        width: 100,
+                        format: "webp",
+                        quality: 85
+                      }}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
