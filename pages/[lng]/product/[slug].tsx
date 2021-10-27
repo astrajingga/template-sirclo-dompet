@@ -83,7 +83,7 @@ const classesProductDetail = {
   variantLabelClassName: "product-detail__right--form-variant-title",
   variantOptionsClassName: "product-detail__right--form-variant-option",
   qtyBoxClassName: "product-detail__right--form-qty",
-  addToCartBtnClassName: "product-detail_addToCartBtn btn product-detail_blueOuter",
+  addToCartBtnClassName: "product-detail_addToCartBtn-product btn",
   buyNowBtnClassName: "product-detail_buyNowBtn btn",
   descriptionClassName: "product-detail__right--desc order-5",
   additionalInfoClassName: "d-none",
@@ -289,7 +289,13 @@ const Product: FC<any> = ({
           </div>
         </Popup>
       }
-      <Breadcrumb title={i18n.t("product.detailProduct")} links={linksBreadcrumb} lng={lng} />
+
+      <div className="top-head">
+        <h3 className="text-capitalize">
+          {i18n.t("product.detailProduct")}
+        </h3>
+      </div>
+      <Breadcrumb links={linksBreadcrumb} lng={lng} />
       {data &&
         <SEO
           title={data?.details[0]?.name || ""}

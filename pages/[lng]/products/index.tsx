@@ -224,7 +224,7 @@ const ProductsPage: FC<any> = ({
               {i18n.t("cart.title")}
             </button>
             <button
-              className="btn btn-orange-outer btn-long mt-3"
+              className="btn product-detail_addToCartBtn-product btn-long mt-3"
               onClick={() => {
                 setShowModalAddToCart(false);
                 Router.push("/[lng]/products", `/${lng}/products`);

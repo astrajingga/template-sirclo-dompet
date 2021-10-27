@@ -119,11 +119,15 @@ const Cart: FC<any> = ({
       lngDict={lngDict}
       brand={brand}
     >
-      <Breadcrumb
-        title={i18n.t("cart.title")}
-        links={linksBreadcrumb}
-        lng={lng}
-      />
+      <div className="top-head">
+        <h3 className="text-capitalize">
+        {i18n.t("cart.title")}
+        </h3>
+      </div>
+        <Breadcrumb
+          links={linksBreadcrumb}
+          lng={lng}
+        />
       <div className="container">
         <div className="cart margin-step-payment">
           <div className="row">

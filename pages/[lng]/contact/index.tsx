@@ -47,7 +47,16 @@ const ContactPage: FC<any> = ({
     >
       {allowedEnquiry &&
         <>
-          <Breadcrumb title={i18n.t("contact.title")} links={linksBreadcrumb} lng={lng} />
+        <div className="top-head">
+          <h3 className="text-capitalize">
+            {i18n.t("contact.title")}
+          </h3>
+        </div>
+        <Breadcrumb
+          // title={i18n.t("account.yourAccount")}
+          links={linksBreadcrumb}
+          lng={lng}
+        />
           <div className="container mb-5">
             <div className="row">
               <div className="col-12 col-sm-12 col-lg-12">

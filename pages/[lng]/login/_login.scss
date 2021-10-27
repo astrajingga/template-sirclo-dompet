@@ -303,7 +303,10 @@
 
   
   @media screen and (max-width: 575px) {
-    // height: 100%;
+    img{
+      object-fit: cover !important;
+      height: 200px !important;
+    }
     // width: auto;
     // z-index: -1;
     // top: 0;

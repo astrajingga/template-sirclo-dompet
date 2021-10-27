@@ -49,7 +49,7 @@ const classesOrderSummary = {
   pointsIconClassName: "order-summary__header--features-icon",
   pointsTextClassName: "order-summary__header--features-label",
   pointsAppliedTextClassName: "order-summary_voucherAppliedText",
-  pointsButtonAppliedClassName: "col-6 order-summary_voucherButtonApplied b-left",
+  pointsButtonAppliedClassName: "col-12 order-summary_voucherButtonApplied b-left",
 
   pointsContainerClassName: "order-summary__popup",
   numberOfPointsClassName: "order-summary__popup--points-header",
@@ -118,7 +118,7 @@ const OrderSummaryBox: FC<any> = ({
         } order-summary__header--features`;
     }
 
-    classes.voucherButtonAppliedClassName = `${auth ? "col-6 b-right" : "col-12"
+    classes.voucherButtonAppliedClassName = `${auth ? "col-12 b-right" : "col-12"
       } order-summary_voucherButtonApplied`;
       
     return classes;

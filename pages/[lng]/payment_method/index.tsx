@@ -189,8 +189,12 @@ const PaymentMethods: FC<any> = ({
         lngDict={lngDict}
         brand={brand}
       >
+        <div className="top-head">
+        <h3 className="text-capitalize">
+        {i18n.t("placeOrder.title")}
+        </h3>
+      </div>
         <Breadcrumb
-          title={i18n.t("placeOrder.title")}
           links={linksBreadcrumb}
           lng={lng}
         />

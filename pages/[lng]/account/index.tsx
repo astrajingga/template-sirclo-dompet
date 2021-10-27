@@ -251,11 +251,18 @@ const Accounts: FC<any> = ({
       lngDict={lngDict}
       brand={brand}
     >
+
+      <div className="top-head">
+        <h3 className="text-capitalize">
+          {i18n.t("account.yourAccount")}
+        </h3>
+      </div>
       <Breadcrumb
-        title={i18n.t("account.yourAccount")}
+        // title={i18n.t("account.yourAccount")}
         links={linksBreadcrumb}
         lng={lng}
       />
+
       <div className="container">
         <div className="account-page-container">
           <div className="account-page-inner">

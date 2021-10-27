@@ -38,7 +38,7 @@ const productDetailClasses = {
   variantContainerClassName: "quickview__inner-right-detail--size-color",
   variantOptionsClassName: "quickview__inner-right-detail--size-color-select",
   qtyBoxClassName: "quickview__inner-right-detail--quantity",
-  addToCartBtnClassName: "product-detail_addToCartBtn btn btn-orange-outer my-2",
+  addToCartBtnClassName: "product-detail_addToCartBtn-product btn my-2",
   buyNowBtnClassName: "product-detail_buyNowBtn btn btn-orange my-2",
   descriptionClassName: "quickview__inner-right-detail--desc",
   accordionClassName: "quickview__inner-right-detail--desc-tab",
