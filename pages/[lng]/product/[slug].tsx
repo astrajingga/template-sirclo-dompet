@@ -83,7 +83,7 @@ const classesProductDetail = {
   variantLabelClassName: "product-detail__right--form-variant-title",
   variantOptionsClassName: "product-detail__right--form-variant-option",
   qtyBoxClassName: "product-detail__right--form-qty",
-  addToCartBtnClassName: "product-detail_addToCartBtn-product btn",
+  addToCartBtnClassName: "product-detail_addToCartBtn btn-black-outer  btn",
   buyNowBtnClassName: "product-detail_buyNowBtn btn",
   descriptionClassName: "product-detail__right--desc order-5",
   additionalInfoClassName: "d-none",
@@ -274,7 +274,7 @@ const Product: FC<any> = ({
               {i18n.t("product.successAddToCart")}
             </p>
             <button
-              className="btn btn-orange btn-long mt-4"
+              className="btn login-page-btnLogin btn-long mt-4"
               onClick={() => {
                 setShowModalAddToCart(false);
                 Router.push("/[lng]/cart", `/${lng}/cart`);
@@ -282,7 +282,7 @@ const Product: FC<any> = ({
               {i18n.t("cart.title")}
             </button>
             <button
-              className="btn btn-orange-outer btn-long mt-3"
+              className="btn btn-black-outer btn-long mt-3"
               onClick={() => setShowModalAddToCart(false)}>
               {i18n.t("global.continueShopping")}
             </button>

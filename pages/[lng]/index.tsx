@@ -185,7 +185,7 @@ const Home: React.FC<any> = ({
               {i18n.t("product.successAddToCart")}
             </p>
             <button
-              className="btn btn-orange btn-long mt-4"
+              className="btn login-page-btnLogin btn-long mt-4"
               onClick={() => {
                 setShowModalAddToCart(false);
                 Router.push("/[lng]/cart", `/${lng}/cart`);
@@ -193,7 +193,7 @@ const Home: React.FC<any> = ({
               {i18n.t("cart.title")}
             </button>
             <button
-              className="btn btn-orange-outer btn-long mt-3"
+              className="btn btn-black-outer btn-long mt-3"
               onClick={() => {
                 setShowModalAddToCart(false);
                 Router.push("/[lng]/products", `/${lng}/products`);
