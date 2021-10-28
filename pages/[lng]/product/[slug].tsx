@@ -124,35 +124,36 @@ const classesProductDetail = {
 }
 
 const ProductReviewsClasses = {
-  reviewListContainerClassName: "product-detail_reviewListContainer",
-  reviewListStarContainerClassName: "product-detail_reviewListStarContainer",
-  reviewListDescriptionClassName: "product-detail_reviewListDescription",
-  reviewListImageContainerClassName: "product-detail_reviewListImageContainer",
-  reviewListImageClassName: "product-detail_reviewListImage",
-  reviewListFooterClassName: "product-detail_reviewListFooter",
-  reviewListAuthorClassName: "product-detail_reviewListAuthor",
-  reviewListDateClassName: "product-detail_reviewListDate",
-  reviewPopupContentClassName: "product-detail_reviewPopupContent",
-  reviewPopupContainerClassName: "product-detail_reviewPopupContainer",
-  reviewPopupImagePopupClassName: "product-detail_reviewPopupImagePopup",
-  reviewPopupLeftButtonClassName: "product-detail_reviewPopupLeftButton",
-  reviewPopupRightButtonClassName: "product-detail_reviewPopupRightButton",
-  reviewPopupButtonCloseClassName: "product-detail_reviewPopupButtonClose",
-  reviewPopupImagePreviewClassName: "product-detail_reviewPopupImagePreview",
-  reviewPopupPreviewClassName: "product-detail_reviewPopupPreview",
-  itemPerPageOptionsClassName: "product-detail_reviewItemPerPageOptions",
-  filtersClassName: "product-detail_reviewFilters",
-  filterClassName: "product-detail_reviewFilter",
-  filterInputClassName: "product-detail_reviewFilterInput",
-  filterIconClassName: "product-detail_reviewFilterIcon",
-  activeFilterClassName: "product-detail_reviewActiveFilter",
-  filterLabelClassName: "product-detail_reviewFilterLabel",
-  sortOptionsClassName: "product-detail_reviewSortOptions",
-  itemPerPageClassName: "product-detail_reviewItemPerPage",
-  reviewImageContainerClassName: "product-detail_reviewImageContainer",
-  reviewImageClassName: "product-detail_reviewImage",
-  itemPerPageLabelClassName: "product-detail_reviewItemPerPageLabel",
-}
+  reviewImageContainerClassName: "ratingReview_imageContainer",
+  reviewImageClassName: "ratingReview_image",
+  filtersClassName: "ratingReview_filters",
+  filterClassName: "ratingReview_filter",
+  activeFilterClassName: "ratingReview_filterActive",
+  filterLabelClassName: "ratingReview_filterLabel",
+  filterInputClassName: "ratingReview_filterInput",
+  filterIconClassName: "ratingReview_filterIcon",
+  sortClassName: "ratingReview_sort",
+  sortOptionsClassName: "form-control ratingReview_sortOptions",
+  reviewListContainerClassName: "ratingReview_container",
+  reviewListStarContainerClassName: "ratingReview_starContainer",
+  reviewListDescriptionClassName: "ratingReview_desc",
+  reviewListImageContainerClassName: "ratingReview_imageContainer",
+  reviewListImageClassName: "ratingReview_image",
+  reviewListFooterClassName: "ratingReview_footer",
+  reviewListAuthorClassName: "ratingReview_author",
+  reviewListDateClassName: "ratingReview_date",
+  itemPerPageClassName: "ratingReview_itemPerPage",
+  itemPerPageLabelClassName: "ratingReview_itemPerPageLabel",
+  itemPerPageOptionsClassName: "ratingReview_itemPerPageOptions",
+  reviewPopupContainerClassName: "ratingReview_popupContainer",
+  reviewPopupContentClassName: "ratingReview_popupContent",
+  reviewPopupPreviewClassName: "ratingReview_popupPreview",
+  reviewPopupImagePreviewClassName: "ratingReview_popupImagePreview",
+  reviewPopupImagePopupClassName: "ratingReview_popupImage",
+  reviewPopupLeftButtonClassName: "ratingReview_popupLeftButton",
+  reviewPopupRightButtonClassName: "ratingReview_popupRightButton",
+  reviewPopupButtonCloseClassName: "ratingReview_popupButtonClose",
+};
 
 const paginationClasses = {
   pagingClassName: "orderReview-pagination-order",
@@ -191,6 +192,7 @@ const Product: FC<any> = ({
   const allowedProductRecommendation = isProductRecommendationAllowed();
   const [productId, setProductId] = useState(null);
   const [totalItems, setTotalItems] = useState(null);
+  const [totalAllReviews, setTotalAllReviews] = useState(null);
 
   const linksBreadcrumb = [`${i18n.t("home.title")}`, `${i18n.t("product.detailProduct")}`]
 
@@ -289,13 +291,7 @@ const Product: FC<any> = ({
           </div>
         </Popup>
       }
-
-      <div className="top-head">
-        <h3 className="text-capitalize">
-          {i18n.t("product.detailProduct")}
-        </h3>
-      </div>
-      <Breadcrumb links={linksBreadcrumb} lng={lng} />
+      <Breadcrumb title={i18n.t("product.detailProduct")} links={linksBreadcrumb} lng={lng} />
       {data &&
         <SEO
           title={data?.details[0]?.name || ""}
@@ -375,83 +371,79 @@ const Product: FC<any> = ({
           }
         </div>
         {brand?.settings?.reviewsAndRatingEnabled &&
+          <div className={"ratingReview"}>
           <div className="container">
-            <div className="product-detail_review">
-              <div className="product-detail_reviewInner">
-                <div className="heading">
-                  <div className="heading__title">
-                    <h5>
-                      {i18n.t("product.rating")} {" & "} {i18n.t("product.review")}
-                    </h5>
-                  </div>
-                  <div className="heading__desc">
-                    <p>{i18n.t("product.reviewDesc")}</p>
-                  </div>
-                </div>
-                <LazyLoadComponent>
-                  <ProductReviews
-                    classes={ProductReviewsClasses}
-                    productID={productId}
-                    productName={slug}
-                    reviewsPaginationClasses={paginationClasses}
-                    itemPerPageOptions={[1, 10, 25, 50, 100]}
-                    errorComponent={<div>{i18n.t("global.error")}</div>}
-                    customEmptyComponentReviews={
-                      <div className="emptyReview d-flex my-4 justify-content-center align-items-center flex-column">
-                        <img src="/icon/emptyReview.svg" />
-                        <div className="heading__desc">
-                          <p>{i18n.t("product.emptyReviews")}</p>
-                        </div>
+                <h2 className={"ratingReview_titleSection"}>
+                  {i18n.t("product.ratingReviewTitle")} (
+                  {totalAllReviews === null ? "..." : totalAllReviews})
+                </h2>
+                <ProductReviews
+                  productID={productId}
+                  productName={slug}
+                  classes={ProductReviewsClasses}
+                  reviewsPaginationClasses={paginationClasses}
+                  getTotalAllReviews={(totalItem: number) =>
+                    setTotalAllReviews(totalItem)
+                  }
+                  itemPerPageOptions={[5, 10, 25, 50, 100]}
+                  customEmptyComponentReviews={
+                    <div className="emptyReview d-flex my-4 justify-content-center align-items-center flex-column">
+                      <img src="/icon/emptyReview.svg" />
+                      <div className="heading__desc">
+                        <p>{i18n.t("product.emptyReviews")}</p>
                       </div>
-                    }
-                    iconClose={
-                      <FontAwesomeIcon icon={faTimes} height="1.25em" />
-                    }
-                    iconLeft={
-                      <FontAwesomeIcon
-                        className="text-white"
-                        icon={faChevronLeft}
-                        height="1.5em"
-                      />
-                    }
-                    iconRight={
-                      <FontAwesomeIcon
-                        className="text-white"
-                        icon={faChevronRight}
-                        height="1.5em"
-                      />
-                    }
-                    reviewsNextLabel={
-                      <FontAwesomeIcon
-                        className="text-gray-900"
-                        icon={faChevronRight}
-                        height="1.5em"
-                      />
-                    }
-                    reviewsPrevLabel={
-                      <FontAwesomeIcon
-                        className="text-gray-900"
-                        icon={faChevronLeft}
-                        height="1.5em"
-                      />
-                    }
-                    loadingComponent={
-                      <>
-                        <div className="col-12 col-md-12 mb-4">
-                          <Placeholder classes={classesPlaceholderProduct} withImage withList />
-                        </div>
-                      </>
-                    }
-                    thumborSetting={{
-                      width: size.width < 575 ? 350 : 500,
-                      format: 'webp',
-                      quality: 85,
-                    }}
-                  />
-                </LazyLoadComponent>
-              </div>
-            </div>
+                    </div>
+                  }
+                  iconClose={
+                    <FontAwesomeIcon icon={faTimes} height="1.25em" />
+                  }
+                  iconLeft={
+                    <FontAwesomeIcon
+                      className="text-white"
+                      icon={faChevronLeft}
+                      height="1.5em"
+                    />
+                  }
+                  iconRight={
+                    <FontAwesomeIcon
+                      className="text-white"
+                      icon={faChevronRight}
+                      height="1.5em"
+                    />
+                  }
+                  reviewsNextLabel={
+                    <FontAwesomeIcon
+                      className="text-gray-900"
+                      icon={faChevronRight}
+                      height="1.5em"
+                    />
+                  }
+                  reviewsPrevLabel={
+                    <FontAwesomeIcon
+                      className="text-gray-900"
+                      icon={faChevronLeft}
+                      height="1.5em"
+                    />
+                  }
+                  loadingComponent={
+                    <>
+                      <div className="col-12 col-md-12 mb-4">
+                        <Placeholder
+                          classes={classesPlaceholderProduct}
+                          withImage
+                          withList
+                        />
+                      </div>
+                    </>
+                  }
+                  thumborSetting={{
+                    width: size.width < 575 ? 350 : 500,
+                    format: "webp",
+                    quality: 85,
+                  }}
+                />
           </div>
+        </div>
         }
         {allowedProductRecommendation &&
           (totalItems > 0 || totalItems === null) &&
@@ -460,9 +452,6 @@ const Product: FC<any> = ({
             <div className="heading">
               <div className="heading__title">
                 <h5>{i18n.t("product.relatedProduct")}</h5>
-              </div>
-              <div className="heading__desc">
-                <p>{i18n.t("product.relatedProductDesc")}</p>
               </div>
             </div>
             <div className="row products-list">
