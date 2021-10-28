@@ -83,7 +83,7 @@ const classesProductDetail = {
   variantLabelClassName: "product-detail__right--form-variant-title",
   variantOptionsClassName: "product-detail__right--form-variant-option",
   qtyBoxClassName: "product-detail__right--form-qty",
-  addToCartBtnClassName: "product-detail_addToCartBtn btn-black-outer  btn",
+  addToCartBtnClassName: "col-12 product-detail_addToCartBtn btn-black-outer  btn",
   buyNowBtnClassName: "product-detail_buyNowBtn btn",
   descriptionClassName: "product-detail__right--desc order-5",
   additionalInfoClassName: "d-none",
@@ -96,7 +96,7 @@ const classesProductDetail = {
   notifyMeRadioLabelClassName: "product-detail_notifyMeRadioLabel",
   notifyMeInputWrapperClassName: "product-detail_notifyMeInputWrapper",
   notifyMeInputClassName: "product-detail_notifyMeInput",
-  notifyMeSubmitClassName: "btn btn-orange btn-long mt-3",
+  notifyMeSubmitClassName: "col-12 btn btn-orange btn-long mt-3",
 
   /* Estimate Shipping */
   estimateShippingWrapperClassName: "estimateShipping order-6",
