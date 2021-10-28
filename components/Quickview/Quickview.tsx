@@ -38,7 +38,7 @@ const productDetailClasses = {
   variantContainerClassName: "quickview__inner-right-detail--size-color",
   variantOptionsClassName: "quickview__inner-right-detail--size-color-select",
   qtyBoxClassName: "quickview__inner-right-detail--quantity",
-  addToCartBtnClassName: "product-detail_addToCartBtn-product btn my-2",
+  addToCartBtnClassName: "col-12 product-detail_addToCartBtn btn-black-outer btn my-2",
   buyNowBtnClassName: "product-detail_buyNowBtn btn btn-orange my-2",
   descriptionClassName: "quickview__inner-right-detail--desc",
   accordionClassName: "quickview__inner-right-detail--desc-tab",
@@ -62,7 +62,7 @@ const productDetailClasses = {
   notifyMeRadioLabelClassName: "product-detail_notifyMeRadioLabel",
   notifyMeInputWrapperClassName: "product-detail_notifyMeInputWrapper",
   notifyMeInputClassName: "product-detail_notifyMeInput",
-  notifyMeSubmitClassName: "btn btn-orange btn-long mt-3"
+  notifyMeSubmitClassName: "col-12 btn btn-orange btn-long mt-3"
 }
 
 const Quickview: FC<QuickviewPropsType> = ({

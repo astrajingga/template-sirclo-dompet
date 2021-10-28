@@ -215,7 +215,7 @@ const ProductsPage: FC<any> = ({
               {i18n.t("product.successAddToCart")}
             </p>
             <button
-              className="btn btn-orange btn-long mt-4"
+              className="col-12 btn login-page-btnLogin btn-long mt-4"
               onClick={() => {
                 setShowModalAddToCart(false);
                 Router.push("/[lng]/cart", `/${lng}/cart`);
@@ -224,7 +224,7 @@ const ProductsPage: FC<any> = ({
               {i18n.t("cart.title")}
             </button>
             <button
-              className="btn product-detail_addToCartBtn-product btn-long mt-3"
+              className="col-12 btn product-detail_addToCartBtn-product btn-black-outer btn-long mt-3"
               onClick={() => {
                 setShowModalAddToCart(false);
                 Router.push("/[lng]/products", `/${lng}/products`);
