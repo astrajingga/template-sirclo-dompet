@@ -9,14 +9,7 @@
   font-style: normal;
   font-display: fallback;
 }
-@font-face {
-  font-family: "karla-bold-italic";
-  src: local("Karla Bold Italic"), local("karla-bold-italic"),
-    url("/webfonts/Karla-BoldItalic.ttf");
-  font-weight: bold;
-  font-style: italic;
-  font-display: fallback;
-}
+
 @font-face {
   font-family: "karla-italic";
   src: local("Karla Italic"), local("karla-italic"),
@@ -33,6 +26,36 @@
   font-style: normal;
   font-display: fallback;
 }
+
+
+@font-face {
+  font-family: "poppins-bold";
+  src: local("poppins Bold"), local("poppins-bold"), url("/webfonts/Poppins-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "poppins-italic";
+  src: local("poppins Italic"), local("poppins-italic"),
+    url("/webfonts/Poppins-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "poppins-regular";
+  src: local("poppins Regular"), local("poppins-regular"),
+    url("/webfonts/Poppins-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+*{
+  font-family: 'poppins-regular' !important;
+  }
 
 .newsletter {
   &__overlay {
