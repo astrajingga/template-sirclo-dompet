@@ -1,10 +1,17 @@
-import { FC, useState } from "react"
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import { LookbookSingle, useI18n } from "@sirclo/nexus"
-import Layout from "components/Layout/Layout"
-import Breadcrumb from "components/Breadcrumb/Breadcrumb";
-import useWindowSize from "lib/utils/useWindowSize";
-import { useBrand } from "lib/utils/useBrand";
+/* library package */
+import { FC, useState } from 'react'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import { LookbookSingle, useI18n } from '@sirclo/nexus'
+import { faArrowLeft, faShareAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+/* library template */
+import useWindowSize from 'lib/utils/useWindowSize';
+import { useBrand } from 'lib/utils/useBrand';
+
+/* component */
+import Layout from 'components/Layout/Layout'
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
 
 const classesLookbookSingle = {
   containerClassName: "lookbook-detail",
@@ -31,6 +38,11 @@ const LookbookSinglePage: FC<any> = ({
       lngDict={lngDict}
       brand={brand}
     >
+      <div className="top-head">
+        <h3 className="text-capitalize">
+        {title}
+        </h3>
+      </div>
       <Breadcrumb title={title} links={linksBreadcrumb} lng={lng} />
       <section>
         <div className="container">
@@ -44,6 +56,25 @@ const LookbookSinglePage: FC<any> = ({
               quality: 85,
             }}
           />
+
+          {/* <div className="lookbook--navigation">
+            <div className="m-3">
+              <FontAwesomeIcon
+                icon={faArrowLeft}
+                className="lookbook--navigation-icon"
+              />
+              <div>
+                {i18n.t('')}
+              </div>
+            </div>
+            <div className="m-3">
+              <FontAwesomeIcon
+                icon={faShareAlt}
+                className="lookbook--navigation-icon"
+              />
+              Bagikan
+            </div>
+          </div> */}
         </div>
       </section>
     </Layout>

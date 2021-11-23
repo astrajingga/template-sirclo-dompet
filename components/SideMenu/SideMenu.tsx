@@ -1,3 +1,4 @@
+import { Logo } from "@sirclo/nexus";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
@@ -6,9 +7,17 @@ const SideMenu = ({ title, openSide, toogleSide, children, positionSide }) => {
     <>
       <div className={openSide ? `side-menu fade show ${positionSide}` : `side-menu fade`}>
         <div className="header-side-menu">
-          <h6>{title}</h6>
+          <Logo
+            imageClassName="nav-logo"
+            thumborSetting={{
+              width: 400,
+              format: 'webp',
+              quality: 85
+            }}
+          />
           <FontAwesomeIcon
             className="icon text-white"
+            style={{ transform: "translateY(17px)", fontSize: "16px" }}
             icon={faTimes}
             onClick={toogleSide}
           />

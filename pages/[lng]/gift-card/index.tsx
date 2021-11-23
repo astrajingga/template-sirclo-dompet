@@ -1,9 +1,14 @@
-import { FC } from "react";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import Layout from "components/Layout/Layout";
-import Breadcrumb from "components/Breadcrumb/Breadcrumb";
-import { GiftCard, useI18n } from "@sirclo/nexus";
-import { useBrand } from "lib/utils/useBrand";
+/* library package */
+import { FC } from 'react';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import { GiftCard, useI18n } from '@sirclo/nexus';
+
+/* library template */
+import { useBrand } from 'lib/utils/useBrand';
+
+/* component */
+import Layout from 'components/Layout/Layout';
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
 
 const classesGiftCard = {
   containerClassName: "giftcard-page-form",
@@ -39,12 +44,6 @@ const GiftCardPage: FC<any> = ({
         <div className="container">
           <div className="giftcard-page-container">
             <div className="giftcard-page-inner">
-              {/* <h3 className="giftcard-page-title"> */}
-                {/* {i18n.t("giftCard.welcome")} */}
-              {/* </h3> */}
-              {/* <span className="giftcard-page-subtitle"> */}
-                {/* {i18n.t("giftCard.desc")} */}
-              {/* </span> */}
               <GiftCard classes={classesGiftCard} />
             </div>
           </div>

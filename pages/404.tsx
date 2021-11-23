@@ -1,5 +1,10 @@
-import { useState, useEffect } from "react";
-import Link from "next/link";
+/* library package */
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useI18n } from '@sirclo/nexus';
+
+/* components */
+import Layout from 'components/Layout/Layout';
 
 const lang = {
   en: {
@@ -16,6 +21,7 @@ const lang = {
 
 const Error404Page: React.FC<any> = () => {
   const [lng, setLang] = useState<string>("en")
+  const i18n: any = useI18n();
 
   useEffect(() => {
     const allowedLang = ['id', 'en'];
@@ -28,16 +34,20 @@ const Error404Page: React.FC<any> = () => {
   }, [])
 
   return (
-    <div className="error-pages">
-      <div className="error-pages__container">
-        {/* <img src="/images/merlin-404.svg" className="error-pages__container--icon" alt="merlin" /> */}
-        <h2 className="error-pages__container--title">{lng && lang[lng].title}</h2>
-        <p className="error-pages__container--desc">{lng && lang[lng].desc}</p>
-        <Link href="/" as="/">
-          <a className="btn login-page-btnLogin btn-long">{lng && lang[lng].back}</a>
-        </Link>
+    <Layout
+      i18n={i18n}
+      lng={lng}
+    >
+      <div className="error-pages">
+        <div className="error-pages__container">
+          <h2 className="error-pages__container--title">{lng && lang[lng].title}</h2>
+          <p className="error-pages__container--desc">{lng && lang[lng].desc}</p>
+          <Link href="/" as="/">
+            <a className="btn login-page-btnLogin btn-long">{lng && lang[lng].back}</a>
+          </Link>
+        </div>
       </div>
-    </div>
+    </Layout>
   )
 }
 

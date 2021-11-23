@@ -131,10 +131,10 @@
     },
     "giftCard": {
         "desc": "Give someone something to smile about by purchasing our online gift card. An email containing the e-gift card will be sent to them and they can spend it on any items(s)",
-        "message": "Personal Message",
+        "message": "Message",
         "recipient": "Recipient",
         "send": "Send Gift Card",
-        "sender": "Account Name",
+        "sender": "Sender Name",
         "title": "Gift Card",
         "value": "Gift Card Value",
         "welcome": "Add Gift Card to Your Bag"
@@ -222,7 +222,7 @@
         "orderID": "Order ID",
         "pointHistory": "Point History",
         "points": "Points",
-        "shopNow": "Shopping now",
+        "shopNow": "Shopping now!",
         "upLevelPrompt": "Make {MINIMUM_ORDER} transaction(s) left to reach {NEXT_LEVEL}",
         "usePoints": "Use Point",
         "warning": "You will not earn Points from transactions made with points",
@@ -291,6 +291,7 @@
         "voucherApplied": "Voucher applied"
     },
     "pageStepper": {
+        "checkoutTitle": "Checkout",
         "customerInfo": "Customer Information",
         "paymentMethod": "Payment Method",
         "shippingDetails": "Shipping Details"
@@ -518,7 +519,8 @@
         "subtitleShipTo": "*your order will be shipped",
         "track": "Track your order",
         "trackDriver": "Track Driver",
-        "updatePinpoint": "Change Location Pin"
+        "updatePinpoint": "Change Location Pin",
+        "paymentMethod": "Payment Method"
     },
     "sort": {
         "aToZAscending": "Name (Ascending)",

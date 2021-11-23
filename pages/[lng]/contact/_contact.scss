@@ -11,19 +11,55 @@
 
   &-title
   {
-    font-family: "karla-bold";
-    font-size: 16px;
+    font-family: "Poppins-bold";
+    font-size: 20px;
     margin-bottom: 2rem;
+
+    @media screen and (max-width: 440px) {
+      font-size: 11px;
+    }
   }
 }
 
 .contact-info
 {
   margin-bottom: 2rem;
-  
+
   img
   {
     height: 50px;
     margin-bottom: 1.5rem;
+  }
+}
+
+#widget {
+  &--contact-info {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    img {
+      height: auto;
+      margin-bottom: 0;
+    }
+
+    img,
+    iframe {
+      width: 50%;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto;
+
+      @media screen and(max-width: 440px) {
+        width: 100%;
+      }
+    }
+
+    iframe {
+      @media screen and(max-width: 440px) {
+        height: 400px;
+      }
+    }
   }
 }

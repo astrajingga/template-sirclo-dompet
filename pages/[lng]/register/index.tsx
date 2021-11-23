@@ -1,3 +1,4 @@
+/* library package */
 import { FC, useState } from 'react'
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import Router from 'next/router'
@@ -14,12 +15,20 @@ import {
   SingleSignOn,
   useI18n
 } from '@sirclo/nexus'
+import dynamic from 'next/dynamic';
+const Widget = dynamic(
+  () => import('@sirclo/nexus').then((mod) => mod.Widget),
+  { ssr: false }
+);
+
+/* library template */
 import { parseCookies } from 'lib/parseCookies'
-import dynamic from "next/dynamic";
 import redirectIfAuthenticated from 'lib/redirectIfAuthenticated'
 import { useBrand } from 'lib/utils/useBrand'
 import { useGoogleAuth } from 'lib/utils/useGoogleAuth'
 import { useFacebookAuth } from 'lib/utils/useFacebookAuth'
+
+/* component */
 import Layout from 'components/Layout/Layout'
 import Breadcrumb from 'components/Breadcrumb/Breadcrumb'
 import Loader from 'components/Loader/Loader'
@@ -34,7 +43,7 @@ const classesRegister = {
   inputClassName: "form-control sirclo-form-input",
   labelRequiredClassName: "col-12",
   verificationContainerClassName: "col-12 mb-3",
-  buttonClassName: "btn login-page-btnLogin m-3 col-12 col-md-6",
+  buttonClassName: "btn login-page-btnLogin col-12 col-md-6",
   passwordStrengthBarContainerClassName:
     "sirclo-form-password-strength-bar-container",
   passwordStrengthBarClassName: "sirclo-form-password-strength-bar",
@@ -45,11 +54,6 @@ const classesRegister = {
   datePickerCalendarClassName: "date-picker__calendar"
 }
 
-const Widget = dynamic(
-  () => import("@sirclo/nexus").then((mod) => mod.Widget),
-  { ssr: false }
-);
-
 const RegisterPage: FC<any> = ({
   lng,
   lngDict,
@@ -59,7 +63,7 @@ const RegisterPage: FC<any> = ({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   const i18n: any = useI18n()
   const [isVerified, setIsVerified] = useState<boolean>(false)
-  
+
 
   const linksBreadcrumb = [
     `${i18n.t("home.title")}`,
@@ -73,13 +77,7 @@ const RegisterPage: FC<any> = ({
       lngDict={lngDict}
       brand={brand}
     >
-      {/* <Breadcrumb
-        title={i18n.t("register.title")}
-        links={linksBreadcrumb}
-        lng={lng}
-      /> */}
       <section>
-        {/* <div className="container"> */}
           <div className="row">
             <div className=" col-12 col-sm-12 col-lg-4">
               <Widget pos="main-content-2" widgetClassName="widget-login" />
@@ -152,8 +150,7 @@ const RegisterPage: FC<any> = ({
                   </div>
               </div>
             </div>
-          </div> 
-        {/* </div> */}
+          </div>
       </section>
     </Layout>
   )

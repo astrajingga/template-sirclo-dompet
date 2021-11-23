@@ -1,10 +1,8 @@
-import { FC, useState } from "react";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import { Account, useI18n } from "@sirclo/nexus";
-import Layout from "components/Layout/Layout";
-import Breadcrumb from "components/Breadcrumb/Breadcrumb";
-import { parseCookies } from "lib/parseCookies";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+/* Library Package */
+import { FC, useState } from 'react';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import { Account, useI18n } from '@sirclo/nexus';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faChevronDown,
   faCheckCircle,
@@ -18,22 +16,28 @@ import {
   faCoins,
   faBell,
   faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
 import {
   faWhatsapp,
   faLine
-} from "@fortawesome/free-brands-svg-icons";
+} from '@fortawesome/free-brands-svg-icons';
 import{
   AlertCircle
-} from "react-feather"
-import { toast } from "react-toastify";
-import { useBrand } from "lib/utils/useBrand";
-import { useWhatsAppOTPSetting } from "lib/utils/useSingleSignOn";
+} from 'react-feather'
+import { toast } from 'react-toastify';
 
-import stylesPopupCheckPaymentOrder from "public/scss/components/CheckPaymentOrder.module.scss";
-import styles from "public/scss/pages/Account.module.scss";
+/* library template */
+import { useBrand } from 'lib/utils/useBrand';
+import { useWhatsAppOTPSetting } from 'lib/utils/useSingleSignOn';
+import { parseCookies } from 'lib/parseCookies';
 
-const ACTIVE_CURRENCY = "IDR";
+/* components */
+import Layout from 'components/Layout/Layout';
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
+
+/* styles */
+import styles from 'public/scss/pages/Account.module.scss';
+import stylesPopupCheckPaymentOrder from 'public/scss/components/CheckPaymentOrder.module.scss';
 
 const classesAccount = {
   containerClassName: "account-page_detail",
@@ -58,7 +62,7 @@ const classesAccount = {
   passwordContainerClassName: "d-flex align-items-center position-relative w-100",
   passwordInputClassName: "form-control sirclo-form-input size-label",
   passwordViewButtonClassName: "btn button-view-password",
-  buttonClassName: "btn btn-dark-blue btn-long float-right ml-2",
+  buttonClassName: "account-list--button btn btn-dark-blue btn-long float-right ml-2",
   tableClassName: "table",
 
   orderHistoryContainerClassName: "order-history-container",
@@ -69,7 +73,7 @@ const classesAccount = {
   orderDateClassName: "order-history-items__date",
   orderBodyClassName: "order-history-items-body",
   invoiceButtonClassName: "order-history-items-body invoice-button",
-  
+
   datePickerInputClassName: "date-picker__input",
   datePickerCalendarClassName: "date-picker__calendar",
 
@@ -93,7 +97,7 @@ const classesAccount = {
   orderedItemDetailNeedReviewClassName: "ordered-button ordered-button-needReview btn",
   orderedItemDetailReviewedClassName: "ordered-button ordered-button-reviewed btn",
   buyerNoteLabelClassName: "label",
-  
+
   shippingContainerClassName: "order-history-shipping-container",
   shippingDetailsClassName: "order-history-shipping-details",
   shippingDetailsLabelClassName: "label",
@@ -103,7 +107,7 @@ const classesAccount = {
   paymentMethodLabelClassName: "label",
   orderFooterClassName: "order-history-footer",
   totalCostClassName: "order-history-footer__total-cost",
-  
+
   passwordStrengthBarContainerClassName: "sirclo-form-password-strength-bar-container",
   passwordStrengthBarClassName: "sirclo-form-password-strength-bar",
   passwordStrengthLabelClassName: "sirclo-form-password-strength-label",
@@ -116,7 +120,7 @@ const classesAccount = {
   shipmentBodyClassName: "order-history-shipmentTracking__body",
   shipmentFooterClassName: "order-history-shipmentTracking__footer",
   shippingTrackerButton: "order-history-shipmentTracking__toggle",
-  
+
   shipmentHeaderTextClassName: "track-shipment__headerText",
   shipmentTextClassName: "track-shipment__text",
   shipmentListClassName: "track-shipment__list",
@@ -168,7 +172,7 @@ const classesAccount = {
   popupConfirmationOrderWrapButtonClassName: "orderConfirmPopup__buttons",
   popupConfirmationOrderButtonConfirmClassName: "orderConfirmPopup__button orderConfirmPopup__button--confirm btn btn-orange-outer",
   popupConfirmationOrderButtonNoClassName: "orderConfirmPopup__button orderConfirmPopup__button--cancel btn btn-orange",
-  
+
   orderControlClassName: "order-history__actions",
   orderedItemDetailDeliveredClassName: "order-history-items-body invoice-button",
 
@@ -205,7 +209,7 @@ const classesAccount = {
   orderInfoContainerClassName: styles.membership_info_container,
   OrderInfoIconClassName: styles.membership_info_icon,
   orderInfoLabelClassName: styles.membership_info_label,
-  OrderInfoSearchHereClassName: styles.membership_info_button,
+  OrderInfoSearchHereClassName: styles.membership_info_button
 };
 
 const paginationClasses = {
@@ -214,6 +218,8 @@ const paginationClasses = {
   activeClassName: "active",
   linkClassName: "order-history-footer__pagination-order-list-link",
 };
+
+const ACTIVE_CURRENCY = "IDR";
 
 const Accounts: FC<any> = ({
   lng,
@@ -258,7 +264,6 @@ const Accounts: FC<any> = ({
         </h3>
       </div>
       <Breadcrumb
-        // title={i18n.t("account.yourAccount")}
         links={linksBreadcrumb}
         lng={lng}
       />

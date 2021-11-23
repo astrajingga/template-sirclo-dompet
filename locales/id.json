@@ -144,6 +144,7 @@
       "isEmpty": "Keranjang Kosong",
       "isEmptyDesc": "Harap tambahkan beberapa item ke keranjang Anda terlebih dahulu.",
       "item": "Barang",
+      "image" : "Barang",
       "limitStock": "Tidak bisa melebihi stok yang tersedia",
       "noteToSeller": "Catatan untuk penjual",
       "outofStock": "Stok Habis",
@@ -200,10 +201,10 @@
   },
   "giftCard": {
       "desc": "Berikan sesuatu untuk membuat seseorang tersenyum dengan membeli kartu hadiah online kami. Email yang berisi kartu hadiah elektronik akan dikirimkan kepada mereka dan mereka dapat membelanjakannya untuk barang apa pun",
-      "message": "Pesan Pribadi",
+      "message": "Pesan",
       "recipient": "Penerima",
       "send": "Kirimkan Kartu Hadiah",
-      "sender": "Nama Akun",
+      "sender": "Nama Pengirim",
       "title": "Kartu Ucapan",
       "value": "Nilai Kartu Hadiah",
       "welcome": "Tambahkan Kartu Hadiah ke Belanjaan Anda"
@@ -279,6 +280,8 @@
       "withEmail": "Masuk dengan Email"
   },
   "lookbook": {
+      "back": "Kembali",
+      "share": "Kembali",
       "isEmpty": "Belum ada lookbook",
       "seeCollection": "Lihat Koleksi",
       "seeMore": "Lebih Banyak",
@@ -291,7 +294,7 @@
       "orderID": "ID Pesanan",
       "pointHistory": "Riwayat Poin",
       "points": "Poin",
-      "shopNow": "Belanja sekarang",
+      "shopNow": "Belanja sekarang!",
       "upLevelPrompt": "Tinggal {MINIMUM_ORDER} transaksi pembelian untuk mencapai {NEXT_LEVEL}",
       "usePoints": "Gunakan Poin Anda",
       "warning": "Anda tidak bisa mendapatkan poin dari transaksi pembelian dengan menggunakan poin",
@@ -360,6 +363,7 @@
       "voucherApplied": "Voucher digunakan"
   },
   "pageStepper": {
+			"checkoutTitle": "Checkout",
       "customerInfo": "Informasi Pelanggan",
       "paymentMethod": "Metode Pembayaran",
       "shippingDetails": "Detail Pengiriman"
@@ -606,7 +610,8 @@
       "subtitleShipTo": "*pesanan Anda akan dikirimkan",
       "track": "Lacak Pesanan",
       "trackDriver": "Lacak kurir",
-      "updatePinpoint": "Ubah Pin Lokasi"
+      "updatePinpoint": "Ubah Pin Lokasi",
+      "paymentMethod": "Metode Pembayaran"
   },
   "sort": {
       "aToZAscending": "Nama (A-Z)",

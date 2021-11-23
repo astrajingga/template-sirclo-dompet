@@ -1,7 +1,8 @@
+/* library package */
 import { FC, useState } from 'react'
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import { toast } from 'react-toastify'
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faEye,
@@ -12,19 +13,27 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faWhatsapp
-} from "@fortawesome/free-brands-svg-icons";
+} from '@fortawesome/free-brands-svg-icons';
 import {
   Login,
   WhatsAppOTPInput,
   SingleSignOn,
   useI18n
 } from '@sirclo/nexus'
+const Widget = dynamic(
+  () => import('@sirclo/nexus').then((mod) => mod.Widget),
+  { ssr: false }
+);
+
+/* library template */
 import { parseCookies } from 'lib/parseCookies'
 import redirectIfAuthenticated from 'lib/redirectIfAuthenticated'
 import { useBrand } from 'lib/utils/useBrand'
 import { useGoogleAuth } from 'lib/utils/useGoogleAuth'
 import { useFacebookAuth } from 'lib/utils/useFacebookAuth'
 import { useWhatsAppOTPSetting } from 'lib/utils/useSingleSignOn'
+
+/* component */
 import Layout from 'components/Layout/Layout'
 import Breadcrumb from 'components/Breadcrumb/Breadcrumb'
 import Loader from 'components/Loader/Loader'
@@ -53,19 +62,19 @@ const classesWhatsAppOTP = {
   privacyPolicyClassName: "login-page-pointer",
   //confirmation
   confirmationContainerClassName: "login-page-column",
-  confirmationHeaderContainerClassName: "w-100 text-center",
+  confirmationHeaderContainerClassName: "w-100",
   confirmationBackContainerClassName: "login-page-back",
   confirmationBackLabelClassName: "login-page-backTitle ml-2",
-  confirmationHeaderTitleClassName: "login-page-title",
+  confirmationHeaderTitleClassName: "login-page-title mb-3",
   confirmationHeaderSubtitleClassName: "loglogin-page-btnLoginin-page-subtitle",
-  confirmationButtonOTPClassName: "btn  btn-long btn-center col-12 col-md-12",
+  confirmationButtonOTPClassName: "btn btn-dark-blue my-5 btn-long btn-center col-12 col-md-12",
   anotherLoginMethodClassName: "login-page-pointer",
   //verification
   verificationContainerClassName: "login-page-column",
   verificationHeaderClassName: "text-center",
   verificationTitleClassName: "login-page-title mt-2",
   verificationBodyClassName: "login-page-column",
-  infoLabelClassName: "login-page-subtitle text-center",
+  infoLabelClassName: "login-page-subtitle text-center mt-2",
   fieldOTPInputContainerClassName: "login-page-inputContainer",
   fieldOTPInputClassName: "form-control sirclo-form-input login-page-inputOtp",
   verificationFooterClassName: "login-page-column",
@@ -85,12 +94,6 @@ const classesWhatsAppOTP = {
   btnChooseAccountClassName: "btn btn-orange btn-long btn-center"
 }
 
-
-const Widget = dynamic(
-  () => import("@sirclo/nexus").then((mod) => mod.Widget),
-  { ssr: false }
-);
-
 const LoginPage: FC<any> = ({
   lng,
   lngDict,
@@ -108,7 +111,7 @@ const LoginPage: FC<any> = ({
     return brand?.charAt(0).toUpperCase() + lower?.slice(1);
   }
 
-  
+
 
   return (
     <Layout
@@ -117,7 +120,6 @@ const LoginPage: FC<any> = ({
       lngDict={lngDict}
       brand={brand}
     >
-      {/* <Breadcrumb title={i18n.t("login.title")} links={linksBreadcrumb} lng={lng} /> */}
       <section>
         <div className="container">
           <div className="login-page-container">
@@ -201,7 +203,6 @@ const LoginPage: FC<any> = ({
             </div>
           </div>
         </div>
-        {/* <Widget pos="login-image" widgetClassName="widget-login" /> */}
       </section>
     </Layout>
   )

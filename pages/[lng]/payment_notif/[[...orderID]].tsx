@@ -1,21 +1,28 @@
-import { FC } from "react";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import { useRouter } from "next/router";
-import { PaymentConfirmation, CheckPaymentOrder, useI18n } from "@sirclo/nexus";
-import SEO from "components/SEO/SEO";
-import Layout from "components/Layout/Layout";
-import Loader from "components/Loader/Loader";
-import BankAccount from "components/BankAccount/BankAccount";
-import { useBrand } from "lib/utils/useBrand";
-import { toast } from "react-toastify";
-import styles from "public/scss/pages/PaymentNotif.module.scss";
-import stylesPopup from "public/scss/components/CheckPaymentOrder.module.scss";
-import stylesBanks from "public/scss/components/BanksAccount.module.scss";
+/* library package */
+import { FC } from 'react';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import { useRouter } from 'next/router';
+import { PaymentConfirmation, CheckPaymentOrder, useI18n } from '@sirclo/nexus';
+import { toast } from 'react-toastify';
 import {
   ChevronUp,
   ChevronDown,
   X,
-} from "react-feather";
+} from 'react-feather';
+
+/* library template */
+import { useBrand } from 'lib/utils/useBrand';
+
+/* component */
+import SEO from 'components/SEO/SEO';
+import Layout from 'components/Layout/Layout';
+import Loader from 'components/Loader/Loader';
+import BankAccount from 'components/BankAccount/BankAccount';
+
+/* styles */
+import styles from 'public/scss/pages/PaymentNotif.module.scss';
+import stylesPopup from 'public/scss/components/CheckPaymentOrder.module.scss';
+import stylesBanks from 'public/scss/components/BanksAccount.module.scss';
 
 const classesPaymentConfirmation = {
   paymentConfirmationDivClassName: styles.paymentNotif_form,

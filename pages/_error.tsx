@@ -1,5 +1,7 @@
-import { NextPage } from "next";
-import Error from "next/error";
+/* library package */
+import { NextPage } from 'next';
+import Error from 'next/error';
+
 interface Props {
   statusCode?: any;
 }

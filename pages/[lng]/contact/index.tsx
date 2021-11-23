@@ -1,17 +1,22 @@
-import { FC } from "react";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+/* library package */
+import { FC } from 'react';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import {
   Contact,
   Widget,
   useI18n,
   isEnquiryAllowed
-} from "@sirclo/nexus";
-import Layout from "components/Layout/Layout";
-import Breadcrumb from "components/Breadcrumb/Breadcrumb";
-import Placeholder from "components/Placeholder";
-import useWindowSize from "lib/utils/useWindowSize";
-import { toast } from "react-toastify";
-import { useBrand } from "lib/utils/useBrand";
+} from '@sirclo/nexus';
+import { toast } from 'react-toastify';
+
+/* library template */
+import useWindowSize from 'lib/utils/useWindowSize';
+import { useBrand } from 'lib/utils/useBrand';
+
+/* component */
+import Layout from 'components/Layout/Layout';
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
+import Placeholder from 'components/Placeholder';
 
 const classesContact = {
   containerClassName: "contact-page-container",
@@ -48,12 +53,11 @@ const ContactPage: FC<any> = ({
       {allowedEnquiry &&
         <>
         <div className="top-head">
-          <h3 className="text-capitalize">
+          <h3 className="text-capitalize-20">
             {i18n.t("contact.title")}
           </h3>
         </div>
         <Breadcrumb
-          // title={i18n.t("account.yourAccount")}
           links={linksBreadcrumb}
           lng={lng}
         />

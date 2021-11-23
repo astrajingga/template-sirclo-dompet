@@ -1,13 +1,18 @@
-import { FC } from "react";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import { ResetPassword, useI18n } from "@sirclo/nexus";
-import Layout from "components/Layout/Layout";
-import Breadcrumb from "components/Breadcrumb/Breadcrumb";
-import Loader from "components/Loader/Loader";
-import { toast } from "react-toastify";
-import { parseCookies } from "lib/parseCookies";
-import redirectIfAuthenticated from "lib/redirectIfAuthenticated";
-import { useBrand } from "lib/utils/useBrand";
+/* library package */
+import { FC } from 'react';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import { ResetPassword, useI18n } from '@sirclo/nexus';
+import { toast } from 'react-toastify';
+
+/* library template */
+import { parseCookies } from 'lib/parseCookies';
+import redirectIfAuthenticated from 'lib/redirectIfAuthenticated';
+import { useBrand } from 'lib/utils/useBrand';
+
+/* component */
+import Layout from 'components/Layout/Layout';
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
+import Loader from 'components/Loader/Loader';
 
 const classesResetPassword = {
   containerClassName: "forgot-password-page-form",
@@ -33,7 +38,6 @@ const ForgotPassword: FC<any> = ({
       lngDict={lngDict}
       brand={brand}
     >
-      {/* <Breadcrumb title={i18n.t("resetPassword.title")} links={linksBreadcrumb} lng={lng} /> */}
       <div className="container">
         <div className="forgot-password-page-container">
           <div className="forgot-password-page-inner">
@@ -46,6 +50,7 @@ const ForgotPassword: FC<any> = ({
             <ResetPassword
               classes={classesResetPassword}
               onErrorMsg={(msg) => toast.error(msg)}
+              onSuccessMsg={(msg) => toast.success(msg)}
               loadingComponent={<Loader color="text-light" />}
             />
           </div>

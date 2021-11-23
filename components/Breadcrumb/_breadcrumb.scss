@@ -3,22 +3,21 @@
   flex-direction: column;
   align-items: flex-start;
   background-color: transparent;
-  // padding: 3rem 0;
-  // padding-top: 1rem;
-  // padding-bottom: 1rem;
-  // padding-left: 2rem;
-  // background-image: linear-gradient($color_orange_light, $color_white);
-  
-  // background-image: linear-gradient($color_orange_light, $color_white);
+  padding: 1.5rem 0 1rem;
+  @media screen and (max-width: 991px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   @media screen and (max-width: 575px) {
     padding-bottom: 1.5rem;
   }
 
   &__title {
-    font-family: "karla-bold";
+    font-family: "Poppins-bold";
     padding: 0.25rem 1rem;
-    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: bold;
 
     @media screen and (max-width: 575px) {
       font-size: 1.5rem;
@@ -29,7 +28,8 @@
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 100% auto;
-    height: 20vh;
+    padding-top: 60px;
+    padding-bottom: 60px;
     // margin-bottom: 50px;
 
     @media screen and (max-width: 575px) {
@@ -45,6 +45,8 @@
       // padding: 0.25rem 1rem;
 
       &-item {
+        font-size: 14px;
+
         a {
           color: $color_black;
           text-decoration: none;
@@ -55,12 +57,16 @@
 
           &::before {
             padding-right: 1rem;
-            content: "\276F";
+            content: "\002F";
           }
         }
 
         &__link {
           text-transform: capitalize;
+        }
+
+        @media screen and (max-width: 440px) {
+          font-size: 17px;
         }
       }
     }

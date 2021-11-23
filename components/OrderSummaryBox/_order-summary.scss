@@ -20,7 +20,7 @@
     max-width: 100% !important;
     width: 100% !important;
     height: 100%;
-    
+
 
     @media screen and (max-width: 767px) {
       margin-top: 32px;
@@ -35,9 +35,6 @@
   }
 
   &__header {
-    // margin: 10px 0;
-    border-left: solid 1px $color_orange;
-    border-right: solid 1px $color_orange;
 
     @media screen and (max-width: 767px) {
       border: none;
@@ -52,9 +49,7 @@
       height: 44px;
       justify-content: flex-start;
       cursor: pointer;
-      // border: 1px solid $color_orange;
       padding: 0 16px;
-      // border-radius: 6px;
       background: $color_white;
 
       @media screen and (max-width: 767px) {
@@ -69,8 +64,12 @@
       }
 
       &-label {
-        font-size: 11.2px;
+        font-size: 14px !important;
         margin-left: 8px;
+
+        @media screen and (max-width: 440px) {
+          font-size: 11px !important;
+        }
       }
     }
 
@@ -83,11 +82,9 @@
       height: 44px;
       justify-content: flex-start;
       cursor: pointer;
-      border-top: 1px solid $color_orange;
-      border-bottom: 1px solid $color_orange;
+      border: 1px solid $color_shade_madison;
       padding: 0 16px;
       margin-bottom: 3rem;
-      // border-radius: 6px;
       background: $color_white;
 
       &-icon {
@@ -100,6 +97,10 @@
         font-size: 11.2px;
         margin-left: 8px;
       }
+
+      @media screen and (max-width: 440px) {
+        border: 1px solid #F7BE16;
+      }
     }
   }
 
@@ -108,22 +109,18 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-left: 1px solid $color_orange;
-    border-right: 1px solid $color_orange;
-    // border-top: 1px solid $color_orange;
 
     &--label-subtotal {
       font-size: 14px;
+      color: $color_shade_gunmetal;
 
       @media screen and (min-width: 768px) {
-        font-family: "karla-bold";
+        font-family: "poppins-bold";
       }
     }
 
     &--subtotal {
-      font-family: "karla-bold";
+      font-family: "poppins-bold";
       font-size: 14px;
     }
 
@@ -147,11 +144,6 @@
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    border-left: 1px solid $color_orange;
-    border-right: 1px solid $color_orange;
-    border-bottom: 1px solid $color_orange;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
 
     @media screen and (max-width: 767px) {
       margin: auto auto 0 !important;
@@ -245,11 +237,7 @@
       }
 
       &-textApllied {
-        position: absolute;
-        top: 12px;
-        left: 16px;
-        font-size: 11px;
-        color: $color_black;
+        display: none;
       }
     }
 
@@ -284,7 +272,7 @@
       }
 
       &-label {
-        font-family: "karla-bold";
+        font-family: "Poppins-bold";
         font-size: 16px;
       }
 
@@ -401,17 +389,18 @@
   }
 
   &_voucherAppliedText {
-    color: $color_green;
+    font-weight: 600;
+    color: $color_shade_madison;
     white-space: nowrap;
     word-break: keep-all;
     text-overflow: ellipsis;
     width: 90%;
     overflow: hidden;
-    margin-top: 10px;
+    font-family: "poppins-bold";
   }
 
   &_voucherButtonRemove {
-    color: $color_gray_high_dark;
+    color: $color_shade_madison;
     margin-left: auto;
     margin-right: 10px;
     display: flex;
@@ -428,9 +417,7 @@
     line-height: 125%;
     border-left: solid 1px $color_orange;
     border-right: solid 1px $color_orange;
-    // border-bottom: solid 1px $color_orange;
     border-bottom: 0;
-    // border-radius: 6px 6px 0 0;
     padding: 20px;
     padding-bottom: 0;
 
@@ -484,16 +471,12 @@
     font-weight: 300;
     font-size: 13px;
     line-height: 125%;
-    border: solid 1px $color_orange;
-    border-bottom: 0;
-    border-radius: 6px 6px 0 0;
     padding: 20px;
     padding-bottom: 0;
-
-    color: $color_gray_text;
+    margin-top: 5px;
+    color: $color_shade_eclipse;
 
     & > div:first-child {
-      color: $color_black;
       font-weight: normal;
     }
 
@@ -502,7 +485,7 @@
       justify-content: space-between;
       font-size: 14px;
       line-height: 21px;
-      color: $color_green;
+      color: $color_shade_eclipse;
     }
 
     & > *:last-child {
@@ -554,29 +537,23 @@
       border-left: solid 1px $color_orange;
       border-right: solid 1px $color_orange;
       border-bottom: solid 1px $color_orange;
-      // border-radius: 2px;
     }
   }
 
   &_voucherButtonApplied {
     display: flex;
     justify-content: center;
-    color: $color_orange;
-    background: $color_yellow;
-    border-bottom: 1px solid $color_orange;
-    border-top: 1px solid $color_orange;
-    padding: 20px;
+    background: $color_white;
+    padding: 10px;
     cursor: pointer;
-    // margin-bottom: 1rem;
+    border: 1px solid $color_shade_heather;
+    border-radius: 2px;
 
     @media screen and (max-width: 767px) {
       border-color: $color_gray;
     }
 
     &.b-right {
-      // border-right: 0.5px solid $color_orange;
-      // border-top-left-radius: 5px;
-
       @media screen and (max-width: 767px) {
         border-color: $color_gray;
       }
@@ -590,9 +567,11 @@
   }
 }
 
-.orderSummary-pointEarnedBannerClassName{
-  p{ display: none;
-
+.orderSummary {
+  &-pointEarnedBannerClassName {
+    p{
+      display: none;
+    }
   }
 }
 
@@ -602,10 +581,7 @@
   border-right: solid 1px $color_orange;
   padding: 1rem;
   padding-bottom: 0;
-  // border-radius: 5px;
-  // margin-bottom: 2rem;
-   
-
+  
   &_title {
     font-weight: normal;
     font-size: 14px;
@@ -651,10 +627,15 @@
     margin-right: 1rem;
 
     img {
-      width: 100%;
-      height: 120px;
+      width: 90px;
+      height: 90px;
       object-fit: cover;
       border-radius: 5px;
+
+      @media screen and (max-width: 1200px) {
+        width: 70px;
+        height: 70px;
+      }
     }
   }
 
@@ -813,4 +794,10 @@
   &_discNote {
     display: none;
   }
+}
+
+.btn-blue {
+  background-color: $color_shade_madison;
+  color: white;
+  font-weight: bold;
 }

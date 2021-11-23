@@ -51,8 +51,16 @@
     }
 
     h6 {
-      font-family: "karla-bold";
+      font-family: "Poppins-bold";
       font-size: 16px;
+    }
+
+    &> a {
+      flex-grow: 1;
+
+      img {
+        width: auto;
+      }
     }
   }
 

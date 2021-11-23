@@ -42,14 +42,17 @@
       }
 
       li {
-        margin: 0 0.5rem;
-
         .image-thumb {
-          width: 60px;
+          width: 85px;
           height: 85px;
           object-fit: cover;
           opacity: 0.5;
           border-radius: 2.5px;
+          margin-right: 5px;
+
+          &::last-child{
+            margin-right: 0;
+          }
 
           &:hover {
             cursor: pointer;
@@ -84,13 +87,14 @@
 
     &--detailTitle {
       &-title {
-        font-family: "karla-bold";
-        font-size: 22px;
+        font-family: "Poppins-bold";
+        font-weight: bold;
+        font-size: 24px;
       }
     }
 
     & > p {
-      font-family: "karla-bold";
+      font-family: "Poppins-bold";
       font-size: 22px;
       color: $color_orange;
       order: 2;
@@ -108,9 +112,10 @@
 
           select {
             width: 150px;
-            padding: 1rem;
+            padding: 0.8rem 1rem;
             border-color: rgba(0, 0, 0, 0.25);
             border-radius: 2.5px;
+            background-color: white;
 
             &:focus,
             &:active {
@@ -151,6 +156,11 @@
 
         &-container {
           margin-right: 1rem;
+        }
+
+        &-title{
+          font-size: 16px;
+          color: black;
         }
       }
 
@@ -202,12 +212,17 @@
 
     &--desc {
       margin-top: 2rem;
+      font-size: 16px;
     }
 
     &-share {
       margin-top: 2rem;
-      display: block;
+      display: flex;
       align-items: center;
+
+      @media screen and (max-width: 440px){
+        align-items: flex-start !important;
+      }
 
       p {
         font-size: 14px;
@@ -240,7 +255,7 @@
 
       &--date,
       &--time {
-        font-family: "karla-bold";
+        font-family: "Poppins-bold";
         padding: 0.5rem 1rem;
         border: 1px solid $color_orange;
         border-radius: 4px;
@@ -265,14 +280,14 @@
       }
 
       & > span {
-        font-family: "karla-bold";
+        font-family: "Poppins-bold";
         font-size: 15px;
         color: $color_maroon;
         margin: 0 0.5rem 1rem 0.5rem;
       }
 
       &-item {
-        font-family: "karla-bold";
+        font-family: "Poppins-bold";
         font-size: 15px;
         padding: 0.5rem;
         border-radius: 4px;
@@ -282,7 +297,7 @@
     }
 
     &-timeout {
-      font-family: "karla-bold";
+      font-family: "Poppins-bold";
       font-size: 24px;
       color: $color_maroon;
       text-transform: uppercase;
@@ -448,14 +463,14 @@
 
   &_errorAddCartTitle
   {
-    font-family: "karla-bold";
+    font-family: "Poppins-bold";
     font-size: 18px;
     margin-bottom: 1rem;
   }
 
   &_errorAddCartDesc
   {
-    font-size: 13px;
+    font-size: 16px;
     margin-bottom: 0;
   }
 
@@ -771,6 +786,7 @@
     width: 178px;
     margin-right: 12px;
     background-color: #2C3E50 !important;
+    border-radius: 0 !important;
 
     @media screen and (max-width: 767px) {
       display: block;
@@ -784,6 +800,7 @@
     height: 46px;
     width: 178px;
     margin-right: 12px;
+    border-radius: 0 !important;
 
     @media screen and (max-width: 767px) {
       display: block;
@@ -865,7 +882,7 @@
       }
 
       &-point {
-        font-family: "karla-bold";
+        font-family: "Poppins-bold";
         font-size: 4rem;
         margin-bottom: 0;
       }
@@ -929,7 +946,7 @@
     }
 
     &--title {
-      font-family: "karla-bold";
+      font-family: "Poppins-bold";
       font-size: 1rem;
       text-transform: uppercase;
       margin: 1rem 0 0.5rem 0;
@@ -960,7 +977,7 @@
       &-title {
         &-name {
           font-size: 1rem;
-          font-family: "karla-bold";
+          font-family: "Poppins-bold";
         }
       }
 
@@ -1082,11 +1099,11 @@
     position: relative;
     margin: 0 0 8px;
     padding: 0;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 18px;
     font-weight: 400;
     letter-spacing: calc(12 * 3.5%);
-    color: #A2A2A2;
+    color: black;
   }
 
   &_showCourier
@@ -1461,8 +1478,12 @@
 
   &_titleSection {
     font-family: "roboto-medium";
-    font-size: 16px;
+    font-size: 24px;
     margin-top: 20px;
+
+    @media screen and (max-width: 440px) {
+      font-size: 14px;
+    }
   }
 
   &_filters {
@@ -1475,7 +1496,7 @@
 
   &_filter {
     font-size: 14px;
-    border: 1px solid $color_gray;
+    border: 1px solid rgba(0, 0, 0, .2);
     border-radius: 4px;
     padding: 6px 12px;
     margin: 0 12px;
@@ -1541,12 +1562,29 @@
   }
 
   &_starContainer {
-    font-size: 14px !important;
+    font-size: 18px !important;
     margin-right: 5px;
   }
 
   &_desc {
     margin: 22px 0;
+    font-size: 14px;
+
+    @media screen and (max-width: 440px) {
+      font-size: 11px;
+    }
+  }
+
+  &_date {
+    transform: translateY(3px);
+    margin-left: 8px;
+    color: rgba(0, 0, 0, .7);
+    font-size: 11px !important;
+
+    @media screen and (max-width: 440px) {
+      font-size: 9px;
+      transform: translateY(0);
+    }
   }
 
   &_imageContainer {
@@ -1576,10 +1614,16 @@
 
   &_footer {
     margin: 22px 0;
+    display: flex;
   }
 
   &_author {
-    color: #2C3E50;
+    color: black;
+    font-size: 14px;
+
+    @media screen and (max-width: 440px) {
+      font-size: 11px;
+    }
   }
 
   &_itemPerPage {
@@ -1601,6 +1645,7 @@
       padding: 6px 12px;
       border: 1px solid $color_gray_semi_dark;
       border-radius: 4px;
+      background-color: $color_white;
     }
   }
 
@@ -1771,5 +1816,13 @@
         max-width: 100%;
       }
     }
+  }
+}
+
+.productDetail{
+  &-priceClassName{
+    color: black !important;
+    font-weight: bold;
+    font-size: 30px !important;
   }
 }

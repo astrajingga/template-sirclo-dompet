@@ -18,6 +18,7 @@
 
       &-title {
         font-size: 14px;
+        font-weight: bold;
         margin-bottom: 3px;
 
         @media screen and (max-width: 575px) {
@@ -37,6 +38,8 @@
 
     &--right {
       &-link {
+        font-size: 14px;
+        font-weight: bold;
         color: #1c9aea;
 
         &:hover {
@@ -46,12 +49,25 @@
       }
     }
   }
+
+  &__info {
+    &--person {
+      &-value:first-child {
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      &-value {
+        font-size: 11px;
+      }
+    }
+  }
 }
 
 .shipping-detail {
   &__provider {
     &--title {
-      font-family: "karla-bold";
+      font-family: "Poppins-bold";
       font-size: 14px;
     }
   }
@@ -60,11 +76,12 @@
 .payment-method {
   &__title {
     font-size: 14px;
+    font-weight: bold;
     margin-bottom: 1rem;
   }
 
   &__items {
-    border: 1px solid $color_orange;
+    border: 1px solid #3A96CA;
     border-radius: 3px;
     margin-bottom: 1rem;
     font-size: 1rem;
@@ -86,8 +103,9 @@
 
       & > p {
         margin-bottom: 0;
+        font-size: 16px;
       }
-      
+
 
       &-image {
         text-align: right;
@@ -110,7 +128,6 @@
       }
 
       &-details {
-        background: $color_yellow;
         padding: 2rem 3rem 2rem 4.75rem;
 
         @media screen and (max-width: 575px) {
@@ -142,7 +159,7 @@
               margin-top: 1rem;
               padding-top: 1rem;
               border-top: 1px solid rgba(0, 0, 0, 0.15);
-              font-family: "karla-bold";
+              font-family: "Poppins-bold";
               font-size: 1.2rem;
               text-transform: uppercase;
             }
@@ -158,6 +175,15 @@
             }
           }
         }
+
+        button {
+          transition: .3s;
+          border: 1px solid rgba(0, 0, 0, .3);
+
+          &:hover{
+            border: 1px solid rgba(0, 0, 0, .3);
+          }
+        }
       }
 
       &-footer {
@@ -169,11 +195,11 @@
 
         &-point{
           &_toggle {
-            @extend 
+            @extend
               .btn,
-              .btn-orange-outer,
               .btn-promotion,
               .btn-long;
+            border: 1px solid rgba(0, 0, 0, .3);
           }
         }
 
@@ -188,12 +214,25 @@
             position: relative;
             top: 1px;
             margin-right: 0.5rem;
+
+            &:checked:after {
+              transform: translateY(-25px) !important;
+            }
           }
         }
 
         &-button {
           text-align: right;
           margin: 1rem 0;
+
+          button {
+            transition: .3s;
+            background-color: #2D3E51;
+
+            &:hover{
+              background-color: #2D3E51;
+            }
+          }
         }
       }
 
@@ -280,7 +319,7 @@
     }
 
     &--title {
-      font-family: "karla-bold";
+      font-family: "Poppins-bold";
       font-size: 1rem;
       text-transform: uppercase;
       margin: 1rem 0 0.5rem 0;

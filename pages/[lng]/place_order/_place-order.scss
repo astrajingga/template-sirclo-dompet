@@ -3,10 +3,13 @@
     text-align: right;
 
     &--login-label {
+      text-align: left !important;
+
       span {
-        font-family: "karla-bold";
-        color: $color_black !important;
+        font-family: "Poppins-bold";
+        color: #3A96CA !important;
         margin-left: 5px;
+        font-weight: bold;
 
         &:hover {
           text-decoration: underline;
@@ -27,14 +30,27 @@
 
   &__form {
     &--label {
+      font-size: 14px;
+      color: $color_black;
+      font-weight: bold;
       margin: 0.5rem;
       margin-left: 0;
+
+      @media screen and (max-width: 440px) {
+        font-size: 11px;
+      }
     }
   }
 
   &__shipping {
     &--title {
       margin-bottom: 1rem;
+    }
+
+    &--label {
+      @media screen and (max-width: 440px) {
+        font-size: 14px;
+      }
     }
 
     &--checkbox {
@@ -65,7 +81,7 @@
 
   &_errorAddCartTitle
   {
-    font-family: "karla-bold";
+    font-family: "Poppins-bold";
     font-size: 18px;
     margin-bottom: 1rem;
   }
@@ -151,7 +167,7 @@
   {
     border: none;
     background-color: transparent;
-    font-family: "karla-bold";
+    font-family: "Poppins-bold";
     font-size: 16px;
 
     &:focus,

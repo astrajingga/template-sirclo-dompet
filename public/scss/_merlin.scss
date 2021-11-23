@@ -1,61 +1,52 @@
 @import "./base/all.scss";
-@import './base/_scrollbar.scss';
-
+@import "./base/_scrollbar.scss";
 
 @font-face {
-  font-family: "karla-bold";
-  src: local("Karla Bold"), local("karla-bold"), url("/webfonts/Karla-Bold.ttf");
+  font-family: 'Poppins-regular';
+  src: local('Poppins Regular'), local('Poppins-regular'), url('/webfonts/Poppins-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'Poppins-medium';
+  src: local('Poppins Medium'), local('Poppins-medium'), url('/webfonts/Poppins-Medium.ttf');
+  font-weight: bolder;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'Poppins-black';
+  src: local('Poppins Black'), local('Poppins-black'), url('/webfonts/Poppins-Black.ttf');
   font-weight: bold;
   font-style: normal;
   font-display: fallback;
 }
 
 @font-face {
-  font-family: "karla-italic";
-  src: local("Karla Italic"), local("karla-italic"),
-    url("/webfonts/Karla-Italic.ttf");
-  font-weight: normal;
+  font-family: "Poppins-bold";
+  src: local("Poppins Bold"), local("Poppins-bold"), url("/webfonts/Poppins-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Poppins-bold-italic";
+  src: local("Poppins Bold Italic"), local("Poppins-bold-italic"),
+    url("/webfonts/Poppins-BoldItalic.ttf");
+  font-weight: bold;
   font-style: italic;
   font-display: fallback;
 }
 @font-face {
-  font-family: "karla-regular";
-  src: local("Karla Regular"), local("karla-regular"),
-    url("/webfonts/Karla-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-  font-display: fallback;
-}
-
-
-@font-face {
-  font-family: "poppins-bold";
-  src: local("poppins Bold"), local("poppins-bold"), url("/webfonts/Poppins-Bold.ttf");
-  font-weight: bold;
-  font-style: normal;
-  font-display: fallback;
-}
-
-@font-face {
-  font-family: "poppins-italic";
-  src: local("poppins Italic"), local("poppins-italic"),
+  font-family: "Poppins-italic";
+  src: local("Poppins Italic"), local("Poppins-italic"),
     url("/webfonts/Poppins-Italic.ttf");
   font-weight: normal;
   font-style: italic;
   font-display: fallback;
 }
-@font-face {
-  font-family: "poppins-regular";
-  src: local("poppins Regular"), local("poppins-regular"),
-    url("/webfonts/Poppins-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-  font-display: fallback;
-}
 
-*{
-  font-family: 'poppins-regular' !important;
-  }
 
 .newsletter {
   &__overlay {
@@ -72,30 +63,62 @@
     align-items: center;
     justify-content: center;
 
-    &:empty
-    {
+    &:empty {
       display: none;
     }
   }
 
   &__popup-container {
-    margin: 100px auto;
-    background: $color_white;
-    width: 35%;
-    height: 500px;
-    position: relative;
-    transition: all .3s ease-in-out;
-    overflow-y: auto;
-    position: relative;
-    transition: all 5s ease-in-out;
-    padding-bottom: 40px;
+    span {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      -webkit-align-items: stretch;
+      align-items: stretch;
+      -webkit-justify-content: flex-start;
+      justify-content: flex-start;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+      position: relative;
+      margin: 0 auto;
+      padding: 0;
+      background-color: #efa739;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgb(0 0 0 / 7%);
+      max-width: -webkit-calc(100vw - 60px);
+      max-width: calc(100vw - 60px);
+      width: 65vw;
+      min-height: 420px;
+      max-height: -webkit-calc(100vh - 60px);
+      max-height: calc(100vh - 60px);
+      height: 420px;
+      overflow: hidden;
 
-    img 
-    {
-      width: 100% !important;
-    }
-    @media screen and (max-width: 767px) {
-      width: 70%;
+      @media screen and (max-width: 767px) {
+        overflow-y: auto;
+        height: auto;
+      }
+
+      & > div {
+        @media screen and (min-width: 768px) {
+          min-width: -webkit-calc(100%/2);
+          min-width: calc(100% / 2);
+          max-width: -webkit-calc(100%/2);
+          max-width: calc(100% / 2);
+          width: -webkit-calc(100%/2);
+          width: calc(100% / 2);
+          min-height: 420px;
+          max-height: 420px;
+          height: 420px;
+        }
+
+        img {
+          width: 100% !important;
+          height: auto !important;
+        }
+      }
     }
   }
 
@@ -105,13 +128,12 @@
     top: 5px;
     border: none;
     border-radius: 38px;
-    background: rgba($color_black, 0.65);
+    background: #efa739;
     color: $color_white;
     padding: 5px 10px;
 
     &:active,
-    &:focus
-    {
+    &:focus {
       outline: 0;
       box-shadow: none;
     }
@@ -119,13 +141,21 @@
 
   &-form {
     &-container {
-      padding: 20px 20px 0px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      padding: 0 20px;
+
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+      }
     }
 
     &__label {
-      display: block;
-      font-size: 14px;
-      line-height: 21px;
+      display: none;
     }
 
     &__input {
@@ -141,13 +171,18 @@
     }
 
     &__button {
-      background: #f7be16;
+      background: $color_shade_madison;
       border: 1px solid #ececec;
       box-sizing: border-box;
       border-radius: 3px;
       height: 54px;
       padding: 0px 24px 0px 24px;
       color: #ffffff;
+
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        margin-top: 20px;
+      }
     }
   }
 }
@@ -173,7 +208,7 @@
 }
 
 body {
-  font-family: "karla-regular";
+  font-family: "Poppins-regular";
   font-size: 13px;
   font-weight: normal;
   background: #fff;
@@ -455,6 +490,15 @@ section {
     position: relative;
     margin-bottom: 2rem;
 
+    label {
+      font-size: 14px;
+      font-weight: bold;
+
+      @media screen and (max-width: 440px) {
+        font-size: 11px;
+      }
+    }
+
     textarea {
       padding: 1rem;
     }
@@ -667,7 +711,9 @@ section {
       }
     }
     &-criteria {
+      font-size: 12px;
       &-list {
+        font-size: 14px;
         display: none;
         padding-left: 5px;
         list-style-type: none;
@@ -746,7 +792,7 @@ section {
   margin-bottom: 2rem;
 
   &__title {
-    font-family: "karla-bold";
+    font-family: "Poppins-bold";
 
     h1,
     h2,
@@ -816,7 +862,7 @@ section {
       text-align: center;
 
       span {
-        font-family: "karla-bold";
+        font-family: "Poppins-bold";
         display: table-cell;
         vertical-align: middle;
         width: 45px;
@@ -827,42 +873,42 @@ section {
 
       &--outofstock {
         color: $color_white;
-        background: $color_gray_high_dark;
+        background: #BDBDBD;
         font-size: 10px;
         line-height: 15px;
       }
 
       &--sale {
         color: $color_white;
-        background: $color_orange;
+        background: #EB5757;
         font-size: 10px;
         line-height: 15px;
       }
 
       &--preorder {
         color: $color_white;
-        background: $color_navy;
+        background: #BB9864;
         font-size: 10px;
         line-height: 15px;
       }
 
       &--new {
         color: $color_white;
-        background: $color_tosca;
+        background: #F2994A;
         font-size: 10px;
         line-height: 15px;
       }
 
       &--comingsoon {
         color: $color_white;
-        background: $color_navy;
+        background: #6BBB64;
         font-size: 10px;
         line-height: 15px;
       }
 
       &--openorder {
         color: $color_white;
-        background: $color_purple;
+        background: #BB6BD9;
         font-size: 10px;
         line-height: 15px;
       }
@@ -876,7 +922,7 @@ section {
       }
 
       &-title {
-        font-family: "karla-bold";
+        font-family: "Poppins-bold";
         font-size: 14px;
         margin-bottom: 0.5rem;
 
@@ -896,8 +942,21 @@ section {
       }
 
       &-price {
-        margin-bottom: 0.5rem;
-        font-size: 14px;
+        display: flex;
+        font-weight: bold;
+        font-size: 18px;
+        letter-spacing: 2px;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: row-reverse;
+
+        @media screen and (max-width: 767px) {
+          display: block;
+          font-size: 18px;
+          padding-right: 0;
+        }
 
         @media screen and (max-width: 440px) {
           margin-bottom: 0.25rem;
@@ -906,20 +965,23 @@ section {
         &--sale {
           text-decoration: line-through;
           color: $color_black;
-          padding-right: 10px;
+          font-size: 12px;
 
           @media screen and (max-width: 767px) {
             display: block;
+            font-size: 18px;
             padding-right: 0;
           }
-          
+        }
+        &--normal {
+          font-size: 18px;
         }
       }
     }
 
     &--buttonQuickview {
       display: none;
-      font-family: "karla-bold";
+      font-family: "Poppins-bold";
       position: absolute;
       top: 65%;
       left: 50%;
@@ -952,7 +1014,7 @@ section {
     }
 
     &--title {
-      font-family: "karla-bold";
+      font-family: "Poppins-bold";
       font-size: 27.5px;
       text-transform: uppercase;
       margin: 1rem 0 0.5rem 0;
@@ -1030,7 +1092,7 @@ section {
 
     .close {
       &-button {
-        font-family: "karla-bold";
+        font-family: "Poppins-bold";
         font-size: 1rem;
         position: absolute;
         top: 0;
@@ -1132,7 +1194,7 @@ section {
     &-right {
       &--detailTitle {
         &-title {
-          font-family: "karla-bold";
+          font-family: "Poppins-bold";
           font-size: 14px;
           margin-bottom: 0.25rem;
         }
@@ -1258,7 +1320,7 @@ section {
 
     .close {
       &-button {
-        font-family: "karla-bold";
+        font-family: "Poppins-bold";
         font-size: 1rem;
         position: absolute;
         top: 0;
@@ -1338,7 +1400,7 @@ section {
 
     &--right {
       &-title {
-        font-family: "karla-bold";
+        font-family: "Poppins-bold";
         font-size: 16px;
       }
 
@@ -1422,7 +1484,7 @@ section {
       &-update {
         width: 46.5%;
         padding: 0.75rem;
-        font-family: "karla-bold";
+        font-family: "Poppins-bold";
       }
 
       &-detail {
@@ -1531,8 +1593,7 @@ section {
   }
 }
 
-.autocomplete-dropdown-container 
-{
+.autocomplete-dropdown-container {
   z-index: 1;
   width: calc(100% - 75px);
   border: 1px solid $color_gray;
@@ -1547,15 +1608,25 @@ section {
     padding: 10px;
   }
 
-  div:nth-child(odd) 
-  {
+  div:nth-child(odd) {
     background-color: $color_white !important;
   }
 
-  div:nth-child(even) 
-  {
+  div:nth-child(even) {
     background-color: $color_gray !important;
   }
+}
+
+.dropdown-container::before {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-top: 15px solid #eeeeee;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid transparent;
+  transform: rotate(180deg) translate(-30px, 30px);
 }
 
 .widget {

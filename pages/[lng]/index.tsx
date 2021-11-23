@@ -1,37 +1,39 @@
-import { useState } from "react";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import dynamic from "next/dynamic";
-import Link from "next/link";
-import Router from "next/router"
-import Carousel from "@brainhubeu/react-carousel";
-import { LazyLoadComponent } from "react-lazy-load-image-component";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle, faBoxOpen, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+/* library package */
+import { useState } from 'react';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import dynamic from 'next/dynamic';
+import Link from 'next/link';
+import Router from 'next/router'
+import Carousel from '@brainhubeu/react-carousel';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle, faBoxOpen, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import {
   Banner,
   getBanner,
   Products,
   ProductCategory,
-  useI18n,
-  Testimonials
-} from "@sirclo/nexus";
-import useWindowSize from "lib/utils/useWindowSize";
-import { useSizeBanner } from "lib/useSizeBanner";
-import { parseCookies } from "lib/parseCookies";
-import { useBrand } from "lib/utils/useBrand";
-import { GRAPHQL_URI } from "lib/Constants";
-import Layout from "components/Layout/Layout";
-import InstagramFeed from "components/InstagramFeed/InstagramFeed"
-
-const Quickview = dynamic(() => import("components/Quickview/Quickview"));
-const Popup = dynamic(() => import("components/Popup/Popup"));
-const Placeholder = dynamic(() => import("components/Placeholder"));
-const EmptyComponent = dynamic(() => import("components/EmptyComponent/EmptyComponent"));
-
+  useI18n
+} from '@sirclo/nexus';
 const Widget = dynamic(
-  () => import("@sirclo/nexus").then((mod) => mod.Widget),
+  () => import('@sirclo/nexus').then((mod) => mod.Widget),
   { ssr: false }
 );
+
+/* library template */
+import useWindowSize from 'lib/utils/useWindowSize';
+import { useSizeBanner } from 'lib/useSizeBanner';
+import { parseCookies } from 'lib/parseCookies';
+import { useBrand } from 'lib/utils/useBrand';
+import { GRAPHQL_URI } from 'lib/Constants';
+
+/* component */
+import Layout from 'components/Layout/Layout';
+import InstagramFeed from 'components/InstagramFeed/InstagramFeed'
+const Quickview = dynamic(() => import('components/Quickview/Quickview'));
+const Popup = dynamic(() => import('components/Popup/Popup'));
+const Placeholder = dynamic(() => import('components/Placeholder'));
+const EmptyComponent = dynamic(() => import('components/EmptyComponent/EmptyComponent'));
 
 const bannerClasses = {
   imageContainerClassName: "banner-carousel__header",
@@ -51,6 +53,7 @@ const classesProductCategory = {
 
 const classesProducts = {
   productContainerClassName: "col-6 col-md-4 products__item",
+  priceClassName: "products__item--content-price--normal",
   productImageContainerClassName: "products__item--image-container",
   productImageClassName: "products__item--image",
   productLabelContainerClassName: "products__item--content",
@@ -253,9 +256,9 @@ const Home: React.FC<any> = ({
               </LazyLoadComponent>
             </div>
             <div className="col-sm-12 col-md-6 mt-5">
-              <div style={{ fontSize: "18px" }}>{ i18n.t("home.aboutUs")}</div>
-              <div className="font-weight-bold py-2" style={{ fontSize: "30px" }}>{ i18n.t("home.aboutUsTitle")}</div>
-              <div style={{ fontSize: "15px" }}>{ i18n.t("home.aboutUsDesc")}</div>
+              <div className="aboutus__heading">{ i18n.t("home.aboutUs")}</div>
+              <div className="font-weight-bold py-2 aboutus__title">{ i18n.t("home.aboutUsTitle")}</div>
+              <div className="aboutus__desc">{ i18n.t("home.aboutUsDesc")}</div>
             </div>
           </div>
         </div>
@@ -264,9 +267,7 @@ const Home: React.FC<any> = ({
         <div className="container">
           <LazyLoadComponent>
             <div className="heading">
-              <div className="heading__title">
-                <h5>{i18n.t("home.mostPopular")}</h5>
-              </div>
+              <h5 className="heading__title">{i18n.t("home.mostPopular")}</h5>
             </div>
             <ProductCategory
               itemPerPage={4}
@@ -314,10 +315,62 @@ const Home: React.FC<any> = ({
               }
             />
           </LazyLoadComponent>
-          <div className="heading">
-            <div className="heading__title">
-              <h5>{i18n.t("home.newArrivalProducts")}</h5>
+            <div className="heading">
+              <h5 className="heading__title">{i18n.t("home.newArrivalProducts")}</h5>
             </div>
+          <div className="row best-seller">
+            <LazyLoadComponent>
+              <Products
+                itemPerPage={6}
+                withSeparatedVariant={true}
+                isQuickView={setIsQuickview}
+                getQuickViewSlug={setSlug}
+                quickViewFeature={true}
+                classes={classesProducts}
+                lazyLoadedImage={false}
+                thumborSetting={{
+                  width: size.width < 768 ? 375 : 512,
+                  format: "webp",
+                  quality: 85,
+                }}
+                loadingComponent={
+                  <>
+                    <div className="col-6 col-md-4 mb-4">
+                      <Placeholder
+                        classes={classesPlaceholderProduct}
+                        withImage
+                      />
+                    </div>
+                    <div className="col-6 col-md-4 mb-4">
+                      <Placeholder
+                        classes={classesPlaceholderProduct}
+                        withImage
+                      />
+                    </div>
+                    <div className="col-6 col-md-4 mb-4">
+                      <Placeholder
+                        classes={classesPlaceholderProduct}
+                        withImage
+                      />
+                    </div>
+                  </>
+                }
+              />
+            </LazyLoadComponent>
+          </div>
+          <div className="text-center">
+            <Link href="/[lng]/products" as={`/${lng}/products`}>
+              <a className="btn btn-black-outer btn-short py-3">
+                {i18n.t("home.showAll")}
+              </a>
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="container">
+          <div className="heading">
+            <h5 className="heading__title">{i18n.t("home.featuredProducts")}</h5>
           </div>
           <div className="row best-seller">
             <LazyLoadComponent>
@@ -361,161 +414,8 @@ const Home: React.FC<any> = ({
           </div>
           <div className="text-center">
             <Link href="/[lng]/products" as={`/${lng}/products`}>
-              <a className="btn btn-black-outer btn-short">
+              <a className="btn btn-black-outer btn-short py-3">
                 {i18n.t("home.showAll")}
-              </a>
-            </Link>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="container">
-          <div className="heading">
-            <div className="heading__title">
-              <h5>{i18n.t("home.featuredProducts")}</h5>
-            </div>
-          </div>
-          <div className="row best-seller">
-            <LazyLoadComponent>
-              <Products
-                itemPerPage={6}
-                withSeparatedVariant={true}
-                isQuickView={setIsQuickview}
-                getQuickViewSlug={setSlug}
-                quickViewFeature={true}
-                classes={classesProducts}
-                lazyLoadedImage={false}
-                thumborSetting={{
-                  width: size.width < 768 ? 375 : 512,
-                  format: "webp",
-                  quality: 85,
-                }}
-                loadingComponent={
-                  <>
-                    <div className="col-6 col-md-4 mb-4">
-                      <Placeholder
-                        classes={classesPlaceholderProduct}
-                        withImage
-                      />
-                    </div>
-                    <div className="col-6 col-md-4 mb-4">
-                      <Placeholder
-                        classes={classesPlaceholderProduct}
-                        withImage
-                      />
-                    </div>
-                    <div className="col-6 col-md-4 mb-4">
-                      <Placeholder
-                        classes={classesPlaceholderProduct}
-                        withImage
-                      />
-                    </div>
-                  </>
-                }
-              />
-            </LazyLoadComponent>
-          </div>
-          <div className="text-center">
-            <Link href="/[lng]/products" as={`/${lng}/products`}>
-              <a className="btn btn-black-outer btn-short">
-                {i18n.t("home.showAll")}
-              </a>
-            </Link>
-          </div>
-        </div>
-      </section>
-      {/* <section>
-        <div className="container">
-          <div className="heading">
-            <div className="heading__title">
-              <h5>{i18n.t("home.preOrderProducts")}</h5>
-            </div>
-          </div>
-          <div className="row best-seller">
-            <LazyLoadComponent>
-              <Products
-                itemPerPage={6}
-                withSeparatedVariant={true}
-                isQuickView={setIsQuickview}
-                getQuickViewSlug={setSlug}
-                quickViewFeature={true}
-                classes={classesProducts}
-                lazyLoadedImage={false}
-                thumborSetting={{
-                  width: size.width < 768 ? 375 : 512,
-                  format: "webp",
-                  quality: 85,
-                }}
-                loadingComponent={
-                  <>
-                    <div className="col-6 col-md-4 mb-4">
-                      <Placeholder
-                        classes={classesPlaceholderProduct}
-                        withImage
-                      />
-                    </div>
-                    <div className="col-6 col-md-4 mb-4">
-                      <Placeholder
-                        classes={classesPlaceholderProduct}
-                        withImage
-                      />
-                    </div>
-                    <div className="col-6 col-md-4 mb-4">
-                      <Placeholder
-                        classes={classesPlaceholderProduct}
-                        withImage
-                      />
-                    </div>
-                  </>
-                }
-              />
-            </LazyLoadComponent>
-          </div>
-          <div className="text-center">
-            <Link href="/[lng]/products" as={`/${lng}/products`}>
-              <a className="btn btn-black-outer btn-short">
-                {i18n.t("home.showAll")}
-              </a>
-            </Link>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="container-fluid">
-          <Widget
-            pos="main-content-2"
-            widgetClassName="widget-image-home"
-            thumborSetting={{
-              width: size.width < 768 ? 512 : 800,
-              format: "webp",
-              quality: 85,
-            }}
-            loadingComponent={
-              <Placeholder classes={classesPlaceholderWidget} withImage />
-            }
-          />
-        </div>
-      </section> */}
-      <section>
-        <div className="container">
-          <div className="heading">
-            <div className="heading__title">
-              <h5>{i18n.t("home.whatDoTheySay")}</h5>
-            </div>
-          </div>
-          <Testimonials
-            lazyLoadedImage={false}
-            isList={false}
-          />
-          <div className="text-center mt-5">
-            <Link href="/[lng]/testimonials" as={`/${lng}/testimonials`}>
-              <a className="btn" style={{ color: "#D35400", fontSize: "16px", textDecoration: "underline" }}>
-                {i18n.t("home.viewAllTestimonial")}
-              <FontAwesomeIcon
-                  icon={faArrowRight}
-                  color="#D35400"
-                  className="pt-1 pl-1"
-                />
               </a>
             </Link>
           </div>
@@ -526,9 +426,7 @@ const Home: React.FC<any> = ({
           {brand?.socmedSetting?.instagramToken &&
             <LazyLoadComponent threshold={300}>
               <div className="heading">
-                <div className="heading__title">
-                  <h5>{i18n.t("home.followInstagram")}</h5>
-                </div>
+                <h5 className="heading__title"><img src="/icon/instagram.svg" style={{ width: "60px", transform: "translateY(-2px)" }} />{i18n.t("home.followInstagram")} </h5>
               </div>
               <InstagramFeed size={size} />
             </LazyLoadComponent>

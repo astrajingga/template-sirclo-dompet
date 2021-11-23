@@ -1,3 +1,27 @@
+.loglogin-page {
+  &-btnLoginin {
+    &-page {
+      &-subtitle {
+        font-size: 14px;
+
+    @media screen and (max-width: 440px) {
+      font-size: 11px;
+    }
+      }
+    }
+  }
+}
+
+.whatsAppInput {
+  &-noWhatsAppLabelClassName {
+    font-size: 14px;
+
+    @media screen and (max-width: 440px) {
+      font-size: 11px;
+    }
+  }
+}
+
 .login-page
 {
   &-container
@@ -11,8 +35,16 @@
 
   &-btnLogin
   {
+    margin-top: 2rem;
     background-color: #2C3E50;
     color: white;
+    font-size: 14px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    &:hover {
+      color: white;
+    }
   }
 
 
@@ -31,23 +63,25 @@
 
     .forgot-password
     {
+      font-size: 14px;
       display: block;
       text-align: center;
 
       .forgot-link
       {
-        font-family: "karla-bold";
+        font-family: "Poppins-bold";
       }
     }
 
     .footer
     {
+      font-size: 14px;
       margin: 1rem 0;
       text-align: center;
 
       a
       {
-        font-family: "karla-bold";
+        font-family: "Poppins-bold";
       }
     }
   }
@@ -65,13 +99,22 @@
 
   &-title
   {
-    font-family: "karla-bold";
-    font-size: 16px;
+    font-family: "Poppins-bold";
+    font-size: 28px;
+
+    @media screen and (max-width: 440px) {
+      font-size: 20px;
+    }
   }
 
   &-subtitle
   {
-    color: $color_gray_text;
+    color: $color_black;
+    font-size: 14px;
+
+    @media screen and (max-width: 440px) {
+      font-size: 11px;
+    }
   }
 
   &-back
@@ -89,8 +132,8 @@
 
   &-withGoogle
   {
-    max-width: 226px;
     margin: 32px auto 0;
+    padding: 0;
 
     &.register
     {
@@ -100,7 +143,7 @@
 
   &-withGoogleButton
   {
-    font-family: "karla-regular" !important;
+    font-family: "Poppins-regular" !important;
     font-size: 13px !important;
     color: #444444 !important;
     display: flex;
@@ -108,8 +151,7 @@
     justify-content: center;
     width: 100%;
     height: 40px;
-    border: 1px solid #E8E8E8 !important;
-    border-radius: 3px !important;
+    border: 1px solid rgba(0, 0, 0, .6) !important;
     box-shadow: none !important;
     background-color: $color_white;
 
@@ -119,7 +161,7 @@
       width: 18px;
       height: 21px;
     }
-    
+
     &.metro
     {
       margin-top: 12px;
@@ -144,18 +186,22 @@
 
   &-orTitle
   {
-    display: flex; 
+    display: flex;
     justify-content: center;
     position: relative;
     margin-top: 38.5px;
-    
+
     span{
       background-color: white;
       padding: 0 12px;
       z-index: 2;
       color: $color_black;
-      font-size: 11px;
+      font-size: 14px;
       font-style: normal;
+
+    @media screen and (max-width: 440px) {
+      font-size: 11px;
+    }
     }
 
     &::before
@@ -182,8 +228,12 @@
 
   &-label
   {
-    font-size: 13px;
+    font-size: 14px;
     margin-bottom: 7px;
+
+    @media screen and (max-width: 440px) {
+      font-size: 11px;
+    }
   }
 
   &-btn
@@ -233,8 +283,8 @@
     height: 54px;
     margin: 0 5px;
     padding: 0;
-    text-align: center;
-    font-family: "karla-bold";
+    text-align: left;
+    font-family: "Poppins-bold";
     font-size: 24px;
 
     @media screen and (max-width: 375px) {
@@ -298,10 +348,10 @@
   // position: absolute;
   z-index: -1;
   width: 100%;
-  height: auto;        
+  height: auto;
   top: 0;
 
-  
+
   @media screen and (max-width: 575px) {
     img{
       object-fit: cover !important;

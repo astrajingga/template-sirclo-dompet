@@ -6,10 +6,9 @@
     width: 100%;
 
     &__header {
-      // display: grid !important;
       display: none !important;
-      // grid-template-columns: 10% 40% 15% 15% auto;
-      font-family: "karla-bold";
+      grid-template-columns: 10% 40% 15% 15% auto;
+      font-family: "Poppins-bold";
       text-transform: uppercase;
       margin-bottom: 2rem;
 
@@ -31,7 +30,7 @@
       &--item {
         margin-bottom: 1rem;
         display: grid;
-        grid-template-columns: 10% 40% auto 20%;
+        grid-template-columns: 10% 40% auto auto 20%;
 
         @media screen and (max-width: 575px) {
           grid-template-columns: 35% 55% 10%;
@@ -71,11 +70,7 @@
         }
 
         &-title {
-          font-family: "karla-bold";
-          font-size: 20px;
-          // grid-column: 3;
-          // grid-row: 1;
-
+          font-family: "Poppins-bold";
         }
 
         &-priceContainer {
@@ -93,7 +88,6 @@
         }
 
         &-priceRegular {
-          display: none;
           @media screen and (max-width: 575px) {
             display: none;
           }
@@ -112,8 +106,6 @@
           display: flex;
           justify-content: start;
           align-items: center;
-          // grid-column: 3;
-          // grid-row: 2;
 
           & > div
           {
@@ -131,7 +123,7 @@
         }
 
         &-qty {
-          align-self: right;
+          align-self: center;
           grid-column: 4;
 
           @media screen and (max-width: 575px) {
@@ -211,11 +203,6 @@
           width: 100%;
           align-self: center;
           padding-left: 1rem;
-          text-align: left;
-          grid-column: 4;
-          grid-row: 2;
-          font-size: 20px;
-          font-family: "karla-bold";
 
           @media screen and (max-width: 575px) {
             grid-column: 2;
@@ -246,6 +233,8 @@
         }
 
         &-remove {
+          grid-column: 2;
+          grid-row: 2;
           padding-left: 1.1rem;
           align-self: center;
 
@@ -257,6 +246,7 @@
           }
 
           &-icon {
+            color: #EB5757;
             cursor: pointer;
           }
         }
@@ -275,13 +265,12 @@
 
     &__footer {
       &--title {
-        font-family: "karla-bold";
+        font-family: "Poppins-bold";
         font-size: 13px;
       }
 
       &--input {
-        width: 100% !important;
-        margin-bottom: 2rem;
+        width: 50% !important;
 
         @media screen and (max-width: 767px) {
           width: 100% !important;
@@ -299,7 +288,7 @@
       }
 
       &--title {
-        font-family: "karla-bold";
+        font-family: "Poppins-bold";
         font-size: 27.5px;
         text-transform: uppercase;
         margin: 1rem 0 0.5rem 0;
@@ -326,7 +315,7 @@
 
   &_errorAddCartTitle
   {
-    font-family: "karla-bold";
+    font-family: "Poppins-bold";
     font-size: 18px;
     margin-bottom: 1rem;
   }

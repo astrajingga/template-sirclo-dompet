@@ -81,7 +81,7 @@
   h5,
   h6 {
     color: $color_white;
-    font-family: "karla-bold";
+    font-family: "Poppins-bold";
     font-size: 22px;
     text-transform: uppercase;
   }
@@ -272,7 +272,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         text-transform: capitalize;
-        font-family: "karla-bold";
+        font-family: "Poppins-bold";
         font-size: 16px;
         color: $color_white;
         border: 1px solid $color_white;
@@ -331,18 +331,6 @@
   }
 }
 
-.products__item {
-  &--content-title {
-    font-family: "karla-regular" !important;
-    font-size: 18px;
-  }
-
-  &--content-price {
-    font-weight: bold;
-    font-size: 16px;
-  }
-}
-
 .heading__title {
   h5 {
     font-size: 25px;
@@ -361,7 +349,7 @@
   }
 }
 
-.navbar{
+.navbar {
   @media screen and (max-width: 992px) {
     display: none;
   }

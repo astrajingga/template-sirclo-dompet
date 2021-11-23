@@ -11,7 +11,7 @@
     padding-bottom: 1rem;
     white-space: nowrap;
     overflow-x: scroll;
-    
+
     button {
       background-color: transparent;
       text-transform: uppercase;
@@ -39,7 +39,7 @@
     padding: 0;
     color: $color_red_dark;
     text-decoration: underline;
-    
+
     &:focus,
     &:active
     {
@@ -47,7 +47,7 @@
       box-shadow: none;
     }
   }
-  
+
   &_history
   {
     width: 100%;
@@ -58,11 +58,11 @@
     thead
     {
       border: 1px solid $color_gray_semi_dark;
-      
+
       tr
       {
         padding: 1rem;
-  
+
         th
         {
           padding: 1rem;
@@ -247,7 +247,7 @@
       color: $color_gray_semi_dark;
       font-family: "roboto-black";
       font-size: 12px;
-      
+
       &:hover
       {
         color: $color_blue;
@@ -281,14 +281,14 @@
 
   &_myAccount
   {
-    &_order 
+    &_order
     {
       margin: 0;
       padding: 0;
       line-height: 2rem;
       text-align: left;
       margin-bottom: 2rem;
-      
+
       &__list
       {
         list-style: none;
@@ -543,7 +543,7 @@
 
   &_progress
   {
-    border-radius: 6px; 
+    border-radius: 6px;
     width: 100%;
     height: 10px;
 
@@ -629,7 +629,7 @@
 
       & > span
       {
-        font-family: "roboto-medium"; 
+        font-family: "roboto-medium";
       }
     }
   }
@@ -691,7 +691,7 @@
   }
   &_info {
     &_container {
-      background: rgba(251, 192, 45, 0.5);
+      background: #E9F5FA;
       padding: 10px 12px;
       width: 100%;
       display: flex;
@@ -710,7 +710,7 @@
     &_button {
       border: none;
       background: none;
-      color: rgb(0, 145, 254);
+      color: #D2562E;
       font-size: 14px;
     }
   }

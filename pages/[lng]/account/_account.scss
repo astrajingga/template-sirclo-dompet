@@ -1,9 +1,11 @@
+
 .account-page {
   &-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 5rem;
+    margin-top: 40px;
   }
 
   &-inner {
@@ -15,8 +17,12 @@
     margin-bottom: 2rem;
 
     &--title {
-      font-family: "karla-bold";
+      font-family: "Poppins-bold";
       font-size: 28px;
+
+      @media screen and (max-width: 440px) {
+        font-size: 14px;
+      }
     }
 
     &--points {
@@ -34,7 +40,7 @@
       margin: 0;
       padding: 0;
       margin-bottom: 2rem;
-      border-bottom: 1px solid $color_orange;
+      border-bottom: 1px solid $color_gray;
       white-space: nowrap;
       overflow-x: auto;
       overflow-y: hidden;
@@ -61,7 +67,8 @@
           }
 
           &--active {
-            font-family: "karla-bold";
+            font-family: "Poppins-bold";
+            font-weight: bold;
 
             &::after {
               content: "";
@@ -71,6 +78,10 @@
               bottom: 0;
               border-bottom: 3px solid $color_orange;
             }
+          }
+
+          @media screen and (max-width: 440px) {
+            font-size: 14px;
           }
         }
 
@@ -98,12 +109,23 @@
               margin-bottom: 2rem;
             }
 
+            &--button {
+              font-size: 14px;
+              font-weight: bold;
+            }
+
             &-label {
               display: block;
               min-width: 200px;
+              font-size: 16px;
+              margin-bottom: 5px;
 
               @media screen and (max-width: 767px) {
                 margin-bottom: 1rem;
+              }
+
+              @media screen and (max-width: 440px) {
+                font-size: 11px;
               }
             }
 
@@ -120,9 +142,17 @@
       }
 
       .edit-account {
+        .account {
+          &-list {
+            &--button {
+              font-size: 14px;
+              font-weight: bold;
+            }
+          }
+        }
         &-label {
           min-width: 200px;
-          margin-bottom: 0;
+          margin-bottom: 8px;
 
           @media screen and (max-width: 767px) {
             margin-bottom: 1rem;
@@ -225,7 +255,7 @@
   &_mapPopupClose {
     border: none;
     background-color: transparent;
-    font-family: "karla-bold";
+    font-family: "Poppins-bold";
     font-size: 16px;
     color: $color_black;
     margin: 0 !important;
@@ -307,9 +337,14 @@
     margin-bottom: 7px;
 
     & > p {
-      font-family: "karla-bold";
-      font-size: 14px;
+      font-family: "Poppins-bold";
+      font-size: 20px;
+      font-weight: bold;
       margin-bottom: 0;
+
+      @media screen and (max-width: 440px) {
+        font-size: 11px;
+      }
     }
   }
 
@@ -320,10 +355,15 @@
   }
 
   &_membershipTotalPoints {
-    font-family: "karla-bold";
+    font-family: "Poppins-bold";
+    font-size: 16px;
     position: absolute;
     top: 0;
     right: 0;
+
+    @media screen and (max-width: 440px) {
+      font-size: 9px;
+    }
   }
 
   &_membershipProgress {
@@ -344,6 +384,7 @@
 
   &_membershipPrompt {
     margin-top: 7px;
+    font-size: 12px;
     color: $color_gray_text;
   }
 
@@ -368,14 +409,24 @@
   &_membershipHistorytransactionType {
     grid-row: 2;
     grid-column: 1;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
+
+    @media screen and (max-width: 440px) {
+      font-size: 14px;
+    }
   }
 
   &_membershipHistoryTransactionDate {
     grid-row: 3;
     grid-column: 1;
-    font-size: 14px;
+    font-size: 12px;
     color: $color_gray_text;
+    padding: 5px 10px;
+
+    @media screen and (max-width: 440px) {
+      font-size: 9px;
+    }
   }
 
   &_membershipHistoryPointDelta {
@@ -383,7 +434,11 @@
     grid-column: 2;
     align-self: center;
     text-align: right;
-    font-size: 18px;
+    font-size: 22px;
+
+    @media screen and (max-width: 440px) {
+      font-size: 14px;
+    }
 
     &.positive {
       color: $color_green;
@@ -398,38 +453,55 @@
     grid-row: 1;
     grid-column: 1;
     width: fit-content;
-    background: $color_gray;
     padding: 5px 10px;
     margin-bottom: 5px;
     border-radius: 2px;
 
     & > p,
     > span {
-      font-family: "karla-italic";
+      font-size: 12px;
+      font-family: "Poppins-italic";
+
+      @media screen and (max-width: 440px) {
+        font-size: 11px;
+      }
     }
   }
 
   &_membershipHistoryLinkContinue {
-    border: 1px solid $color_orange_low;
     padding: 1rem;
+    background-color: #E8F5FB;
     margin-bottom: 30px;
     border-radius: 3px;
     font-size: 16px;
 
     & > p {
+      display: inline-block;
       margin: 0;
+      font-size: 12px;
+
+      @media screen and (max-width: 440px) {
+        font-size: 9px;
+      }
     }
 
     & > a {
-      color: $color_blue;
-      font-family: "karla-bold";
+      font-size: 12px;
+      margin-left: 4px;
+      color: #D2562E;
+      font-family: "Poppins-bold";
+      font-weight: bold;
+
+      @media screen and (max-width: 440px) {
+        font-size: 9px;
+      }
     }
   }
 
   &_membershipHistoryPagination {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
 
   &_membershipHistoryItemPerPage {
@@ -446,6 +518,7 @@
 
   &_membershipHistoryItemPerPageOptions {
     & > select {
+      border: 0;
       padding: 7.5px 10px;
       background-color: transparent;
 
@@ -597,7 +670,7 @@
 
         &-itemTitle {
           margin-bottom: 0;
-          font-family: "karla-bold";
+          font-family: "Poppins-bold";
         }
 
         &-button {
@@ -609,7 +682,7 @@
           &-needReview {
             background-color: $color_gray_light;
             color: $color_blue;
-            font-family: "karla-bold";
+            font-family: "Poppins-bold";
 
             &:hover {
               background-color: $color_gray;
@@ -952,7 +1025,7 @@
 
     &_membershipHistoryItemPerPage {
       margin-bottom: 20px;
-      justify-content: center;
+      justify-content: flex-end;
     }
   }
 
@@ -965,7 +1038,6 @@
 
         .ordered {
           &-container {
-            margin-top: 20px;
           }
 
           &-items {
@@ -1023,7 +1095,16 @@
 {
   &_desc
   {
+    padding: 1rem;
+    background-color: #E8F5FB;
+    margin-bottom: 30px;
+    border-radius: 3px;
+    font-size: 12px;
     margin-bottom: 25px;
+
+    @media screen and (max-width: 440px) {
+      font-size: 9px;
+    }
   }
 
   &_media
@@ -1084,7 +1165,7 @@
     display: none;
 
     &:checked + .notification_mediaCheckboxSlider {
-      background-color: $color_orange;
+      background-color: #3B97CA;
     }
 
     &:checked + .notification_mediaCheckboxSlider:before {
@@ -1159,7 +1240,7 @@
     opacity: 0;
 
     &:checked ~ .notification_mediaDetailCheckboxLabel {
-      background-color: $color_orange;
+      background-color: #2D3E51;
     }
 
     &:disabled ~ .notification_mediaDetailCheckboxLabel {
@@ -1218,5 +1299,23 @@
   &:hover{
     color: white;
     background-color: #263444;
+  }
+}
+
+.settingNotification {
+  &-mediaLabel {
+    font-size: 18px;
+
+    @media screen and (max-width: 440px) {
+      font-size: 14px;
+    }
+  }
+
+  &-mediaDesc {
+    font-size: 16px;
+
+    @media screen and (max-width: 440px) {
+      font-size: 11px;
+    }
   }
 }

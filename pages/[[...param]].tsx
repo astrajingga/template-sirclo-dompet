@@ -1,5 +1,10 @@
-import { NextPage } from "next";
+/* library package */
+import { NextPage } from 'next';
+
+/* library template */
 import { parseCookies } from 'lib/parseCookies';
+
+/* component */
 import Error from 'components/Error';
 
 interface Props {

@@ -1,17 +1,22 @@
-import { FC } from "react";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import { toast } from "react-toastify";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
-import Breadcrumb from "components/Breadcrumb/Breadcrumb";
-import useWindowSize from "lib/utils/useWindowSize";
-import { useRouter } from "next/router";
-import { useBrand } from "lib/utils/useBrand";
-import Layout from "components/Layout/Layout";
+/* library package */
+import { FC } from 'react';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import { toast } from 'react-toastify';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { useRouter } from 'next/router';
 import {
   OrderReview,
   useI18n,
-} from "@sirclo/nexus";
+} from '@sirclo/nexus';
+
+/* library template */
+import useWindowSize from 'lib/utils/useWindowSize';
+import { useBrand } from 'lib/utils/useBrand';
+
+/* component */
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
+import Layout from 'components/Layout/Layout';
 
 const classesOrderReview = {
   titleContainerClassName: "d-none",
@@ -33,7 +38,7 @@ const classesOrderReview = {
   productNameClassName: "orderReview-productDetailName",
   yourRatingTextClassName: "orderReview-productDetailRating",
   productReviewButtonContainerClassName: "orderReview-productButton",
-  writeReviewButtonClassName: `btn btn-danger`,
+  writeReviewButtonClassName: `btn btn-dark-blue`,
   itemPerPageClassName: "orderReview-itemPerPage",
   itemPerPageOptionsClassName: "orderReview-itemPerPageOptions",
   formContainerClassName: "orderReview-form",
@@ -99,9 +104,9 @@ const ReviewPage: FC<any> = ({
       />
       <section>
         <div className="container">
-          <div className="text-center pb-3">
-            <div class="font-weight-bold" style={{ fontSize: "30px" }}>{i18n.t("orderReview.writeAReview")}</div>
-            <div style={{ color: "rgba(0, 0, 0, .6)", fontSize: "15px" }}>{i18n.t("orderReview.howIsQualityProduct")}</div>
+          <div className="text-center pb-3 review-header">
+            <div className="font-weight-bold review-header--title">{i18n.t("orderReview.writeAReview")}</div>
+            <div className="review-header--subtitle">{i18n.t("orderReview.howIsQualityProduct")}</div>
           </div>
           <div className="orderReview">
             <OrderReview

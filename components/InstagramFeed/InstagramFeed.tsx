@@ -1,6 +1,5 @@
 import { FC, useState } from "react";
 import { InstagramFeed as InstaFeed } from "@sirclo/nexus";
-import Carousel from "@brainhubeu/react-carousel";
 import dynamic from "next/dynamic";
 
 const Placeholder = dynamic(() => import("components/Placeholder"));
@@ -36,7 +35,7 @@ const InstagramFeed: FC<{size: TSize}> = ({ size }) => {
   const [instagramMedia, setInstagramMedia] = useState<any>({});
 
   return (
-    <div className="container">
+    <div className="d-flex justify-content-center">
       {(instagramQuickView && instagramMedia) &&
         <InstagramQuickView
           classes={classesInstagramQuickView}
@@ -51,8 +50,7 @@ const InstagramFeed: FC<{size: TSize}> = ({ size }) => {
       }
 
       <InstaFeed
-        Carousel={Carousel}
-        slidesPerPage={size.width < 575 ? 2 : 4}
+        slidesPerPage={size.width < 575 ? 2 : 6}
         slidesPerScroll={1}
         autoPlay={10000}
         infinite

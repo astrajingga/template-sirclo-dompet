@@ -1,4 +1,5 @@
-import globby from "globby";
+/* library package */
+import globby from 'globby';
 import {
   getProducts,
   getCategories,
@@ -6,8 +7,10 @@ import {
   getBlogs,
   getArticles,
   getAllowedActions,
-} from "@sirclo/nexus";
-import { GRAPHQL_URI } from "lib/Constants";
+} from '@sirclo/nexus';
+
+/* library template */
+import { GRAPHQL_URI } from 'lib/Constants';
 
 const Sitemap = () => <></>;
 export default Sitemap;
@@ -70,7 +73,7 @@ export async function getServerSideProps({ req, res }) {
               <loc>${`https://${req.headers.host}/${lng}/product/${product.slug}`}</loc>
             </url>
           `
-        )} 
+        )}
         `.replace(",", "");
       })
       .join("")}
@@ -83,7 +86,7 @@ export async function getServerSideProps({ req, res }) {
                 <loc>${`https://${req.headers.host}/${lng}/products/category/${category.slug}`}</loc>
               </url>
             `
-        )} 
+        )}
         `.replace(",", "");
       })
       .join("")}
@@ -96,7 +99,7 @@ export async function getServerSideProps({ req, res }) {
                 <loc>${`https://${req.headers.host}/${lng}/article/${article.slug}`}</loc>
               </url>
             `
-        )} 
+        )}
         `.replace(",", "");
       })
       .join("")}
@@ -109,7 +112,7 @@ export async function getServerSideProps({ req, res }) {
                 <loc>${`https://${req.headers.host}/${lng}/lookbook/categories/${lookbook.slug}`}</loc>
               </url>
             `
-        )} 
+        )}
         `.replace(",", "");
       })
       .join("")}
@@ -122,7 +125,7 @@ export async function getServerSideProps({ req, res }) {
                 <loc>${`https://${req.headers.host}/${lng}/blog/${blog.slug}`}</loc>
               </url>
             `
-        )} 
+        )}
         `.replace(",", "");
       })
       .join("")}

@@ -1,17 +1,21 @@
-import { FC, useState } from "react";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import dynamic from "next/dynamic";
+/* library package */
+import { FC, useState } from 'react';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import dynamic from 'next/dynamic';
 import {
   BlogSingle,
   BlogCategories,
   useI18n,
   BlogRecent
-} from "@sirclo/nexus";
-import Layout from "components/Layout/Layout";
-import Breadcrumb from "components/Breadcrumb/Breadcrumb";
-import { useBrand } from "lib/utils/useBrand";
+} from '@sirclo/nexus';
 
-const Placeholder = dynamic(() => import("components/Placeholder"));
+/* library template */
+import { useBrand } from 'lib/utils/useBrand';
+
+/* component */
+import Layout from 'components/Layout/Layout';
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
+const Placeholder = dynamic(() => import('components/Placeholder'));
 
 const classesBlogSingle = {
   blogContainerClassName: "blog-detail",
@@ -70,13 +74,6 @@ const BlogSlug: FC<any> = ({
       lngDict={lngDict}
       brand={brand}
     >
-      {/* <div className="blog-detail__breadcrumb">
-        <Breadcrumb
-          title={title}
-          links={linksBreadcrumb}
-          lng={lng}
-        />
-      </div> */}
       <div className="top-head">
         <h3 className="text-capitalize">
           {title}

@@ -1,14 +1,19 @@
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import { useRouter } from "next/router";
-import { useI18n, usePaymentLink } from "@sirclo/nexus";
-import Layout from "components/Layout/Layout";
-import Breadcrumb from "components/Breadcrumb/Breadcrumb";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
-import { useBrand } from "lib/utils/useBrand";
+/* library package */
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import { useRouter } from 'next/router';
+import { useI18n, usePaymentLink } from '@sirclo/nexus';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
-const PaymentStatus: React.FC<any> = ({ 
-  lng, 
+/* library template */
+import { useBrand } from 'lib/utils/useBrand';
+
+/* component */
+import Layout from 'components/Layout/Layout';
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
+
+const PaymentStatus: React.FC<any> = ({
+  lng,
   lngDict,
   brand,
   orderID,
@@ -51,9 +56,9 @@ const PaymentStatus: React.FC<any> = ({
   ];
 
   return (
-    <Layout 
-      lngDict={lngDict} 
-      i18n={i18n} 
+    <Layout
+      lngDict={lngDict}
+      i18n={i18n}
       lng={lng}
       brand={brand}
     >
@@ -122,8 +127,8 @@ export const getServerSideProps: GetServerSideProps = async ({ params, req }) =>
   const [orderID, status] = params?.orderID as string[];
 
   return {
-    props: { 
-      lng: params.lng, 
+    props: {
+      lng: params.lng,
       lngDict,
       brand: brand || "",
       orderID: orderID || "",

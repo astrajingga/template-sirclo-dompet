@@ -1,17 +1,22 @@
-import { FC } from "react";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import { SetNewPassword, useI18n } from "@sirclo/nexus";
-import Layout from "components/Layout/Layout";
-import Breadcrumb from "components/Breadcrumb/Breadcrumb";
-import Loader from "components/Loader/Loader";
-import { toast } from "react-toastify";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+/* library package */
+import { FC } from 'react';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import { SetNewPassword, useI18n } from '@sirclo/nexus';
+import { toast } from 'react-toastify';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faEye,
   faEyeSlash,
   faCheckCircle,
-} from "@fortawesome/free-solid-svg-icons";
-import { useBrand } from "lib/utils/useBrand";
+} from '@fortawesome/free-solid-svg-icons';
+
+/* library template */
+import { useBrand } from 'lib/utils/useBrand';
+
+/* component */
+import Layout from 'components/Layout/Layout';
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
+import Loader from 'components/Loader/Loader';
 
 const classesSetNewPassword = {
   containerClassName: "forgot-password-page-form",
@@ -47,11 +52,6 @@ const ResetPasswordPage: FC<any> = ({
       lngDict={lngDict}
       brand={brand}
     >
-      {/* <Breadcrumb
-        title={i18n.t("resetPassword.setNewPassword")}
-        links={linksBreadcrumb}
-        lng={lng}
-      /> */}
       <div className="container">
         <div className="forgot-password-page-container">
           <div className="forgot-password-page-inner">

@@ -29,7 +29,7 @@ const classesOrderSummary = {
   subTotalTextClassName: "order-summary__body--label-subtotal",
   subTotalPriceClassName: "order-summary__body--subtotal",
   footerClassName: "order-summary__footer",
-  submitButtonClassName: "px-0 btn btn-orange btn-long btn-45-pad order-summary__submitButton",
+  submitButtonClassName: "px-0 btn btn-blue btn-long btn-45-pad order-summary__submitButton",
   continueShoppingClassName: "d-none",
   popupClassName: "order-summary__overlay",
   voucherContainerClassName: "order-summary__popup",
@@ -107,7 +107,7 @@ const OrderSummaryBox: FC<any> = ({
 
   const classesOrderSum = () => {
     let classes = classesOrderSummary;
-    
+
     if(page == "cart"){
       classes.expandedDivClassName = "order-summary_expandedDivCart"
       classes.voucherButtonClassName =  `${auth ? "col-12 b-right" : "col-12"
@@ -120,7 +120,7 @@ const OrderSummaryBox: FC<any> = ({
 
     classes.voucherButtonAppliedClassName = `${auth ? "col-12 b-right" : "col-12"
       } order-summary_voucherButtonApplied`;
-      
+
     return classes;
   };
 
@@ -154,8 +154,11 @@ const OrderSummaryBox: FC<any> = ({
           onErrorMsgCoupon={(msg) => toast.error(msg)}
           isAccordion
           icons={{
-            voucher: <FontAwesomeIcon icon={faTicketAlt} height="1em" />,
-            points: <FontAwesomeIcon icon={faCrown} height="1em" />,
+            voucher: <img
+            src="/images/mdi_ticket-percent.svg"
+            alt="icon"
+          />,
+            points:  <img src="/images/mdi_star-circle.svg" alt="icon" />,
             pointsApplied: <h3 className="order-summary__popup--points-textApllied">{i18n.t("orderSummary.points")}</h3>,
             voucherApplied: <h3 className="order-summary__popup--voucher-textApllied">{i18n.t("orderSummary.voucher")}</h3>,
             close: <FontAwesomeIcon icon={faTimes} height="1em" />,

@@ -88,6 +88,22 @@
       padding-right: 0;
     }
 
+    &_selected {
+      & > div {
+        & > a {
+          div {
+            padding: 0.5rem 1rem;
+            background: $color_shade_madison;
+            border: 1px solid $color_shade_madison;
+            color: $color_white;
+            border-radius: 34px;
+            font-size: 1rem;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
     &_link
     {
       &:hover
@@ -106,7 +122,7 @@
       cursor: pointer;
 
       @media screen and (max-width: 576px) {
-        font-size: 1rem;
+        font-size: 14px;
       }
     }
   }
@@ -307,13 +323,17 @@
 
 .top-head{
   background-color: #F1F2F7;
-  padding-left: 35px;
-  padding-right: 35px;
+  padding-left: 2rem;
   height: 20vh;
 
   h3{
     line-height: 20vh;
     vertical-align: middle;
+  }
+
+  @media screen and (max-width: 991px) {
+    padding-left: 35px;
+    padding-right: 35px;
   }
 }
 
@@ -343,34 +363,6 @@
   display: inline;
 }
 
-input[type='radio']:after {
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
-  top: -2px;
-  left: -1px;
-  position: relative;
-  background-color: #fff;
-  content: '';
-  display: inline-block;
-  visibility: visible;
-  border: 2px solid #2C3E50;
-}
-
-input[type='radio']:checked:after {
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
-  top: -2px;
-  left: -1px;
-  position: relative;
-  background-color: #2C3E50;
-  content: '';
-  display: inline-block;
-  visibility: visible;
-  border: 2px solid #2C3E50;
-}
-
 input[type='checkbox']:after {
   width: 15px;
   height: 15px;
@@ -379,12 +371,13 @@ input[type='checkbox']:after {
   position: relative;
   background-color: #fff;
   content: '';
+  color: white;
   display: inline-block;
   visibility: visible;
   border: 2px solid #2C3E50;
 }
 
-input[type='checkbox']:checked:after {
+input[type='checkbox']:checked:before {
   width: 15px;
   height: 15px;
   top: -2px;
@@ -395,6 +388,17 @@ input[type='checkbox']:checked:after {
   display: inline-block;
   visibility: visible;
   border: 2px solid #2C3E50;
+}
+
+input[type='checkbox']:checked:after {
+  transform: translateY(-21px);
+  left: 1px;
+  color: white;
+  background-color: transparent;
+  border: 0;
+  content: "✓";
+  display: inline-block;
+  visibility: visible;
 }
 
 
@@ -452,7 +456,7 @@ input[type='checkbox']:checked:after {
   margin: 1rem 0;
 
   &_filterName {
-    font-family: "karla-bold";
+    font-family: "Poppins-bold";
     font-size: 14px;
     margin-top: 1rem;
   }
@@ -548,15 +552,15 @@ input[type='checkbox']:checked:after {
     height: 20px;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
     border-radius: 50%;
-    border: 4px solid #2C3E50;
-    background-color: #2C3E50;
+    border: 4px solid #3B96CB;
+    background-color: #3B96CB;
     cursor: pointer;
   }
 
   &_filterSliderTrack {
     position: absolute;
     height: 5px;
-    background-color: #2C3E50;
+    background-color: #3B96CB;
     border-radius: 7px;
     cursor: pointer;
   }
@@ -625,7 +629,7 @@ input[type='checkbox']:checked:after {
 
       &-selected {
         .products-categories__list--items-value-name {
-          font-family: "karla-bold";
+          font-family: "Poppins-bold";
         }
       }
 
@@ -644,27 +648,28 @@ input[type='checkbox']:checked:after {
   }
 
   select {
-
+    transform: translateY(-8px);
     /* styling */
     background-color: white;
     border: thin solid #eee;
     border-radius: 4px;
     display: inline-block;
     max-width: 100%;
+    font-weight: bold !important;
     font: inherit;
     line-height: 1.5em;
     padding: 0.5em 3.5em 0.5em 1em;
-  
+
     /* reset */
-  
-    margin: 0;      
+
+    margin: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-appearance: none;
     -moz-appearance: none;
   }
-  
+
 
   &__list {
     list-style: none;
@@ -701,5 +706,39 @@ input[type='checkbox']:checked:after {
 
   &-selected{
     background-color: #2C3E50;
+  }
+}
+
+.text-capitalize {
+  font-size: 32px;
+  font-weight: bold;
+
+  @media screen and (max-width: 440px){
+    font-size: 25px;
+  }
+
+  &-20 {
+    font-size: 32px;
+    font-weight: bold;
+
+    @media screen and (max-width: 440px){
+      font-size: 20px;
+    }
+  }
+}
+
+.category_order{
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    height: 9px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: white;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #E8E9E8;
+    border-radius: 100px;
   }
 }

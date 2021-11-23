@@ -9,12 +9,12 @@ const lang = {
   en: {
     title: "Page not found",
     desc: "The link you are following may be broken, or the page has been deleted",
-    back: "Back"
+    back: "Back to Homepage"
   },
   id: {
     title: "Halaman tidak ditemukan",
     desc: "Tautan yang anda ikuti mungkin rusak, atau halaman telah di hapus",
-    back: "Kembali"
+    back: "Kembali ke Halaman Awal"
   }
 }
 

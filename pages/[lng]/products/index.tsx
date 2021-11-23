@@ -1,35 +1,38 @@
-import { FC, useState, useEffect } from "react";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import Router, { useRouter } from "next/router";
+/* library package */
+import { FC, useState, useEffect } from 'react';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import Router, { useRouter } from 'next/router';
 import {
   ProductFilter,
   ProductSort,
   Products,
   useI18n,
   ProductCategory,
-} from "@sirclo/nexus";
-import Layout from "components/Layout/Layout";
-import Breadcrumb from "components/Breadcrumb/Breadcrumb";
-import SideMenu from "components/SideMenu/SideMenu";
-import Placeholder from "components/Placeholder";
-import EmptyComponent from "components/EmptyComponent/EmptyComponent";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+} from '@sirclo/nexus';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faSlidersH,
   faChevronDown,
   faBoxOpen,
   faCheckCircle,
-} from "@fortawesome/free-solid-svg-icons";
-import dynamic from "next/dynamic";
-import useQuery from "lib/utils/useQuery";
-import { useBrand } from "lib/utils/useBrand";
-import useWindowSize from "lib/utils/useWindowSize";
-import useInfiniteScroll from "lib/utils/useInfiniteScroll";
-import convertToTextFromQuery from "lib/utils/convertToTextFromQuery";
+} from '@fortawesome/free-solid-svg-icons';
+import dynamic from 'next/dynamic';
 
-const Quickview = dynamic(() => import("components/Quickview/Quickview"));
+/* library template */
+import useQuery from 'lib/utils/useQuery';
+import { useBrand } from 'lib/utils/useBrand';
+import useWindowSize from 'lib/utils/useWindowSize';
+import useInfiniteScroll from 'lib/utils/useInfiniteScroll';
+import convertToTextFromQuery from 'lib/utils/convertToTextFromQuery';
 
-const Popup = dynamic(() => import("components/Popup/Popup"));
+/* component */
+import Layout from 'components/Layout/Layout';
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
+import SideMenu from 'components/SideMenu/SideMenu';
+import Placeholder from 'components/Placeholder';
+import EmptyComponent from 'components/EmptyComponent/EmptyComponent';
+const Quickview = dynamic(() => import('components/Quickview/Quickview'));
+const Popup = dynamic(() => import('components/Popup/Popup'));
 
 const classesProductFilter = {
   filterClassName: "products_filter",
@@ -64,6 +67,7 @@ const classesPagination = {
 const classesProducts = {
   productContainerClassName: "col-6 col-md-4 products__item",
   productImageClassName: "products__item--image",
+  priceClassName: "products__item--content-price--normal",
   productImageContainerClassName: "image-container",
   productLabelContainerClassName: "products__item--content",
   productTitleClassName: "products__item--content-title",
@@ -90,6 +94,7 @@ const classesProductCategory = {
   categoryItemClassName: "category_list",
   categoryValueClassName: "category_list_link",
   categoryNameClassName: "category_list_item",
+  selectedCategoryClassName : "category_list_selected",
   categoryNumberClassName: "ml-1",
   dropdownIconClassName: "d-none",
 };
@@ -462,10 +467,8 @@ const ProductsPage: FC<any> = ({
               </div>
             </div>
           </div>
-          {/* </div> */}
         </div>
       </div>
-      {/* </section> */}
       <SideMenu
         title={i18n.t("product.filter")}
         openSide={openFilter}

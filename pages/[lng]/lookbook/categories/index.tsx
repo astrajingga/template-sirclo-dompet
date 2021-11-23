@@ -1,14 +1,19 @@
-import { FC } from "react";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+/* library package */
+import { FC } from 'react';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import {
   Lookbook,
   isLookbookAllowed,
   useI18n
-} from "@sirclo/nexus";
-import Layout from "components/Layout/Layout";
-import Breadcrumb from "components/Breadcrumb/Breadcrumb";
-import useWindowSize from "lib/utils/useWindowSize";
-import { useBrand } from "lib/utils/useBrand";
+} from '@sirclo/nexus';
+
+/* library template */
+import useWindowSize from 'lib/utils/useWindowSize';
+import { useBrand } from 'lib/utils/useBrand';
+
+/* component */
+import Layout from 'components/Layout/Layout';
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
 
 const classesLookbook = {
   containerClassName: "lookbook",
@@ -38,6 +43,11 @@ const LookbookCategory: FC<any> = ({
       lngDict={lngDict}
       brand={brand}
     >
+      <div className="top-head">
+        <h3 className="text-capitalize">
+        {i18n.t("lookbook.title")}
+        </h3>
+      </div>
       <Breadcrumb title={i18n.t("lookbook.title")} links={linksBreadcrumb} lng={lng} />
       {LookbookAllowed &&
         <section>

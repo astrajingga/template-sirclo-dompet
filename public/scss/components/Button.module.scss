@@ -17,12 +17,12 @@
   &_primary
   {
     color: $color_white !important;
-    background-color: $color_blue !important;
+    background-color: #2D3E51 !important;
     transition: all .3s;
 
     &:hover{
       color: $color_white !important;
-      background-color: $color_blue_dark !important;
+      background-color: #2D3E51 !important;
     }
   }
 

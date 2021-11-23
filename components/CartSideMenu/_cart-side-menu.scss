@@ -24,7 +24,8 @@
 
       &-title
       {
-        font-family: "karla-bold";
+        font-family: "Poppins-bold";
+        font-size: 18px;
       }
 
       &-variant
@@ -70,7 +71,7 @@
       margin-left: .5rem;
 
       h6 {font-size: 14px; margin-bottom: 0;}
-      .title {font-family: "karla-bold";}
+      .title {font-family: "Poppins-bold";}
       .price {margin-top: .2rem;}
       span {color: rgba(0, 0, 0, .5)}
     }
@@ -82,8 +83,8 @@
 
     &--title
     {
-      font-family: "karla-bold";
-      font-size: 13px;
+      font-family: "Poppins-bold";
+      font-size: 14px;
     }
   }
 
@@ -100,7 +101,7 @@
 
     &--title
     {
-      font-family: "karla-bold";
+      font-family: "Poppins-bold";
       font-size: 1.25rem;
       text-transform: uppercase;
       margin: 1rem 0 .5rem 0;
@@ -127,7 +128,7 @@
 
   &_errorAddCartTitle
   {
-    font-family: "karla-bold";
+    font-family: "Poppins-bold";
     font-size: 18px;
     margin-bottom: 1rem;
   }
@@ -139,6 +140,12 @@
   }
 }
 
+.cart-item{
+  &RegularAmountClassName{
+    font-size: 18px;
+  }
+}
+
 .order-summary-side-menu
 {
   &__header
@@ -147,7 +154,7 @@
     {
       display: flex;
       justify-content: center;
-      
+
       &-label
       {
         width: 100%;
@@ -173,17 +180,17 @@
     margin: 1.5rem -1.5rem !important;
     background: $color_gray;
     background-color: #2A3035 !important;
-    
+
     &--label-subtotal
     {
-      font-family: "karla-bold";
-      font-size: 14px;
+      font-family: "Poppins-bold";
+      font-size: 18px;
     }
 
     &--subtotal
     {
-      font-family: "karla-bold";
-      font-size: 14px;
+      font-family: "Poppins-bold";
+      font-size: 20px;
       text-align: right;
     }
   }
@@ -191,6 +198,10 @@
   &__footer
   {
     padding: 0 1rem 1rem 1rem;
+
+    button, a {
+      font-size: 14px !important;
+    }
   }
 
   &__overlay
@@ -225,7 +236,7 @@
       span:nth-child(2)
       {
         margin-right: 5px;
-        font-family: "karla-bold";
+        font-family: "Poppins-bold";
         font-size: 1rem;
         text-transform: uppercase;
       }
@@ -237,7 +248,7 @@
         margin-top: -5px;
       }
     }
-    
+
     &-close
     {
       position: absolute;
@@ -253,7 +264,7 @@
       &:active
       {
         outline: 0;
-        border: none; 
+        border: none;
       }
 
       &:hover

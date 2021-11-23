@@ -1,26 +1,30 @@
-import { FC } from "react";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import dynamic from "next/dynamic";
+/* library package */
+import { FC } from 'react';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import dynamic from 'next/dynamic';
 import {
   PlaceOrderForm,
   useI18n,
   PrivateRoute,
-} from "@sirclo/nexus";
-import { toast } from "react-toastify";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+} from '@sirclo/nexus';
+import { toast } from 'react-toastify';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faTimes,
   faDotCircle,
-} from "@fortawesome/free-solid-svg-icons";
-import Layout from "components/Layout/Layout";
-import Breadcrumb from "components/Breadcrumb/Breadcrumb";
-import Stepper from "components/Stepper/Stepper";
-import { parseCookies } from "lib/parseCookies";
-import { useBrand } from "lib/utils/useBrand";
-import OrderSummaryBox from 'components/OrderSummaryBox/OrderSummaryBox';
+} from '@fortawesome/free-solid-svg-icons';
 
+/* library template */
+import { parseCookies } from 'lib/parseCookies';
+import { useBrand } from 'lib/utils/useBrand';
+
+/* component */
+import Layout from 'components/Layout/Layout';
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
+import Stepper from 'components/Stepper/Stepper';
+import OrderSummaryBox from 'components/OrderSummaryBox/OrderSummaryBox';
 const LoaderPages = dynamic(
-  () => import("components/Loader/LoaderPages")
+  () => import('components/Loader/LoaderPages')
 );
 
 const classesPlaceOrderForm = {
@@ -95,11 +99,11 @@ const PlaceOrder: FC<any> = ({
         lngDict={lngDict}
         brand={brand}
       >
-        {/* <Breadcrumb
-          title={i18n.t("placeOrder.title")}
-          links={linksBreadcrumb}
-          lng={lng}
-        /> */}
+        <div className="top-head">
+          <h3 className="text-capitalize">
+          {i18n.t("pageStepper.checkoutTitle")}
+          </h3>
+        </div>
         <section>
           <div className="container">
             <div className="row">

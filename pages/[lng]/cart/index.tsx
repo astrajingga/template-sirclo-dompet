@@ -1,28 +1,28 @@
+/* library package */
 import { FC, useState } from "react";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import {
   useI18n,
   CartDetails,
   Products,
-  isProductRecommendationAllowed
+  isProductRecommendationAllowed,
 } from "@sirclo/nexus";
+import { toast } from "react-toastify";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEdit, faTrash, faCartPlus } from "@fortawesome/free-solid-svg-icons";
+
+/* library template */
+import { parseCookies } from "lib/parseCookies";
+import { useBrand } from "lib/utils/useBrand";
+import useWindowSize from "lib/utils/useWindowSize";
+
+/* component */
 import Layout from "components/Layout/Layout";
 import Breadcrumb from "components/Breadcrumb/Breadcrumb";
 import EmptyComponent from "components/EmptyComponent/EmptyComponent";
 import Placeholder from "components/Placeholder";
-import { parseCookies } from "lib/parseCookies";
-import { useBrand } from "lib/utils/useBrand";
-import useWindowSize from "lib/utils/useWindowSize";
-import { toast } from "react-toastify";
-import { LazyLoadComponent } from "react-lazy-load-image-component";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEdit,
-  faTrash,
-  faCartPlus
-} from "@fortawesome/free-solid-svg-icons";
-
-import OrderSummaryBox from 'components/OrderSummaryBox/OrderSummaryBox';
+import OrderSummaryBox from "components/OrderSummaryBox/OrderSummaryBox";
 
 const classesCartDetails = {
   className: "cart-table",
@@ -54,7 +54,8 @@ const classesCartDetails = {
   removeButtonClassName: "cart-table__body--item-remove-icon",
   cartFooterClassName: "cart-table__footer sirclo-form-row mb-0",
   cartFooterTitleClassName: "cart-table__footer--title",
-  cartFooterTextareaClassName: "form-control sirclo-form-input cart-table__footer--input"
+  cartFooterTextareaClassName:
+    "form-control sirclo-form-input cart-table__footer--input",
 };
 
 const classesProducts = {
@@ -72,13 +73,13 @@ const classesProducts = {
   preOrderLabelClassName: "products__item-sticker--preorder",
   newLabelClassName: "products__item-sticker--new",
   buttonClassName: "products__item--buttonQuickview",
-  salePriceClassName: "products__item--content-price--sale"
-}
+  salePriceClassName: "products__item--content-price--sale",
+};
 
 const paginationClasses = {
   pagingClassName: "col-12 cart_pagination",
-  itemClassName: "cart_paginationItem"
-}
+  itemClassName: "cart_paginationItem",
+};
 
 const classesEmptyComponent = {
   emptyContainer: "cart-table__empty",
@@ -90,13 +91,13 @@ const classesPlaceholderProduct = {
   placeholderImage: "placeholder-item placeholder-item__product--card",
   placeholderTitle: "placeholder-item placeholder-item__product--title",
   placeholderList: "placeholder-item placeholder-item__product--list",
-}
+};
 
 const Cart: FC<any> = ({
   lng,
   lngDict,
   auth,
-  brand
+  brand,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   const i18n: any = useI18n();
   const size = useWindowSize();
@@ -113,34 +114,20 @@ const Cart: FC<any> = ({
   ];
 
   return (
-    <Layout
-      i18n={i18n}
-      lng={lng}
-      lngDict={lngDict}
-      brand={brand}
-    >
+    <Layout i18n={i18n} lng={lng} lngDict={lngDict} brand={brand}>
       <div className="top-head">
-        <h3 className="text-capitalize">
-        {i18n.t("cart.title")}
-        </h3>
+        <h3 className="text-capitalize">{i18n.t("cart.title")}</h3>
       </div>
-        <Breadcrumb
-          links={linksBreadcrumb}
-          lng={lng}
-        />
+      <Breadcrumb links={linksBreadcrumb} lng={lng} />
       <div className="container">
         <div className="cart margin-step-payment">
           <div className="row">
-            <div className="col-12 col-lg-12">
-              {invalidMsg !== "" &&
-                <div className="cart-table__errorCart">
-                  {invalidMsg}
-                </div>
-              }
+            <div className="col-12 col-lg-8">
+              {invalidMsg !== "" && (
+                <div className="cart-table__errorCart">{invalidMsg}</div>
+              )}
               <CartDetails
                 currency="IDR"
-                // imageHeaderText={i18n.t("cart.item")}
-                // nameHeaderText={i18n.t("cart.product")}
                 classes={classesCartDetails}
                 withSeparatedVariant={true}
                 itemRedirectPathPrefix={`product`}
@@ -170,61 +157,71 @@ const Cart: FC<any> = ({
                 }
               />
             </div>
-            <div className="col-12 col-lg-8">
-            </div>
             <div className="col-12 col-lg-4 no-padding-mobile-pad">
-              <OrderSummaryBox
-                i18n={i18n}
-                auth={auth}
-                page="cart"
-              />
+              <OrderSummaryBox i18n={i18n} auth={auth} page="cart" />
             </div>
           </div>
-          {allowedProductRecommendation && pageInfo.totalItems !== 0 && SKUs !== null &&
-            <>
-              <hr className="hr-page" />
-              <div className="heading">
-                <div className="heading__title">
-                  <h5>{i18n.t("product.relatedProduct")}</h5>
+          {allowedProductRecommendation &&
+            pageInfo.totalItems !== 0 &&
+            SKUs !== null && (
+              <>
+                <hr className="hr-page" />
+                <div className="heading">
+                  <div className="heading__title">
+                    <h5>{i18n.t("product.relatedProduct")}</h5>
+                  </div>
                 </div>
-              </div>
-              <div className="row">
-                <LazyLoadComponent>
-                  <Products
-                    SKUs={SKUs}
-                    getCrossSellPageInfo={(pageInfo: any) => setPageInfo({ totalItems: pageInfo.totalItems })}
-                    classes={classesProducts}
-                    paginationClasses={paginationClasses}
-                    itemPerPage={size.width < 768 ? 2 : 4}
-                    newPagination
-                    pathPrefix="product"
-                    lazyLoadedImage={false}
-                    thumborSetting={{
-                      width: size.width < 768 ? 350 : 600,
-                      format: "webp",
-                      quality: 85
-                    }}
-                    loadingComponent={
-                      <>
-                        <div className="col-6 col-md-3 mb-4">
-                          <Placeholder classes={classesPlaceholderProduct} withImage />
-                        </div>
-                        <div className="col-6 col-md-3 mb-4">
-                          <Placeholder classes={classesPlaceholderProduct} withImage />
-                        </div>
-                        <div className="col-6 col-md-3 mb-4">
-                          <Placeholder classes={classesPlaceholderProduct} withImage />
-                        </div>
-                        <div className="col-6 col-md-3 mb-4">
-                          <Placeholder classes={classesPlaceholderProduct} withImage />
-                        </div>
-                      </>
-                    }
-                  />
-                </LazyLoadComponent>
-              </div>
-            </>
-          }
+                <div className="row">
+                  <LazyLoadComponent>
+                    <Products
+                      SKUs={SKUs}
+                      getCrossSellPageInfo={(pageInfo: any) =>
+                        setPageInfo({ totalItems: pageInfo.totalItems })
+                      }
+                      classes={classesProducts}
+                      paginationClasses={paginationClasses}
+                      itemPerPage={size.width < 768 ? 2 : 4}
+                      newPagination
+                      pathPrefix="product"
+                      lazyLoadedImage={false}
+                      thumborSetting={{
+                        width: size.width < 768 ? 350 : 600,
+                        format: "webp",
+                        quality: 85,
+                      }}
+                      loadingComponent={
+                        <>
+                          <div className="col-6 col-md-3 mb-4">
+                            <Placeholder
+                              classes={classesPlaceholderProduct}
+                              withImage
+                            />
+                          </div>
+                          <div className="col-6 col-md-3 mb-4">
+                            <Placeholder
+                              classes={classesPlaceholderProduct}
+                              withImage
+                            />
+                          </div>
+                          <div className="col-6 col-md-3 mb-4">
+                            <Placeholder
+                              classes={classesPlaceholderProduct}
+                              withImage
+                            />
+                          </div>
+                          <div className="col-6 col-md-3 mb-4">
+                            <Placeholder
+                              classes={classesPlaceholderProduct}
+                              withImage
+                            />
+                          </div>
+                        </>
+                      }
+                    />
+                  </LazyLoadComponent>
+                </div>
+              </>
+            )}
         </div>
       </div>
     </Layout>
@@ -235,9 +232,7 @@ export const getServerSideProps: GetServerSideProps = async ({
   req,
   params,
 }) => {
-  const { default: lngDict = {} } = await import(
-    `locales/${params.lng}.json`
-  );
+  const { default: lngDict = {} } = await import(`locales/${params.lng}.json`);
 
   const cookies = parseCookies(req);
   const auth = cookies.AUTH_KEY;
@@ -248,7 +243,7 @@ export const getServerSideProps: GetServerSideProps = async ({
       lng: params.lng,
       lngDict,
       auth: auth || null,
-      brand: brand || ''
+      brand: brand || "",
     },
   };
 };
