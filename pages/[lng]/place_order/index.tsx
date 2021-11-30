@@ -57,7 +57,7 @@ const classesPlaceOrderForm = {
   mapHeaderNoteClassName: "place-order_mapPopupNote",
   mapLabelAddressClassName: "place-order_mapPopupLabelAddress",
   mapCenterButtonClassName: "place-order_mapPopupCenterButton",
-  mapButtonFooterClassName: "btn btn-orange btn-long d-block mx-auto my-3"
+  mapButtonFooterClassName: "btn btn-blue btn-long d-block mx-auto my-3 place-order__marginMapButton"
 };
 
 const logistixStyles = {
