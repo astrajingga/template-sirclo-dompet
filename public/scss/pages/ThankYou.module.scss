@@ -33,6 +33,7 @@
   &_message {
     margin: 20px 0px;
     font-size: 20px;
+    color: #2D3436;
 
     @media screen and (max-width: 440px) {
       font-size: 11px !important;
@@ -78,7 +79,7 @@
     h3
     {
       display: inline-block;
-      margin: 16px 0px 32px 0px;
+      margin: 24px 0px 24px 0px;
       width: 100%;
       text-align: center;
     }

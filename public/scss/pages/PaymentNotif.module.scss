@@ -123,14 +123,14 @@
     span {
       display: flex;
       color: black;
-      font-size: 20px;
+      font-size: 14px;
     }
   }
 
   &_detailItemImg {
     img {
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
     }
   }
 
@@ -138,6 +138,7 @@
     width: 70%;
     padding-left: 12px;
     font-size: 14px;
+    color : $color_grey_black !important;
     span {
       display: flex;
       font-size: 12px;
@@ -146,10 +147,13 @@
   &_detailItemPrice {
     width: 30%;
     text-align: right;
+    color : $color_grey_black !important;
+    font-size: 14px !important;
   }
 
   &_detailDropdown {
     color: #2296CB;
+    font-size: 14px !important;
   }
 
   &_detailPriceBreakdown, &_detailTotalField {
@@ -162,10 +166,13 @@
   &_detailField, &_detailTotalField {
     display: flex;
     justify-content: space-between;
+    font-size: 14px !important;
+    color : $color_grey_black !important;
   }
 
   &_detailTotalField {
-    font-size: 15px;
+    font-size: 14px;
+    color : $color_grey_black !important;
   }
 
   &_summaryTotalContainer
