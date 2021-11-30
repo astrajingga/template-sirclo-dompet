@@ -12,6 +12,10 @@
   }
 }
 
+.text-margin{
+  margin-top: 20px;
+}
+
 .whatsAppInput {
   &-noWhatsAppLabelClassName {
     font-size: 14px;
@@ -41,6 +45,7 @@
     font-size: 14px;
     padding-top: 12px;
     padding-bottom: 12px;
+    margin-bottom: 10px;
 
     &:hover {
       color: white;
@@ -53,9 +58,9 @@
     width: 500px;
     padding: 1.5rem;
     align-content: center;
-    border-radius: 5px;
+    border-radius: 0px;
+    border: solid #BDC3C7 1px;
     background-color: $color_white;
-    box-shadow: 0 0 15px rgba(0,0,0,.15);
 
     @media screen and (max-width: 575px) {
       width: 100%
@@ -258,6 +263,7 @@
   {
     cursor: pointer;
     color: $color_blue;
+    color: #2296CB !important;
   }
 
   &-column

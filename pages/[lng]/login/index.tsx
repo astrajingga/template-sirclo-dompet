@@ -57,7 +57,7 @@ const classesWhatsAppOTP = {
   inputLabelClassName: "login-page-label",
   inputWANumberClassName: "form-control sirclo-form-input",
   btnSubmitClassName: "btn login-page-btnLogin btn-long btn-center col-12 col-md-12",
-  inputDescriptionClassName: "text-center",
+  inputDescriptionClassName: "text-center text-margin",
   termsAndConditionClassName: "login-page-pointer",
   privacyPolicyClassName: "login-page-pointer",
   //confirmation
