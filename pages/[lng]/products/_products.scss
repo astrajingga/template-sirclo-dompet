@@ -655,6 +655,14 @@ input[type='checkbox']:checked:after {
 }
 
 .products-sort {
+  &::after {
+    content: "▾";
+    position: absolute;
+    z-index: 2;
+    top: 9px;
+    right: 25px;
+  }
+
   & > p {
     display: none;
   }
