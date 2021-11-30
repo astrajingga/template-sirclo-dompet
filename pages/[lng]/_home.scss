@@ -57,7 +57,12 @@
     }
   }
 }
-
+.title-text{
+  font-size: 25px;
+  @media screen and (max-width: 440px) {
+    font-size: 11px;
+  }
+}
 .widget-image-home {
   margin: 1rem 0;
   position: relative;

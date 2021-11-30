@@ -127,10 +127,6 @@ const Home: React.FC<any> = ({
 
   const toogleTab = (menus) => setTabActive(menus);
 
-  const information = {
-    fontSize: "25px",
-  };
-
   return (
     <Layout
       i18n={i18n}
@@ -234,7 +230,7 @@ const Home: React.FC<any> = ({
         />
       </div>
       <section>
-        <div className="container text-center py-3" style={information}>{i18n.t("home.informationProductsSale")}</div>
+        <div className="container text-center py-3 title-text">{i18n.t("home.informationProductsSale")}</div>
       </section>
       <section>
         <div className="container">
