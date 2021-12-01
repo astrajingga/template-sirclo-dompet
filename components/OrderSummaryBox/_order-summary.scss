@@ -99,7 +99,7 @@
       }
 
       @media screen and (max-width: 440px) {
-        border: 1px solid #F7BE16;
+        border: 1px solid $color_shade_madison;
       }
     }
   }
@@ -581,7 +581,7 @@
   border-right: solid 1px $color_orange;
   padding: 1rem;
   padding-bottom: 0;
-  
+
   &_title {
     font-weight: normal;
     font-size: 14px;

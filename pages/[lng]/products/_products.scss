@@ -323,7 +323,8 @@
 
 .top-head{
   background-color: #F1F2F7;
-  padding-left: 2rem;
+  padding-left: 207px;
+  padding-right: 207px;
   height: 20vh;
 
   h3{
@@ -515,6 +516,17 @@ input[type='checkbox']:checked:after {
 
   &_filterPriceLabel {
     margin: 10px 0 20px 0;
+
+    &> .filter-maxPriceLabelClassName {
+      display: inline-block;
+      padding: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 3px;
+
+      p {
+        margin-bottom: 0 !important;
+      }
+    }
   }
 
   &_filterOptionLabel {
@@ -643,6 +655,14 @@ input[type='checkbox']:checked:after {
 }
 
 .products-sort {
+  &::after {
+    content: "▾";
+    position: absolute;
+    z-index: 2;
+    top: 9px;
+    right: 25px;
+  }
+
   & > p {
     display: none;
   }
