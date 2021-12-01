@@ -6,6 +6,10 @@
     align-items: center;
     margin-bottom: 5rem;
     margin-top: 40px;
+
+    @media screen and (max-width: 440px) {
+      margin-top: 0px;
+    }
   }
 
   &-inner {
@@ -75,7 +79,7 @@
               position: absolute;
               width: 100%;
               left: 0;
-              bottom: 0;
+              bottom: 2px;
               border-bottom: 3px solid $color_orange;
             }
           }
@@ -1317,5 +1321,16 @@
     @media screen and (max-width: 440px) {
       font-size: 11px;
     }
+  }
+}
+
+.css {
+  &-1okebmr-indicatorSeparator {
+    margin-top: 2px !important;
+    margin-bottom: 14px !important;
+  }
+
+  &-tlfecz-indicatorContainer {
+    margin-bottom: 7px;
   }
 }
