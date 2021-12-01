@@ -27,7 +27,7 @@ const classesThankYouPage = {
   hankYouOrderID: styles.thankyou_label,
   thankYouMessageClassName: styles.thankyou_message,
   thankYouOrderID: styles.thankyou_orderID,
-  buttonClassName: `btn w-100 btn-dark-blue ${styles.btn_long}`,
+  buttonClassName: `btn w-100 btn-blue ${styles.btn_long}`,
 
   buttonConfirmClassName: stylesOrder.paymentConfirmation_buttonConfirm,
   detailContainerClassName: stylesOrder.paymentConfirmation_detailContainer,
