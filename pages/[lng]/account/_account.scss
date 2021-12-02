@@ -418,6 +418,7 @@
   }
 
   &_membershipHistorytransactionType {
+    padding: 0 10px;
     grid-row: 2;
     grid-column: 1;
     font-size: 20px;
@@ -452,11 +453,11 @@
     }
 
     &.positive {
-      color: $color_green;
+      color: $color_green_track;
     }
 
     &.negative {
-      color: $color_red;
+      color: rgba(244, 68, 68, 1);
     }
   }
 
