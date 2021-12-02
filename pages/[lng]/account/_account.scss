@@ -146,6 +146,12 @@
       }
 
       .edit-account {
+        .sirclo-form-row {
+          select::after {
+            background-color: red !important;
+          }
+        }
+
         .account {
           &-list {
             &--button {
@@ -198,6 +204,7 @@
   }
 
   &_buttonLocation {
+    color: #000 !important;
     display: block;
     width: 100%;
     border-radius: 0.25rem;
@@ -1327,7 +1334,6 @@
 .css {
   &-1okebmr-indicatorSeparator {
     margin-top: 2px !important;
-    margin-bottom: 14px !important;
   }
 
   &-tlfecz-indicatorContainer {
