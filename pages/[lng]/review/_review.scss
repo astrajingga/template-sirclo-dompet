@@ -43,7 +43,7 @@
 
   &-buyerInfo {
     display: block;
-    max-width: 380px;
+    width: 100%;
     margin: 40px auto;
   }
 
@@ -98,7 +98,7 @@
   &-activeTab
   {
     font-weight: bold;
-    border-bottom: 3px solid $color_black;
+    border-bottom: 3px solid $color_orange;
   }
 
   &-tabLabel
@@ -159,7 +159,6 @@
 
   &-productButton
   {
-    border: 1px solid #2D3E51;
     align-self: center;
   }
 
@@ -233,6 +232,16 @@
   {
     margin-bottom: 20px;
 
+    &> div {
+      display: flex;
+
+      &> label {
+        color: #9E9E9E !important;
+        margin-left: 10px;
+        transform: translateY(15px);
+      }
+    }
+
     label
     {
       font-size: 14px;
@@ -241,6 +250,12 @@
       @media screen and (max-width: 440px) {
         font-size: 11px;
       }
+    }
+
+    &> label:last-child {
+      text-align: right;
+      font-size: 12px;
+      color: #9E9E9E;
     }
 
     textarea
@@ -329,10 +344,10 @@
 
   &-mediaImage
   {
-    width: 70px;
-    height: 70px;
-    max-width: 70px;
-    max-height: 70px;
+    width: 90px;
+    height: 90px;
+    max-width: 90px;
+    max-height: 90px;
     object-fit: cover;
     border: 1px solid $color_gray;
   }

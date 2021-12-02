@@ -551,6 +551,7 @@ section {
 
       .icon-password {
         height: 1.25em;
+        color: $color_black !important;
       }
     }
 
@@ -563,6 +564,8 @@ section {
           & > div.css-1wa3eu0-placeholder {
             position: absolute;
             font-size: 1rem;
+            padding-bottom: 7px !important;
+            white-space: nowrap;
           }
 
           & > div.css-1dxjwtd-Placeholder {

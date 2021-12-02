@@ -364,6 +364,10 @@
   display: inline;
 }
 
+input[type='checkbox'] {
+  visibility: hidden;
+}
+
 input[type='checkbox']:after {
   width: 15px;
   height: 15px;
@@ -400,6 +404,10 @@ input[type='checkbox']:checked:after {
   content: "✓";
   display: inline-block;
   visibility: visible;
+
+  @media screen and (max-width: 440px) {
+    transform: translateY(-22px);
+  }
 }
 
 

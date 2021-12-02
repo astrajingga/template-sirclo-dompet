@@ -54,6 +54,14 @@ const classesRegister = {
   datePickerCalendarClassName: "date-picker__calendar"
 }
 
+const sectionStyle = {
+  marginTop: "0"
+};
+
+const rowContainerStyle = {
+  marginRight: "0"
+};
+
 const RegisterPage: FC<any> = ({
   lng,
   lngDict,
@@ -77,16 +85,16 @@ const RegisterPage: FC<any> = ({
       lngDict={lngDict}
       brand={brand}
     >
-      <section>
-          <div className="row">
+      <section style={sectionStyle}>
+          <div className="row" style={rowContainerStyle}>
             <div className=" col-12 col-sm-12 col-lg-4">
               <Widget pos="main-content-2" widgetClassName="widget-login" />
             </div>
             <div className="col-12 col-sm-12 col-lg-8">
               <div className="register-page-container">
-                <div className="row mb-5">
+                <div className="row mb-4">
                   <div className="col-12 col-sm-12 col-lg-6">
-                    <h3 className="login-page-title">
+                    <h3 className="login-page-title mb-4">
                       {i18n.t("register.newAccount")}
                     </h3>
                     <span className="login-page-subtitle">
