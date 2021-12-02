@@ -4,6 +4,10 @@ import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { useRouter } from 'next/router';
 import { PaymentConfirmation, CheckPaymentOrder, useI18n } from '@sirclo/nexus';
 import { toast } from 'react-toastify';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faCheckCircle
+} from '@fortawesome/free-solid-svg-icons'
 import {
   ChevronUp,
   ChevronDown,
@@ -123,7 +127,7 @@ const PaymentConfirmationPage: FC<any> = ({
                     chevronDown: <ChevronDown />
                   }}
                   onErrorMsg={(msg) => toast.error(msg)}
-                  onSuccessMsg={(msg) => toast.success(msg)}
+                  onSuccessMsg={(msg) => toast.success(<div><FontAwesomeIcon icon={faCheckCircle}/> {msg}</div> )}
                   loadingComponent={<Loader color="text-light" />}
                   withOrderDetails
                   children={<BankAccount />}

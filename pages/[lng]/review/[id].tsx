@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { toast } from 'react-toastify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faChevronUp,faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { useRouter } from 'next/router';
 import {
   OrderReview,
@@ -115,7 +115,7 @@ const ReviewPage: FC<any> = ({
               itemPerPageOptions={[5, 10, 15]}
               arrowIconDown={<FontAwesomeIcon color="black" icon={faChevronDown} />}
               arrowIconUp={<FontAwesomeIcon color="black" icon={faChevronUp} />}
-              onSuccessMsg={(msg) => toast.success(msg)}
+              onSuccessMsg={(msg) => toast.success(<div><FontAwesomeIcon icon={faCheckCircle}/> {msg}</div> )}
               onErrorMsg={(msg) => toast.error(msg)}
               thumborSetting={{
                 width: size.width < 768 ? 375 : 500,

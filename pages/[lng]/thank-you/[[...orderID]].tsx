@@ -3,6 +3,8 @@ import { FC } from 'react';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { ThankYou, useI18n } from '@sirclo/nexus';
 import { toast } from 'react-toastify';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import {
   Check,
   ChevronUp,
@@ -86,7 +88,7 @@ const ThankYouPage: FC<any> = ({
               classes={classesThankYouPage}
               withDelay
               withOrderDetails
-              onSuccessMsg={(msg) => toast.success(msg)}
+              onSuccessMsg={(msg) => toast.success(<div><FontAwesomeIcon icon={faCheckCircle}/> {msg}</div> )}
               icon={{
                 chevronUp: <ChevronUp />,
                 chevronDown: <ChevronDown />,

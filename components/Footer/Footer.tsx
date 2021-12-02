@@ -16,6 +16,10 @@ import {
   faYoutube,
   faTiktok
 } from "@fortawesome/free-brands-svg-icons";
+import {
+  faCheckCircle
+} from '@fortawesome/free-solid-svg-icons'
+
 import { toast } from "react-toastify";
 
 const newsletterClasses = {
@@ -60,8 +64,9 @@ const Footer: FC<any> = ({ brand }) => {
                 <p>{i18n.t("footer.newsletterDesc")}</p>
                 <NewsletterForm
                   classes={newsletterClasses}
+                  
                   buttonComponent={<>{i18n.t("footer.subscribe")}</>}
-                  onComplete={() => toast.success(i18n.t("newsletter.submitSuccess"))}
+                  onComplete={() => toast.success(<div><FontAwesomeIcon icon={faCheckCircle}/>{i18n.t("newsletter.submitSuccess")}</div>)}
                   onError={() => toast.error(i18n.t("newsletter.submitError"))}
                 />
                 <div className="footer__widget--socialMedia">

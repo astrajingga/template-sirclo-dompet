@@ -69,6 +69,7 @@
   &_input
   {
     padding: 0 1rem;
+    margin-right: 10px;
     height: calc(2em + 0.75rem + 2px);
 
     &:focus
@@ -109,12 +110,14 @@
         position: absolute;
         top: 10px;
         left: 1rem;
-        padding: 2.5px 1.5rem;
+        // padding: 2.5px 1.5rem;
         font-size: 10px;
+        width: 90px;
+        height: 26px;
         text-transform: uppercase;
         background: $color_gray;
         border: 1px solid $color_gray_primary;
-        border-radius: 40px;
+        border-radius: 2px;
         cursor: pointer;
 
         &:active,

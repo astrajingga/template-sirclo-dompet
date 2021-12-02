@@ -8,6 +8,10 @@ import { toast } from 'react-toastify';
 import { parseCookies } from 'lib/parseCookies';
 import redirectIfAuthenticated from 'lib/redirectIfAuthenticated';
 import { useBrand } from 'lib/utils/useBrand';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faCheckCircle
+} from '@fortawesome/free-solid-svg-icons'
 
 /* component */
 import Layout from 'components/Layout/Layout';
@@ -50,7 +54,7 @@ const ForgotPassword: FC<any> = ({
             <ResetPassword
               classes={classesResetPassword}
               onErrorMsg={(msg) => toast.error(msg)}
-              onSuccessMsg={(msg) => toast.success(msg)}
+              onSuccessMsg={(msg) => toast.success(<div><FontAwesomeIcon icon={faCheckCircle}/> {msg}</div> )}
               loadingComponent={<Loader color="text-light" />}
             />
           </div>
