@@ -8,6 +8,10 @@ import {
   isEnquiryAllowed
 } from '@sirclo/nexus';
 import { toast } from 'react-toastify';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faCheckCircle,
+} from '@fortawesome/free-solid-svg-icons'
 
 /* library template */
 import useWindowSize from 'lib/utils/useWindowSize';
@@ -67,7 +71,7 @@ const ContactPage: FC<any> = ({
                 <Contact
                   classes={classesContact}
                   isAddressDetail={false}
-                  onCompleted={() => toast.success(i18n.t("contact.submitSuccess"))}
+                  onCompleted={() => toast.success(<div><FontAwesomeIcon icon={faCheckCircle}/>{i18n.t("contact.submitSuccess")}</div>)}
                   onError={() => toast.error(i18n.t("contact.submitError"))}
                 />
               </div>

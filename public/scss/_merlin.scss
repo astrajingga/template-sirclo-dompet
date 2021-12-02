@@ -187,6 +187,10 @@
   }
 }
 
+.Toastify__toast--success{
+  background-color: #219653 !important;
+}
+
 .page-transition {
   &-enter {
     opacity: 0;
@@ -604,8 +608,8 @@ section {
         color: $color_orange;
         background: transparent;
         border: 1px solid $color_orange;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
         height: calc(2em + 0.75rem + 2px);
         position: absolute;
         top: -1px;

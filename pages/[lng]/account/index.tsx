@@ -237,7 +237,7 @@ const Accounts: FC<any> = ({
   ];
 
   const onError = (msg: string) => toast.error(msg);
-  const onSuccessChPass = (msg: string) => toast.success(msg);
+  const onSuccessChPass = (msg: string) => toast.success(<div><FontAwesomeIcon icon={faCheckCircle}/> {msg}</div> );
 
   const onSuccess = (msg: string, data: any) => {
     if (data) setName(data.upsertProfile[0]?.firstName + " " + data?.upsertProfile[0]?.lastName);

@@ -3,6 +3,10 @@ import { FC } from 'react';
 import { BanksAccount as BanksAccountList } from '@sirclo/nexus';
 import { toast } from "react-toastify";
 import Loader from "components/Loader/Loader";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faCheckCircle
+} from '@fortawesome/free-solid-svg-icons'
 
 import stylesBanks from "public/scss/components/BanksAccount.module.scss";
 
@@ -32,7 +36,7 @@ const BanksAccount: FC = () => {
     <BanksAccountList
       classes={classesBankAccount}
       loadingComponent={<Loader color="text-light" />}
-      onSuccessMsg={(msg) => toast.success(msg)}
+      onSuccessMsg={(msg) => toast.success(<div><FontAwesomeIcon icon={faCheckCircle}/> {msg}</div> )}
       icon={{
         chevronUp: <ChevronUp/>,
         chevronDown: <ChevronDown />,

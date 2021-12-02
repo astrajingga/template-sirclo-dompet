@@ -9,7 +9,8 @@ import {
   faEyeSlash,
   faUserCircle,
   faEnvelope,
-  faArrowLeft
+  faArrowLeft,
+  faCheck
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faWhatsapp
@@ -38,6 +39,7 @@ import Layout from 'components/Layout/Layout'
 import Breadcrumb from 'components/Breadcrumb/Breadcrumb'
 import Loader from 'components/Loader/Loader'
 import LoaderPages from 'components/Loader/LoaderPages'
+import { faCheckCircle } from '@fortawesome/free-regular-svg-icons';
 
 const loginClasses = {
   containerClassName: "login-page-form",
@@ -134,7 +136,7 @@ const LoginPage: FC<any> = ({
                   </span>
                   <Login
                     classes={loginClasses}
-                    onCompletedMsg={(msg) => toast.success(msg)}
+                    onCompletedMsg={(msg) => toast.success(<div><FontAwesomeIcon icon={faCheckCircle}/> {msg}</div>)}
                     onErrorMsg={(msg) => toast.error(msg)}
                     passwordViewIcon={<FontAwesomeIcon className="icon-password" icon={faEye} />}
                     passwordHideIcon={<FontAwesomeIcon className="icon-password" icon={faEyeSlash} />}
@@ -149,7 +151,7 @@ const LoginPage: FC<any> = ({
                     loginRedirectPath="account"
                     inputPlaceholder={i18n.t("whatsAppOTPInput.inputPlaceholder")}
                     onErrorMsg={(msg) => toast.error(msg)}
-                    onCompletedMsg={(msg) => toast.success(msg)}
+                    onCompletedMsg={(msg) => toast.success(<div><FontAwesomeIcon icon={faCheckCircle}/> {msg}</div>)}
                     loadingComponent={
                       <LoaderPages otherClassNameInner="login-page-innerOtp" />
                     }
