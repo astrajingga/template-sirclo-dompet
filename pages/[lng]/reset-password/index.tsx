@@ -64,7 +64,7 @@ const ResetPasswordPage: FC<any> = ({
             <SetNewPassword
               classes={classesSetNewPassword}
               onErrorMsg={toast.error}
-              onSuccessMsg={toast.success}
+              onSuccessMsg={(msg) => toast.success(<div><FontAwesomeIcon icon={faCheckCircle}/> {msg}</div> )}
               passwordViewIcon={
                 <FontAwesomeIcon icon={faEye} className="icon-password" />
               }

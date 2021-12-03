@@ -600,7 +600,7 @@
   }
 
   &_emptyTitle {
-    font-family: "roboto-black";
+    font-family: "Poppins-black";
     font-size: 0.75rem;
     text-transform: uppercase;
     margin: 1rem 0 0.5rem 0;
@@ -657,7 +657,7 @@
     align-self: center;
 
     & > a {
-      font-family: "roboto-medium";
+      font-family: "Poppins-medium";
       font-size: 18px;
       cursor: pointer;
     }
@@ -704,7 +704,7 @@
     grid-column: 2/5;
 
     & > a {
-      font-family: "roboto-medium";
+      font-family: "Poppins-medium";
       font-size: 14px;
       color: $color_white !important;
     }

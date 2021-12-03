@@ -125,7 +125,7 @@ const RegisterPage: FC<any> = ({
                         classes={classesRegister}
                         withHeaderLabel={true}
                         onErrorMsg={(msg) => toast.error(msg)}
-                        onSuccessMsg={(msg) => toast.success(msg)}
+                        onSuccessMsg={(msg) => toast.success(<div><FontAwesomeIcon icon={faCheckCircle}/> {msg}</div> )}
                         redirectPage={() =>
                           Router.push(`/[lng]/login`, `/${lng}/login`)
                         }
