@@ -17,8 +17,8 @@ import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
 
 const classesLookbook = {
   containerClassName: "lookbook",
-  rowClassName: 'card-columns',
-  lookbookContainerClassName: 'card lookbook_items',
+  rowClassName: "card-columns",
+  lookbookContainerClassName: "card lookbook_items",
   imageClassName: "lookbook__items--images",
   lookbookLabelContainerClassName: "lookbook__items--details",
   labelClassName: "lookbook__items--details-label",
