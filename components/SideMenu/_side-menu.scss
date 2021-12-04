@@ -1,7 +1,8 @@
 .side-menu {
   width: 0;
   top: 0;
-  background-color: #2A3035;
+  background-color: #252531;
+  ;
   height: 100vh;
   color: white;
   position: fixed;
@@ -16,7 +17,7 @@
   }
 
   &.show {
-    width: 350px;
+    width: 462px;
 
     @media screen and (max-width: 440px) {
       width: 280px;
@@ -46,7 +47,7 @@
 
     img {
       width: 60px;
-      height: 60px;
+      // height: 36px;
       border-radius: 0.25rem;
     }
 
