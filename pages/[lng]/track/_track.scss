@@ -42,7 +42,7 @@
       height: 14px;
       border-radius: 100%;
 
-      background-color: $color_green_track_low;
+      background-color: #E6E6E6;
       border: 2px solid $color_white;
 
       top: 4px;
@@ -55,7 +55,7 @@
       height: 100%;
 
       // border-left: 2px dashed $color_green_track_low;
-      background-color: $color_green_track_low;
+      background-color: #E6E6E6;
 
       left: 6px;
       top: 14px;
@@ -97,7 +97,7 @@
 
   &__body {
     padding: 25px 22px;
-    background-image: linear-gradient(#fffaea, #fff);
+    background-image: #ffffff !important;
   }
 
   &__headerText {
@@ -120,7 +120,7 @@
 
     button {
       @extend .btn;
-      background-color: #f1f2f7;
+      background-color: #E9F5FA;
       display: flex;
       align-items: center;
       position: relative !important;
@@ -168,7 +168,7 @@
     font-size: 14px;
     color: $color_white;
     text-transform: uppercase;
-
+    
     &::after {
       content: ">";
       margin-left: auto;
