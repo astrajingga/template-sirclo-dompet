@@ -103,7 +103,7 @@ const ReviewPage: FC<any> = ({
         lng={lng}
       />
       <section>
-        <div className="container">
+        <div className="custom-container">
           <div className="text-center pb-3 review-header">
             <div className="font-weight-bold review-header--title">{i18n.t("orderReview.writeAReview")}</div>
             <div className="review-header--subtitle">{i18n.t("orderReview.howIsQualityProduct")}</div>

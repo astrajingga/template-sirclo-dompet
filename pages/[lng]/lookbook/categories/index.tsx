@@ -51,7 +51,7 @@ const LookbookCategory: FC<any> = ({
       <Breadcrumb title={i18n.t("lookbook.title")} links={linksBreadcrumb} lng={lng} />
       {LookbookAllowed &&
         <section>
-          <div className="container">
+          <div className="custom-container">
             <Lookbook
               classes={classesLookbook}
               linkText={i18n.t("lookbook.seeCollection")}

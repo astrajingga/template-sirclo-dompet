@@ -259,8 +259,8 @@ const ProductsPage: FC<any> = ({
             : i18n.t("product.all")}
         </h3>
       </div>
-      <div className="contain-product">
         <Breadcrumb className="breadcrumb" links={linksBreadcrumb} lng={lng} />
+      <div className="contain-product">
         <div className="col-12">
           <ProductCategory
             classes={classesProductCategory}

@@ -84,7 +84,7 @@ const BlogSlug: FC<any> = ({
           lng={lng}
         />
       <section className="mt-0">
-        <div className="container">
+        <div className="custom-container">
           <div className="row">
             <div className="col-12 col-lg-3 border-blog display-web">
               <div className="row card-recent">

@@ -29,7 +29,7 @@ const Information: FC<any> = ({
 		>
 			<Breadcrumb title={title} links={linksBreadcrumb} lng={lng} />
 			<section>
-				<div className="container">
+				<div className="custom-container">
 					<div className="information">
 						<Article
 							containerClassName="information__content"

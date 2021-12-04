@@ -119,7 +119,7 @@ const Cart: FC<any> = ({
         <h3 className="text-capitalize">{i18n.t("cart.title")}</h3>
       </div>
       <Breadcrumb links={linksBreadcrumb} lng={lng} />
-      <div className="container">
+      <div className="custom-container">
         <div className="cart margin-step-payment">
           <div className="row">
             <div className="col-12 col-lg-8">

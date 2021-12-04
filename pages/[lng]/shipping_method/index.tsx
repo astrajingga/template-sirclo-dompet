@@ -122,7 +122,7 @@ const ShippingMethodPage: FC<any> = ({
           lng={lng}
         />
         <section>
-          <div className="container">
+          <div className="custom-container">
             <div className="row">
               <div className="col-12 col-lg-8">
                 <Stepper

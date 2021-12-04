@@ -1,9 +1,6 @@
 
 .account-page {
   &-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 5rem;
     margin-top: 40px;
 
@@ -13,7 +10,7 @@
   }
 
   &-inner {
-    width: 90%;
+    width: 100%;
     align-content: center;
   }
 

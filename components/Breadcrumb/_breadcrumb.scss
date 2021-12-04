@@ -3,19 +3,31 @@
   flex-direction: column;
   align-items: flex-start;
   background-color: transparent;
-  padding: 1.5rem 192px 1rem;
+  padding: 1.5rem 13rem 1rem;
   @media screen and (max-width: 991px) {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
-  @media screen and (max-width: 575px) {
+  @media screen and (min-width: 1200px) {
+
+  }
+
+  @media screen and (min-width: 992px) {
+
+  }
+
+  @media screen and (min-width: 768px) {
+
+  }
+
+  @media screen and (max-width: 576px) {
     padding-bottom: 1.5rem;
   }
 
   &__title {
     font-family: "Poppins-bold";
-    padding: 0.25rem 1rem;
+    padding: 0.25rem 0;
     font-size: 40px;
     font-weight: bold;
 
@@ -42,6 +54,8 @@
       padding-bottom: 0;
       background-color: transparent;
       padding-top: 0;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
       // padding: 0.25rem 1rem;
 
       &-item {
@@ -58,6 +72,10 @@
           &::before {
             padding-right: 1rem;
             content: "\002F";
+          }
+
+          &::first-child {
+            padding-left: 0;
           }
         }
 
