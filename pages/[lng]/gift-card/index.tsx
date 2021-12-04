@@ -41,7 +41,7 @@ const GiftCardPage: FC<any> = ({
       </div>
       <Breadcrumb links={linksBreadcrumb} lng={lng} />
       <section>
-        <div className="container">
+        <div className="custom-container">
           <div className="giftcard-page-container">
             <div className="giftcard-page-inner">
               <GiftCard classes={classesGiftCard} />

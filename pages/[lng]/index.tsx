@@ -233,7 +233,7 @@ const Home: React.FC<any> = ({
         <div className="container text-center py-3 title-text">{i18n.t("home.informationProductsSale")}</div>
       </section>
       <section>
-        <div className="container">
+        <div className="custom-container">
           <div className="row">
             <div className="col-sm-12 col-md-6">
               <LazyLoadComponent>
@@ -260,7 +260,7 @@ const Home: React.FC<any> = ({
         </div>
       </section>
       <section>
-        <div className="container">
+        <div className="custom-container">
           <LazyLoadComponent>
             <div className="heading">
               <h5 className="heading__title">{i18n.t("home.mostPopular")}</h5>
@@ -364,7 +364,7 @@ const Home: React.FC<any> = ({
         </div>
       </section>
       <section>
-        <div className="container">
+        <div className="custom-container">
           <div className="heading">
             <h5 className="heading__title">{i18n.t("home.featuredProducts")}</h5>
           </div>

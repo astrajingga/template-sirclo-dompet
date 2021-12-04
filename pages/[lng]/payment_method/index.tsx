@@ -42,7 +42,7 @@ const classesCustomerDetail = {
 };
 
 const classesListPaymentMethod = {
-  listPaymentDivClassName: "container payment-method__container",
+  listPaymentDivClassName: "payment-method__container",
   paymentItemEnabledClassName: "row payment-method__items",
   paymentItemDisabledClassName: "row payment-method__items payment-method__itemsDisabled",
   paymentTypeClassName:
@@ -202,7 +202,7 @@ const PaymentMethods: FC<any> = ({
           lng={lng}
         />
         <section>
-          <div className="container">
+          <div className="custom-container">
             <div className="row">
               <div className="col-12">
                 <Stepper

@@ -45,7 +45,7 @@ const LookbookSinglePage: FC<any> = ({
       </div>
       <Breadcrumb title={title} links={linksBreadcrumb} lng={lng} />
       <section>
-        <div className="container">
+        <div className="custom-container">
           <LookbookSingle
             classes={classesLookbookSingle}
             slug={slug}

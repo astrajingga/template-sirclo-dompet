@@ -1643,3 +1643,13 @@ section {
     right: 16px !important;
   }
 }
+
+.custom-container {
+  padding-left: 13rem;
+  padding-right: 13rem;
+
+  @media screen and (max-width: 991px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

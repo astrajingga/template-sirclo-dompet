@@ -312,7 +312,7 @@ const Product: FC<any> = ({
         />
       }
       <section>
-        <div className="container">
+        <div className="custom-container">
           {data === null ?
             <div className="col-12">
               <EmptyComponent

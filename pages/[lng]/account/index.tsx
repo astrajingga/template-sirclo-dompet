@@ -268,7 +268,7 @@ const Accounts: FC<any> = ({
         lng={lng}
       />
 
-      <div className="container">
+      <div className="custom-container">
         <div className="account-page-container">
           <div className="account-page-inner">
             <div className="account-page_profile">

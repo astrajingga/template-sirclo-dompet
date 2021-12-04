@@ -19,10 +19,19 @@
 }
 
 .contain-product{
-  padding-left: 20px;
-  padding-right: 20px;
-}
+  padding-left: 12rem;
+  padding-right: 12rem;
 
+  &__category {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media screen and (max-width: 991px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
 .click-sort{
   display: none;
   @media screen and (max-width: 950px) {
@@ -323,8 +332,8 @@
 
 .top-head{
   background-color: #F1F2F7;
-  padding-left: 207px;
-  padding-right: 207px;
+  padding-left: 13rem;
+  padding-right: 13rem;
   height: 20vh;
 
   h3{
@@ -333,8 +342,8 @@
   }
 
   @media screen and (max-width: 991px) {
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
@@ -443,8 +452,6 @@ input[type='checkbox']:checked:after {
 }
 
 .contain {
-  padding-left: 2rem;
-  padding-right: 2rem;
   @media screen and (max-width: 950px) {
     .sidebar {
       display: none;
@@ -533,6 +540,23 @@ input[type='checkbox']:checked:after {
 
       p {
         margin-bottom: 0 !important;
+      }
+
+      .filter-filterPriceInputClassName {
+        display: block;
+        width: 100%;
+        height: calc(1.5em + 0.75rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1 px solid #ced4da;
+        border-radius: 0.25rem;
+        -webkit-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
       }
     }
   }
