@@ -1174,7 +1174,7 @@
     display: none;
 
     &:checked + .notification_mediaCheckboxSlider {
-      background-color: #3B97CA;
+      background-color: #0075FF;
     }
 
     &:checked + .notification_mediaCheckboxSlider:before {
@@ -1217,7 +1217,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 0 20px 36px;
+    margin: 20px 0 20px;
   }
 
   &_mediaDetailLabel
@@ -1336,5 +1336,11 @@
 
   &-tlfecz-indicatorContainer {
     margin-bottom: 7px;
+  }
+}
+
+.svg-inline--fa {
+  &.fa-envelope {
+    transform: translateY(-8px) !important;
   }
 }
