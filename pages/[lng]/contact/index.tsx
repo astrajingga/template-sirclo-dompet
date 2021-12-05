@@ -76,7 +76,7 @@ const ContactPage: FC<any> = ({
                 />
               </div>
               <br></br><br></br>
-              <div className="col-12 col-sm-12 col-lg-12">
+              <div className="col-12 col-sm-12 col-lg-12 content-contact">
                 <Widget
                   pos="login-image"
                   widgetClassName="contact-info"

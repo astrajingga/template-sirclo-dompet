@@ -66,7 +66,7 @@ const classesBlogRecent = {
   containerClassName: "recent-post",
   blogRecentClassName: "recent-post__items row",
   imageClassName: "recent-post__items--image  col-12 col-md-12",
-  labelContainerClassName: "recent-post__items--label col-12 col-md-12",
+  labelContainerClassName: "recent-post__items--label col-12 col-md-12 blog-padding",
   titleClassName: "recent-post__items--label-title",
   dateClassName: "recent-post__items--label-date",
 }
@@ -117,7 +117,7 @@ const Blog: FC<any> = ({
                       </>
                     }
                   </div>
-                  <div className="col-12 col-md-6 col-lg-12">
+                  <div className="col-12 col-md-6 col-lg-12 border-blog blog-padding">
                     <h2 className="title-side-blogs">{i18n.t("blog.recentPost")}</h2>
                     <BlogRecent
                       classes={classesBlogRecent}
@@ -182,7 +182,7 @@ const Blog: FC<any> = ({
                       </>
                     }
                   </div>
-                  <div className="col-12 col-md-6 col-lg-12">
+                  <div className="col-12 col-md-6 col-lg-12 border-blog blog-padding">
                     <h2 className="title-side-blogs">{i18n.t("blog.recentPost")}</h2>
                     <BlogRecent
                       classes={classesBlogRecent}
