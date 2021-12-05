@@ -1137,6 +1137,8 @@
   {
     display: flex;
     align-items: center;
+    flex-grow: 2;
+    margin-right: 30px;
 
     @media screen and (max-width: 575px) {
       max-width: calc(100% - 45px);
@@ -1146,6 +1148,7 @@
   &_mediaInnerLabel
   {
     margin-left: 14px;
+    width: 100%;
   }
 
   &_mediaDesc
@@ -1174,7 +1177,7 @@
     display: none;
 
     &:checked + .notification_mediaCheckboxSlider {
-      background-color: #3B97CA;
+      background-color: #0075FF;
     }
 
     &:checked + .notification_mediaCheckboxSlider:before {
@@ -1217,7 +1220,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 0 20px 36px;
+    margin: 20px 0 20px;
   }
 
   &_mediaDetailLabel
@@ -1314,6 +1317,7 @@
 .settingNotification {
   &-mediaLabel {
     font-size: 18px;
+    border-bottom: 1px solid #D3D3D3;
 
     @media screen and (max-width: 440px) {
       font-size: 14px;
@@ -1336,5 +1340,11 @@
 
   &-tlfecz-indicatorContainer {
     margin-bottom: 7px;
+  }
+}
+
+.svg-inline--fa {
+  &.fa-envelope {
+    transform: translateY(-8px) !important;
   }
 }

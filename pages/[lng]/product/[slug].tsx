@@ -383,7 +383,7 @@ const Product: FC<any> = ({
         </div>
         {brand?.settings?.reviewsAndRatingEnabled &&
           <div className={"ratingReview"}>
-          <div className="container">
+          <div>
                 <h2 className={"ratingReview_titleSection"}>
                   {i18n.t("product.ratingReviewTitle")} (
                   {totalAllReviews === null ? "..." : totalAllReviews})
