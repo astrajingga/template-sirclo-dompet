@@ -37,7 +37,7 @@ const classesOrderSummary = {
   closeButtonClassName: "order-summary__popup-close",
   voucherFormContainerClassName: "order-summary__popup-form-container",
   voucherFormClassName: "form-inline sirclo-form-row order-summary__popup-form",
-  voucherInputClassName: "form-control sirclo-form-input order-summary__popup-form-input",
+  voucherInputClassName: "form-control cart-control sirclo-form-input order-summary__popup-form-input",
   voucherSubmitButtonClassName: "btn btn-black-outer order-summary__popup-form-button",
   voucherListClassName: "order-summary__popup--voucher",
   voucherListHeaderClassName: "order-summary__popup--voucher-title",

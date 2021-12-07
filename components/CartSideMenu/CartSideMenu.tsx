@@ -7,10 +7,11 @@ import {
   faEdit,
   faTrash,
   faCartPlus,
-  faTicketAlt,
-  faCrown,
   faTimes,
+  faChevronDown,
+  faChevronUp,
 } from "@fortawesome/free-solid-svg-icons";
+
 import dynamic from "next/dynamic";
 
 const Quickdetail = dynamic(() => import("../Quickdetail/Quickdetail"));
@@ -46,10 +47,10 @@ const classesCartDetails = {
 const classesOrderSummary = {
   containerClassName: "order-summary-side-menu",
   headerClassName: "row order-summary-side-menu__header",
-  voucherButtonClassName: "col-6 order-summary-side-menu__header--features",
+  voucherButtonClassName: "col-12 order-summary-side-menu__header--features",
   voucherIconClassName: "d-none",
   voucherTextClassName: "order-summary-side-menu__header--features-label",
-  pointsButtonClassName: "col-6 order-summary-side-menu__header--features",
+  pointsButtonClassName: "col-12 order-summary-side-menu__header--features",
   pointsIconClassName: "d-none",
   pointsTextClassName: "order-summary-side-menu__header--features-label",
   subTotalClassName: "row order-summary-side-menu__body",
@@ -62,25 +63,25 @@ const classesOrderSummary = {
     "col-12 order-2 px-0 btn btn-orange-outer btn-long my-1",
   //Popup
   popupClassName: "order-summary-side-menu__overlay",
-  voucherContainerClassName: "order-summary-side-menu__popup",
   numberOfPointsClassName: "order-summary-side-menu__popup--points",
   labelClassName: "order-summary-side-menu__popup--points-label",
   valueClassName: "order-summary-side-menu__popup--points-value",
   closeButtonClassName: "order-summary-side-menu__popup-close",
-  voucherFormContainerClassName:
-    "order-summary-side-menu__popup-form-container",
-  voucherFormClassName:
-    "form-inline sirclo-form-row order-summary-side-menu__popup-form",
-  voucherInputClassName:
-    "form-control sirclo-form-input order-summary-side-menu__popup-form-input",
-  voucherSubmitButtonClassName:
-    "btn btn-black-outer order-summary-side-menu__popup-form-button",
-  voucherListClassName: "order-summary-side-menu__popup--voucher",
-  voucherListHeaderClassName: "order-summary-side-menu__popup--voucher-title",
-  voucherClassName: "order-summary-side-menu__popup--voucher-list",
-  voucherFooterClassName: "order-summary-side-menu__popup--voucher-footer",
-  voucherApplyButtonClassName: "btn btn-orange",
   pointsContainerClassName: "order-summary-side-menu__popup",
+  voucherListClassName: "order-summary__popup--voucher",
+  voucherListHeaderClassName: "order-summary__popup--voucher-title",
+  voucherClassName: "order-summary__popup--voucher-list voucher-color",
+  voucherFooterClassName: "order-summary__popup--voucher-footer",
+  voucherApplyButtonClassName: "btn btn-orange",
+  voucherContainerClassName: "order-summary__popup",
+  voucherFormContainerClassName: "order-summary__popup-form-container",
+  voucherFormClassName: "form-inline sirclo-form-row order-summary__popup-form",
+  voucherInputClassName: "form-control sirclo-form-input order-summary__popup-form-input",
+  voucherSubmitButtonClassName: "btn btn-black-outer order-summary__popup-form-button",
+  voucherDetailClassName: "order-summary__popup--voucher-detail",
+  voucherButtonAppliedClassName: "col-12 order-summary_voucherButtonAppliedCart b-right",
+  voucherButtonRemoveClassName: "cursor-pointer order-summary_voucherButtonRemoveCart",
+  voucherAppliedTextClassName: "order-summary_voucherAppliedTextCart",
 };
 
 const classesEmptyComponent = {
@@ -91,7 +92,7 @@ const classesEmptyComponent = {
 
 const classesOrderSum = (auth) => {
   let classes = classesOrderSummary;
-  classes.voucherButtonClassName = `${auth ? "col-6" : "col-12"
+  classes.voucherButtonClassName = `${auth ? "col-12" : "col-12"
     } order-summary-side-menu__header--features`;
   return classes;
 };
@@ -116,11 +117,20 @@ const OrderSummaryComponent = ({
     continueShoppingRoute="cart"
     onErrorMsg={() => setShowModalErrorAddToCart(true)}
     icons={{
-      voucher: <FontAwesomeIcon icon={faTicketAlt} height="1em" />,
-      points: <FontAwesomeIcon icon={faCrown} height="1em" />,
+      voucher: <img
+      src="/images/mdi_ticket-percent.svg"
+      alt="icon"
+    />,
+      points:  <img src="/images/mdi_star-circle.svg" alt="icon" />,
+      pointsApplied: <h3 className="order-summary__popup--points-textApllied">{i18n.t("orderSummary.points")}</h3>,
+      voucherApplied: <h3 className="order-summary__popup--voucher-textApllied">{i18n.t("orderSummary.voucher")}</h3>,
       close: <FontAwesomeIcon icon={faTimes} height="1em" />,
+      expand: <FontAwesomeIcon icon={faChevronUp} color="#F7BE16" className="order-summary_expandButtonIcon" />,
+      collapse: <FontAwesomeIcon icon={faChevronDown} color="#F7BE16" className="order-summary_expandButtonIcon" />,
+      voucherRemoved: <FontAwesomeIcon icon={faTimes} />
     }}
   />
+  
 );
 
 const CartSideMenu = () => {
