@@ -952,7 +952,7 @@ section {
       &-price {
         display: flex;
         font-weight: bold;
-        font-size: 18px;
+        font-size: 22px;
         letter-spacing: 2px;
         flex-wrap: nowrap;
         align-content: center;
@@ -962,7 +962,7 @@ section {
 
         @media screen and (max-width: 767px) {
           display: block;
-          font-size: 18px;
+          font-size: 11px;
           padding-right: 0;
         }
 
@@ -973,16 +973,20 @@ section {
         &--sale {
           text-decoration: line-through;
           color: $color_black;
-          font-size: 12px;
+          font-size: 11px;
 
           @media screen and (max-width: 767px) {
             display: block;
-            font-size: 18px;
+            font-size: 9px;
             padding-right: 0;
           }
         }
         &--normal {
-          font-size: 18px;
+          font-size: 22px;
+
+        @media screen and (max-width: 767px) {
+          font-size: 11px;
+        }
         }
       }
     }
