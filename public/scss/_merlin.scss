@@ -1652,6 +1652,11 @@ section {
   padding-left: 13rem;
   padding-right: 13rem;
 
+  @media screen and (max-width: 1366px) {
+    padding-left: 6.3rem;
+    padding-right: 6.3rem;
+  }
+
   @media screen and (max-width: 991px) {
     padding-left: 2rem;
     padding-right: 2rem;

@@ -51,7 +51,7 @@ const Header = ({ lng }) => {
   const containerClasses = {
     marginRight: "0",
     paddingRight: "0",
-    paddingLeft: "200px",
+    paddingLeft: "100px",
     justifyContent: "left",
     backgroundColor: "#2C3E50"
   };
