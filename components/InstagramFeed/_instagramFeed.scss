@@ -9,6 +9,10 @@
     "image1 image2 image4 image5"
     "image1 image3 image4 image6";
 
+  @media screen and (max-width: 1366px) {
+    margin: 0 7rem;
+  }
+
   @media screen and (max-width: 768px) {
     grid-template-columns: 108px 108px 108px;
     grid-template-rows: 108px 108px;
