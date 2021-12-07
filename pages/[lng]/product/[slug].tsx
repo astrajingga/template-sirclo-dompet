@@ -100,7 +100,7 @@ const classesProductDetail = {
   notifyMeRadioLabelClassName: "product-detail_notifyMeRadioLabel",
   notifyMeInputWrapperClassName: "product-detail_notifyMeInputWrapper",
   notifyMeInputClassName: "product-detail_notifyMeInput",
-  notifyMeSubmitClassName: "col-12 btn btn-orange btn-long mt-3",
+  notifyMeSubmitClassName: "btn login-page-btnLogin btn-long btn-center col-12 col-md-12",
 
   /* Estimate Shipping */
   estimateShippingWrapperClassName: "estimateShipping order-6",
