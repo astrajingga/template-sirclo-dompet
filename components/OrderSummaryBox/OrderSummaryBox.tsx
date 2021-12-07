@@ -126,7 +126,7 @@ const OrderSummaryBox: FC<any> = ({
 
   return (
     <>
-      <div className="order-summary__wrapper">
+      <div className="order-summary__wrapper cart-padding">
         {withOrderDetail &&
           <div className="cartOrderSummaryBox order-1">
             <div className="flex cart_orderSummaryBoxTitle">
