@@ -230,7 +230,7 @@ const Home: React.FC<any> = ({
         />
       </div>
       <section>
-        <div className="container text-center py-3 title-text">{i18n.t("home.informationProductsSale")}</div>
+        <div className="custom-container text-center py-3 title-text">{i18n.t("home.informationProductsSale")}</div>
       </section>
       <section>
         <div className="custom-container">
