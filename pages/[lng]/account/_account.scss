@@ -1143,6 +1143,12 @@
     @media screen and (max-width: 575px) {
       max-width: calc(100% - 45px);
     }
+
+    .svg-inline--fa {
+      &.fa-envelope {
+        transform: translateY(-8px) !important;
+      }
+    }
   }
 
   &_mediaInnerLabel
@@ -1340,11 +1346,5 @@
 
   &-tlfecz-indicatorContainer {
     margin-bottom: 7px;
-  }
-}
-
-.svg-inline--fa {
-  &.fa-envelope {
-    transform: translateY(-8px) !important;
   }
 }
