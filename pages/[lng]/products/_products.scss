@@ -54,6 +54,10 @@
     display: flex;
     align-items: center;
 
+    svg {
+      margin: 0 1rem 0 0 !important;
+    }
+
     &--icon {
       width: 1em;
       margin-right: 10px;
@@ -793,4 +797,8 @@ input[type='checkbox']:checked:after {
     background-color: #E8E9E8;
     border-radius: 100px;
   }
+}
+
+.sidebar {
+  padding: 0;
 }
