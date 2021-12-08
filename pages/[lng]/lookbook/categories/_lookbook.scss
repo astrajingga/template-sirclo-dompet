@@ -43,7 +43,6 @@
 
       &-label {
         position: relative;
-        top: 0.8rem;
         font-family: "Poppins-bold";
         font-size: 18px;
         color: $color_white;
@@ -55,7 +54,7 @@
       }
 
       &-links {
-        opacity: 0;
+        opacity: 1;
         color: $color_white;
 
         &:hover {
