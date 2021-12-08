@@ -95,7 +95,7 @@ span.account-page_membershipTotalPoints{
             font-size: 14px;
           }
 
-     
+
         }
 
         .tab-item-icon {
@@ -226,7 +226,7 @@ span.account-page_membershipTotalPoints{
   &_mapArea {
     width: 100%;
     height: 200px;
-    // display: grid;
+    display: grid;
     position: relative;
   }
 
@@ -251,12 +251,10 @@ span.account-page_membershipTotalPoints{
     position: relative;
     width: 50vw;
     background: $color_white;
-    border-radius: 10px;
 
     @media screen and (max-width: 991px) {
-      margin: 0 1rem;
       width: 100%;
-      height: auto;
+      height: 100%;
     }
   }
 
@@ -264,6 +262,7 @@ span.account-page_membershipTotalPoints{
     display: flex;
     align-items: center;
     padding: 15px;
+    flex-direction: row-reverse;
   }
 
   &_mapPopupHeaderTitle {
@@ -297,14 +296,20 @@ span.account-page_membershipTotalPoints{
     text-align: center;
   }
 
-  &_mapPopupMaps {
+  &_mapPopupMaps
+  {
     position: relative;
     background-color: $color_white;
     z-index: 1;
     width: 100%;
     height: 320px;
 
-    input {
+    @media screen and (max-width: 991px) {
+      height: 60%;
+    }
+
+    input
+    {
       font-size: 14px;
       width: calc(100% - 75px);
       padding: 10px 15px;
@@ -1045,6 +1050,13 @@ ul.order-history-footer__pagination-order{
     &_detail {
       &-tab {
         margin: 15px -29px 30px;
+      }
+    }
+
+    &__marginMapButton {
+      @media screen and (max-width: 991px) {
+        width: 80%;
+        margin: auto;
       }
     }
 
