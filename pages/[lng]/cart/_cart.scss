@@ -357,3 +357,16 @@
     }
   }
 }
+
+.margin-step-payment {
+  &.cart {
+    .col-12 {
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
