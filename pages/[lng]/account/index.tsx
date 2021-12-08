@@ -141,7 +141,7 @@ const classesAccount = {
   mapHeaderNoteClassName: "account-page_mapPopupNote",
   mapLabelAddressClassName: "account-page_mapPopupLabelAddress",
   mapCenterButtonClassName: "account-page_mapPopupCenterButton",
-  mapButtonFooterClassName: "btn btn-orange btn-long d-block mx-auto my-3 mx-2",
+  mapButtonFooterClassName: "btn btn-blue btn-long d-block mx-auto my-3 mx-2 account-page__marginMapButton",
 
   /* membership */
   membershipStatusClassName: "account-page_membershipStatus",
