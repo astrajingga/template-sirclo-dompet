@@ -523,7 +523,7 @@ span.account-page_membershipTotalPoints{
   &_membershipHistoryPagination {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 
   &_membershipHistoryItemPerPage {
@@ -549,6 +549,11 @@ span.account-page_membershipTotalPoints{
       }
     }
   }
+}
+
+ul.order-history-footer__pagination-order{
+  margin-top: unset !important;
+  margin-bottom: unset !important;
 }
 
 .account-myAccountSeparatorClassName{
@@ -780,15 +785,17 @@ span.account-page_membershipTotalPoints{
           display: inline-block;
           margin: 0.5rem 0.75rem;
           font-size: 14px;
-
+          padding-left: 10px;
+          padding-right: 10px;
           &.active {
+            background-color: $color_shade_madison;
             & > span {
-              color: $color_black;
+              color: white;
             }
           }
 
           &-link {
-            color: $color_gray_text;
+            color: $color_shade_madison;
           }
         }
       }
@@ -1047,7 +1054,7 @@ span.account-page_membershipTotalPoints{
 
     &_membershipHistoryItemPerPage {
       margin-bottom: 20px;
-      justify-content: flex-end;
+      justify-content: center;
     }
   }
 
