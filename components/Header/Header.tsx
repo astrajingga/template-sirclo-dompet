@@ -59,7 +59,7 @@ const Header = ({ lng }) => {
   return (
     <>
       {(countWidgetAnnouncement === null || countWidgetAnnouncement > 0) &&
-        <div className="announce" style={{ display: showAnnounce ? 'block' : 'none' }}>
+        <div className="announce" style={{ display: showAnnounce ? 'flex' : 'none' }}>
           <span className="announce__close">
             <FontAwesomeIcon
               icon={faTimes}

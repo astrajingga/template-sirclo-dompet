@@ -65,7 +65,7 @@ const classesProductDetail = {
   mainImageClassName: "product-detail__left--image",
   thumbnailImageClassName: "image-thumb",
   propertyRowClassName: "col-12 col-md-6 product-detail__right",
-  detailTitleStarClassName: "mr-2",
+  detailTitleStarClassName: "mr-2 icon-star",
   detailTitleContainerClassName: "product-detail__right--detailTitle-container order-1",
   detailTitleClassName: "product-detail__right--detailTitle-title",
   openOrderClassName: "product-detail__openorder",
