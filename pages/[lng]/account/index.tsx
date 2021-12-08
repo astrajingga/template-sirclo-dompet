@@ -285,7 +285,6 @@ const Accounts: FC<any> = ({
               onSuccessChPass={onSuccessChPass}
               onFetchCompleted={onFetchCompleted}
               currency={ACTIVE_CURRENCY}
-              orderHistoryType="list"
               paymentHrefPrefix="payment_notif"
               showSettingNotification={hasOtp}
               orderHistoryIsCallPagination={true}
