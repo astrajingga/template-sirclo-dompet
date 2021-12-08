@@ -43,9 +43,9 @@ const classesOrderSummary = {
   voucherListHeaderClassName: "order-summary-cart__popup--voucher-title",
   voucherClassName: "order-summary-cart__popup--voucher-list",
   voucherFooterClassName: "order-summary-cart__popup--voucher-footer",
-  voucherApplyButtonClassName: "btn btn-orange",
+  voucherApplyButtonClassName: "btn btn-blue",
 
-  pointsButtonClassName: "order-summary-cart__header--features",
+  pointsButtonClassName: "col-12 order-summary-cart__header--features",
   pointsIconClassName: "order-summary-cart__header--features-icon",
   pointsTextClassName: "order-summary-cart__header--features-label",
   pointsAppliedTextClassName: "order-summary-cart_voucherAppliedText",
@@ -64,7 +64,7 @@ const classesOrderSummary = {
 
   voucherDetailClassName: "order-summary-cart__popup--voucher-detail",
   voucherButtonAppliedClassName: "col-12 order-summary-cart_voucherButtonApplied b-right",
-  voucherButtonRemoveClassName: "cursor-pointer order-summary-cart_voucherButtonRemove",
+  voucherButtonRemoveClassName: "cursor-pointer order-summary-cart_voucherButtonRemoveCart",
   voucherAppliedTextClassName: "order-summary-cart_voucherAppliedText",
   expandButtonClassName: "order-summary-cart_expandButton",
   expandedDivClassName: "order-summary-cart_expandedDiv",
@@ -112,7 +112,7 @@ const OrderSummaryBox: FC<any> = ({
       classes.expandedDivClassName = "order-summary-cart_expandedDivCart"
       classes.voucherButtonClassName =  `${auth ? "col-12 b-right" : "col-12"
         } order-summary-cart__header--featuresCart`;
-    }else if (page == "place_order"){
+    }else if (page == "place_order" || page == "shipping_method"){
       classes.expandedDivClassName = "order-summary-cart_expandedDiv"
       classes.voucherButtonClassName = `${auth ? "col-12 b-right" : "col-12"
         } order-summary-cart__header--features`;
