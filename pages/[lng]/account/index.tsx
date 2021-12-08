@@ -269,7 +269,7 @@ const Accounts: FC<any> = ({
       />
 
       <div className="custom-container">
-        <div className="account-page-container">
+        <div className="account-page-container account-padding">
           <div className="account-page-inner">
             <div className="account-page_profile">
               <h2 className="account-page_profile--title">
@@ -285,7 +285,6 @@ const Accounts: FC<any> = ({
               onSuccessChPass={onSuccessChPass}
               onFetchCompleted={onFetchCompleted}
               currency={ACTIVE_CURRENCY}
-              orderHistoryType="list"
               paymentHrefPrefix="payment_notif"
               showSettingNotification={hasOtp}
               orderHistoryIsCallPagination={true}

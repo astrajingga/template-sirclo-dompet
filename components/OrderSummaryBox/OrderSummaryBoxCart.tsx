@@ -19,56 +19,56 @@ const Popup = dynamic(
 );
 
 const classesOrderSummary = {
-  containerClassName: "order-summary",
-  headerClassName: "order-summary__header",
-  voucherButtonClassName: "order-summary__header--features",
+  containerClassName: "order-summary-cart",
+  headerClassName: "order-summary-cart__header",
+  voucherButtonClassName: "order-summary-cart__header--features",
 
-  voucherIconClassName: "order-summary__header--features-icon",
-  voucherTextClassName: "order-summary__header--features-label",
-  subTotalClassName: "order-summary__body",
-  subTotalTextClassName: "order-summary__body--label-subtotal",
-  subTotalPriceClassName: "order-summary__body--subtotal",
-  footerClassName: "order-summary__footer",
-  submitButtonClassName: "px-0 btn btn-blue btn-long btn-45-pad order-summary__submitButton",
+  voucherIconClassName: "order-summary-cart__header--features-icon",
+  voucherTextClassName: "order-summary-cart__header--features-label",
+  subTotalClassName: "order-summary-cart__body",
+  subTotalTextClassName: "order-summary-cart__body--label-subtotal",
+  subTotalPriceClassName: "order-summary-cart__body--subtotal",
+  footerClassName: "order-summary-cart__footer",
+  submitButtonClassName: "px-0 btn btn-blue btn-long btn-45-pad order-summary-cart__submitButton",
   continueShoppingClassName: "d-none",
-  popupClassName: "order-summary__overlay",
-  voucherContainerClassName: "order-summary__popup",
+  popupClassName: "order-summary-cart__overlay",
+  voucherContainerClassName: "order-summary-cart__popup",
 
-  closeButtonClassName: "order-summary__popup-close",
-  voucherFormContainerClassName: "order-summary__popup-form-container",
-  voucherFormClassName: "form-inline sirclo-form-row order-summary__popup-form",
-  voucherInputClassName: "form-control cart-control sirclo-form-input order-summary__popup-form-input",
-  voucherSubmitButtonClassName: "btn btn-black-outer order-summary__popup-form-button",
-  voucherListClassName: "order-summary__popup--voucher",
-  voucherListHeaderClassName: "order-summary__popup--voucher-title",
-  voucherClassName: "order-summary__popup--voucher-list",
-  voucherFooterClassName: "order-summary__popup--voucher-footer",
+  closeButtonClassName: "order-summary-cart__popup-close",
+  voucherFormContainerClassName: "order-summary-cart__popup-form-container",
+  voucherFormClassName: "form-inline sirclo-form-row order-summary-cart__popup-form",
+  voucherInputClassName: "form-control cart-control sirclo-form-input order-summary-cart__popup-form-input",
+  voucherSubmitButtonClassName: "btn btn-black-outer order-summary-cart__popup-form-button",
+  voucherListClassName: "order-summary-cart__popup--voucher",
+  voucherListHeaderClassName: "order-summary-cart__popup--voucher-title",
+  voucherClassName: "order-summary-cart__popup--voucher-list",
+  voucherFooterClassName: "order-summary-cart__popup--voucher-footer",
   voucherApplyButtonClassName: "btn btn-blue",
 
-  pointsButtonClassName: "order-summary__header--features b-left mt-3",
-  pointsIconClassName: "order-summary__header--features-icon",
-  pointsTextClassName: "order-summary__header--features-label",
-  pointsAppliedTextClassName: "order-summary_voucherAppliedText",
-  pointsButtonAppliedClassName: "col-12 order-summary_voucherButtonApplied b-left",
+  pointsButtonClassName: "col-12 order-summary-cart__header--features",
+  pointsIconClassName: "order-summary-cart__header--features-icon",
+  pointsTextClassName: "order-summary-cart__header--features-label",
+  pointsAppliedTextClassName: "order-summary-cart_voucherAppliedText",
+  pointsButtonAppliedClassName: "col-12 order-summary-cart_voucherButtonApplied b-right",
 
-  pointsContainerClassName: "order-summary__popup",
-  numberOfPointsClassName: "order-summary__popup--points-header",
-  pointsFormClassName: "order-summary__popup--points-form",
-  changePointsClassName: "order-summary__popup--points-change",
-  pointLabelClassName: "order-summary__popup--points-label",
-  totalPointsClassName: "order-summary__popup--points-total",
-  valueClassName: "order-summary__popup--points-value",
-  pointsInsufficientClassName: "order-summary__popup--points-insufficient",
-  pointsSubmitButtonClassName: "order-summary__popup--points-submit",
-  pointsWarningClassName: "order-summary__popup--points-warning",
+  pointsContainerClassName: "order-summary-cart__popup",
+  numberOfPointsClassName: "order-summary-cart__popup--points-header",
+  pointsFormClassName: "order-summary-cart__popup--points-form",
+  changePointsClassName: "order-summary-cart__popup--points-change",
+  pointLabelClassName: "order-summary-cart__popup--points-label",
+  totalPointsClassName: "order-summary-cart__popup--points-total",
+  valueClassName: "order-summary-cart__popup--points-value",
+  pointsInsufficientClassName: "order-summary-cart__popup--points-insufficient",
+  pointsSubmitButtonClassName: "order-summary-cart__popup--points-submit",
+  pointsWarningClassName: "order-summary-cart__popup--points-warning",
 
-  voucherDetailClassName: "order-summary__popup--voucher-detail",
-  voucherButtonAppliedClassName: "col-12 order-summary_voucherButtonApplied b-right",
-  voucherButtonRemoveClassName: "cursor-pointer order-summary_voucherButtonRemove",
-  voucherAppliedTextClassName: "order-summary_voucherAppliedText",
-  expandButtonClassName: "order-summary_expandButton",
-  expandedDivClassName: "order-summary_expandedDiv",
-  expandedPriceClassName: "order-summary_expandedPrice",
+  voucherDetailClassName: "order-summary-cart__popup--voucher-detail",
+  voucherButtonAppliedClassName: "col-12 order-summary-cart_voucherButtonApplied b-right",
+  voucherButtonRemoveClassName: "cursor-pointer order-summary-cart_voucherButtonRemoveCart",
+  voucherAppliedTextClassName: "order-summary-cart_voucherAppliedText",
+  expandButtonClassName: "order-summary-cart_expandButton",
+  expandedDivClassName: "order-summary-cart_expandedDiv",
+  expandedPriceClassName: "order-summary-cart_expandedPrice",
 };
 
 const classesCartDetails = {
@@ -109,24 +109,24 @@ const OrderSummaryBox: FC<any> = ({
     let classes = classesOrderSummary;
 
     if(page == "cart"){
-      classes.expandedDivClassName = "order-summary_expandedDivCart"
+      classes.expandedDivClassName = "order-summary-cart_expandedDivCart"
       classes.voucherButtonClassName =  `${auth ? "col-12 b-right" : "col-12"
-        } order-summary__header--featuresCart`;
+        } order-summary-cart__header--featuresCart`;
     }else if (page == "place_order" || page == "shipping_method"){
-      classes.expandedDivClassName = "order-summary_expandedDiv"
+      classes.expandedDivClassName = "order-summary-cart_expandedDiv"
       classes.voucherButtonClassName = `${auth ? "col-12 b-right" : "col-12"
-        } order-summary__header--features`;
+        } order-summary-cart__header--features`;
     }
 
     classes.voucherButtonAppliedClassName = `${auth ? "col-12 b-right" : "col-12"
-      } order-summary_voucherButtonApplied`;
+      } order-summary-cart_voucherButtonApplied`;
 
     return classes;
   };
 
   return (
     <>
-      <div className="order-summary__wrapper cart-padding">
+      <div className="order-summary-cart__wrapper cart-padding">
         {withOrderDetail &&
           <div className="cartOrderSummaryBox order-1">
             <div className="flex cart_orderSummaryBoxTitle">
@@ -159,11 +159,11 @@ const OrderSummaryBox: FC<any> = ({
             alt="icon"
           />,
             points:  <img src="/images/mdi_star-circle.svg" alt="icon" />,
-            pointsApplied: <h3 className="order-summary__popup--points-textApllied">{i18n.t("orderSummary.points")}</h3>,
-            voucherApplied: <h3 className="order-summary__popup--voucher-textApllied">{i18n.t("orderSummary.voucher")}</h3>,
+            pointsApplied: <h3 className="order-summary-cart__popup--points-textApllied">{i18n.t("orderSummary.points")}</h3>,
+            voucherApplied: <h3 className="order-summary-cart__popup--voucher-textApllied">{i18n.t("orderSummary.voucher")}</h3>,
             close: <FontAwesomeIcon icon={faTimes} height="1em" />,
-            expand: <FontAwesomeIcon icon={faChevronUp} color="#F7BE16" className="order-summary_expandButtonIcon" />,
-            collapse: <FontAwesomeIcon icon={faChevronDown} color="#F7BE16" className="order-summary_expandButtonIcon" />,
+            expand: <FontAwesomeIcon icon={faChevronUp} color="#F7BE16" className="order-summary-cart_expandButtonIcon" />,
+            collapse: <FontAwesomeIcon icon={faChevronDown} color="#F7BE16" className="order-summary-cart_expandButtonIcon" />,
             voucherRemoved: <FontAwesomeIcon icon={faTimes} />
           }}
         />
