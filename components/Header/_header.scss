@@ -613,6 +613,7 @@
 
 .heading{
   &__title{
+    padding-top : 30px;
     font-size: 28px;
 
     @media screen and(max-width: 440px){
