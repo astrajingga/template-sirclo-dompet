@@ -407,6 +407,7 @@
 }
 
 .display-web{
+  padding-left: 0;
   @media screen and (max-width: 767px) {
     display: none;
   }
