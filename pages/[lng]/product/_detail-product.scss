@@ -1,4 +1,18 @@
 .product-detail {
+  &__row {
+    .col-12 {
+      padding: 1rem;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
   &__container {
     margin-bottom: 2rem;
 
@@ -1474,7 +1488,7 @@
   border-top: 7.5px solid $color_gray;
   border-bottom: 7.5px solid $color_gray;
   margin-bottom: 32px;
-  padding: 0 13rem;
+  padding: 0 6.3rem;
 
   @media screen and (max-width: 991px) {
     padding-left: 2rem;
@@ -1828,27 +1842,4 @@
     font-weight: bold;
     font-size: 30px !important;
   }
-}
-
-.col-12 {
-  padding: 1rem;
-
-  &:first-child {
-    padding-left: 0;
-  }
-
-  &:last-child {
-    padding-right: 0;
-  }
-}
-
-.cart.margin-step-payment{
-  .col-12{
-    padding: 0;
-  }
-}
-
-.cart-padding{
-  padding-left: 0px !important;
-  padding-right: 0px !important;
 }
