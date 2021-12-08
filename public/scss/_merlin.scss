@@ -856,13 +856,12 @@ section {
       border-radius: 5px;
 
       @media screen and (max-width: 767px) {
-        width: 220px;
         height: 220px;
       }
 
       @media screen and (max-width: 440px) {
-        width: 200px;
-        height: 200px;
+        height: 145px;
+        max-height: 145px;
       }
     }
 
