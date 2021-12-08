@@ -43,7 +43,7 @@ const classesOrderSummary = {
   voucherListHeaderClassName: "order-summary__popup--voucher-title",
   voucherClassName: "order-summary__popup--voucher-list",
   voucherFooterClassName: "order-summary__popup--voucher-footer",
-  voucherApplyButtonClassName: "btn btn-orange",
+  voucherApplyButtonClassName: "btn btn-blue",
 
   pointsButtonClassName: "order-summary__header--features b-left mt-3",
   pointsIconClassName: "order-summary__header--features-icon",
@@ -112,7 +112,7 @@ const OrderSummaryBox: FC<any> = ({
       classes.expandedDivClassName = "order-summary_expandedDivCart"
       classes.voucherButtonClassName =  `${auth ? "col-12 b-right" : "col-12"
         } order-summary__header--featuresCart`;
-    }else if (page == "place_order"){
+    }else if (page == "place_order" || page == "shipping_method"){
       classes.expandedDivClassName = "order-summary_expandedDiv"
       classes.voucherButtonClassName = `${auth ? "col-12 b-right" : "col-12"
         } order-summary__header--features`;

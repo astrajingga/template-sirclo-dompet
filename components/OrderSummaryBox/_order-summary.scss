@@ -317,7 +317,7 @@
       }
 
       &-textApllied {
-        color: $color_black;
+        color: $color_shade_madison;
         position: absolute;
         top: 12px;
         left: 16px;
@@ -1110,10 +1110,10 @@
 
       &-change {
         background-color: transparent;
-        border: 1px solid $color_orange;
+        border: 1px solid $color_shade_madison;
         box-sizing: border-box;
         border-radius: 3px;
-        color: $color_orange;
+        color: $color_shade_madison;
         width: 46px;
         font-size: 24px;
         opacity: 0.4;
@@ -1166,7 +1166,7 @@
       }
 
       &-submit {
-        @extend .btn, .btn-orange, .btn-long;
+        @extend .btn, .btn-blue, .btn-long;
 
         width: 100%;
         margin: 10px 0;
@@ -1181,9 +1181,10 @@
       &-textApllied {
         color: $color_black;
         position: absolute;
+        margin-left: 10px;
+        font-family: "poppins-bold";
         top: 12px;
-        left: 16px;
-        font-size: 11px;
+        font-size: 14px;
       }
 
       &-warning {
@@ -1277,13 +1278,13 @@
   &_voucherButtonRemove {
     color: $color_shade_madison;
     margin-left: auto;
-    margin-right: 20px;
+    margin-right: 10px;
     display: flex;
     align-items: center;
   }
 
   &_voucherButtonRemoveCart {
-    color: $color_orange;
+    color: $color_black;
     margin-left: auto;
     margin-right: 10px;
     display: flex;
