@@ -104,7 +104,7 @@ const Blog: FC<any> = ({
             <div className="row">
               <div className="col-12 col-lg-3 display-web">
                 <div className="row card-recent">
-                  <div className="col-12 col-md-6 col-lg-12 border-blog">
+                  <div className="col-12 col-md-6 col-lg-12 border-blog blog-padding">
                     {(totalCategories > 0 || totalCategories === null) &&
                       <>
                         <h2 className="title-side-blogs">
@@ -169,7 +169,7 @@ const Blog: FC<any> = ({
               </div>
               <div className="col-12 col-lg-3 display-app">
                 <div className="row card-recent">
-                  <div className="col-12 col-md-6 col-lg-12 border-blog">
+                  <div className="col-12 col-md-6 col-lg-12 border-blog blog-padding">
                     {(totalCategories > 0 || totalCategories === null) &&
                       <>
                         <h2 className="title-side-blogs">
