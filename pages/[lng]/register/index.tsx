@@ -87,7 +87,7 @@ const RegisterPage: FC<any> = ({
     >
       <section style={sectionStyle}>
           <div className="row" style={rowContainerStyle}>
-            <div className=" col-12 col-sm-12 col-lg-4">
+          <div className="col-12 col-sm-12 col-lg-4" style={{ paddingLeft: 0 }}>
               <Widget pos="main-content-2" widgetClassName="widget-login" />
             </div>
             <div className="col-12 col-sm-12 col-lg-8">
