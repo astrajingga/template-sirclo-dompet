@@ -24,7 +24,7 @@ import { useBrand } from 'lib/utils/useBrand';
 import Layout from 'components/Layout/Layout';
 import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
 import Stepper from 'components/Stepper/Stepper';
-import OrderSummaryBox from 'components/OrderSummaryBox/OrderSummaryBox';
+import OrderSummaryBox from 'components/OrderSummaryBox/OrderSummaryBoxCart';
 const LoaderPages = dynamic(() => import('components/Loader/LoaderPages'));
 
 
