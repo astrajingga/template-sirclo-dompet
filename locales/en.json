@@ -29,6 +29,7 @@
         "orderNumber": "Order ID",
         "orderedItem": "Ordered Items",
         "paid": "Paid",
+        "viewDetail": "View Detail",
         "passwordError": "Password error",
         "passwordNotMatch": "Password doesn't match",
         "passwordSuccess": "Password has changed",

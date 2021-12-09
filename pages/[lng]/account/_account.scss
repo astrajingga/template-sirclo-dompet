@@ -553,7 +553,9 @@ span.account-page_membershipTotalPoints{
 
 .order-history {
   &-container {
-    margin-bottom: 5rem;
+    padding-bottom: 1rem;
+    white-space: nowrap;
+    overflow-x: scroll;
   }
 
   &-items {
@@ -565,6 +567,15 @@ span.account-page_membershipTotalPoints{
     &:focus,
     &:active {
       outline: 0;
+    }
+
+    &__view{
+      display: flex;
+      color: #2C3E50 !important;
+      padding: 6px 0px;
+      border: none;
+      background: none;
+      align-items: center;
     }
 
     &__header {
