@@ -73,6 +73,7 @@ const classesAccount = {
   orderDateClassName: "order-history-items__date",
   orderBodyClassName: "order-history-items-body",
   invoiceButtonClassName: "order-history-items-body invoice-button",
+  tableDetailButtonDetailClasName: "order-history-items__view",
 
   datePickerInputClassName: "date-picker__input",
   datePickerCalendarClassName: "date-picker__calendar",
@@ -97,6 +98,7 @@ const classesAccount = {
   orderedItemDetailNeedReviewClassName: "ordered-button ordered-button-needReview btn",
   orderedItemDetailReviewedClassName: "ordered-button ordered-button-reviewed btn",
   buyerNoteLabelClassName: "label",
+  
 
   shippingContainerClassName: "order-history-shipping-container",
   shippingDetailsClassName: "order-history-shipping-details",
@@ -209,7 +211,8 @@ const classesAccount = {
   orderInfoContainerClassName: styles.membership_info_container,
   OrderInfoIconClassName: styles.membership_info_icon,
   orderInfoLabelClassName: styles.membership_info_label,
-  OrderInfoSearchHereClassName: styles.membership_info_button
+  OrderInfoSearchHereClassName: styles.membership_info_button,
+ 
 };
 
 const paginationClasses = {

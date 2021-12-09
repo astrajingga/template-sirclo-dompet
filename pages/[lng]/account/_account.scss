@@ -573,7 +573,9 @@ ul.order-history-footer__pagination-order{
 
 .order-history {
   &-container {
-    margin-bottom: 5rem;
+    padding-bottom: 1rem;
+    white-space: nowrap;
+    overflow-x: scroll;
   }
 
   &-items {
@@ -585,6 +587,15 @@ ul.order-history-footer__pagination-order{
     &:focus,
     &:active {
       outline: 0;
+    }
+
+    &__view{
+      display: flex;
+      color: #2C3E50 !important;
+      padding: 6px 0px;
+      border: none;
+      background: none;
+      align-items: center;
     }
 
     &__header {
