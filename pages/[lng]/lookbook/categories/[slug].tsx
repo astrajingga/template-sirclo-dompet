@@ -1,17 +1,15 @@
 /* library package */
 import { FC, useState } from 'react'
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import { LookbookSingle, useI18n } from '@sirclo/nexus'
-import { faArrowLeft, faShareAlt } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 /* library template */
-import useWindowSize from 'lib/utils/useWindowSize';
-import { useBrand } from 'lib/utils/useBrand';
+import useWindowSize from 'lib/utils/useWindowSize'
+import { useBrand } from 'lib/utils/useBrand'
 
 /* component */
 import Layout from 'components/Layout/Layout'
-import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb'
 
 const classesLookbookSingle = {
   containerClassName: "lookbook-detail",

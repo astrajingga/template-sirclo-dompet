@@ -1,4 +1,5 @@
-import { useState } from "react";
+/* library package */
+import { useState } from 'react';
 
 const ProgressBar = ({ rating }) => {
   const [style, setStyle] = useState({});

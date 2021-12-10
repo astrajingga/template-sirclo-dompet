@@ -1,5 +1,6 @@
-import { FC } from "react";
-import Link from 'next/link';
+/* library package */
+import { FC } from 'react'
+import Link from 'next/link'
 
 export type PageHeadingPropsType = {
   title: string
@@ -8,11 +9,6 @@ export type PageHeadingPropsType = {
   lng: any
 }
 
-const breadcrumbTitleClasses = {
-  padding: "3em 3em",
-  backgroundColor: "#F1F2F7",
-  width: "100%"
-};
 
 const Breadcrumb: FC<any> = ({
   title,

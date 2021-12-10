@@ -1,39 +1,38 @@
 /* library package */
-import { useState } from 'react';
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import dynamic from 'next/dynamic';
-import Link from 'next/link';
+import { useState } from 'react'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
+import dynamic from 'next/dynamic'
+import Link from 'next/link'
 import Router from 'next/router'
-import Carousel from '@brainhubeu/react-carousel';
-import { LazyLoadComponent } from 'react-lazy-load-image-component';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckCircle, faBoxOpen, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import Carousel from '@brainhubeu/react-carousel'
+import { LazyLoadComponent } from 'react-lazy-load-image-component'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import {
   Banner,
   getBanner,
   Products,
   ProductCategory,
   useI18n
-} from '@sirclo/nexus';
+} from '@sirclo/nexus'
 const Widget = dynamic(
   () => import('@sirclo/nexus').then((mod) => mod.Widget),
   { ssr: false }
 );
 
 /* library template */
-import useWindowSize from 'lib/utils/useWindowSize';
-import { useSizeBanner } from 'lib/useSizeBanner';
-import { parseCookies } from 'lib/parseCookies';
-import { useBrand } from 'lib/utils/useBrand';
-import { GRAPHQL_URI } from 'lib/Constants';
+import useWindowSize from 'lib/utils/useWindowSize'
+import { useSizeBanner } from 'lib/useSizeBanner'
+import { parseCookies } from 'lib/parseCookies'
+import { useBrand } from 'lib/utils/useBrand'
+import { GRAPHQL_URI } from 'lib/Constants'
 
 /* component */
-import Layout from 'components/Layout/Layout';
+import Layout from 'components/Layout/Layout'
 import InstagramFeed from 'components/InstagramFeed/InstagramFeed'
-const Quickview = dynamic(() => import('components/Quickview/Quickview'));
-const Popup = dynamic(() => import('components/Popup/Popup'));
-const Placeholder = dynamic(() => import('components/Placeholder'));
-const EmptyComponent = dynamic(() => import('components/EmptyComponent/EmptyComponent'));
+const Quickview = dynamic(() => import('components/Quickview/Quickview'))
+const Popup = dynamic(() => import('components/Popup/Popup'))
+const Placeholder = dynamic(() => import('components/Placeholder'))
 
 const bannerClasses = {
   imageContainerClassName: "banner-carousel__header",
@@ -70,11 +69,6 @@ const classesProducts = {
   salePriceClassName: "products__item--content-price--sale",
 };
 
-const classesEmptyComponent = {
-  emptyContainer: "product-home__empty",
-  emptyTitle: "product-home__empty--title",
-};
-
 const classesPlaceholderBanner = {
   placeholderImage: "placeholder-item placeholder-item__banner",
 };
@@ -91,8 +85,6 @@ const classesPlaceholderWidget = {
   placeholderImage: "placeholder-item placeholder-item__widget--banner",
 };
 
-const tabMenu = ["featured", "new-arrivals", "preorder"];
-
 const Home: React.FC<any> = ({
   lng,
   lngDict,
@@ -105,7 +97,6 @@ const Home: React.FC<any> = ({
 
   const [isQuickview, setIsQuickview] = useState<boolean>(false);
   const [slug, setSlug] = useState<string>("");
-  const [tabActive, setTabActive] = useState<string>("featured");
   const [showModalErrorAddToCart, setShowModalErrorAddToCart] = useState<boolean>(false);
   const [showModalAddToCart, setShowModalAddToCart] = useState<boolean>(false);
   const [showModalNotifyMe, setShowModalNotifyMe] = useState<boolean>(false);
@@ -124,8 +115,6 @@ const Home: React.FC<any> = ({
     setIsQuickview(false);
     setShowModalNotifyMe(true);
   }
-
-  const toogleTab = (menus) => setTabActive(menus);
 
   return (
     <Layout

@@ -1,8 +1,9 @@
-import { Logo } from "@sirclo/nexus";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+/* library package */
+import { Logo } from '@sirclo/nexus'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
-const SideMenu = ({ title, openSide, toogleSide, children, positionSide }) => {
+const SideMenu = ({ openSide, toogleSide, children, positionSide }) => {
   return (
     <>
       <div className={openSide ? `side-menu fade show ${positionSide}` : `side-menu fade`}>

@@ -1,11 +1,11 @@
-import { FC, useState } from "react";
-import { InstagramFeed as InstaFeed } from "@sirclo/nexus";
-import dynamic from "next/dynamic";
+/* library package */
+import { FC, useState } from 'react'
+import { InstagramFeed as InstaFeed } from '@sirclo/nexus'
+import dynamic from 'next/dynamic'
 
-const Placeholder = dynamic(() => import("components/Placeholder"));
-const InstagramQuickView = dynamic(() =>
-  import("@sirclo/nexus").then((mod) => mod.InstagramQuickView)
-);
+/* component */
+const Placeholder = dynamic(() => import('components/Placeholder'));
+const InstagramQuickView = dynamic(() => import('@sirclo/nexus').then((mod) => mod.InstagramQuickView))
 
 const classesInstagramQuickView = {
   quickViewBackgroundClassName: "instagramFeed_quickviewBackground",

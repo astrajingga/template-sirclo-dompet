@@ -1,9 +1,10 @@
+/* library package */
 import {
   FC,
   useState,
   useEffect
-} from "react";
-import Link from "next/link";
+} from 'react'
+import Link from 'next/link'
 
 const lang = {
   en: {

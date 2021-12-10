@@ -1,28 +1,27 @@
 /* library package */
-import { FC } from 'react';
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import dynamic from 'next/dynamic';
+import { FC } from 'react'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
+import dynamic from 'next/dynamic'
 import {
   PlaceOrderForm,
   useI18n,
   PrivateRoute,
-} from '@sirclo/nexus';
-import { toast } from 'react-toastify';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+} from '@sirclo/nexus'
+import { toast } from 'react-toastify'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faTimes,
   faDotCircle,
-} from '@fortawesome/free-solid-svg-icons';
+} from '@fortawesome/free-solid-svg-icons'
 
 /* library template */
-import { parseCookies } from 'lib/parseCookies';
-import { useBrand } from 'lib/utils/useBrand';
+import { parseCookies } from 'lib/parseCookies'
+import { useBrand } from 'lib/utils/useBrand'
 
 /* component */
-import Layout from 'components/Layout/Layout';
-import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
-import Stepper from 'components/Stepper/Stepper';
-import OrderSummaryBox from 'components/OrderSummaryBox/OrderSummaryBoxCart';
+import Layout from 'components/Layout/Layout'
+import Stepper from 'components/Stepper/Stepper'
+import OrderSummaryBox from 'components/OrderSummaryBox/OrderSummaryBoxCart'
 const LoaderPages = dynamic(
   () => import('components/Loader/LoaderPages')
 );
@@ -85,11 +84,6 @@ const PlaceOrder: FC<any> = ({
   brand
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   const i18n: any = useI18n();
-
-  const linksBreadcrumb = [
-    `${i18n.t("home.title")}`,
-    `${i18n.t("placeOrder.title")}`,
-  ];
 
   return (
     <PrivateRouteWrapper>

@@ -1,26 +1,29 @@
-import { FC } from "react";
-import { useRouter } from "next/router";
+/* library package */
+import { FC } from 'react'
+import { useRouter } from 'next/router'
 import {
   Widget,
   NewsletterForm,
   SocialMediaIcons,
   useI18n,
   isCopyrightAllowed
-} from "@sirclo/nexus";
-import MobileFooter from "./MobileFooter";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+} from '@sirclo/nexus'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faFacebookF,
   faTwitter,
   faInstagram,
   faYoutube,
   faTiktok
-} from "@fortawesome/free-brands-svg-icons";
+} from '@fortawesome/free-brands-svg-icons'
 import {
   faCheckCircle
 } from '@fortawesome/free-solid-svg-icons'
+import { toast } from 'react-toastify'
 
-import { toast } from "react-toastify";
+/* component */
+import MobileFooter from './MobileFooter'
+
 
 const newsletterClasses = {
   containerClassName: "newsletter",

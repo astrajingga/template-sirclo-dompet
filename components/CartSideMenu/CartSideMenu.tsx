@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { OrderSummary, CartDetails, useI18n } from "@sirclo/nexus";
-import { toast } from "react-toastify";
-import EmptyComponent from "../../components/EmptyComponent/EmptyComponent";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+/* library package */
+import { useState } from 'react'
+import { OrderSummary, CartDetails, useI18n } from '@sirclo/nexus'
+import { toast } from 'react-toastify'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faEdit,
   faTrash,
@@ -10,16 +10,17 @@ import {
   faTimes,
   faChevronDown,
   faChevronUp,
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons'
+import dynamic from 'next/dynamic'
 
-import dynamic from "next/dynamic";
-
-const Quickdetail = dynamic(() => import("../Quickdetail/Quickdetail"));
-const Popup = dynamic(() => import("../Popup/Popup"));
-
+/* component */
+import EmptyComponent from '../../components/EmptyComponent/EmptyComponent'
+const Quickdetail = dynamic(() => import('../Quickdetail/Quickdetail'))
+const Popup = dynamic(() => import('../Popup/Popup'))
 const PrivateComponent = dynamic(() =>
-  import("@sirclo/nexus").then((mod) => mod.PrivateComponent)
-);
+  import('@sirclo/nexus').then((mod) => mod.PrivateComponent)
+)
+
 
 const classesCartDetails = {
   cartBodyClassName: "cart-side-menu",

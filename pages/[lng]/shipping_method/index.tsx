@@ -1,31 +1,31 @@
 /* library package */
-import { FC } from 'react';
-import Link from 'next/link';
-import dynamic from 'next/dynamic';
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import { FC } from 'react'
+import Link from 'next/link'
+import dynamic from 'next/dynamic'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import {
   ShippingMethods,
   CustomerDetail,
   PrivateRoute,
   useI18n
-} from '@sirclo/nexus';
-import { toast } from 'react-toastify';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+} from '@sirclo/nexus'
+import { toast } from 'react-toastify'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faTimes,
   faDotCircle,
-} from '@fortawesome/free-solid-svg-icons';
+} from '@fortawesome/free-solid-svg-icons'
 
 /* library template */
-import { parseCookies } from 'lib/parseCookies';
-import { useBrand } from 'lib/utils/useBrand';
+import { parseCookies } from 'lib/parseCookies'
+import { useBrand } from 'lib/utils/useBrand'
 
 /* component */
-import Layout from 'components/Layout/Layout';
-import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
-import Stepper from 'components/Stepper/Stepper';
-import OrderSummaryBox from 'components/OrderSummaryBox/OrderSummaryBoxCart';
-const LoaderPages = dynamic(() => import('components/Loader/LoaderPages'));
+import Layout from 'components/Layout/Layout'
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb'
+import Stepper from 'components/Stepper/Stepper'
+import OrderSummaryBox from 'components/OrderSummaryBox/OrderSummaryBoxCart'
+const LoaderPages = dynamic(() => import('components/Loader/LoaderPages'))
 
 
 const classesCustomerDetail = {

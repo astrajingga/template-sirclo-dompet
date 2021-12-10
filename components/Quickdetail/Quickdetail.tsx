@@ -1,7 +1,10 @@
-import { QuickDetail } from "@sirclo/nexus"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import Loader from "../Loader/Loader";
+/* library package */
+import { QuickDetail } from '@sirclo/nexus'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
+
+/* component */
+import Loader from '../Loader/Loader'
 
 export type QuickdetailPropsType = {
   slug: string,

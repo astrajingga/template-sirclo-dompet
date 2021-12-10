@@ -1,7 +1,8 @@
-import { useState } from "react";
-import { useI18n } from "@sirclo/nexus"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+/* library package */
+import { useState } from 'react'
+import { useI18n } from '@sirclo/nexus'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 const Search = ({ searchProduct }: any) => {
   const i18n: any = useI18n();

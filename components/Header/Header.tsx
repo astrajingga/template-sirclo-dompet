@@ -1,17 +1,21 @@
+/* library package */
 import {
   Logo,
   Navigation,
   Widget,
   useLogout
-} from "@sirclo/nexus";
-import ProfileMenu from "./ProfileMenu";
-import MobileNavButton from "./MobileNav";
-import Placeholder from "../Placeholder";
-import { LazyLoadComponent } from "react-lazy-load-image-component";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
-import Router from "next/router";
+} from '@sirclo/nexus'
+import { LazyLoadComponent } from 'react-lazy-load-image-component'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { useState } from 'react'
+import Router from 'next/router'
+
+/* component */
+import ProfileMenu from './ProfileMenu'
+import MobileNavButton from './MobileNav'
+import Placeholder from '../Placeholder'
+
 
 const navClasses = {
   dropdownContainerClassName: "dropdown-container",

@@ -1,6 +1,9 @@
-import { FC } from "react";
-import Rating from "./Rating";
-import ProgressBar from "./ProgressBar";
+/* library package */
+import { FC } from 'react'
+
+/* component */
+import Rating from './Rating'
+import ProgressBar from './ProgressBar'
 
 const RatingReview: FC<any> = () => {
   const ratings = {

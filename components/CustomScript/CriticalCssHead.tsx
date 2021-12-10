@@ -1,4 +1,7 @@
+/* library package */
 import { Head } from 'next/document'
+
+/* component */
 import { InlineStyle } from './InlineStyle'
 
 type DocumentFiles = {

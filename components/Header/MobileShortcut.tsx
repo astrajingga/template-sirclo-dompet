@@ -1,13 +1,14 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useI18n, useCart, PrivateComponent } from "@sirclo/nexus";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+/* library package */
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useI18n, useCart, PrivateComponent } from '@sirclo/nexus'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faHome,
   faThLarge,
   faShoppingBag,
   faUser,
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons'
 
 const MobileShortcut = ({ lng }) => {
   const i18n: any = useI18n();

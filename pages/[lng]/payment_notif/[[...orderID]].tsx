@@ -1,9 +1,9 @@
 /* library package */
-import { FC } from 'react';
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import { useRouter } from 'next/router';
-import { PaymentConfirmation, CheckPaymentOrder, useI18n } from '@sirclo/nexus';
-import { toast } from 'react-toastify';
+import { FC } from 'react'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
+import { useRouter } from 'next/router'
+import { PaymentConfirmation, CheckPaymentOrder, useI18n } from '@sirclo/nexus'
+import { toast } from 'react-toastify'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faCheckCircle
@@ -12,21 +12,21 @@ import {
   ChevronUp,
   ChevronDown,
   X,
-} from 'react-feather';
+} from 'react-feather'
 
 /* library template */
-import { useBrand } from 'lib/utils/useBrand';
+import { useBrand } from 'lib/utils/useBrand'
 
 /* component */
-import SEO from 'components/SEO/SEO';
-import Layout from 'components/Layout/Layout';
-import Loader from 'components/Loader/Loader';
-import BankAccount from 'components/BankAccount/BankAccount';
+import SEO from 'components/SEO/SEO'
+import Layout from 'components/Layout/Layout'
+import Loader from 'components/Loader/Loader'
+import BankAccount from 'components/BankAccount/BankAccount'
 
 /* styles */
-import styles from 'public/scss/pages/PaymentNotif.module.scss';
-import stylesPopup from 'public/scss/components/CheckPaymentOrder.module.scss';
-import stylesBanks from 'public/scss/components/BanksAccount.module.scss';
+import styles from 'public/scss/pages/PaymentNotif.module.scss'
+import stylesPopup from 'public/scss/components/CheckPaymentOrder.module.scss'
+import stylesBanks from 'public/scss/components/BanksAccount.module.scss'
 
 const classesPaymentConfirmation = {
   paymentConfirmationDivClassName: styles.paymentNotif_form,
@@ -160,7 +160,7 @@ const PaymentConfirmationPage: FC<any> = ({
 
 export const getServerSideProps: GetServerSideProps = async ({ req, params }) => {
   const brand = await useBrand(req);
-  const defaultLanguage = brand?.settings?.defaultLanguage || params.lng || 'id';
+  const defaultLanguage = brand?.settings?.defaultLanguage || params.lng || 'id'
   const { default: lngDict = {} } = await import(`locales/${defaultLanguage}.json`);
 
   return {

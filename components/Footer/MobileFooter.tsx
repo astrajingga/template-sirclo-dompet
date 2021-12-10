@@ -1,7 +1,8 @@
+/* library package */
 import { useState } from 'react'
 import { Widget, NewsletterForm, useI18n } from '@sirclo/nexus'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons'
 
 const newsletterClasses = {
   containerClassName: "newsletter",

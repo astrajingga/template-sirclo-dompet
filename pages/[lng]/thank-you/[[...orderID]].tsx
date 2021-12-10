@@ -1,28 +1,28 @@
 /* library package */
-import { FC } from 'react';
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import { ThankYou, useI18n } from '@sirclo/nexus';
-import { toast } from 'react-toastify';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { FC } from 'react'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
+import { ThankYou, useI18n } from '@sirclo/nexus'
+import { toast } from 'react-toastify'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import {
   Check,
   ChevronUp,
   ChevronDown,
   Copy
-} from 'react-feather';
+} from 'react-feather'
 
 /* library template */
-import { useBrand } from 'lib/utils/useBrand';
+import { useBrand } from 'lib/utils/useBrand'
 
 /* component */
-import SEO from 'components/SEO/SEO';
-import Layout from 'components/Layout/Layout';
+import SEO from 'components/SEO/SEO'
+import Layout from 'components/Layout/Layout'
 
 /* styles */
-import styles from 'public/scss/pages/ThankYou.module.scss';
-import stylesBanks from 'public/scss/components/BanksAccount.module.scss';
-import stylesOrder from 'public/scss/pages/PaymentNotif.module.scss';
+import styles from 'public/scss/pages/ThankYou.module.scss'
+import stylesBanks from 'public/scss/components/BanksAccount.module.scss'
+import stylesOrder from 'public/scss/pages/PaymentNotif.module.scss'
 
 const classesThankYouPage = {
   thankYouClassName: styles.thankyou_inner,
@@ -104,7 +104,7 @@ const ThankYouPage: FC<any> = ({
 
 export const getServerSideProps: GetServerSideProps = async ({ req, params }) => {
   const brand = await useBrand(req);
-  const defaultLanguage = brand?.settings?.defaultLanguage || params.lng || 'id';
+  const defaultLanguage = brand?.settings?.defaultLanguage || params.lng || 'id'
   const { default: lngDict = {} } = await import(`locales/${defaultLanguage}.json`);
 
   return {

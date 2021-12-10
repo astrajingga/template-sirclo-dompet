@@ -1,34 +1,34 @@
 /* library package */
-import { FC } from 'react';
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import Link from 'next/link';
+import { FC } from 'react'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
+import Link from 'next/link'
 import {
   CustomerDetail,
   ListPaymentMethod,
   PrivateRoute,
   useI18n,
   useShippingMethod,
-} from '@sirclo/nexus';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+} from '@sirclo/nexus'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faTimes,
   faCreditCard,
   faTicketAlt,
   faCrown
-} from '@fortawesome/free-solid-svg-icons';
-import dynamic from 'next/dynamic';
-import { toast } from 'react-toastify';
+} from '@fortawesome/free-solid-svg-icons'
+import dynamic from 'next/dynamic'
+import { toast } from 'react-toastify'
 
 /* library template */
-import { useBrand } from 'lib/utils/useBrand';
-import { useWhatsAppOTPSetting } from 'lib/utils/useSingleSignOn';
+import { useBrand } from 'lib/utils/useBrand'
+import { useWhatsAppOTPSetting } from 'lib/utils/useSingleSignOn'
 
 /* component */
-import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
-import Layout from 'components/Layout/Layout';
-import Stepper from 'components/Stepper/Stepper';
-import Loader from 'components/Loader/Loader';
-import EmptyComponent from 'components/EmptyComponent/EmptyComponent';
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb'
+import Layout from 'components/Layout/Layout'
+import Stepper from 'components/Stepper/Stepper'
+import Loader from 'components/Loader/Loader'
+import EmptyComponent from 'components/EmptyComponent/EmptyComponent'
 const LoaderPages = dynamic(
   () => import('components/Loader/LoaderPages')
 );

@@ -1,14 +1,14 @@
 /* library package */
-import { FC } from 'react';
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import { GiftCard, useI18n } from '@sirclo/nexus';
+import { FC } from 'react'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
+import { GiftCard, useI18n } from '@sirclo/nexus'
 
 /* library template */
-import { useBrand } from 'lib/utils/useBrand';
+import { useBrand } from 'lib/utils/useBrand'
 
 /* component */
-import Layout from 'components/Layout/Layout';
-import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
+import Layout from 'components/Layout/Layout'
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb'
 
 const classesGiftCard = {
   containerClassName: "giftcard-page-form",

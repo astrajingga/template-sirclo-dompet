@@ -1,26 +1,26 @@
 /* library package */
-import { FC } from 'react';
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import { FC } from 'react'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import {
   Contact,
   Widget,
   useI18n,
   isEnquiryAllowed
-} from '@sirclo/nexus';
-import { toast } from 'react-toastify';
+} from '@sirclo/nexus'
+import { toast } from 'react-toastify'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faCheckCircle,
 } from '@fortawesome/free-solid-svg-icons'
 
 /* library template */
-import useWindowSize from 'lib/utils/useWindowSize';
-import { useBrand } from 'lib/utils/useBrand';
+import useWindowSize from 'lib/utils/useWindowSize'
+import { useBrand } from 'lib/utils/useBrand'
 
 /* component */
-import Layout from 'components/Layout/Layout';
-import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
-import Placeholder from 'components/Placeholder';
+import Layout from 'components/Layout/Layout'
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb'
+import Placeholder from 'components/Placeholder'
 
 const classesContact = {
   containerClassName: "contact-page-container",

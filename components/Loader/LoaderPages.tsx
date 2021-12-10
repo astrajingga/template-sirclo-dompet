@@ -1,5 +1,6 @@
-import { FC } from "react"
-import { useI18n } from "@sirclo/nexus"
+/* library package */
+import { FC } from 'react'
+import { useI18n } from '@sirclo/nexus'
 
 type TypeLoaderPage = {
   otherClassNameInner?: string
