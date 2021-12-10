@@ -98,7 +98,7 @@ const classesAccount = {
   orderedItemDetailNeedReviewClassName: "ordered-button ordered-button-needReview btn",
   orderedItemDetailReviewedClassName: "ordered-button ordered-button-reviewed btn",
   buyerNoteLabelClassName: "label",
-  
+
 
   shippingContainerClassName: "order-history-shipping-container",
   shippingDetailsClassName: "order-history-shipping-details",
@@ -212,7 +212,7 @@ const classesAccount = {
   OrderInfoIconClassName: styles.membership_info_icon,
   orderInfoLabelClassName: styles.membership_info_label,
   OrderInfoSearchHereClassName: styles.membership_info_button,
- 
+
 };
 
 const paginationClasses = {
