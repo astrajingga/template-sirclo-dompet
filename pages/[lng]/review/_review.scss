@@ -413,7 +413,7 @@
    }
   }
 
-  &-popup
+  &_popup
   {
     position: fixed;
     top: 0;
@@ -427,15 +427,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
   }
 
   &-popupContent
   {
-    margin: 1rem;
-    padding: 2rem 1.5rem;
+    text-align: center;
+    padding: 50px;
     background: $color_white;
     border-radius: 4px;
     position: relative;
+    align-items: center;
+    justify-content: center;
     transition: all .3s ease-in-out;
   }
 
@@ -453,13 +456,14 @@
 
   &-popupActionButton
   {
+    text-align: center;
     & > button
     {
       padding: 10px 40px;
       font-size: 13px;
       border: none;
       color: $color_white;
-      background-color: $color_black;
+      background-color: $color_shade_madison;
       cursor: pointer;
 
       &:active,
