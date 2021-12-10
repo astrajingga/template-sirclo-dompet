@@ -1,5 +1,5 @@
 /* library package */
-import { ShipmentTracker } from '@sirclo/nexus';
+import { ShipmentTracker } from '@sirclo/nexus'
 
 const classesTrackerPage = {
   shipmentHeaderClassName: "track-shipment__header rounded-none px-10 py-8",
@@ -13,7 +13,7 @@ const classesTrackerPage = {
   shipmentCloseIconClassName: "track-shipment__closeIcon",
   shipmentTrackButtonClassName: "track-shipment__trackButton btn btn-orange",
 };
-const TrackerPage = ({ order_token }) => {
+const TrackerPage = () => {
   return (
     <ShipmentTracker
       awbNumber="IN-SB-2-C2VTGFMAA2XUME"

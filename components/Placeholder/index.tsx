@@ -1,4 +1,5 @@
-import { FC } from "react"
+/* library package */
+import { FC } from 'react'
 
 export type PlaceholderPropsType = {
   classes?: {

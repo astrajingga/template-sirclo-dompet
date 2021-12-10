@@ -2,7 +2,6 @@
 import { FC, useState } from 'react'
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import { toast } from 'react-toastify'
-import dynamic from 'next/dynamic';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faEye,
@@ -10,21 +9,16 @@ import {
   faUserCircle,
   faEnvelope,
   faArrowLeft,
-  faCheck
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faWhatsapp
-} from '@fortawesome/free-brands-svg-icons';
+} from '@fortawesome/free-brands-svg-icons'
 import {
   Login,
   WhatsAppOTPInput,
   SingleSignOn,
   useI18n
 } from '@sirclo/nexus'
-const Widget = dynamic(
-  () => import('@sirclo/nexus').then((mod) => mod.Widget),
-  { ssr: false }
-);
 
 /* library template */
 import { parseCookies } from 'lib/parseCookies'
@@ -36,10 +30,9 @@ import { useWhatsAppOTPSetting } from 'lib/utils/useSingleSignOn'
 
 /* component */
 import Layout from 'components/Layout/Layout'
-import Breadcrumb from 'components/Breadcrumb/Breadcrumb'
 import Loader from 'components/Loader/Loader'
 import LoaderPages from 'components/Loader/LoaderPages'
-import { faCheckCircle } from '@fortawesome/free-regular-svg-icons';
+import { faCheckCircle } from '@fortawesome/free-regular-svg-icons'
 
 const loginClasses = {
   containerClassName: "login-page-form",
@@ -106,7 +99,6 @@ const LoginPage: FC<any> = ({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   const i18n: any = useI18n()
   const [step, setStep] = useState<string>("whatsapp-input");
-  const linksBreadcrumb = [`${i18n.t("home.title")}`, `${i18n.t("login.title")}`]
 
   const brandName = (brand: string): string => {
     const lower = brand?.toLowerCase();

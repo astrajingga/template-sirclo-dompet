@@ -15,7 +15,7 @@ import {
   SingleSignOn,
   useI18n
 } from '@sirclo/nexus'
-import dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic'
 const Widget = dynamic(
   () => import('@sirclo/nexus').then((mod) => mod.Widget),
   { ssr: false }
@@ -30,7 +30,6 @@ import { useFacebookAuth } from 'lib/utils/useFacebookAuth'
 
 /* component */
 import Layout from 'components/Layout/Layout'
-import Breadcrumb from 'components/Breadcrumb/Breadcrumb'
 import Loader from 'components/Loader/Loader'
 import LoaderPages from 'components/Loader/LoaderPages'
 
@@ -44,8 +43,7 @@ const classesRegister = {
   labelRequiredClassName: "col-12",
   verificationContainerClassName: "col-12 mb-3",
   buttonClassName: "btn login-page-btnLogin col-12 col-md-6",
-  passwordStrengthBarContainerClassName:
-    "sirclo-form-password-strength-bar-container",
+  passwordStrengthBarContainerClassName: "sirclo-form-password-strength-bar-container",
   passwordStrengthBarClassName: "sirclo-form-password-strength-bar",
   passwordStrengthLabelClassName: "sirclo-form-password-strength-label",
   passwordCriteriaListClassName: "sirclo-form-password-criteria-list",
@@ -71,12 +69,6 @@ const RegisterPage: FC<any> = ({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   const i18n: any = useI18n()
   const [isVerified, setIsVerified] = useState<boolean>(false)
-
-
-  const linksBreadcrumb = [
-    `${i18n.t("home.title")}`,
-    `${i18n.t("register.title")}`,
-  ]
 
   return (
     <Layout

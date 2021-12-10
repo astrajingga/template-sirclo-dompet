@@ -1,22 +1,22 @@
 /* library package */
-import { FC } from 'react';
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import { toast } from 'react-toastify';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faChevronUp,faCheckCircle } from '@fortawesome/free-solid-svg-icons';
-import { useRouter } from 'next/router';
+import { FC } from 'react'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
+import { toast } from 'react-toastify'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown, faChevronUp,faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { useRouter } from 'next/router'
 import {
   OrderReview,
   useI18n,
-} from '@sirclo/nexus';
+} from '@sirclo/nexus'
 
 /* library template */
-import useWindowSize from 'lib/utils/useWindowSize';
-import { useBrand } from 'lib/utils/useBrand';
+import useWindowSize from 'lib/utils/useWindowSize'
+import { useBrand } from 'lib/utils/useBrand'
 
 /* component */
-import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
-import Layout from 'components/Layout/Layout';
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb'
+import Layout from 'components/Layout/Layout'
 
 const classesOrderReview = {
   titleContainerClassName: "d-none",

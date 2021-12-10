@@ -1,22 +1,20 @@
-import { FC, useState } from "react";
+/* library package */
+import { FC, useState } from 'react'
 import {
   OrderSummary,
   CartDetails
-} from "@sirclo/nexus";
-import { toast } from "react-toastify";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import dynamic from "next/dynamic";
+} from '@sirclo/nexus'
+import { toast } from 'react-toastify'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import dynamic from 'next/dynamic'
 import {
   faTimes,
   faChevronDown,
   faChevronUp,
-  faTicketAlt,
-  faCrown
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons'
 
-const Popup = dynamic(
-  () => import("components/Popup/Popup")
-);
+/* component */
+const Popup = dynamic(() => import('components/Popup/Popup'))
 
 const classesOrderSummary = {
   containerClassName: "order-summary-cart",

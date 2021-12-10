@@ -1,8 +1,8 @@
 /* Library Package */
-import { FC, useState } from 'react';
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import { Account, useI18n } from '@sirclo/nexus';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FC, useState } from 'react'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
+import { Account, useI18n } from '@sirclo/nexus'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faChevronDown,
   faCheckCircle,
@@ -16,28 +16,28 @@ import {
   faCoins,
   faBell,
   faEnvelope,
-} from '@fortawesome/free-solid-svg-icons';
+} from '@fortawesome/free-solid-svg-icons'
 import {
   faWhatsapp,
   faLine
-} from '@fortawesome/free-brands-svg-icons';
+} from '@fortawesome/free-brands-svg-icons'
 import{
   AlertCircle
 } from 'react-feather'
-import { toast } from 'react-toastify';
+import { toast } from 'react-toastify'
 
 /* library template */
-import { useBrand } from 'lib/utils/useBrand';
-import { useWhatsAppOTPSetting } from 'lib/utils/useSingleSignOn';
-import { parseCookies } from 'lib/parseCookies';
+import { useBrand } from 'lib/utils/useBrand'
+import { useWhatsAppOTPSetting } from 'lib/utils/useSingleSignOn'
+import { parseCookies } from 'lib/parseCookies'
 
 /* components */
-import Layout from 'components/Layout/Layout';
-import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
+import Layout from 'components/Layout/Layout'
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb'
 
 /* styles */
-import styles from 'public/scss/pages/Account.module.scss';
-import stylesPopupCheckPaymentOrder from 'public/scss/components/CheckPaymentOrder.module.scss';
+import styles from 'public/scss/pages/Account.module.scss'
+import stylesPopupCheckPaymentOrder from 'public/scss/components/CheckPaymentOrder.module.scss'
 
 const classesAccount = {
   containerClassName: "account-page_detail",

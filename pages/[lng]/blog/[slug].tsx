@@ -1,21 +1,21 @@
 /* library package */
-import { FC, useState } from 'react';
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import dynamic from 'next/dynamic';
+import { FC, useState } from 'react'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
+import dynamic from 'next/dynamic'
 import {
   BlogSingle,
   BlogCategories,
   useI18n,
   BlogRecent
-} from '@sirclo/nexus';
+} from '@sirclo/nexus'
 
 /* library template */
-import { useBrand } from 'lib/utils/useBrand';
+import { useBrand } from 'lib/utils/useBrand'
 
 /* component */
-import Layout from 'components/Layout/Layout';
-import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
-const Placeholder = dynamic(() => import('components/Placeholder'));
+import Layout from 'components/Layout/Layout'
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb'
+const Placeholder = dynamic(() => import('components/Placeholder'))
 
 const classesBlogSingle = {
   blogContainerClassName: "blog-detail",

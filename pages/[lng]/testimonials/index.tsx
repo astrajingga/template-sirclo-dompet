@@ -1,29 +1,29 @@
 /* library package */
-import { FC, useState } from 'react';
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import dynamic from 'next/dynamic';
+import { FC, useState } from 'react'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
+import dynamic from 'next/dynamic'
 import {
   Testimonials,
   isTestimonialFormAllowed,
   isTestimonialAllowed,
   Pagination,
   useI18n
-} from '@sirclo/nexus';
-import ReCAPTCHA from 'react-google-recaptcha';
-import { toast } from 'react-toastify';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+} from '@sirclo/nexus'
+import ReCAPTCHA from 'react-google-recaptcha'
+import { toast } from 'react-toastify'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 const TestimonialForm = dynamic(() => import('@sirclo/nexus').then((mod) => mod.TestimonialForm));
 
 /* library template */
-import { useBrand } from 'lib/utils/useBrand';
-import { parseCookies } from 'lib/parseCookies';
+import { useBrand } from 'lib/utils/useBrand'
+import { parseCookies } from 'lib/parseCookies'
 
 /* component */
-import Layout from 'components/Layout/Layout';
-import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
-import Placeholder from 'components/Placeholder';
-import PremiumFeatures from 'components/PremiumFeatures/PremiumFeatures';
+import Layout from 'components/Layout/Layout'
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb'
+import Placeholder from 'components/Placeholder'
+import PremiumFeatures from 'components/PremiumFeatures/PremiumFeatures'
 const Popup = dynamic(() => import('components/Popup/Popup'));
 
 const classesTestimonials = {

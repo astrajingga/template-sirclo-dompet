@@ -1,17 +1,21 @@
-import { FC } from "react";
-import dynamic from "next/dynamic";
-import { ProductDetail } from "@sirclo/nexus";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+/* library package */
+import { FC } from 'react'
+import dynamic from 'next/dynamic'
+import { ProductDetail } from '@sirclo/nexus'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faTimes,
   faClock,
   faCalendarAlt,
-} from "@fortawesome/free-solid-svg-icons";
-import Loader from "../Loader/Loader";
-import useWindowSize from "lib/utils/useWindowSize";
-import { toast } from "react-toastify";
+} from '@fortawesome/free-solid-svg-icons'
+import { toast } from 'react-toastify'
 
-const SocialShare = dynamic(() => import("components/SocialShare/SocialShare"));
+/* library template */
+import useWindowSize from 'lib/utils/useWindowSize'
+
+/* component */
+import Loader from '../Loader/Loader'
+const SocialShare = dynamic(() => import('components/SocialShare/SocialShare'))
 
 export type QuickviewPropsType = {
   slug: string,

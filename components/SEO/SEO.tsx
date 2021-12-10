@@ -1,4 +1,5 @@
-import Head from "next/head";
+/* library package */
+import Head from 'next/head'
 
 type SEOProps = {
   title?: string;

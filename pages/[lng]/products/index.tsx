@@ -1,36 +1,35 @@
 /* library package */
-import { FC, useState, useEffect } from 'react';
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import Router, { useRouter } from 'next/router';
+import { FC, useState, useEffect } from 'react'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
+import Router, { useRouter } from 'next/router'
 import {
   ProductFilter,
   ProductSort,
   Products,
   useI18n,
   ProductCategory,
-} from '@sirclo/nexus';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+} from '@sirclo/nexus'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faSlidersH,
-  faChevronDown,
   faBoxOpen,
   faCheckCircle,
-} from '@fortawesome/free-solid-svg-icons';
-import dynamic from 'next/dynamic';
+} from '@fortawesome/free-solid-svg-icons'
+import dynamic from 'next/dynamic'
 
 /* library template */
-import useQuery from 'lib/utils/useQuery';
-import { useBrand } from 'lib/utils/useBrand';
-import useWindowSize from 'lib/utils/useWindowSize';
-import useInfiniteScroll from 'lib/utils/useInfiniteScroll';
-import convertToTextFromQuery from 'lib/utils/convertToTextFromQuery';
+import useQuery from 'lib/utils/useQuery'
+import { useBrand } from 'lib/utils/useBrand'
+import useWindowSize from 'lib/utils/useWindowSize'
+import useInfiniteScroll from 'lib/utils/useInfiniteScroll'
+import convertToTextFromQuery from 'lib/utils/convertToTextFromQuery'
 
 /* component */
-import Layout from 'components/Layout/Layout';
-import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
-import SideMenu from 'components/SideMenu/SideMenu';
-import Placeholder from 'components/Placeholder';
-import EmptyComponent from 'components/EmptyComponent/EmptyComponent';
+import Layout from 'components/Layout/Layout'
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb'
+import SideMenu from 'components/SideMenu/SideMenu'
+import Placeholder from 'components/Placeholder'
+import EmptyComponent from 'components/EmptyComponent/EmptyComponent'
 const Quickview = dynamic(() => import('components/Quickview/Quickview'));
 const Popup = dynamic(() => import('components/Popup/Popup'));
 
@@ -122,7 +121,6 @@ const ProductsPage: FC<any> = ({
   const tagname: string | string[] = router.query.tagname || null;
 
   const [openFilter, setOpenFilter] = useState<boolean>(false);
-  const [openSort, setOpenSort] = useState<boolean>(false);
   const [sort, setSort] = useState(null);
   const [filterProduct, setFilterProduct] = useState({});
   const [isQuickview, setIsQuickview] = useState<boolean>(false);
@@ -171,7 +169,6 @@ const ProductsPage: FC<any> = ({
     setFilterProduct(selectedFilter);
 
   const toogleFilter = () => setOpenFilter(!openFilter);
-  const toogleSort = () => setOpenSort(!openSort);
 
   return (
     <Layout i18n={i18n} lng={lng} lngDict={lngDict} brand={brand}>
@@ -337,7 +334,6 @@ const ProductsPage: FC<any> = ({
                 type="dropdown"
                 handleSort={(selectedSort: any) => {
                   setSort(selectedSort);
-                  setOpenSort(false);
                 }}
               />
             </div>

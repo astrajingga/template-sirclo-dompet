@@ -1,19 +1,19 @@
 /* library package */
-import { FC } from 'react';
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import { FC } from 'react'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import {
   Lookbook,
   isLookbookAllowed,
   useI18n
-} from '@sirclo/nexus';
+} from '@sirclo/nexus'
 
 /* library template */
-import useWindowSize from 'lib/utils/useWindowSize';
-import { useBrand } from 'lib/utils/useBrand';
+import useWindowSize from 'lib/utils/useWindowSize'
+import { useBrand } from 'lib/utils/useBrand'
 
 /* component */
-import Layout from 'components/Layout/Layout';
-import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
+import Layout from 'components/Layout/Layout'
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb'
 
 const classesLookbook = {
   containerClassName: "lookbook",

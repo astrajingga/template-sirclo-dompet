@@ -1,13 +1,13 @@
 /* library package */
-import { FC } from 'react';
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import { Links, useI18n } from '@sirclo/nexus';
+import { FC } from 'react'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
+import { Links, useI18n } from '@sirclo/nexus'
 
 /* library template */
-import { useBrand } from 'lib/utils/useBrand';
+import { useBrand } from 'lib/utils/useBrand'
 
 /* component */
-import Layout from 'components/Layout/Layout';
+import Layout from 'components/Layout/Layout'
 
 const classesLinks = {
   containerClassName: "tautan",

@@ -1,8 +1,8 @@
 /* library package */
-import { FC, useState } from 'react';
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import dynamic from 'next/dynamic';
-import Router from 'next/router';
+import { FC, useState } from 'react'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
+import dynamic from 'next/dynamic'
+import Router from 'next/router'
 import {
   getProductDetail,
   ProductDetail,
@@ -10,10 +10,10 @@ import {
   useI18n,
   isProductRecommendationAllowed,
   ProductReviews
-} from '@sirclo/nexus';
-import { LazyLoadComponent } from 'react-lazy-load-image-component';
-import { toast } from 'react-toastify';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+} from '@sirclo/nexus'
+import { LazyLoadComponent } from 'react-lazy-load-image-component'
+import { toast } from 'react-toastify'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faBoxOpen,
   faClock,
@@ -23,19 +23,19 @@ import {
   faTimes,
   faCheckCircle,
   faBell
-} from '@fortawesome/free-solid-svg-icons';
+} from '@fortawesome/free-solid-svg-icons'
 
 /* library template */
-import { GRAPHQL_URI } from 'lib/Constants';
-import useWindowSize from 'lib/utils/useWindowSize';
-import { useBrand } from 'lib/utils/useBrand';
+import { GRAPHQL_URI } from 'lib/Constants'
+import useWindowSize from 'lib/utils/useWindowSize'
+import { useBrand } from 'lib/utils/useBrand'
 
 /* component */
-import Layout from 'components/Layout/Layout';
-import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
-import Placeholder from 'components/Placeholder';
-import EmptyComponent from 'components/EmptyComponent/EmptyComponent';
-import SEO from 'components/SEO/SEO';
+import Layout from 'components/Layout/Layout'
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb'
+import Placeholder from 'components/Placeholder'
+import EmptyComponent from 'components/EmptyComponent/EmptyComponent'
+import SEO from 'components/SEO/SEO'
 const Quickview = dynamic(() => import('components/Quickview/Quickview'));
 const Popup = dynamic(() => import('components/Popup/Popup'));
 const SocialShare = dynamic(() => import('components/SocialShare/SocialShare'));

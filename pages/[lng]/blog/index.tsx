@@ -1,7 +1,7 @@
 /* library package */
-import { FC, useState } from 'react';
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import dynamic from 'next/dynamic';
+import { FC, useState } from 'react'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
+import dynamic from 'next/dynamic'
 import {
   useI18n,
   Blogs,
@@ -9,20 +9,20 @@ import {
   getBlogHeaderImage,
   BlogRecent,
   isBlogAllowed
-} from '@sirclo/nexus';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faNewspaper } from '@fortawesome/free-solid-svg-icons';
+} from '@sirclo/nexus'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faNewspaper } from '@fortawesome/free-solid-svg-icons'
 
 /* library template */
-import useWindowSize from 'lib/utils/useWindowSize';
-import { GRAPHQL_URI } from 'lib/Constants';
-import { useBrand } from 'lib/utils/useBrand';
+import useWindowSize from 'lib/utils/useWindowSize'
+import { GRAPHQL_URI } from 'lib/Constants'
+import { useBrand } from 'lib/utils/useBrand'
 
 /* component */
-import Layout from 'components/Layout/Layout';
-import Breadcrumb from 'components/Breadcrumb/Breadcrumb';
-const EmptyComponent = dynamic(() => import('components/EmptyComponent/EmptyComponent'));
-const Placeholder = dynamic(() => import('components/Placeholder'));
+import Layout from 'components/Layout/Layout'
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb'
+const EmptyComponent = dynamic(() => import('components/EmptyComponent/EmptyComponent'))
+const Placeholder = dynamic(() => import('components/Placeholder'))
 
 const classesBlogs = {
   blogsContainerClassName: "row blogs-page",

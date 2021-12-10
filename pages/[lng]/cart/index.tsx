@@ -1,28 +1,28 @@
 /* library package */
-import { FC, useState } from "react";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+import { FC, useState } from 'react'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import {
   useI18n,
   CartDetails,
   Products,
   isProductRecommendationAllowed,
-} from "@sirclo/nexus";
-import { toast } from "react-toastify";
-import { LazyLoadComponent } from "react-lazy-load-image-component";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEdit, faTrash, faCartPlus } from "@fortawesome/free-solid-svg-icons";
+} from '@sirclo/nexus'
+import { toast } from 'react-toastify'
+import { LazyLoadComponent } from 'react-lazy-load-image-component'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEdit, faTrash, faCartPlus } from '@fortawesome/free-solid-svg-icons'
 
 /* library template */
-import { parseCookies } from "lib/parseCookies";
-import { useBrand } from "lib/utils/useBrand";
-import useWindowSize from "lib/utils/useWindowSize";
+import { parseCookies } from 'lib/parseCookies'
+import { useBrand } from 'lib/utils/useBrand'
+import useWindowSize from 'lib/utils/useWindowSize'
 
 /* component */
-import Layout from "components/Layout/Layout";
-import Breadcrumb from "components/Breadcrumb/Breadcrumb";
-import EmptyComponent from "components/EmptyComponent/EmptyComponent";
-import Placeholder from "components/Placeholder";
-import OrderSummaryBox from "components/OrderSummaryBox/OrderSummaryBox";
+import Layout from 'components/Layout/Layout'
+import Breadcrumb from 'components/Breadcrumb/Breadcrumb'
+import EmptyComponent from 'components/EmptyComponent/EmptyComponent'
+import Placeholder from 'components/Placeholder'
+import OrderSummaryBox from 'components/OrderSummaryBox/OrderSummaryBox'
 
 const classesCartDetails = {
   className: "cart-table",

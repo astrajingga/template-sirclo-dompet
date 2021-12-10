@@ -1,4 +1,5 @@
-import { useI18n } from "@sirclo/nexus"
+/* library package */
+import { useI18n } from '@sirclo/nexus'
 
 const Loader = ({ color }) => {
   const i18n: any = useI18n();

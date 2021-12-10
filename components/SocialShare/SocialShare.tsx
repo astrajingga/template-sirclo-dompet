@@ -1,4 +1,5 @@
-import { FC } from "react";
+/* library package */
+import { FC } from 'react'
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -6,16 +7,16 @@ import {
   WhatsappShareButton,
   EmailShareButton,
   TelegramShareButton
-} from "react-share";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+} from 'react-share'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faFacebookF,
   faTwitter,
   faLinkedin,
   faWhatsapp,
   faTelegram
-} from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { SizeProp } from '@fortawesome/fontawesome-svg-core'
 
 type TypeSocialShare = {

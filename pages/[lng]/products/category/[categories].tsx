@@ -1,5 +1,6 @@
-import { useEffect } from "react";
-import { useRouter } from "next/router";
+/* library package */
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 const ProductCategory = () => {
   const router = useRouter();

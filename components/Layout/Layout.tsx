@@ -1,15 +1,20 @@
-import { useEffect } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import { Newsletter, withBrand } from "@sirclo/nexus";
-import { useRouter } from "next/router";
+/* library package */
+import { useEffect } from 'react'
+import { ToastContainer, toast } from 'react-toastify'
+import { Newsletter, withBrand } from '@sirclo/nexus'
+import { useRouter } from 'next/router'
+import Head from 'next/head'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
-import Head from "next/head";
-import SEO from "../SEO/SEO";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
-import { useHookWidgetStyle } from "lib/utils/useWidgetStyle";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+/* library template */
+import { useHookWidgetStyle } from 'lib/utils/useWidgetStyle'
+
+/* component */
+import SEO from '../SEO/SEO'
+import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
+
 
 type LayoutPropType = {
   lngDict: any;

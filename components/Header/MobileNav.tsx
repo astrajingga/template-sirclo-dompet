@@ -1,24 +1,26 @@
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router"
-import { Logo, useI18n } from "@sirclo/nexus";
-import Search from "./Search";
-import SideMenu from "../SideMenu/SideMenu";
-import MobileShortcut from "./MobileShortcut";
-import Placeholder from "../Placeholder";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+/* library package */
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+import { Logo, useI18n } from '@sirclo/nexus'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faBars,
   faSearch,
   faChevronDown,
   faChevronUp
-} from "@fortawesome/free-solid-svg-icons";
-import { LazyLoadComponent } from "react-lazy-load-image-component";
-import dynamic from "next/dynamic";
+} from '@fortawesome/free-solid-svg-icons'
+import { LazyLoadComponent } from 'react-lazy-load-image-component'
+import dynamic from 'next/dynamic'
 
-// const CurrencySelector = dynamic(() => import("@sirclo/nexus").then((mod) => mod.CurrencySelector));
-// const LanguageSelector = dynamic(() => import("@sirclo/nexus").then((mod) => mod.LanguageSelector));
-const CollapsibleNav = dynamic(() => import("@sirclo/nexus").then((mod) => mod.CollapsibleNav));
-const PrivateComponent = dynamic(() => import("@sirclo/nexus").then((mod) => mod.PrivateComponent));
+/* component */
+import Search from './Search'
+import SideMenu from '../SideMenu/SideMenu'
+import MobileShortcut from './MobileShortcut'
+import Placeholder from '../Placeholder'
+
+
+const CollapsibleNav = dynamic(() => import('@sirclo/nexus').then((mod) => mod.CollapsibleNav))
+const PrivateComponent = dynamic(() => import('@sirclo/nexus').then((mod) => mod.PrivateComponent))
 
 const classesCollapsibleNav = {
   parentNavClassName: "menu-mobile",
@@ -29,20 +31,6 @@ const classesCollapsibleNav = {
   subChildNavClassName: "menu-mobile__sub",
 };
 
-// const classesCurrencySelector = {
-//   currencyContainerClassName: "currency__unordered currency__unordered--mobile d-none",
-//   currencyItemClassName: "currency__unordered--list currency__unordered--list-mobile",
-//   currencyButtonSelectedClassName: "currency__unordered--list-button currency__unordered--list-button-selected-mobile",
-//   currencyButtonClassName: "currency__unordered--list-button",
-// }
-
-// const classesLanguageSelector = {
-//   languageContainerClassName: "language__unordered language__unordered--mobile",
-//   languageItemClassName: "language__unordered--list language__unordered--list-mobile",
-//   languageButtonSelectedClassName: "language__unordered--list-button language__unordered--list-button-selected-mobile",
-//   languageButtonClassName: "language__unordered--list-button"
-// }
-
 const classesPlaceholderCollapsibleNav = {
   placeholderList: "placeholder-item placeholder-item__header--nav-mobile"
 }
@@ -51,7 +39,6 @@ const MobileNavButton = ({ lng, actionLogout, searchProduct }) => {
   const i18n: any = useI18n();
   const router = useRouter();
 
-  // const [openCurLang, setOpenCurLang] = useState<boolean>(false)
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const [openSearch, setOpenSearch] = useState<boolean>(false)
 
@@ -123,33 +110,6 @@ const MobileNavButton = ({ lng, actionLogout, searchProduct }) => {
         toogleSide={toogleMenu}
         positionSide="left"
       >
-        {/* <div className="currency-language-mobile">
-          <div className="currency-language-mobile__label">
-            <span>{i18n.t("header.language")}</span>
-            <FontAwesomeIcon
-              icon={faChevronDown}
-              className="icon-down-mobile--svg"
-              onClick={() => setOpenCurLang(!openCurLang)}
-            />
-          </div>
-          {openCurLang &&
-            <>
-              <CurrencySelector
-                classes={classesCurrencySelector}
-                type="list"
-                separator=""
-              />
-              <hr className="ml-3 d-none" />
-              <LanguageSelector
-                classes={classesLanguageSelector}
-                type="list"
-                lng={`${lng}`}
-                separator=""
-                withCurrency={false}
-              />
-            </>
-          }
-        </div> */}
         <CollapsibleNav
           dropdownIcon={<FontAwesomeIcon icon={faChevronDown} className="icon-down-mobile--svg" />}
           dropdownOpenIcon={<FontAwesomeIcon icon={faChevronUp} className="icon-down-mobile--svg" />}
