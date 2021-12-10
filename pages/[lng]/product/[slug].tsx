@@ -78,7 +78,7 @@ const classesProductDetail = {
   countDownItemTextClassName: "product-detail__openorder-countdown-item--text",
   openOrderTimeoutClassName: "product-detail__openorder-timeout",
   openOrderTimeoutDescClassName: "product-detail__openorder-timeout--desc",
-  openOrderTimeoutBtnClassName: "btn btn-orange btn-long mt-3",
+  openOrderTimeoutBtnClassName: "col-12 btn btn-black-outer btn-long mt-3",
   selectedVariantContainerClassName: "d-none",
   propertyInnerContainerClassName: "product-detail__right--form order-3",
   propertyFooterContainerClassname: "order-4 product-detail_propertyFooterContainer",

@@ -45,7 +45,7 @@ const MobileFooter = () => {
           pos="footer-2"
           widgetClassName={`${classesWidget} ${widgetActive === "widget-2" && "widget-2"}`}
         />
-        <div className="d-lg-none d-md-flex">
+        <div className="d-lg-none d-md-flex d-none">
           {toggleIcon('widget-2')}
         </div>
       </div>
@@ -54,7 +54,7 @@ const MobileFooter = () => {
           pos="footer-3"
           widgetClassName={`${classesWidget} ${widgetActive === "widget-3" && "widget-3"}`}
         />
-        <div className="d-lg-none d-md-flex">
+        <div className="d-lg-none d-md-flex d-none">
           {toggleIcon('widget-3')}
         </div>
       </div>
