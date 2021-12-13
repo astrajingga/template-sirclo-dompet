@@ -151,6 +151,7 @@
         flex-direction: column;
         justify-content: space-between;
         padding: 20px;
+        width: 100%;
       }
     }
 
@@ -169,6 +170,11 @@
       @media (max-width: 575px) {
         width: 100%;
       }
+
+      @media (max-width: 767px) {
+        width: 100%;
+        margin-top: 30px;
+      }
     }
 
     &__button {
@@ -180,6 +186,10 @@
       height: 54px;
       padding: 0px 24px 0px 24px;
       color: #ffffff;
+
+      @media (max-width: 767px) {
+        margin-top: 30px;
+      }
 
       @media screen and (max-width: 767px) {
         width: 100%;
@@ -1659,5 +1669,22 @@ section {
   @media screen and (max-width: 991px) {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+}
+
+#custom-newsletter-title {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  min-width: 50%;
+  max-width: 50%;
+  text-align: center;
+  color: white;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 30px;
+    min-width: 100%;
+    max-width: 100%;
+    position: unset;
   }
 }
