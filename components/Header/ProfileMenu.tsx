@@ -56,9 +56,9 @@ const ProfileMenu = ({
   };
 
   return (
-    <div className="navbar-nav navbar-merlin">
+    <div className="navbar-nav navbar-stylish">
       <a
-        className="navbar-profile-menu__cart d-flex align-items-center px-4 line-merlin"
+        className="navbar-profile-menu__cart d-flex align-items-center px-4 line-stylish"
         onClick={(e) => e.preventDefault()}
         href="#"
       >
@@ -145,7 +145,6 @@ const ProfileMenu = ({
         />
       </a>
       <SideMenu
-        title={i18n.t("header.shoppingCart")}
         openSide={openCart}
         toogleSide={toogleCart}
         positionSide="right"
@@ -153,7 +152,6 @@ const ProfileMenu = ({
         <CartSideMenu />
       </SideMenu>
       <SideMenu
-        title={i18n.t("header.searchProduct")}
         openSide={openSearch}
         toogleSide={toogleSearch}
         positionSide="right"

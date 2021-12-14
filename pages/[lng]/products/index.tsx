@@ -466,7 +466,6 @@ const ProductsPage: FC<any> = ({
         </div>
       </div>
       <SideMenu
-        title={i18n.t("product.filter")}
         openSide={openFilter}
         toogleSide={toogleFilter}
         positionSide="left"

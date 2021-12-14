@@ -50,7 +50,7 @@
   z-index: 10;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
 
-  .line-merlin {
+  .line-stylish {
     position: relative;
 
     // &:hover {
@@ -62,7 +62,7 @@
     }
   }
 
-  .nav-link-merlin {
+  .nav-link-stylish {
     color: white !important;
     text-transform: uppercase;
     font-size: small;
@@ -170,7 +170,7 @@
   }
 
   .nav {
-    &-merlin {
+    &-stylish {
       border: none;
       background-color: $color_white;
       justify-content: space-between;
@@ -202,7 +202,7 @@
     }
   }
 
-  .navbar-merlin {
+  .navbar-stylish {
     height: 70px;
   }
 
@@ -270,7 +270,7 @@
   }
 
   .dropdown {
-    &-merlin {
+    &-stylish {
       min-width: 8rem;
       width: max-content;
       top: 4.5rem;

@@ -19,9 +19,9 @@ import Placeholder from '../Placeholder'
 
 const navClasses = {
   dropdownContainerClassName: "dropdown-container",
-  navItemClassName: "nav-item line-merlin",
-  navLinkClassName: "nav-link nav-link-merlin",
-  navbarUlClassName: "navbar-nav navbar-merlin flex-grow-1 pl-5",
+  navItemClassName: "nav-item line-stylish",
+  navLinkClassName: "nav-link nav-link-stylish",
+  navbarUlClassName: "navbar-nav navbar-stylish flex-grow-1 pl-5",
   subChildClassName: "subchild",
   withChildClassName: "withchild"
 }
@@ -80,7 +80,7 @@ const Header = ({ lng }) => {
         </div>
       }
       <header className="header">
-        <nav className="navbar navbar-expand-lg nav-merlin d-lg-flex">
+        <nav className="navbar navbar-expand-lg nav-stylish d-lg-flex">
           <div className="container-fluid" style={containerClasses}>
             <LazyLoadComponent
               placeholder={
