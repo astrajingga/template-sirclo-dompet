@@ -12,7 +12,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import {
   Register,
-  SingleSignOn,
   useI18n
 } from '@sirclo/nexus'
 import dynamic from 'next/dynamic'
