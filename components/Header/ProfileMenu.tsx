@@ -145,7 +145,6 @@ const ProfileMenu = ({
         />
       </a>
       <SideMenu
-        title={i18n.t("header.shoppingCart")}
         openSide={openCart}
         toogleSide={toogleCart}
         positionSide="right"
@@ -153,7 +152,6 @@ const ProfileMenu = ({
         <CartSideMenu />
       </SideMenu>
       <SideMenu
-        title={i18n.t("header.searchProduct")}
         openSide={openSearch}
         toogleSide={toogleSearch}
         positionSide="right"

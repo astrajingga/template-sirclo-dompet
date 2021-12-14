@@ -97,7 +97,6 @@ const MobileNavButton = ({ lng, actionLogout, searchProduct }) => {
         </div>
       </div>
       <SideMenu
-        title={i18n.t("header.searchProduct")}
         openSide={openSearch}
         toogleSide={toogleSearch}
         positionSide="right"
@@ -105,7 +104,6 @@ const MobileNavButton = ({ lng, actionLogout, searchProduct }) => {
         <Search searchProduct={searchProduct} />
       </SideMenu>
       <SideMenu
-        title={i18n.t("header.menu")}
         openSide={openMenu}
         toogleSide={toogleMenu}
         positionSide="left"
