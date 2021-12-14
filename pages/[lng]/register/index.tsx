@@ -92,23 +92,6 @@ const RegisterPage: FC<any> = ({
                     <span className="login-page-subtitle">
                       {i18n.t("register.promo")}
                     </span>
-                    {(hasGoogleAuth || hasFacebookAuth) &&
-                      <>
-                        <div className="login-page-withGoogle register">
-                          <SingleSignOn
-                            className="login-page-withGoogleButton"
-                            buttonText={i18n.t("register.sso")}
-                            onErrorMsg={(msg: string) => toast.error(msg)}
-                            loadingComponent={
-                              <div className="quickdetail__overlay">
-                                <LoaderPages />
-                              </div>
-                            }
-                          />
-                        </div>
-                        <label className="login-page-orTitle"><span>{i18n.t("testimonials.or")}</span></label>
-                      </>
-                    }
                   </div>
                 </div>
                 <div className="row mb-3">
