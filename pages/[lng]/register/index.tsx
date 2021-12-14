@@ -30,7 +30,6 @@ import { useFacebookAuth } from 'lib/utils/useFacebookAuth'
 /* component */
 import Layout from 'components/Layout/Layout'
 import Loader from 'components/Loader/Loader'
-import LoaderPages from 'components/Loader/LoaderPages'
 
 const classesRegister = {
   containerClassName: "row register-page-form",
@@ -63,8 +62,6 @@ const RegisterPage: FC<any> = ({
   lng,
   lngDict,
   brand,
-  hasGoogleAuth,
-  hasFacebookAuth
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   const i18n: any = useI18n()
   const [isVerified, setIsVerified] = useState<boolean>(false)
