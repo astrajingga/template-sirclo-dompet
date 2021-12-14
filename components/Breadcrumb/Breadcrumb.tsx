@@ -26,14 +26,14 @@ const Breadcrumb: FC<any> = ({
     </div> : null}
     <div className="section-breadcrumb" >
         <nav aria-label="breadcrumb">
-        <ol className="breadcrumb breadcrumb-merlin">
+        <ol className="breadcrumb breadcrumb-stylish">
           {
             links.map((el, idx) => {
               if (el === "Home" || el === "Beranda") {
                 return (
-                  <li className="breadcrumb-item breadcrumb-merlin-item" key={idx}>
+                  <li className="breadcrumb-item breadcrumb-stylish-item" key={idx}>
                     <Link href="/[lng]" as={`/${lng}`}>
-                      <a className="breadcrumb-merlin-item__link">{el}</a>
+                      <a className="breadcrumb-stylish-item__link">{el}</a>
                     </Link>
                   </li>
                 )
@@ -41,15 +41,15 @@ const Breadcrumb: FC<any> = ({
 
               if (idx === (links.length - 1)) {
                 return (
-                  <li className="breadcrumb-item breadcrumb-merlin-item" key={idx}>
-                    <a className="breadcrumb-merlin-item__link font-weight-bold">{el}</a>
+                  <li className="breadcrumb-item breadcrumb-stylish-item" key={idx}>
+                    <a className="breadcrumb-stylish-item__link font-weight-bold">{el}</a>
                   </li>
                 )
               }
               else {
                 return (
-                  <li className="breadcrumb-item breadcrumb-merlin-item" key={idx}>
-                    <a className="breadcrumb-merlin-item__link">{el}</a>
+                  <li className="breadcrumb-item breadcrumb-stylish-item" key={idx}>
+                    <a className="breadcrumb-stylish-item__link">{el}</a>
                   </li>
                 )
               }
