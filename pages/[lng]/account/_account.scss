@@ -596,6 +596,10 @@ ul.order-history-footer__pagination-order{
       border: none;
       background: none;
       align-items: center;
+      
+      & > span {
+        margin-left: 10px;
+      }
     }
 
     &__header {
@@ -618,15 +622,13 @@ ul.order-history-footer__pagination-order{
     }
 
     &__paymentStatus {
-      border-radius: 3px;
-      color: #fff;
-      font-weight: 600;
-      font-size: 12px;
-      line-height: 17px;
-      text-align: center;
-      text-transform: uppercase;
-      padding: 3px 6px;
-      margin-left: 15px;
+        width: max-content;
+        padding: 5px 16px;
+        border-radius: 18px;
+        color: $color_white;
+        &_cancelled {
+          color: red;
+        }
     }
 
     &__date {
@@ -870,6 +872,7 @@ ul.order-history-footer__pagination-order{
       @extend .invoice-button;
       right: 100px !important;
       background-color: transparent;
+      border : 1px solid $color_shade_madison;
     }
   }
 

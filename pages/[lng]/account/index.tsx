@@ -5,6 +5,7 @@ import { Account, useI18n } from '@sirclo/nexus'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faChevronDown,
+  faChevronUp,
   faCheckCircle,
   faDotCircle,
   faEye,
@@ -121,7 +122,7 @@ const classesAccount = {
   shipmentHeaderClassName: "order-history-shipmentTracking__header",
   shipmentBodyClassName: "order-history-shipmentTracking__body",
   shipmentFooterClassName: "order-history-shipmentTracking__footer",
-  shippingTrackerButton: "order-history-shipmentTracking__toggle",
+  shippingTrackerButton: "btn my-3 order-history-shipmentTracking__toggle",
 
   shipmentHeaderTextClassName: "track-shipment__headerText",
   shipmentTextClassName: "track-shipment__text",
@@ -212,6 +213,25 @@ const classesAccount = {
   OrderInfoIconClassName: styles.membership_info_icon,
   orderInfoLabelClassName: styles.membership_info_label,
   OrderInfoSearchHereClassName: styles.membership_info_button,
+
+  //table
+  tableDetailContainerClassName: styles.table_detail_container,
+  tableDetailInfoSectionClassName: styles.table_detail_info_section,
+  tableDetailInfoItemClassName: styles.table_detail_info_item,
+  tableDetailPriceLineClassName: styles.table_detail_price_line,
+  tableDetailItemSectionClassName: styles.table_detail_info_section,
+  tableDetailItemLineClassName: styles.table_detail_item_line,
+  tableDetailItemImageClassName: styles.table_detail_item_image,
+  tableDetailItemDescClassName: styles.table_detail_item_desc,
+  tableDetailViewInvoiceClassName: styles.table_detail_buttonInvoice,
+  tableDetailTitleClassName: styles.table_detail_title,
+  tableDetailLabelNeedReviewClassName: styles.table_detail_buttonNeedReview,
+  tableDetailLabelReviewedClassName: styles.table_detail_buttonInvoice,
+  tableDetailButtonDeliveredClassName: `btn my-3 ${styles.btn_primary} ${styles.btn_long}`,
+  tableDetailButtonNeedReviewClassName: `btn my-3 ${styles.btn_secondary} ${styles.btn_long}`,
+  tableDetailUploadReceiptClassName: `btn my-3 ${styles.table_detail_buttonUpload}`,
+  paymentStatusNeedReviewClassName: styles.table_status,
+  paymentStatusReturnedClassName: `${styles.table_status} ${styles.table_status_cancelled}`,
 
 };
 
@@ -307,6 +327,8 @@ const Accounts: FC<any> = ({
                 orderHistory: <FontAwesomeIcon icon={faList} height="1em" />,
                 accordionIcon: <FontAwesomeIcon icon={faChevronDown} height="1em" color="#F7BE16" />,
                 membershipHistory: <FontAwesomeIcon icon={faCoins} height="1em" />,
+                chevronDownIcon: <FontAwesomeIcon icon={faChevronDown} height="1em" color="#2C3E50" />,
+                chevronUpIcon: <FontAwesomeIcon icon={faChevronUp} height="1em" color="#2C3E50" />,
                 settingNotification: <FontAwesomeIcon icon={faBell} height="1em" />,
                 email: <FontAwesomeIcon icon={faEnvelope} size="2x" />,
                 whatsApp: <FontAwesomeIcon icon={faWhatsapp} size="2x" />,
