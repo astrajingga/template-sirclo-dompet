@@ -579,6 +579,7 @@
     "successConfPassword": "Berhasil menyimpan kata sandi!",
     "title": "Daftar",
     "toLogin": "Masuk",
+    "sso": "Daftar dengan {SSO_PROVIDER}",
     "verificationFailed": "Gagal verifikasi"
   },
   "resetPassword": {
