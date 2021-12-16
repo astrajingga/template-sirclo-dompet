@@ -306,6 +306,7 @@ const Home: React.FC<any> = ({
           <div className="row best-seller">
             <LazyLoadComponent>
               <Products
+                tagName="new-arrivals"
                 itemPerPage={6}
                 withSeparatedVariant={true}
                 isQuickView={setIsQuickview}
@@ -360,6 +361,7 @@ const Home: React.FC<any> = ({
           <div className="row best-seller">
             <LazyLoadComponent>
               <Products
+                tagName="featured"
                 itemPerPage={6}
                 withSeparatedVariant={true}
                 isQuickView={setIsQuickview}
